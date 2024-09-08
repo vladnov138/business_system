@@ -44,6 +44,7 @@ class SettingsManager:
                 self.__data = json.load(stream)
             return True
         except:
+            self.__set_default_data()
             return False
 
     # Настройки
@@ -60,13 +61,8 @@ class SettingsManager:
         if isinstance(value, dict):
             self.__data = value
 
-    def __default_settings(self):
-        data = Settings()
-        data.inn = "380080920202"
-        data.organization_name = "Рога и копыта (default)"
-        data.director_name = "Default default"
-        data.bik = "999999999"
-        data.account = "12312312312"
-        data.business_type = "DEFDF"
-        data.correspondent_account = "13213213213"
-        return data
+    def __set_default_data(self):
+        data = {"inn": "380080920202", "organization_name": "Рога и копыта (default)",
+                "director_name": "Default default", "bik": "999999999", "account": "12312312312",
+                "business_type": "DEFDF", "correspondent_account": "13213213213"}
+        self.__data = data

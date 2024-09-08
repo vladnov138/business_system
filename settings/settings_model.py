@@ -74,5 +74,5 @@ class Settings:
     @business_type.setter
     def business_type(self, value: str):
         if not isinstance(value, str) or len(value) != 5:
-            raise ValueError("Ownership type must be a 5-character string")
+            raise ValueError("Businesstype type must be a 5-character string")
         self.__business_type = value

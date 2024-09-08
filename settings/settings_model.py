@@ -76,3 +76,12 @@ class Settings:
         if not isinstance(value, str) or len(value) != 5:
             raise ValueError("Businesstype type must be a 5-character string")
         self.__business_type = value
+
+    def __str__(self):
+        return f"""Settings(Organization Name: {self.organization_name}
+                INN: {self.inn}
+                Director Name: {self.director_name}
+                Account: {self.account}
+                Correspondent Account: {self.correspondent_account}
+                BIK: {self.bik}
+                Business Type: {self.business_type})"""

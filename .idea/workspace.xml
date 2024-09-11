@@ -5,9 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4afd156-2404-459e-a434-5121565aff87" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/abstract_reference.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/measurement_unit_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/nomenclature_group_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/nomenclature_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/organization_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/storage_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/settings/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings/settings_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings/settings_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/settings_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings/settings_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/settings_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/settings_model.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,9 +62,16 @@
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;Python.settings_manager.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;
+    &quot;git-widget-placeholder&quot;: &quot;exception__handling&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/models" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="business_system" />

@@ -2,7 +2,7 @@ import json
 import os
 from pathlib import Path
 
-from settings.settings_model import Settings
+from src.models.settings_model import Settings
 
 
 class SettingsManager:

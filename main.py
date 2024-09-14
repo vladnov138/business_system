@@ -1,3 +1,4 @@
+from src.models.measurement_unit_model import MeasurementUnitModel
 from src.settings.settings_manager import SettingsManager
 
 manager1 = SettingsManager()

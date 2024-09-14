@@ -1,13 +1,16 @@
+from src.abstract_reference import AbstractReference
 from src.models.settings_model import Settings
+from src.utils.checker import check_arg, check_max_len, check_exact_length
 
 
-class Organization:
+class OrganizationModel(AbstractReference):
     __inn = ""
     __account = ""
     __bik = ""
     __business_type = ""
 
     def __init__(self, settings: Settings):
+        super().__init__(settings.organization_name)
         self.__inn = settings.inn
         self.__account = settings.account
         self.__bik = settings.bik
@@ -19,8 +22,8 @@ class Organization:
 
     @inn.setter
     def inn(self, value: str):
-        if not isinstance(value, str) or len(value) != 12:
-            raise ValueError("INN must be a 12-character string")
+        check_arg(value, str)
+        check_exact_length(value, 12)
         self.__inn = value
 
     @property
@@ -29,8 +32,8 @@ class Organization:
 
     @account.setter
     def account(self, value: str):
-        if not isinstance(value, str) or len(value) != 11:
-            raise ValueError("Account must be an 11-character string")
+        check_arg(value, str)
+        check_exact_length(value, 11)
         self.__account = value
 
     @property
@@ -39,8 +42,8 @@ class Organization:
 
     @bik.setter
     def bik(self, value: str):
-        if not isinstance(value, str) or len(value) != 9:
-            raise ValueError("BIK must be a 9-character string")
+        check_arg(value, str)
+        check_exact_length(value, 9)
         self.__bik = value
 
     @property
@@ -49,6 +52,6 @@ class Organization:
 
     @business_type.setter
     def business_type(self, value: str):
-        if not isinstance(value, str) or len(value) != 5:
-            raise ValueError("Businesstype type must be a 5-character string")
+        check_arg(value, str)
+        check_exact_length(value, 5)
         self.__business_type = value

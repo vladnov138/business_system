@@ -1,3 +1,7 @@
+from src.exceptions.argument_exception import ArgumentException
+from src.utils.checker import check_arg, check_exact_length, check_max_len
+
+
 class Settings:
     __organization_name = ""
     __inn = ""
@@ -13,8 +17,7 @@ class Settings:
 
     @organization_name.setter
     def organization_name(self, value: str):
-        if not isinstance(value, str):
-            raise TypeError("Invalid value")
+        check_arg(value, str)
         self.__organization_name = value
 
     @property
@@ -23,8 +26,8 @@ class Settings:
 
     @inn.setter
     def inn(self, value: str):
-        if not isinstance(value, str) or len(value) != 12:
-            raise ValueError("INN must be a 12-character string")
+        check_arg(value, str)
+        check_exact_length(value, 12)
         self.__inn = value
 
     @property
@@ -33,8 +36,7 @@ class Settings:
 
     @director_name.setter
     def director_name(self, value: str):
-        if not isinstance(value, str):
-            raise TypeError("Invalid value")
+        check_arg(value, str)
         self.__director_name = value
 
     @property
@@ -43,8 +45,8 @@ class Settings:
 
     @account.setter
     def account(self, value: str):
-        if not isinstance(value, str) or len(value) != 11:
-            raise ValueError("Account must be an 11-character string")
+        check_arg(value, str)
+        check_exact_length(value, 11)
         self.__account = value
 
     @property
@@ -53,8 +55,8 @@ class Settings:
 
     @correspondent_account.setter
     def correspondent_account(self, value: str):
-        if not isinstance(value, str) or len(value) != 11:
-            raise ValueError("Correspondent account must be an 11-character string")
+        check_arg(value, str)
+        check_exact_length(value, 11)
         self.__correspondent_account = value
 
     @property
@@ -63,8 +65,8 @@ class Settings:
 
     @bik.setter
     def bik(self, value: str):
-        if not isinstance(value, str) or len(value) != 9:
-            raise ValueError("BIK must be a 9-character string")
+        check_arg(value, str)
+        check_exact_length(value, 9)
         self.__bik = value
 
     @property
@@ -73,8 +75,8 @@ class Settings:
 
     @business_type.setter
     def business_type(self, value: str):
-        if not isinstance(value, str) or len(value) != 5:
-            raise ValueError("Businesstype type must be a 5-character string")
+        check_arg(value, str)
+        check_exact_length(value, 5)
         self.__business_type = value
 
     def __str__(self):

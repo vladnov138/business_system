@@ -1,9 +1,8 @@
-import inspect
+from __future__ import annotations
 import uuid
 from abc import ABC, abstractmethod
 
 from src.exceptions.argument_exception import ArgumentException
-from src.utils.checker import check_arg
 
 """
 Абстрактный класс для наследования моделей данных
@@ -16,8 +15,8 @@ class AbstractReference(ABC):
 
     def __init__(self, name: str = '', uid: str = ''):
         super().__init__()
-        check_arg(name, str)
-        check_arg(uid, str)
+        ArgumentException.check_arg(name, str)
+        ArgumentException.check_arg(uid, str)
         self._name = name
         self.__uid = uid
         if not uid:
@@ -33,15 +32,13 @@ class AbstractReference(ABC):
 
     @name.setter
     def name(self, value: str):
-        check_arg(value, str)
+        ArgumentException.check_arg(value, str)
         self._name = value
 
+    @abstractmethod
     def __eq__(self, other):
-        if not isinstance(other, AbstractReference):
-            return False
-        return self.__uid == other.__uid
+        pass
 
+    @abstractmethod
     def __ne__(self, other):
-        if not isinstance(other, AbstractReference):
-            return True
-        return self.__uid != other.__uid
+        return not self == other

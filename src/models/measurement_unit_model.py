@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from src.abstract_reference import AbstractReference
-from src.utils.checker import check_arg
+from src.exceptions.argument_exception import ArgumentException
 
 
 class MeasurementUnitModel(AbstractReference):
@@ -11,8 +11,8 @@ class MeasurementUnitModel(AbstractReference):
     def __init__(self, name: str, unit: float, base_measure_unit: MeasurementUnitModel=None):
         super().__init__(name)
         unit = self.__cvt_unit_to_float(unit)
-        check_arg(unit, float)
-        check_arg(base_measure_unit, MeasurementUnitModel, True)
+        ArgumentException.check_arg(unit, float)
+        ArgumentException.check_arg(base_measure_unit, MeasurementUnitModel, True)
         self.__unit = unit
         self.__base_measure_unit = base_measure_unit
 
@@ -32,12 +32,12 @@ class MeasurementUnitModel(AbstractReference):
     @unit.setter
     def unit(self, value: float):
         value = self.__cvt_unit_to_float(value)
-        check_arg(value, float)
+        ArgumentException.check_arg(value, float)
         self.__unit = value
 
     @base_measure_unit.setter
     def base_measure_unit(self, value: MeasurementUnitModel):
-        check_arg(value, MeasurementUnitModel)
+        ArgumentException.check_arg(value, MeasurementUnitModel)
         self.__base_measure_unit = value
 
     def __eq__(self, other):

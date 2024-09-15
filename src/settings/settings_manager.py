@@ -35,12 +35,10 @@ class SettingsManager:
         if file_name != "":
             self.__file_name = file_name
         try:
-            file_path = Path(file_name)
-            if not file_path.is_absolute():
-                file_path = Path(os.curdir).joinpath(file_path).resolve()
-            if not file_path.is_file():
-                raise FileNotFoundError(f"File {file_path} does not exist")
-            with file_path.open() as stream:
+            current_path_info = os.path.split(__file__)
+            current_path = current_path_info[0]
+            full_name = f"{current_path}{os.sep}{self.__file_name}"
+            with open(full_name) as stream:
                 self.__data = json.load(stream)
             return True
         except:

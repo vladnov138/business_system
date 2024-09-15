@@ -1,5 +1,4 @@
 from src.exceptions.argument_exception import ArgumentException
-from src.utils.checker import check_arg, check_exact_length, check_max_len
 
 
 class Settings:
@@ -17,7 +16,7 @@ class Settings:
 
     @organization_name.setter
     def organization_name(self, value: str):
-        check_arg(value, str)
+        ArgumentException.check_arg(value, str)
         self.__organization_name = value
 
     @property
@@ -26,8 +25,8 @@ class Settings:
 
     @inn.setter
     def inn(self, value: str):
-        check_arg(value, str)
-        check_exact_length(value, 12)
+        ArgumentException.check_arg(value, str)
+        ArgumentException.check_exact_length(value, 12)
         self.__inn = value
 
     @property
@@ -36,7 +35,7 @@ class Settings:
 
     @director_name.setter
     def director_name(self, value: str):
-        check_arg(value, str)
+        ArgumentException.check_arg(value, str)
         self.__director_name = value
 
     @property
@@ -45,8 +44,8 @@ class Settings:
 
     @account.setter
     def account(self, value: str):
-        check_arg(value, str)
-        check_exact_length(value, 11)
+        ArgumentException.check_arg(value, str)
+        ArgumentException.check_exact_length(value, 11)
         self.__account = value
 
     @property
@@ -55,8 +54,8 @@ class Settings:
 
     @correspondent_account.setter
     def correspondent_account(self, value: str):
-        check_arg(value, str)
-        check_exact_length(value, 11)
+        ArgumentException.check_arg(value, str)
+        ArgumentException.check_exact_length(value, 11)
         self.__correspondent_account = value
 
     @property
@@ -65,8 +64,8 @@ class Settings:
 
     @bik.setter
     def bik(self, value: str):
-        check_arg(value, str)
-        check_exact_length(value, 9)
+        ArgumentException.check_arg(value, str)
+        ArgumentException.check_exact_length(value, 9)
         self.__bik = value
 
     @property
@@ -75,8 +74,8 @@ class Settings:
 
     @business_type.setter
     def business_type(self, value: str):
-        check_arg(value, str)
-        check_exact_length(value, 5)
+        ArgumentException.check_arg(value, str)
+        ArgumentException.check_exact_length(value, 5)
         self.__business_type = value
 
     def __str__(self):

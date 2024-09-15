@@ -1,6 +1,6 @@
 from src.abstract_reference import AbstractReference
+from src.exceptions.argument_exception import ArgumentException
 from src.models.settings_model import Settings
-from src.utils.checker import check_arg, check_max_len, check_exact_length
 
 
 class OrganizationModel(AbstractReference):
@@ -22,8 +22,8 @@ class OrganizationModel(AbstractReference):
 
     @inn.setter
     def inn(self, value: str):
-        check_arg(value, str)
-        check_exact_length(value, 12)
+        ArgumentException.check_arg(value, str)
+        ArgumentException.check_exact_length(value, 12)
         self.__inn = value
 
     @property
@@ -32,8 +32,8 @@ class OrganizationModel(AbstractReference):
 
     @account.setter
     def account(self, value: str):
-        check_arg(value, str)
-        check_exact_length(value, 11)
+        ArgumentException.check_arg(value, str)
+        ArgumentException.check_exact_length(value, 11)
         self.__account = value
 
     @property
@@ -42,8 +42,8 @@ class OrganizationModel(AbstractReference):
 
     @bik.setter
     def bik(self, value: str):
-        check_arg(value, str)
-        check_exact_length(value, 9)
+        ArgumentException.check_arg(value, str)
+        ArgumentException.check_exact_length(value, 9)
         self.__bik = value
 
     @property
@@ -52,6 +52,14 @@ class OrganizationModel(AbstractReference):
 
     @business_type.setter
     def business_type(self, value: str):
-        check_arg(value, str)
-        check_exact_length(value, 5)
+        ArgumentException.check_arg(value, str)
+        ArgumentException.check_exact_length(value, 5)
         self.__business_type = value
+
+    def __eq__(self, other):
+        if not isinstance(other, OrganizationModel):
+            return False
+        return self._name == other._name
+
+    def __ne__(self, other):
+        return not self == other

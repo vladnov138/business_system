@@ -1,9 +1,11 @@
 from __future__ import annotations
 
-from src.abstract_reference import AbstractReference
+from abc import ABC
+
+from src.abstract.abstract_reference import AbstractReference
 
 
-class BaseComparingByUid(AbstractReference):
+class BaseComparingByUid(AbstractReference, ABC):
     def __eq__(self, other: AbstractReference):
         if not isinstance(other, AbstractReference):
             return False

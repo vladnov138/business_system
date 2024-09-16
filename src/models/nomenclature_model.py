@@ -1,10 +1,10 @@
-from src.abstract_reference import AbstractReference
+from src.abstract.base_comparing_by_name import BaseComparingByName
 from src.exceptions.argument_exception import ArgumentException
 from src.models.measurement_unit_model import MeasurementUnitModel
 from src.models.nomenclature_group_model import NomenclatureGroupModel
 
 
-class NomenclatureModel(AbstractReference):
+class NomenclatureModel(BaseComparingByName):
     __full_name: str = None
     __nomenclature_group: NomenclatureGroupModel = None
     __measurement_unit: MeasurementUnitModel = None
@@ -47,11 +47,3 @@ class NomenclatureModel(AbstractReference):
     def nomenclature_group(self, value: NomenclatureGroupModel):
         ArgumentException.check_arg(value, NomenclatureModel)
         self.__nomenclature_group = value
-
-    def __eq__(self, other):
-        if not isinstance(other, NomenclatureModel):
-            return False
-        return self._name == other._name
-
-    def __ne__(self, other):
-        return not self == other

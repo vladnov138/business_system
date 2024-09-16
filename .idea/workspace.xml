@@ -5,21 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4afd156-2404-459e-a434-5121565aff87" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abstract_reference.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abstract_reference.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exceptions/argument_exception.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/exceptions/argument_exception.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abstract/base_comparing_by_name.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abstract/base_comparing_by_name.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abstract/base_comparing_by_uid.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abstract/base_comparing_by_uid.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/measurement_unit_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/measurement_unit_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/nomenclature_group_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/nomenclature_group_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/nomenclature_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/nomenclature_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/organization_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/organization_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/settings_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/settings_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/storage_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/storage_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/settings/settings_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings/settings_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/checker.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_exceptions.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +28,24 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/exception_handling" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -45,7 +57,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/vladnov138/business_system.git&quot;,
-    &quot;accountId&quot;: &quot;67d8ac6a-cd73-4066-9582-96612613f2bd&quot;
+    &quot;accountId&quot;: &quot;89db990f-1e6a-4a46-8a70-396d7bafa47d&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -59,40 +71,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.Python tests for test_exceptions.TestUtils.test_check_max_len_exceeded.executor": "Run",
-    "Python tests.Python tests for test_models.TestModels.executor": "Run",
-    "Python tests.Python tests for test_models.TestModels.test_measurement_base_unit_model.executor": "Run",
-    "Python tests.Python tests for test_models.TestModels.test_measurement_unit_exceptions.executor": "Run",
-    "Python tests.Python tests for test_models.TestModels.test_measurement_unit_model.executor": "Run",
-    "Python tests.Python tests for test_models.TestModels.test_measurement_unit_setters.executor": "Run",
-    "Python tests.Python tests for test_models.TestModels.test_nomenclature_group.executor": "Run",
-    "Python tests.Python tests for test_models.TestModels.test_nomenclature_group_model.executor": "Run",
-    "Python tests.Python tests for test_models.TestModels.test_nomenclature_model.executor": "Run",
-    "Python tests.Python tests for test_models.TestModels.test_organization_model.executor": "Run",
-    "Python tests.Python tests for test_models.TestModels.test_storage_model.executor": "Run",
-    "Python tests.Python tests for test_settings.TestSettings.executor": "Run",
-    "Python tests.Python tests for test_settings.TestSettings.test_settings_manager_open_fail.executor": "Run",
-    "Python tests.Python tests for test_settings.TestSettings.test_settings_manager_singletone.executor": "Run",
-    "Python tests.Python tests for test_utils.TestUtils.executor": "Run",
-    "Python tests.Python tests for test_utils.TestUtils.test_check_arg_invalid_type.executor": "Run",
-    "Python tests.Python tests in tests.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.nomenclature_group_model.executor": "Run",
-    "Python.settings_manager.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "#1 on exception__handling"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests for test_exceptions.TestUtils.test_check_max_len_exceeded.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_models.TestModels.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_models.TestModels.test_measurement_base_unit_model.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_models.TestModels.test_measurement_unit_exceptions.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_models.TestModels.test_measurement_unit_model.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_models.TestModels.test_measurement_unit_setters.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_models.TestModels.test_nomenclature_group.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_models.TestModels.test_nomenclature_group_model.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_models.TestModels.test_nomenclature_model.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_models.TestModels.test_organization_model.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_models.TestModels.test_storage_model.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_settings.TestSettings.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_settings.TestSettings.test_settings_manager_open_fail.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_settings.TestSettings.test_settings_manager_singletone.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_utils.TestUtils.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_utils.TestUtils.test_check_arg_invalid_type.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in tests.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.nomenclature_group_model.executor&quot;: &quot;Run&quot;,
+    &quot;Python.settings_manager.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;#1 on exception__handling&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vladn\PycharmProjects\business_system\src\abstract" />
       <recent name="$PROJECT_DIR$/src/models" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_exceptions.TestUtils.test_check_max_len_exceeded">
+  <component name="RunManager" selected="Python tests.Python tests in tests">
     <configuration name="nomenclature_group_model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
@@ -177,8 +190,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for test_exceptions.TestUtils.test_check_max_len_exceeded" />
         <item itemvalue="Python tests.Python tests in tests" />
+        <item itemvalue="Python tests.Python tests for test_exceptions.TestUtils.test_check_max_len_exceeded" />
         <item itemvalue="Python.nomenclature_group_model" />
         <item itemvalue="Python tests.Python tests for tests.test_exceptions.TestUtils" />
         <item itemvalue="Python tests.Python tests for tests.test_exceptions.TestUtils.test_check_arg_invalid_type" />

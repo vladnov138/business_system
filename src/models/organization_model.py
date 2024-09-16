@@ -1,9 +1,9 @@
-from src.abstract_reference import AbstractReference
+from src.abstract.base_comparing_by_name import BaseComparingByName
 from src.exceptions.argument_exception import ArgumentException
 from src.models.settings_model import Settings
 
 
-class OrganizationModel(AbstractReference):
+class OrganizationModel(BaseComparingByName):
     __inn = ""
     __account = ""
     __bik = ""
@@ -55,11 +55,3 @@ class OrganizationModel(AbstractReference):
         ArgumentException.check_arg(value, str)
         ArgumentException.check_exact_length(value, 5)
         self.__business_type = value
-
-    def __eq__(self, other):
-        if not isinstance(other, OrganizationModel):
-            return False
-        return self._name == other._name
-
-    def __ne__(self, other):
-        return not self == other

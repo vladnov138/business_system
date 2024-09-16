@@ -1,10 +1,10 @@
 from __future__ import annotations
 
-from src.abstract_reference import AbstractReference
+from src.abstract.base_comparing_by_name import BaseComparingByName
 from src.exceptions.argument_exception import ArgumentException
 
 
-class MeasurementUnitModel(AbstractReference):
+class MeasurementUnitModel(BaseComparingByName):
     __unit: float = 0
     __base_measure_unit: MeasurementUnitModel = None
 
@@ -39,13 +39,3 @@ class MeasurementUnitModel(AbstractReference):
     def base_measure_unit(self, value: MeasurementUnitModel):
         ArgumentException.check_arg(value, MeasurementUnitModel)
         self.__base_measure_unit = value
-
-    def __eq__(self, other):
-        if not isinstance(other, MeasurementUnitModel):
-            return False
-        return self._name == other._name
-
-    def __ne__(self, other):
-        if not isinstance(other, MeasurementUnitModel):
-            return True
-        return self._name != other._name

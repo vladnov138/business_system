@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4afd156-2404-459e-a434-5121565aff87" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings/settings_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings/settings_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abstract/base_comparing_by_name.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abstract/base_comparing_by_name.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abstract/base_comparing_by_uid.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abstract/base_comparing_by_uid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/measurement_unit_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/measurement_unit_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/nomenclature_group_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/nomenclature_group_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/nomenclature_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/nomenclature_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/organization_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/organization_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/storage_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/storage_model.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +28,24 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/exception_handling" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -33,7 +57,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/vladnov138/business_system.git&quot;,
-    &quot;accountId&quot;: &quot;67d8ac6a-cd73-4066-9582-96612613f2bd&quot;
+    &quot;accountId&quot;: &quot;89db990f-1e6a-4a46-8a70-396d7bafa47d&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -49,14 +73,40 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests for test_exceptions.TestUtils.test_check_max_len_exceeded.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_models.TestModels.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_models.TestModels.test_measurement_base_unit_model.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_models.TestModels.test_measurement_unit_exceptions.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_models.TestModels.test_measurement_unit_model.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_models.TestModels.test_measurement_unit_setters.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_models.TestModels.test_nomenclature_group.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_models.TestModels.test_nomenclature_group_model.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_models.TestModels.test_nomenclature_model.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_models.TestModels.test_organization_model.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_models.TestModels.test_storage_model.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_settings.TestSettings.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_settings.TestSettings.test_settings_manager_open_fail.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_settings.TestSettings.test_settings_manager_singletone.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_utils.TestUtils.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_utils.TestUtils.test_check_arg_invalid_type.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in tests.executor&quot;: &quot;Run&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.nomenclature_group_model.executor&quot;: &quot;Run&quot;,
     &quot;Python.settings_manager.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;
+    &quot;git-widget-placeholder&quot;: &quot;#1 on exception__handling&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vladn\PycharmProjects\business_system\src\abstract" />
+      <recent name="$PROJECT_DIR$/src/models" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.Python tests in tests">
+    <configuration name="nomenclature_group_model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -65,11 +115,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/models" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/models/nomenclature_group_model.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -78,9 +128,73 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests for test_exceptions.TestUtils.test_check_max_len_exceeded" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="business_system" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_exceptions.TestUtils.test_check_max_len_exceeded&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.test_exceptions.TestUtils" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="business_system" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.test_exceptions.TestUtils&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.test_exceptions.TestUtils.test_check_arg_invalid_type" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="business_system" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.test_exceptions.TestUtils.test_check_arg_invalid_type&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in tests" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="business_system" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
+        <item itemvalue="Python tests.Python tests in tests" />
+        <item itemvalue="Python tests.Python tests for test_exceptions.TestUtils.test_check_max_len_exceeded" />
+        <item itemvalue="Python.nomenclature_group_model" />
+        <item itemvalue="Python tests.Python tests for tests.test_exceptions.TestUtils" />
+        <item itemvalue="Python tests.Python tests for tests.test_exceptions.TestUtils.test_check_arg_invalid_type" />
       </list>
     </recent_temporary>
   </component>

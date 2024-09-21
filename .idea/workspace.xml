@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4afd156-2404-459e-a434-5121565aff87" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/file_reader.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/parser.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/path_utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exceptions/argument_exception.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/exceptions/argument_exception.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/ingridient.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/ingridient_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/recipe.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/recipe_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/test_settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/test_settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/start_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/start_service.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/settings/settings_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings/settings_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_data_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_data_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,10 +95,11 @@
     "Python tests.Python tests in test_data_repository.py.executor": "Run",
     "Python tests.Python tests in test_models.py.executor": "Run",
     "Python tests.Python tests in test_settings.py.executor": "Run",
-    "Python tests.Python tests in tests.executor": "Run",
+    "Python tests.Python tests in tests.executor": "Debug",
     "Python.main.executor": "Run",
     "Python.nomenclature_group_model.executor": "Run",
     "Python.settings_manager.executor": "Run",
+    "Python.start_service.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "recipe"
   }
@@ -119,35 +112,27 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in tests">
-    <configuration name="Python tests for test_data_repository.TestDataRepository" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests in test_settings.py">
+    <configuration name="start_service" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/services" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_data_repository.TestDataRepository&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_models.TestModels.test_recipe_model_setters_exceptions" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="business_system" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_models.TestModels.test_recipe_model_setters_exceptions&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/services/start_service.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="Python tests in test_data_repository.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
@@ -180,6 +165,21 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests in test_settings.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="business_system" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_settings.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Python tests in tests" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
@@ -197,11 +197,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests in tests" />
+        <item itemvalue="Python tests.Python tests in test_settings.py" />
         <item itemvalue="Python tests.Python tests in test_data_repository.py" />
+        <item itemvalue="Python tests.Python tests in tests" />
+        <item itemvalue="Python.start_service" />
         <item itemvalue="Python tests.Python tests in test_models.py" />
-        <item itemvalue="Python tests.Python tests for test_models.TestModels.test_recipe_model_setters_exceptions" />
-        <item itemvalue="Python tests.Python tests for test_data_repository.TestDataRepository" />
       </list>
     </recent_temporary>
   </component>

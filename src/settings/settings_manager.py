@@ -35,7 +35,7 @@ class SettingsManager:
             self.__file_name = file_name
         try:
             current_path = Path(__file__).resolve()
-            parent_path = PathUtils.get_parent_directory(current_path, levels_up=2)
+            parent_path = PathUtils.get_parent_directory(current_path, levels_up=3)
             full_name = f"{parent_path}{os.sep}{self.__file_name}"
             self.__data = FileReader.read_json(full_name)
             return True

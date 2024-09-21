@@ -5,5 +5,7 @@
   "account": "12345678901",
   "correspondent_account": "09876543211",
   "bik": "123456789",
-  "business_type": "AAAAA"
+  "business_type": "AAAAA",
+  "recipe_folder": "docs/",
+  "measurement_units_path": "resources/measurement_units.json"
 }

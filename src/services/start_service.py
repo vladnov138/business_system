@@ -3,7 +3,7 @@ import os
 from src.data.data_repository import DataRepository
 from src.models.nomenclature_group_model import NomenclatureGroupModel
 from src.models.nomenclature_model import NomenclatureModel
-from src.settings.settings_manager import SettingsManager
+from src.models.settings_model import Settings
 from src.utils.file_reader import FileReader
 from src.utils.parser import Parser
 from src.utils.path_utils import PathUtils
@@ -11,12 +11,12 @@ from src.utils.path_utils import PathUtils
 
 class StartService:
     __repository: DataRepository = None
-    __settings_manager: SettingsManager = None
+    __settings: Settings = None
 
-    def __init__(self, repository: DataRepository, settings_manager: SettingsManager):
+    def __init__(self, repository: DataRepository, settings: Settings):
         super().__init__()
         self.__repository = repository
-        self.__settings_manager = settings_manager
+        self.__settings = settings
 
     def __create_nomenclature_groups(self):
         list = [NomenclatureGroupModel.default_group_cold(), NomenclatureGroupModel.default_group_source() ]
@@ -24,7 +24,11 @@ class StartService:
 
     def __create_measurement_units(self):
         current_path = PathUtils.get_parent_directory(__file__, levels_up=3)
-        full_name = f"{current_path}{os.sep}resources{os.sep}measurement_units.json"
+        measurement_units_file = self.__settings.measurement_units_path
+        measurement_units_file_parts = measurement_units_file.split('/')
+        full_name = f"{current_path}"
+        for part in measurement_units_file_parts:
+            full_name += f"{os.sep}{part}"
         data = FileReader.read_json(full_name)
         data = data["measurements"]
         units = Parser.parse_measurement_units_from_dict(data)
@@ -45,7 +49,8 @@ class StartService:
 
     def __create_recipe(self):
         current_path = PathUtils.get_parent_directory(__file__, levels_up=3)
-        full_name = f"{current_path}{os.sep}docs"
+        docs_folder = self.__settings.recipe_folder
+        full_name = f"{current_path}{os.sep}{docs_folder}"
         files = PathUtils.get_files_by_path(full_name)
         recipes = []
         for file in files:

@@ -16,7 +16,10 @@ class TestDataRepository(unittest.TestCase):
         :return:
         """
         self.data_repository = DataRepository()
-        settings = SettingsManager().settings
+        settings_manager = SettingsManager()
+        settings_manager.open("resources/settings.json")
+        settings_manager.convert()
+        settings = settings_manager.settings
         self.service = StartService(self.data_repository, settings)
         self.service.create()
 

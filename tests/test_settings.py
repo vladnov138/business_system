@@ -1,8 +1,10 @@
 import json
+import os
 import unittest
 
 from src.models.settings_model import Settings
 from src.services.settings_manager import SettingsManager
+from src.utils.path_utils import PathUtils
 
 
 class TestSettings(unittest.TestCase):
@@ -21,8 +23,9 @@ class TestSettings(unittest.TestCase):
         Тестирует загрузку файла и конвертацию данных из него
         """
         settings_manager = SettingsManager()
-        file_path = "/resources/test_settings.json"
-        with open(".." + file_path) as stream:
+        parent_directory = PathUtils.get_parent_directory(__file__, levels_up=2)
+        file_path = f"{parent_directory}{os.sep}resources{os.sep}test_settings.json"
+        with open(file_path) as stream:
             data: dict = json.load(stream)
         settings_manager.open(file_path)
         settings_manager.convert()

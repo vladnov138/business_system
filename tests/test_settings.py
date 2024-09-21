@@ -23,7 +23,7 @@ class TestSettings(unittest.TestCase):
         Тестирует загрузку файла и конвертацию данных из него
         """
         settings_manager = SettingsManager()
-        parent_directory = PathUtils.get_parent_directory(__file__, levels_up=2)
+        parent_directory = PathUtils().get_parent_directory(__file__, levels_up=2)
         file_path = f"{parent_directory}{os.sep}resources{os.sep}test_settings.json"
         with open(file_path) as stream:
             data: dict = json.load(stream)

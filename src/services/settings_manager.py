@@ -1,4 +1,3 @@
-import json
 import os
 from pathlib import Path
 
@@ -12,6 +11,7 @@ class SettingsManager:
     __file_name = "settings.json"
     __settings: Settings = Settings()
     __data: dict = None
+    __path_utils = PathUtils()
 
     def __new__(cls):
         if not hasattr(cls, "instance"):
@@ -28,6 +28,7 @@ class SettingsManager:
                 value = self.__data[field]
                 if not isinstance(value, list) and not isinstance(value, dict):
                     setattr(self.__settings, field, value)
+        return self.__settings
 
     def open(self, file_name: str = ""):
         ArgumentException.check_arg(file_name, str)
@@ -35,7 +36,7 @@ class SettingsManager:
             self.__file_name = file_name
         try:
             current_path = Path(__file__).resolve()
-            parent_path = PathUtils.get_parent_directory(current_path, levels_up=3)
+            parent_path = self.__path_utils.get_parent_directory(current_path, levels_up=3)
             full_name = f"{parent_path}{os.sep}{self.__file_name}"
             self.__data = FileReader.read_json(full_name)
             return True

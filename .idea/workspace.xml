@@ -5,15 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4afd156-2404-459e-a434-5121565aff87" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/recipe2.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abstract/base_comparing_by_name.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abstract/base_comparing_by_name.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abstract/base_comparing_by_uid.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abstract/base_comparing_by_uid.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/measurement_unit_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/measurement_unit_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/recipe1.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/recipe1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/measurement_units.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/measurement_units.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/data_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/data_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/ingridient.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/ingridient.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/nomenclature_group_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/nomenclature_group_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/nomenclature_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/nomenclature_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/organization_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/organization_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/storage_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/storage_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/recipe.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/recipe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/start_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/start_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +43,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="exception_handling" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -94,7 +94,7 @@
     &quot;Python.nomenclature_group_model.executor&quot;: &quot;Run&quot;,
     &quot;Python.settings_manager.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;#1 on exception__handling&quot;
+    &quot;git-widget-placeholder&quot;: &quot;recipe&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -201,7 +201,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-98f27166c754-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.21829.153" />
+        <option value="bundled-python-sdk-884f5ed5d46b-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.22855.92" />
       </set>
     </attachedChunks>
   </component>

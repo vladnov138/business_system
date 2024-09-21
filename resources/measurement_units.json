@@ -1,0 +1,34 @@
+{
+  "measurements": {
+    "г": {
+      "name": "г",
+      "unit": 1,
+      "base": null
+    },
+    "кг": {
+      "name": "кг",
+      "unit": 1000,
+      "base": "г"
+    },
+    "т": {
+      "name": "т",
+      "unit": 1000,
+      "base": "кг"
+    },
+    "шт": {
+      "name": "шт",
+      "unit": 1,
+      "base": null
+    },
+    "ч.л.": {
+      "name": "ч.л.",
+      "unit": 1,
+      "base": null
+    },
+    "мл": {
+      "name": "мл",
+      "unit": 1,
+      "base": null
+    }
+  }
+}

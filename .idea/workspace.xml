@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4afd156-2404-459e-a434-5121565aff87" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/settings/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/settings/settings_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/settings_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_data_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_data_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_exceptions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_settings.py" afterDir="false" />
     </list>
@@ -106,6 +108,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vladn\PycharmProjects\business_system\src\services" />
       <recent name="C:\Users\vladn\PycharmProjects\business_system\src\abstract" />
       <recent name="$PROJECT_DIR$/src/models" />
       <recent name="$PROJECT_DIR$" />

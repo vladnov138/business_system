@@ -6,7 +6,7 @@ from src.models.nomenclature_group_model import NomenclatureGroupModel
 from src.models.nomenclature_model import NomenclatureModel
 from src.models.recipe_model import RecipeModel
 from src.services.start_service import StartService
-from src.settings.settings_manager import SettingsManager
+from src.services.settings_manager import SettingsManager
 
 
 class TestDataRepository(unittest.TestCase):

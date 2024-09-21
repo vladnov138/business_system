@@ -2,7 +2,7 @@ import json
 import unittest
 
 from src.models.settings_model import Settings
-from src.settings.settings_manager import SettingsManager
+from src.services.settings_manager import SettingsManager
 
 
 class TestSettings(unittest.TestCase):

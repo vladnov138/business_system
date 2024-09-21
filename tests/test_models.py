@@ -11,7 +11,7 @@ from src.models.nomenclature_model import NomenclatureModel
 from src.models.organization_model import OrganizationModel
 from src.models.recipe_model import RecipeModel
 from src.models.storage_model import StorageModel
-from src.settings.settings_manager import SettingsManager
+from src.services.settings_manager import SettingsManager
 
 
 class TestModels(unittest.TestCase):

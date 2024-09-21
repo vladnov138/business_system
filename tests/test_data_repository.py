@@ -10,6 +10,10 @@ from src.settings.settings_manager import SettingsManager
 
 
 class TestDataRepository(unittest.TestCase):
+    """
+    Тестирует репозиторий
+    """
+
     def setUp(self):
         """
         Настройки перед каждым тестом

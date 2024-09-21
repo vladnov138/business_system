@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d4afd156-2404-459e-a434-5121565aff87" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/test_settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/test_settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/start_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/start_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/settings/settings_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings/settings_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_data_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_data_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_exceptions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +112,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in test_settings.py">
+  <component name="RunManager" selected="Python tests.Python tests in test_data_repository.py">
     <configuration name="start_service" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
@@ -197,8 +197,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests in test_settings.py" />
         <item itemvalue="Python tests.Python tests in test_data_repository.py" />
+        <item itemvalue="Python tests.Python tests in test_settings.py" />
         <item itemvalue="Python tests.Python tests in tests" />
         <item itemvalue="Python.start_service" />
         <item itemvalue="Python tests.Python tests in test_models.py" />

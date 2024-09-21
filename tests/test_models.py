@@ -4,10 +4,12 @@
 import unittest
 
 from src.exceptions.argument_exception import ArgumentException
+from src.models.ingridient_model import IngridientModel
 from src.models.measurement_unit_model import MeasurementUnitModel
 from src.models.nomenclature_group_model import NomenclatureGroupModel
 from src.models.nomenclature_model import NomenclatureModel
 from src.models.organization_model import OrganizationModel
+from src.models.recipe_model import RecipeModel
 from src.models.storage_model import StorageModel
 from src.settings.settings_manager import SettingsManager
 
@@ -150,3 +152,65 @@ class TestModels(unittest.TestCase):
         storage_name = "IdkWhatThis"
         storage = StorageModel(storage_name)
         assert storage.name == storage_name
+
+    def test_ingridient_model(self):
+        ml = MeasurementUnitModel("мл", 1)
+        ingridient = IngridientModel("Молоко", ml, 2)
+        assert ingridient.name == "Молоко"
+        assert ingridient.measurement_unit == ml
+        assert ingridient.amount == 2
+
+    def test_ingridient_setters(self):
+        ml = MeasurementUnitModel("мл", 1)
+        ingridient = IngridientModel("Молоко", ml, 2)
+        ingridient.name = "Молоко2"
+        ingridient.measurement_unit = ml
+        ingridient.amount = 3
+        assert ingridient.name == "Молоко2"
+        assert ingridient.measurement_unit == ml
+        assert ingridient.amount == 3
+
+    def test_recipe_model(self):
+        ml = MeasurementUnitModel("мл", 1)
+        ingridient = IngridientModel("Молоко", ml, 2)
+        recipe = RecipeModel("Молоко", [ingridient], 10, "description")
+        assert recipe.name == "Молоко"
+        assert len(recipe.ingridients) == 1
+        assert recipe.ingridients[0] == ingridient
+
+    def test_recipe_setters(self):
+        ml = MeasurementUnitModel("мл", 1)
+        ingridient = IngridientModel("Молоко", ml, 2)
+        recipe = RecipeModel("Молоко", [ingridient], 10, "description")
+        recipe.name = "Молоко2"
+        recipe.ingridients = [ingridient]
+        recipe.time = 20
+        recipe.description = "description2"
+        assert recipe.name == "Молоко2"
+        assert len(recipe.ingridients) == 1
+        assert recipe.ingridients[0] == ingridient
+        assert recipe.time == 20
+        assert recipe.description == "description2"
+
+    def test_ingridient_model_setters_exceptions(self):
+        ml = MeasurementUnitModel("мл", 1)
+        ingridient = IngridientModel("Молоко", ml, 2)
+        with self.assertRaises(ArgumentException):
+            ingridient.name = 123
+        with self.assertRaises(ArgumentException):
+            ingridient.measurement_unit = "мл"
+        with self.assertRaises(ArgumentException):
+            ingridient.amount = 0
+
+    def test_recipe_model_setters_exceptions(self):
+        ml = MeasurementUnitModel("мл", 1)
+        ingridient = IngridientModel("Молоко", ml, 2)
+        recipe = RecipeModel("Молоко", [ingridient], 10, "description")
+        with self.assertRaises(ArgumentException):
+            recipe.name = 123
+        with self.assertRaises(ArgumentException):
+            recipe.ingridients = ["123"]
+        with self.assertRaises(ArgumentException):
+            recipe.cooking_time_minutes = -10
+        with self.assertRaises(ArgumentException):
+            recipe.description = 123

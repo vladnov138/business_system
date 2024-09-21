@@ -2,7 +2,10 @@ import json
 import os
 from pathlib import Path
 
+from src.exceptions.argument_exception import ArgumentException
 from src.models.settings_model import Settings
+from src.utils.file_reader import FileReader
+from src.utils.path_utils import PathUtils
 
 
 class SettingsManager:
@@ -14,9 +17,6 @@ class SettingsManager:
         if not hasattr(cls, "instance"):
             cls.instance = super(SettingsManager, cls).__new__(cls)
         return cls.instance
-
-    # def __init__(self) -> None:
-    #     self.__settings = self.__default_settings()
 
     def convert(self):
         if self.__data is None:
@@ -30,18 +30,14 @@ class SettingsManager:
                     setattr(self.__settings, field, value)
 
     def open(self, file_name: str = ""):
-        if not isinstance(file_name, str):
-            raise TypeError("Invalid argument")
+        ArgumentException.check_arg(file_name, str)
         if file_name != "":
             self.__file_name = file_name
         try:
-            current_path_info = os.path.split(__file__)
-            current_path: str = current_path_info[0]
-            current_path = current_path[:current_path.rfind('/')]
-            current_path = current_path[:current_path.rfind('/')]
-            full_name = f"{current_path}{os.sep}{self.__file_name}"
-            with open(full_name) as stream:
-                self.__data = json.load(stream)
+            current_path = Path(__file__).resolve()
+            parent_path = PathUtils.get_parent_directory(current_path, levels_up=2)
+            full_name = f"{parent_path}{os.sep}{self.__file_name}"
+            self.__data = FileReader.read_json(full_name)
             return True
         except:
             self.__set_default_data()

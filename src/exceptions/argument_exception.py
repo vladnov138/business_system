@@ -27,6 +27,14 @@ class ArgumentException(Exception):
             )
 
     @staticmethod
+    def check_min_value(arg: int | float, min_value: float | int):
+        if arg < min_value:
+            arg_name = ArgumentException.__get_arg_name(arg)
+            raise ArgumentException(
+                f"Arg {arg_name} must be greater than {min_value}."
+            )
+
+    @staticmethod
     def __get_arg_name(arg):
         try:
             frame = inspect.currentframe().f_back.f_back

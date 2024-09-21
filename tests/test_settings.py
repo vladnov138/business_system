@@ -21,7 +21,7 @@ class TestSettings(unittest.TestCase):
     def test_file_loading(self):
         settings_manager = SettingsManager()
         file_path = "/resources/test_settings.json"
-        with open("../../" + file_path) as stream:
+        with open(".." + file_path) as stream:
             data: dict = json.load(stream)
         settings_manager.open(file_path)
         settings_manager.convert()

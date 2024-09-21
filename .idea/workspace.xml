@@ -5,13 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4afd156-2404-459e-a434-5121565aff87" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/test_data_repository.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/file_reader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/parser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/path_utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/data_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/data_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/settings_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/settings_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exceptions/argument_exception.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/exceptions/argument_exception.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/ingridient.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/ingridient_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/recipe.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/recipe_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/start_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/start_service.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/settings/settings_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings/settings_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_data_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_data_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,12 +58,12 @@
     &quot;assignee&quot;: &quot;vladnov138&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/vladnov138/business_system.git",
-    "accountId": "67d8ac6a-cd73-4066-9582-96612613f2bd"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/vladnov138/business_system.git&quot;,
+    &quot;accountId&quot;: &quot;67d8ac6a-cd73-4066-9582-96612613f2bd&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -72,7 +77,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Python tests.Python tests for test_data_repository.TestDataRepository.test_data_nomenclature_group.executor": "Debug",
+    "Python tests.Python tests for test_data_repository.TestDataRepository.executor": "Run",
+    "Python tests.Python tests for test_data_repository.TestDataRepository.test_data_measurement_units.executor": "Run",
+    "Python tests.Python tests for test_data_repository.TestDataRepository.test_data_nomenclature.executor": "Run",
+    "Python tests.Python tests for test_data_repository.TestDataRepository.test_data_nomenclature_group.executor": "Run",
+    "Python tests.Python tests for test_data_repository.TestDataRepository.test_data_recipes.executor": "Run",
     "Python tests.Python tests for test_exceptions.TestUtils.test_check_max_len_exceeded.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.test_measurement_base_unit_model.executor": "Run",
@@ -83,6 +92,7 @@
     "Python tests.Python tests for test_models.TestModels.test_nomenclature_group_model.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.test_nomenclature_model.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.test_organization_model.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_recipe_model_setters_exceptions.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.test_storage_model.executor": "Run",
     "Python tests.Python tests for test_settings.TestSettings.executor": "Run",
     "Python tests.Python tests for test_settings.TestSettings.test_file_loading.executor": "Debug",
@@ -90,6 +100,8 @@
     "Python tests.Python tests for test_settings.TestSettings.test_settings_manager_singletone.executor": "Run",
     "Python tests.Python tests for test_utils.TestUtils.executor": "Run",
     "Python tests.Python tests for test_utils.TestUtils.test_check_arg_invalid_type.executor": "Run",
+    "Python tests.Python tests in test_data_repository.py.executor": "Run",
+    "Python tests.Python tests in test_models.py.executor": "Run",
     "Python tests.Python tests in test_settings.py.executor": "Run",
     "Python tests.Python tests in tests.executor": "Run",
     "Python.main.executor": "Run",
@@ -107,8 +119,8 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in test_settings.py">
-    <configuration name="Python tests for test_data_repository.TestDataRepository.test_data_nomenclature_group" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests in tests">
+    <configuration name="Python tests for test_data_repository.TestDataRepository" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -119,11 +131,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_data_repository.TestDataRepository.test_data_nomenclature_group&quot;" />
+      <option name="_new_target" value="&quot;test_data_repository.TestDataRepository&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_settings.TestSettings.test_file_loading" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_models.TestModels.test_recipe_model_setters_exceptions" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -134,11 +146,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_settings.TestSettings.test_file_loading&quot;" />
+      <option name="_new_target" value="&quot;test_models.TestModels.test_recipe_model_setters_exceptions&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in test_exceptions.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests in test_data_repository.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -149,7 +161,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_exceptions.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_data_repository.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
@@ -168,7 +180,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in test_settings.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests in tests" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -179,17 +191,17 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_settings.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests in test_settings.py" />
-        <item itemvalue="Python tests.Python tests for test_settings.TestSettings.test_file_loading" />
-        <item itemvalue="Python tests.Python tests for test_data_repository.TestDataRepository.test_data_nomenclature_group" />
+        <item itemvalue="Python tests.Python tests in tests" />
+        <item itemvalue="Python tests.Python tests in test_data_repository.py" />
         <item itemvalue="Python tests.Python tests in test_models.py" />
-        <item itemvalue="Python tests.Python tests in test_exceptions.py" />
+        <item itemvalue="Python tests.Python tests for test_models.TestModels.test_recipe_model_setters_exceptions" />
+        <item itemvalue="Python tests.Python tests for test_data_repository.TestDataRepository" />
       </list>
     </recent_temporary>
   </component>
@@ -210,21 +222,5 @@
       <updated>1725783123123</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/services/start_service.py</url>
-          <line>31</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/settings/settings_manager.py</url>
-          <line>42</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -2,7 +2,7 @@
 Репозиторий
 """
 class DataRepository:
-    __data = []
+    __data = {}
 
     def __new__(cls):
         if not hasattr(cls, 'instance'):

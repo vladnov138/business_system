@@ -36,7 +36,9 @@ class SettingsManager:
             self.__file_name = file_name
         try:
             current_path_info = os.path.split(__file__)
-            current_path = current_path_info[0]
+            current_path: str = current_path_info[0]
+            current_path = current_path[:current_path.rfind('/')]
+            current_path = current_path[:current_path.rfind('/')]
             full_name = f"{current_path}{os.sep}{self.__file_name}"
             with open(full_name) as stream:
                 self.__data = json.load(stream)

@@ -20,8 +20,8 @@ class TestSettings(unittest.TestCase):
     """
     def test_file_loading(self):
         settings_manager = SettingsManager()
-        file_path = "../resources/test_settings.json"
-        with open(file_path) as stream:
+        file_path = "/resources/test_settings.json"
+        with open("../../" + file_path) as stream:
             data: dict = json.load(stream)
         settings_manager.open(file_path)
         settings_manager.convert()
@@ -44,7 +44,7 @@ class TestSettings(unittest.TestCase):
     """
     def test_settings_manager_singletone(self):
        manager1 = SettingsManager()
-       manager1.open("../settings.json")
+       manager1.open("resources/settings.json")
        manager2 = SettingsManager()
        assert manager1 == manager2
        assert manager1.settings.inn == manager2.settings.inn

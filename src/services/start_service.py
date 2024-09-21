@@ -8,15 +8,18 @@ from src.models.measurement_unit_model import MeasurementUnitModel
 from src.models.nomenclature_group_model import NomenclatureGroupModel
 from src.models.nomenclature_model import NomenclatureModel
 from src.models.recipe import Recipe
+from src.settings.settings_manager import SettingsManager
 
 
 class StartService:
     __repository: DataRepository = None
+    __settings_manager: SettingsManager = None
 
-    def __init__(self, repository: DataRepository) -> None:
+    def __init__(self, repository: DataRepository, settings_manager: SettingsManager):
         super().__init__()
         # validator.validate(repository, DataRepository)
         self.__repository = repository
+        self.__settings_manager = settings_manager
 
     def __create_nomenclature_groups(self):
         list = [NomenclatureGroupModel.default_group_cold(), NomenclatureGroupModel.default_group_source() ]
@@ -25,7 +28,7 @@ class StartService:
     def __create_measurement_units(self):
         current_path_info = os.path.split(__file__)
         current_path = current_path_info[0]
-        full_name = f"{current_path}{os.sep}{"/resources/measurements_units.json"}"
+        full_name = f"{current_path}{os.sep}{"resources/measurement_units.json"}"
         with open(full_name) as stream:
             data = json.load(stream)
         units = []
@@ -55,7 +58,7 @@ class StartService:
     def __create_recipe(self):
         current_path_info = os.path.split(__file__)
         current_path = current_path_info[0]
-        full_name = f"{current_path}{os.sep}{"/resources/measurements_units.json"}"
+        full_name = f"{current_path}{os.sep}{"resources/measurements_units.json"}"
         with open(full_name) as stream:
             recipe_text = json.load(stream)
         title_match = re.search(r'# (.+)', recipe_text)
@@ -96,5 +99,5 @@ class StartService:
     def create(self):
         self.__create_nomenclature_groups()
         self.__create_measurement_units()
-        self.__create_nomenclature()
-        self.__create_recipe()
+        # self.__create_nomenclature()
+        # self.__create_recipe()

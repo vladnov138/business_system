@@ -20,6 +20,17 @@ class NomenclatureModel(BaseComparingByName):
         self.__measurement_unit = measurement_unit
         self.__full_name = full_name
 
+    @staticmethod
+    def default_flour_nomenclature(group: NomenclatureGroupModel, measurement_unit: MeasurementUnitModel):
+        nomenclature = NomenclatureModel("Мука", group, measurement_unit)
+        return nomenclature
+
+    @staticmethod
+    def default_ice_nomenclature(group: NomenclatureGroupModel, measurement_unit: MeasurementUnitModel):
+        nomenclature = NomenclatureModel("Лёд", group, measurement_unit)
+        return nomenclature
+
+
     @property
     def full_name(self):
         return self.__full_name

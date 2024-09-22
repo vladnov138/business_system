@@ -10,6 +10,9 @@ class Settings:
     __bik = ""
     __business_type = ""
 
+    __recipe_folder = ""
+    __measurement_units_path = ""
+
     @property
     def organization_name(self):
         return self.__organization_name
@@ -77,6 +80,22 @@ class Settings:
         ArgumentException.check_arg(value, str)
         ArgumentException.check_exact_length(value, 5)
         self.__business_type = value
+
+    @property
+    def recipe_folder(self):
+        return self.__recipe_folder
+
+    @recipe_folder.setter
+    def recipe_folder(self, value):
+        self.__recipe_folder = value
+
+    @property
+    def measurement_units_path(self):
+        return self.__measurement_units_path
+
+    @measurement_units_path.setter
+    def measurement_units_path(self, value):
+        self.__measurement_units_path = value
 
     def __str__(self):
         return f"""Settings(Organization Name: {self.organization_name}

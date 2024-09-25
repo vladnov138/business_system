@@ -16,6 +16,7 @@ class Settings:
 
     __report_format: FormatReporting = None
     __format_reports: dict = {}
+    __report_classes_folder = ""
 
     @property
     def organization_name(self):
@@ -107,7 +108,7 @@ class Settings:
 
     @report_format.setter
     def report_format(self, value: FormatReporting):
-        # ArgumentException.check_arg(value, FormatReporting)
+        ArgumentException.check_arg(value, FormatReporting)
         self.__report_format = value
 
     @property
@@ -118,6 +119,15 @@ class Settings:
     def format_reports(self, value: dict):
         ArgumentException.check_arg(value, dict)
         self.__format_reports = value
+
+    @property
+    def report_classes_folder(self):
+        return self.__report_classes_folder
+
+    @report_classes_folder.setter
+    def report_classes_folder(self, value: str):
+        ArgumentException.check_arg(value, str)
+        self.__report_classes_folder = value
 
     def __str__(self):
         return f"""Settings(Organization Name: {self.organization_name}

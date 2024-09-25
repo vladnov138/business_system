@@ -5,16 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4afd156-2404-459e-a434-5121565aff87" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/business_system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/business_system.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/test_settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/test_settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abstract/abstract_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abstract/abstract_report.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/settings_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/settings_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reports/report_factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/reports/report_factory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reports/rtf_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/reports/rtf_report.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/settings_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/settings_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_reporting.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_reporting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +93,9 @@
     "Python tests.Python tests for test_models.TestModels.test_organization_model_converting.executor": "Debug",
     "Python tests.Python tests for test_models.TestModels.test_recipe_model_setters_exceptions.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.test_storage_model.executor": "Run",
+    "Python tests.Python tests for test_reporting.TestReporting.test_csv_report_create_measurement_unit.executor": "Debug",
+    "Python tests.Python tests for test_reporting.TestReporting.test_rtf_report_create_nomenclature.executor": "Run",
+    "Python tests.Python tests for test_reporting.TestReporting.test_xml_report_create_measurement_unit.executor": "Run",
     "Python tests.Python tests for test_settings.TestSettings.executor": "Run",
     "Python tests.Python tests for test_settings.TestSettings.test_file_loading.executor": "Debug",
     "Python tests.Python tests for test_settings.TestSettings.test_settings_manager_open_fail.executor": "Run",
@@ -110,7 +114,8 @@
     "Python.start_service.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "report__factory",
-    "last_opened_file_path": "/home/vladnov138/PycharmProjects/business_system/src/reports"
+    "last_opened_file_path": "/home/vladnov138/PycharmProjects/business_system/src/reports",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -126,29 +131,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Python tests.Python tests in tests">
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="business_system" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_models.TestModels.test_organization_model_converting" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_reporting.TestReporting.test_csv_report_create_measurement_unit" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -159,11 +142,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_models.TestModels.test_organization_model_converting&quot;" />
+      <option name="_new_target" value="&quot;test_reporting.TestReporting.test_csv_report_create_measurement_unit&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_settings.TestSettings.test_file_loading" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_reporting.TestReporting.test_rtf_report_create_nomenclature" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -174,11 +157,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_settings.TestSettings.test_file_loading&quot;" />
+      <option name="_new_target" value="&quot;test_reporting.TestReporting.test_rtf_report_create_nomenclature&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in test_settings.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_reporting.TestReporting.test_xml_report_create_measurement_unit" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -189,7 +172,22 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_settings.py&quot;" />
+      <option name="_new_target" value="&quot;test_reporting.TestReporting.test_xml_report_create_measurement_unit&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in test_reporting.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="business_system" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_reporting.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
@@ -211,10 +209,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Python tests in tests" />
-        <item itemvalue="Python tests.Python tests for test_models.TestModels.test_organization_model_converting" />
-        <item itemvalue="Python tests.Python tests for test_settings.TestSettings.test_file_loading" />
-        <item itemvalue="Python tests.Python tests in test_settings.py" />
-        <item itemvalue="Python.main" />
+        <item itemvalue="Python tests.Python tests in test_reporting.py" />
+        <item itemvalue="Python tests.Python tests for test_reporting.TestReporting.test_rtf_report_create_nomenclature" />
+        <item itemvalue="Python tests.Python tests for test_reporting.TestReporting.test_xml_report_create_measurement_unit" />
+        <item itemvalue="Python tests.Python tests for test_reporting.TestReporting.test_csv_report_create_measurement_unit" />
       </list>
     </recent_temporary>
   </component>

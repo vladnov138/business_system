@@ -8,6 +8,7 @@
   "business_type": "AAAAA",
   "recipe_folder": "docs/",
   "measurement_units_path": "resources/measurement_units.json",
+  "report_classes_folder": "src/reports",
   "report_format": "CSV",
   "format_reports": {
     "CSV": "csv_report",

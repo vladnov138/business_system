@@ -1,5 +1,7 @@
 import unittest
 
+from PyRTF.Elements import Document
+
 from src.abstract.format_reporting import FormatReporting
 from src.data.data_repository import DataRepository
 from src.reports.csv_report import CsvReport
@@ -37,6 +39,7 @@ class TestReporting(unittest.TestCase):
         """
         report = CsvReport()
         report.create(self.repository.data[self.repository.measurement_unit_key()])
+        report.export("reports/report_measurement_unit.csv")
         assert report.result != ""
 
     def test_csv_report_create_nomenclature(self):
@@ -46,6 +49,7 @@ class TestReporting(unittest.TestCase):
         """
         report = CsvReport()
         report.create(self.repository.data[self.repository.nomenclature_key()])
+        report.export("reports/report_nomenclature.csv")
         assert report.result != ""
 
     def test_report_factory_create(self):
@@ -64,6 +68,7 @@ class TestReporting(unittest.TestCase):
         """
         report = MdReport()
         report.create(self.repository.data[self.repository.measurement_unit_key()])
+        report.export("reports/report_measurement_unit.md")
         assert report.result != ""
 
     def test_md_report_create_nomenclature(self):
@@ -73,6 +78,7 @@ class TestReporting(unittest.TestCase):
         """
         report = MdReport()
         report.create(self.repository.data[self.repository.nomenclature_key()])
+        report.export("reports/report_nomenclature.md")
         assert report.result != ""
 
     def test_json_report_create_measurement_unit(self):
@@ -82,6 +88,7 @@ class TestReporting(unittest.TestCase):
         """
         report = JsonReport()
         report.create(self.repository.data[self.repository.measurement_unit_key()])
+        report.export("reports/report_measurement_unit.json")
         assert report.result != ""
 
     def test_json_report_create_nomenclature(self):
@@ -91,6 +98,7 @@ class TestReporting(unittest.TestCase):
         """
         report = JsonReport()
         report.create(self.repository.data[self.repository.nomenclature_key()])
+        report.export("reports/report_nomenclature.json")
         assert report.result != ""
 
     def test_xml_report_create_measurement_unit(self):
@@ -100,6 +108,7 @@ class TestReporting(unittest.TestCase):
         """
         report = XmlReport()
         report.create(self.repository.data[self.repository.measurement_unit_key()])
+        report.export("reports/report_measurement_unit.xml")
         assert report.result != ""
 
     def test_xml_report_create_nomenclature(self):
@@ -109,6 +118,7 @@ class TestReporting(unittest.TestCase):
         """
         report = XmlReport()
         report.create(self.repository.data[self.repository.nomenclature_key()])
+        report.export("reports/report_nomenclature.xml")
         assert report.result != ""
 
     def test_rtf_report_create_measurement_unit(self):
@@ -118,7 +128,9 @@ class TestReporting(unittest.TestCase):
         """
         report = RtfReport()
         report.create(self.repository.data[self.repository.measurement_unit_key()])
+        report.export("reports/report_measurement_unit.rtf")
         assert report.result != ""
+        assert isinstance(report.document, Document)
 
     def test_rtf_report_create_nomenclature(self):
         """
@@ -127,7 +139,9 @@ class TestReporting(unittest.TestCase):
         """
         report = RtfReport()
         report.create(self.repository.data[self.repository.nomenclature_key()])
+        report.export("reports/report_nomenclature.rtf")
         assert report.result != ""
+        assert isinstance(report.document, Document)
 
 if __name__ == "__main__":
     unittest.main()

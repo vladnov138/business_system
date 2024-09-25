@@ -25,7 +25,6 @@ class ReportFactory(AbstractLogic):
         """
         ArgumentException.check_arg(format, FormatReporting)
         if format not in self.__reports.keys():
-            # raise operation_exception(f"Указанный вариант формата не реализован!")
             self.set_exception(OperationException(f"Указанный вариант формата не реализован!"))
         report = self.__reports[format]
         return report()

@@ -20,13 +20,15 @@ class SettingsManager:
             cls.instance = super(SettingsManager, cls).__new__(cls)
         return cls.instance
 
-    def __convert_report_formats(self):
+    def __convert_format_reports(self, path):
         key = "format_reports"
+        if key not in self.__data:
+            raise OperationException(f"Ключ {key} отсутствует в файле настроек!")
         format_data = self.__data[key]
         result = {}
         for format in format_data:
             class_name = format_data[format]
-            module = __import__('src.reports', fromlist=[class_name])
+            module = __import__(path.replace('/', '.'), fromlist=[class_name])
             report_class_file = getattr(module, class_name)
             classes = dir(report_class_file)
             capitalized_class_name = class_name.title().replace('_', '')
@@ -37,6 +39,7 @@ class SettingsManager:
             result[format_name] = report_class
         setattr(self.__settings, key, result)
 
+
     def convert(self):
         if self.__data is None:
             raise AttributeError()
@@ -45,9 +48,12 @@ class SettingsManager:
             keys = list(filter(lambda x: x == field, self.__data.keys()))
             if len(keys) != 0:
                 value = self.__data[field]
-                if not isinstance(value, list) and not isinstance(value, dict):
+                report_format_key = "report_format"
+                if not isinstance(value, list) and not isinstance(value, dict) and field != report_format_key:
                     setattr(self.__settings, field, value)
-        self.__convert_report_formats()
+                elif field == report_format_key:
+                    self.__settings.report_format = list(filter(lambda x: x.name == value, FormatReporting))[0]
+        self.__convert_format_reports(self.__settings.report_classes_folder)
         return self.__settings
 
     def open(self, file_name: str = ""):

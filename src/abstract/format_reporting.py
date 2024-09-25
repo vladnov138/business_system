@@ -1,7 +1,9 @@
-from enum import Enum
+from enum import Enum, auto
 
 
 class FormatReporting(Enum):
-    CSV = 1
-    MARKDOWN = 2
-    JSON = 3
+    CSV = auto()
+    MARKDOWN = auto()
+    JSON = auto()
+    XML = auto()
+    RTF = auto()

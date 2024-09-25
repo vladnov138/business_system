@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4afd156-2404-459e-a434-5121565aff87" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/abstract/abstract_report.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/abstract/format_reporting.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reports/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reports/csv_report.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reports/json_report.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reports/md_report.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reports/report_factory.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reports/xml_report.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_reporting.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reports/rtf_report.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abstract/abstract_reference.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abstract/abstract_reference.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abstract/format_reporting.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abstract/format_reporting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reports/md_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/reports/md_report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reports/xml_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/reports/xml_report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_reporting.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_reporting.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +40,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="exception_handling" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -56,12 +51,12 @@
     &quot;assignee&quot;: &quot;vladnov138&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/vladnov138/business_system.git&quot;,
-    &quot;accountId&quot;: &quot;67d8ac6a-cd73-4066-9582-96612613f2bd&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/vladnov138/business_system.git",
+    "accountId": "89db990f-1e6a-4a46-8a70-396d7bafa47d"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -125,7 +120,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in test_data_repository.py">
+  <component name="RunManager" selected="Python tests.Python tests in test_reporting.py">
     <configuration name="Python tests in test_data_repository.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
@@ -171,7 +166,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in test_settings.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests in test_reporting.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -182,7 +177,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_settings.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_reporting.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
@@ -203,18 +198,18 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests in test_reporting.py" />
+        <item itemvalue="Python tests.Python tests in tests" />
         <item itemvalue="Python tests.Python tests in test_data_repository.py" />
         <item itemvalue="Python tests.Python tests in test_exceptions.py" />
         <item itemvalue="Python tests.Python tests in test_models.py" />
-        <item itemvalue="Python tests.Python tests in test_settings.py" />
-        <item itemvalue="Python tests.Python tests in tests" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-98f27166c754-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.21829.153" />
+        <option value="bundled-python-sdk-884f5ed5d46b-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.22855.92" />
       </set>
     </attachedChunks>
   </component>

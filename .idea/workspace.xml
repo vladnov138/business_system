@@ -5,16 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4afd156-2404-459e-a434-5121565aff87" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/abstract/abstract_logic.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/measurement_unit_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/recipe_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstract/abstract_report.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstract/format_reporting.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reports/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reports/csv_report.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reports/json_report.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reports/md_report.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reports/report_factory.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reports/xml_report.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_reporting.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/nomenclature_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/nomenclature_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/settings_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/settings_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/start_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/start_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/path_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/path_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abstract/abstract_reference.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abstract/abstract_reference.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +99,9 @@
     "Python tests.Python tests for test_utils.TestUtils.executor": "Run",
     "Python tests.Python tests for test_utils.TestUtils.test_check_arg_invalid_type.executor": "Run",
     "Python tests.Python tests in test_data_repository.py.executor": "Run",
+    "Python tests.Python tests in test_exceptions.py.executor": "Run",
     "Python tests.Python tests in test_models.py.executor": "Run",
+    "Python tests.Python tests in test_reporting.py.executor": "Run",
     "Python tests.Python tests in test_settings.py.executor": "Run",
     "Python tests.Python tests in tests.executor": "Run",
     "Python.main.executor": "Run",
@@ -106,10 +109,14 @@
     "Python.settings_manager.executor": "Run",
     "Python.start_service.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "recipe"
+    "git-widget-placeholder": "report__factory",
+    "last_opened_file_path": "/home/vladnov138/PycharmProjects/business_system/src/reports"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/reports" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\vladn\PycharmProjects\business_system\src\services" />
       <recent name="C:\Users\vladn\PycharmProjects\business_system\src\abstract" />
@@ -118,44 +125,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in tests">
-    <configuration name="start_service" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="business_system" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/services" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/services/start_service.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_settings.TestSettings.test_file_loading" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="business_system" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_settings.TestSettings.test_file_loading&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Python tests in test_data_repository.py">
     <configuration name="Python tests in test_data_repository.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
@@ -168,6 +138,36 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_data_repository.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in test_exceptions.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="business_system" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_exceptions.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in test_models.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="business_system" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_models.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
@@ -203,11 +203,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests in tests" />
         <item itemvalue="Python tests.Python tests in test_data_repository.py" />
-        <item itemvalue="Python tests.Python tests for test_settings.TestSettings.test_file_loading" />
+        <item itemvalue="Python tests.Python tests in test_exceptions.py" />
+        <item itemvalue="Python tests.Python tests in test_models.py" />
         <item itemvalue="Python tests.Python tests in test_settings.py" />
-        <item itemvalue="Python.start_service" />
+        <item itemvalue="Python tests.Python tests in tests" />
       </list>
     </recent_temporary>
   </component>

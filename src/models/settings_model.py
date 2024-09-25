@@ -1,3 +1,4 @@
+from src.abstract.format_reporting import FormatReporting
 from src.exceptions.argument_exception import ArgumentException
 
 
@@ -12,6 +13,9 @@ class Settings:
 
     __recipe_folder = ""
     __measurement_units_path = ""
+
+    __report_format: FormatReporting = None
+    __format_reports: dict = {}
 
     @property
     def organization_name(self):
@@ -96,6 +100,24 @@ class Settings:
     @measurement_units_path.setter
     def measurement_units_path(self, value):
         self.__measurement_units_path = value
+
+    @property
+    def report_format(self):
+        return self.__report_format
+
+    @report_format.setter
+    def report_format(self, value: FormatReporting):
+        # ArgumentException.check_arg(value, FormatReporting)
+        self.__report_format = value
+
+    @property
+    def format_reports(self):
+        return self.__format_reports
+
+    @format_reports.setter
+    def format_reports(self, value: dict):
+        ArgumentException.check_arg(value, dict)
+        self.__format_reports = value
 
     def __str__(self):
         return f"""Settings(Organization Name: {self.organization_name}

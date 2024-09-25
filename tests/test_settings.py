@@ -29,7 +29,10 @@ class TestSettings(unittest.TestCase):
             data: dict = json.load(stream)
         settings_manager.open(file_path)
         settings_manager.convert()
-        settings_attrs = dir(settings_manager.settings)
+        # settings_attrs = dir(settings_manager.settings)
+        settings = settings_manager.settings
+        settings_attrs = list(filter(lambda x: not x.startswith("_") and not callable(getattr(settings.__class__, x)),
+                             dir(settings)))
         for field in data.keys():
             if field not in settings_attrs:
                 self.assertFalse(True)

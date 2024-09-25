@@ -25,9 +25,9 @@ class TestReporting(unittest.TestCase):
         settings_manager = SettingsManager()
         settings_manager.open("resources/settings.json")
         settings_manager.convert()
-        settings = settings_manager.settings
+        self.settings = settings_manager.settings
         self.repository = DataRepository()
-        self.start = StartService(self.repository, settings)
+        self.start = StartService(self.repository, self.settings)
         self.start.create()
 
     def test_csv_report_create_measurement_unit(self):
@@ -53,7 +53,7 @@ class TestReporting(unittest.TestCase):
         Проверка работы фабрики отчетов
         :return:
         """
-        report = ReportFactory().create(FormatReporting.CSV)
+        report = ReportFactory(self.settings).create(FormatReporting.CSV)
         assert report is not None
         assert isinstance(report, CsvReport)
 

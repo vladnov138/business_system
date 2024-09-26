@@ -1,7 +1,9 @@
 import os
 from pathlib import Path
 
+from src.abstract.format_reporting import FormatReporting
 from src.exceptions.argument_exception import ArgumentException
+from src.exceptions.operation_exception import OperationException
 from src.models.settings_model import Settings
 from src.utils.file_reader import FileReader
 from src.utils.path_utils import PathUtils
@@ -18,6 +20,26 @@ class SettingsManager:
             cls.instance = super(SettingsManager, cls).__new__(cls)
         return cls.instance
 
+    def __convert_format_reports(self, path):
+        key = "format_reports"
+        if key not in self.__data:
+            raise OperationException(f"Ключ {key} отсутствует в файле настроек!")
+        format_data = self.__data[key]
+        result = {}
+        for format in format_data:
+            class_name = format_data[format]
+            module = __import__(path.replace('/', '.'), fromlist=[class_name])
+            report_class_file = getattr(module, class_name)
+            classes = dir(report_class_file)
+            capitalized_class_name = class_name.title().replace('_', '')
+            if capitalized_class_name not in classes:
+                raise OperationException(f"Класс отчета {class_name} не реализован!")
+            report_class = getattr(report_class_file, capitalized_class_name)
+            format_name = list(filter(lambda x: x.name == format, FormatReporting))[0]
+            result[format_name] = report_class
+        setattr(self.__settings, key, result)
+
+
     def convert(self):
         if self.__data is None:
             raise AttributeError()
@@ -26,8 +48,12 @@ class SettingsManager:
             keys = list(filter(lambda x: x == field, self.__data.keys()))
             if len(keys) != 0:
                 value = self.__data[field]
-                if not isinstance(value, list) and not isinstance(value, dict):
+                report_format_key = "report_format"
+                if not isinstance(value, list) and not isinstance(value, dict) and field != report_format_key:
                     setattr(self.__settings, field, value)
+                elif field == report_format_key:
+                    self.__settings.report_format = list(filter(lambda x: x.name == value, FormatReporting))[0]
+        self.__convert_format_reports(self.__settings.report_classes_folder)
         return self.__settings
 
     def open(self, file_name: str = ""):
@@ -37,10 +63,13 @@ class SettingsManager:
         try:
             current_path = Path(__file__).resolve()
             parent_path = self.__path_utils.get_parent_directory(current_path, levels_up=3)
-            full_name = f"{parent_path}{os.sep}{self.__file_name}"
+            if not Path(self.__file_name).is_absolute():
+                full_name = f"{parent_path}{os.sep}{self.__file_name}"
+            else:
+                full_name = self.__file_name
             self.__data = FileReader.read_json(full_name)
             return True
-        except:
+        except Exception as ex:
             self.__set_default_data()
             return False
 

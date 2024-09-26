@@ -42,3 +42,6 @@ class AbstractReference(ABC):
     @abstractmethod
     def __ne__(self, other):
         pass
+
+    def __str__(self) -> str:
+        return self.__uid

@@ -1,3 +1,4 @@
+
 from src.services.settings_manager import SettingsManager
 
 manager1 = SettingsManager()

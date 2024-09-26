@@ -1,0 +1,39 @@
+{
+  "NomenclatureModel": [
+    {
+      "full_name": null,
+      "measurement_unit": {
+        "name": "\u043a\u0433",
+        "uid": "a42fd6ff-185e-40b2-83af-35ca963a2957",
+        "unit": 1000.0,
+        "base_measure_unit": {
+          "name": "\u0433",
+          "uid": "cd00d1e9-fca2-4e06-8a45-2397df007362",
+          "unit": 1.0,
+          "base_measure_unit": null
+        }
+      },
+      "name": "\u041c\u0443\u043a\u0430",
+      "nomenclature_group": {
+        "name": "\u0421\u044b\u0440\u044c\u0451",
+        "uid": "84319583-4260-4db3-b18c-9369c9e0063d"
+      },
+      "uid": "183dcd71-e38d-40c1-8bef-e18c05d5045c"
+    },
+    {
+      "full_name": null,
+      "measurement_unit": {
+        "name": "\u0433",
+        "uid": "cd00d1e9-fca2-4e06-8a45-2397df007362",
+        "unit": 1.0,
+        "base_measure_unit": null
+      },
+      "name": "\u041b\u0451\u0434",
+      "nomenclature_group": {
+        "name": "\u0417\u0430\u043c\u043e\u0440\u043e\u0437\u043a\u0430",
+        "uid": "0653fd83-dfbe-4bcd-8156-7b861201d608"
+      },
+      "uid": "f2d803f5-40bc-41ea-a63e-a2fb3a8ef8e6"
+    }
+  ]
+}

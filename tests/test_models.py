@@ -133,7 +133,7 @@ class TestModels(unittest.TestCase):
             """
 
     settings_manager = SettingsManager()
-    file_path = "../resources/test_settings.json"
+    file_path = "resources/test_settings.json"
     settings_manager.open(file_path)
     settings_manager.convert()
     settings = settings_manager.settings

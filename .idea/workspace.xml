@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4afd156-2404-459e-a434-5121565aff87" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/abstract/abstract_logic.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/measurement_unit_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/recipe_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/nomenclature_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/nomenclature_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/settings_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/settings_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/start_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/start_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/path_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/path_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abstract/abstract_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abstract/abstract_report.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +36,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="exception_handling" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -89,8 +81,13 @@
     "Python tests.Python tests for test_models.TestModels.test_nomenclature_group_model.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.test_nomenclature_model.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.test_organization_model.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_organization_model_converting.executor": "Debug",
     "Python tests.Python tests for test_models.TestModels.test_recipe_model_setters_exceptions.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.test_storage_model.executor": "Run",
+    "Python tests.Python tests for test_reporting.TestReporting.test_csv_report_create_measurement_unit.executor": "Debug",
+    "Python tests.Python tests for test_reporting.TestReporting.test_json_report_create_measurement_unit.executor": "Debug",
+    "Python tests.Python tests for test_reporting.TestReporting.test_rtf_report_create_nomenclature.executor": "Run",
+    "Python tests.Python tests for test_reporting.TestReporting.test_xml_report_create_measurement_unit.executor": "Run",
     "Python tests.Python tests for test_settings.TestSettings.executor": "Run",
     "Python tests.Python tests for test_settings.TestSettings.test_file_loading.executor": "Run",
     "Python tests.Python tests for test_settings.TestSettings.test_settings_manager_open_fail.executor": "Run",
@@ -98,18 +95,25 @@
     "Python tests.Python tests for test_utils.TestUtils.executor": "Run",
     "Python tests.Python tests for test_utils.TestUtils.test_check_arg_invalid_type.executor": "Run",
     "Python tests.Python tests in test_data_repository.py.executor": "Run",
+    "Python tests.Python tests in test_exceptions.py.executor": "Run",
     "Python tests.Python tests in test_models.py.executor": "Run",
-    "Python tests.Python tests in test_settings.py.executor": "Run",
+    "Python tests.Python tests in test_reporting.py.executor": "Run",
+    "Python tests.Python tests in test_settings.py.executor": "Debug",
     "Python tests.Python tests in tests.executor": "Run",
-    "Python.main.executor": "Run",
+    "Python.main.executor": "Debug",
     "Python.nomenclature_group_model.executor": "Run",
     "Python.settings_manager.executor": "Run",
     "Python.start_service.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "recipe"
+    "git-widget-placeholder": "#3 on report__factory",
+    "last_opened_file_path": "/home/vladnov138/PycharmProjects/business_system/src/reports",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/reports" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\vladn\PycharmProjects\business_system\src\services" />
       <recent name="C:\Users\vladn\PycharmProjects\business_system\src\abstract" />
@@ -119,26 +123,34 @@
     </key>
   </component>
   <component name="RunManager" selected="Python tests.Python tests in tests">
-    <configuration name="start_service" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_reporting.TestReporting.test_json_report_create_measurement_unit" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/services" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/services/start_service.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_reporting.TestReporting.test_json_report_create_measurement_unit&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_reporting.TestReporting.test_xml_report_create_measurement_unit" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="business_system" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_reporting.TestReporting.test_xml_report_create_measurement_unit&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="Python tests for test_settings.TestSettings.test_file_loading" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
@@ -156,7 +168,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in test_data_repository.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests in test_reporting.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -167,22 +179,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_data_repository.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests in test_settings.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="business_system" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_settings.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_reporting.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
@@ -204,10 +201,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Python tests in tests" />
-        <item itemvalue="Python tests.Python tests in test_data_repository.py" />
         <item itemvalue="Python tests.Python tests for test_settings.TestSettings.test_file_loading" />
-        <item itemvalue="Python tests.Python tests in test_settings.py" />
-        <item itemvalue="Python.start_service" />
+        <item itemvalue="Python tests.Python tests in test_reporting.py" />
+        <item itemvalue="Python tests.Python tests for test_reporting.TestReporting.test_xml_report_create_measurement_unit" />
+        <item itemvalue="Python tests.Python tests for test_reporting.TestReporting.test_json_report_create_measurement_unit" />
       </list>
     </recent_temporary>
   </component>
@@ -228,5 +225,21 @@
       <updated>1725783123123</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/reports/rtf_report.py</url>
+          <line>55</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

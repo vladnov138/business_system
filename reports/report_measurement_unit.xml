@@ -3,52 +3,52 @@
   <item>
     <base_measure_unit>None</base_measure_unit>
     <name>г</name>
-    <uid>63b780e9-8c5e-471e-bb92-819dbcb3affd</uid>
+    <uid>fcb640a3-0332-4a30-b66b-48d43007fd40</uid>
     <unit>1.0</unit>
   </item>
   <item>
     <base_measure_unit>
       <name>г</name>
-      <uid>63b780e9-8c5e-471e-bb92-819dbcb3affd</uid>
+      <uid>fcb640a3-0332-4a30-b66b-48d43007fd40</uid>
       <unit>1.0</unit>
       <base_measure_unit>None</base_measure_unit>
     </base_measure_unit>
     <name>кг</name>
-    <uid>1e3084a0-a601-418d-a1ab-1eb607e37e38</uid>
+    <uid>49ef0b6e-3300-49ea-822e-f6f64ea0bbde</uid>
     <unit>1000.0</unit>
   </item>
   <item>
     <base_measure_unit>
       <name>кг</name>
-      <uid>1e3084a0-a601-418d-a1ab-1eb607e37e38</uid>
+      <uid>49ef0b6e-3300-49ea-822e-f6f64ea0bbde</uid>
       <unit>1000.0</unit>
       <base_measure_unit>
         <name>г</name>
-        <uid>63b780e9-8c5e-471e-bb92-819dbcb3affd</uid>
+        <uid>fcb640a3-0332-4a30-b66b-48d43007fd40</uid>
         <unit>1.0</unit>
         <base_measure_unit>None</base_measure_unit>
       </base_measure_unit>
     </base_measure_unit>
     <name>т</name>
-    <uid>f9661f57-45a5-4d99-b720-afe5ce1ee1f3</uid>
+    <uid>7a1c1e57-2052-44cb-8a72-761246218428</uid>
     <unit>1000.0</unit>
   </item>
   <item>
     <base_measure_unit>None</base_measure_unit>
     <name>шт</name>
-    <uid>3aff68e5-2772-4e4c-bd29-38d801d79c10</uid>
+    <uid>4e5a2fb6-a8f5-4876-95b6-ec6d7bc82e7d</uid>
     <unit>1.0</unit>
   </item>
   <item>
     <base_measure_unit>None</base_measure_unit>
     <name>ч.л.</name>
-    <uid>586ef4a0-2ec7-4f54-846a-dd7c92d33ced</uid>
+    <uid>4eba0fc5-344e-4416-a008-525bb7b56fa1</uid>
     <unit>1.0</unit>
   </item>
   <item>
     <base_measure_unit>None</base_measure_unit>
     <name>мл</name>
-    <uid>22f8af90-0297-40e4-98ef-99b91dd58822</uid>
+    <uid>0be3d9b8-3f70-40c1-b5ec-b7ee38089133</uid>
     <unit>1.0</unit>
   </item>
 </MeasurementUnitModel>

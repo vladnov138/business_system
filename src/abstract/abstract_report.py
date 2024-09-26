@@ -37,9 +37,10 @@ class AbstractReport(ABC):
     def export(self, path, path_utils: PathUtils = PathUtils()):
         ArgumentException.check_arg(path, str)
         ArgumentException.check_arg(path_utils, PathUtils)
-        current_path = Path(__file__).resolve()
-        parent_path = path_utils.get_parent_directory(current_path, levels_up=3)
-        full_name = os.path.join(parent_path, path)
+        current_path_info = os.path.split(__file__)
+        current_path = current_path_info[0]
+        parent_path = path_utils.get_parent_directory(current_path, levels_up=2)
+        full_name = f"{parent_path}{os.sep}{path}"
         Path(str(full_name)).parent.mkdir(parents=True, exist_ok=True)
         with open(full_name, "w", encoding='utf-8') as file:
             file.write(self._result)

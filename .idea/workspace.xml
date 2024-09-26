@@ -16,8 +16,8 @@
       <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.md" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.rtf" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.rtf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reports/xml_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/reports/xml_report.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/xml_encoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/xml_encoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abstract/abstract_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abstract/abstract_report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/settings_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/settings_manager.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +100,7 @@
     "Python tests.Python tests for test_reporting.TestReporting.test_rtf_report_create_nomenclature.executor": "Run",
     "Python tests.Python tests for test_reporting.TestReporting.test_xml_report_create_measurement_unit.executor": "Run",
     "Python tests.Python tests for test_settings.TestSettings.executor": "Run",
-    "Python tests.Python tests for test_settings.TestSettings.test_file_loading.executor": "Debug",
+    "Python tests.Python tests for test_settings.TestSettings.test_file_loading.executor": "Run",
     "Python tests.Python tests for test_settings.TestSettings.test_settings_manager_open_fail.executor": "Run",
     "Python tests.Python tests for test_settings.TestSettings.test_settings_manager_singletone.executor": "Run",
     "Python tests.Python tests for test_utils.TestUtils.executor": "Run",
@@ -108,7 +108,7 @@
     "Python tests.Python tests in test_data_repository.py.executor": "Run",
     "Python tests.Python tests in test_exceptions.py.executor": "Run",
     "Python tests.Python tests in test_models.py.executor": "Run",
-    "Python tests.Python tests in test_reporting.py.executor": "Debug",
+    "Python tests.Python tests in test_reporting.py.executor": "Run",
     "Python tests.Python tests in test_settings.py.executor": "Debug",
     "Python tests.Python tests in tests.executor": "Run",
     "Python.main.executor": "Debug",
@@ -133,7 +133,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_reporting.TestReporting.test_xml_report_create_measurement_unit">
+  <component name="RunManager" selected="Python tests.Python tests in tests">
     <configuration name="Python tests for test_reporting.TestReporting.test_json_report_create_measurement_unit" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
@@ -149,21 +149,6 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_reporting.TestReporting.test_rtf_report_create_nomenclature" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="business_system" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_reporting.TestReporting.test_rtf_report_create_nomenclature&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Python tests for test_reporting.TestReporting.test_xml_report_create_measurement_unit" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
@@ -176,6 +161,21 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_reporting.TestReporting.test_xml_report_create_measurement_unit&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_settings.TestSettings.test_file_loading" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="business_system" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_settings.TestSettings.test_file_loading&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -211,11 +211,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for test_reporting.TestReporting.test_xml_report_create_measurement_unit" />
-        <item itemvalue="Python tests.Python tests in test_reporting.py" />
-        <item itemvalue="Python tests.Python tests for test_reporting.TestReporting.test_json_report_create_measurement_unit" />
         <item itemvalue="Python tests.Python tests in tests" />
-        <item itemvalue="Python tests.Python tests for test_reporting.TestReporting.test_rtf_report_create_nomenclature" />
+        <item itemvalue="Python tests.Python tests for test_settings.TestSettings.test_file_loading" />
+        <item itemvalue="Python tests.Python tests in test_reporting.py" />
+        <item itemvalue="Python tests.Python tests for test_reporting.TestReporting.test_xml_report_create_measurement_unit" />
+        <item itemvalue="Python tests.Python tests for test_reporting.TestReporting.test_json_report_create_measurement_unit" />
       </list>
     </recent_temporary>
   </component>
@@ -244,6 +244,11 @@
           <url>file://$PROJECT_DIR$/main.py</url>
           <line>6</line>
           <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/reports/rtf_report.py</url>
+          <line>55</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

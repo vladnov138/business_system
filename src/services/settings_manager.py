@@ -63,8 +63,10 @@ class SettingsManager:
         try:
             current_path = Path(__file__).resolve()
             parent_path = self.__path_utils.get_parent_directory(current_path, levels_up=3)
-            # full_name = f"{parent_path}{os.sep}{self.__file_name}"
-            full_name = os.path.join(parent_path, self.__file_name)
+            if not Path(self.__file_name).is_absolute():
+                full_name = f"{parent_path}{os.sep}{self.__file_name}"
+            else:
+                full_name = self.__file_name
             self.__data = FileReader.read_json(full_name)
             return True
         except Exception as ex:

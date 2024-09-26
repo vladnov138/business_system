@@ -4,11 +4,11 @@
       "full_name": null,
       "measurement_unit": {
         "name": "\u043a\u0433",
-        "uid": "260d8055-a56a-4d97-8c67-79a4b53657a1",
+        "uid": "8a31a8c7-b0c7-4285-9e3e-686f98be756e",
         "unit": 1000.0,
         "base_measure_unit": {
           "name": "\u0433",
-          "uid": "bb9558cf-0148-4c08-af0a-74096fa14e82",
+          "uid": "126354ee-e508-48b8-964c-08a1af99df57",
           "unit": 1.0,
           "base_measure_unit": null
         }
@@ -16,24 +16,24 @@
       "name": "\u041c\u0443\u043a\u0430",
       "nomenclature_group": {
         "name": "\u0421\u044b\u0440\u044c\u0451",
-        "uid": "e9e11db4-5142-437f-ac1a-ccee4065dc0e"
+        "uid": "3a21ecab-d1a3-449d-ae74-2be7a6989645"
       },
-      "uid": "e329b7fc-a78c-479b-ba13-42b5f42c8345"
+      "uid": "e087b074-9e18-4327-b932-09eeb96b7757"
     },
     {
       "full_name": null,
       "measurement_unit": {
         "name": "\u0433",
-        "uid": "bb9558cf-0148-4c08-af0a-74096fa14e82",
+        "uid": "126354ee-e508-48b8-964c-08a1af99df57",
         "unit": 1.0,
         "base_measure_unit": null
       },
       "name": "\u041b\u0451\u0434",
       "nomenclature_group": {
         "name": "\u0417\u0430\u043c\u043e\u0440\u043e\u0437\u043a\u0430",
-        "uid": "8cb90fce-9f05-4954-8abd-184cfc8c13cf"
+        "uid": "97d6ed9d-05de-4306-8285-ecb3907e559a"
       },
-      "uid": "1978eea8-85d4-47ab-9e91-8d0c61a8e4cf"
+      "uid": "d69d1856-337c-4313-b5cc-61706290a9e8"
     }
   ]
 }

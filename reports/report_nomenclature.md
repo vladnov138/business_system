@@ -1,4 +1,4 @@
 |full_name|measurement_unit|name|nomenclature_group|uid|
 |---------|----------------|----|------------------|---|
-|None|48bdd9cc-67fb-499c-b83e-b9b3103f62ee|Мука|839a82f4-cd79-439e-b9ad-718ceffb7ace|1ee9a38a-e7bc-4581-876c-b24dbac64d17|
-|None|afdca0fb-b5a1-48cc-a989-2ac82be1e760|Лёд|fa37e648-eba4-4b85-8f3c-53d8e4214852|afdd4ba3-4855-4cff-ab23-4b84526a13e4|
+|None|49800fcb-f51f-4f47-be00-6d5ac25c7ddb|Мука|8c37137a-04ed-4a38-8842-1de16e672703|9268ec03-d99c-47a4-82f0-b2dd027c566a|
+|None|d090b7ba-307e-4584-a4fc-3d0b16c6aaa2|Лёд|f7c73aa7-6c32-45b6-9b05-be0ce1e3a6ce|eefd91fe-f2f8-4cc8-95c2-0410b8e3e18d|

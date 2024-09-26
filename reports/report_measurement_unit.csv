@@ -1,7 +1,7 @@
 base_measure_unit;name;uid;unit;
-None;г;96ff9ed7-cfa0-4222-a0c4-1231c7c9428e;1.0;
-96ff9ed7-cfa0-4222-a0c4-1231c7c9428e;кг;b4255c07-dba8-44f9-af0d-f767eba2a0cb;1000.0;
-b4255c07-dba8-44f9-af0d-f767eba2a0cb;т;c1680a68-b18d-4035-8e7d-c9c3c9f1670c;1000.0;
-None;шт;67649a92-e63f-49aa-aeaa-c63f2b986857;1.0;
-None;ч.л.;44393441-b10a-4b3e-b765-2da44ce5492f;1.0;
-None;мл;fe8b3a13-32b1-419d-a51e-a54e5cbce4bc;1.0;
+None;г;8cb94eef-834f-4fc7-97ea-a0867b0edd69;1.0;
+8cb94eef-834f-4fc7-97ea-a0867b0edd69;кг;78186351-09a0-4de2-809b-43d361312bb4;1000.0;
+78186351-09a0-4de2-809b-43d361312bb4;т;cd375ba6-2c02-4acc-adee-ba4ea7f84599;1000.0;
+None;шт;04366025-e660-4c02-9191-91ea3b0ed031;1.0;
+None;ч.л.;8c854cc5-39a2-4f37-a32f-c8093d9ad6d9;1.0;
+None;мл;d95d2291-f781-4859-9715-f6d66337963c;1.0;

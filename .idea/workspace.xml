@@ -6,18 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d4afd156-2404-459e-a434-5121565aff87" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.csv" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_measurement_unit.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_measurement_unit.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.md" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_measurement_unit.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.rtf" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_measurement_unit.rtf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_measurement_unit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.csv" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.md" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.rtf" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.rtf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/abstract/abstract_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abstract/abstract_report.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/settings_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/settings_manager.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

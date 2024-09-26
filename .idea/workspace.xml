@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4afd156-2404-459e-a434-5121565aff87" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/json_model_encoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/xml_encoder.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.csv" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_measurement_unit.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_measurement_unit.json" afterDir="false" />
@@ -19,8 +16,8 @@
       <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.md" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.rtf" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.rtf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reports/json_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/reports/json_report.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reports/xml_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/reports/xml_report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/xml_encoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/xml_encoder.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,12 +58,12 @@
     &quot;assignee&quot;: &quot;vladnov138&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/vladnov138/business_system.git",
-    "accountId": "67d8ac6a-cd73-4066-9582-96612613f2bd"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/vladnov138/business_system.git&quot;,
+    &quot;accountId&quot;: &quot;67d8ac6a-cd73-4066-9582-96612613f2bd&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -111,7 +108,7 @@
     "Python tests.Python tests in test_data_repository.py.executor": "Run",
     "Python tests.Python tests in test_exceptions.py.executor": "Run",
     "Python tests.Python tests in test_models.py.executor": "Run",
-    "Python tests.Python tests in test_reporting.py.executor": "Run",
+    "Python tests.Python tests in test_reporting.py.executor": "Debug",
     "Python tests.Python tests in test_settings.py.executor": "Debug",
     "Python tests.Python tests in tests.executor": "Run",
     "Python.main.executor": "Debug",
@@ -215,8 +212,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Python tests for test_reporting.TestReporting.test_xml_report_create_measurement_unit" />
-        <item itemvalue="Python tests.Python tests for test_reporting.TestReporting.test_json_report_create_measurement_unit" />
         <item itemvalue="Python tests.Python tests in test_reporting.py" />
+        <item itemvalue="Python tests.Python tests for test_reporting.TestReporting.test_json_report_create_measurement_unit" />
         <item itemvalue="Python tests.Python tests in tests" />
         <item itemvalue="Python tests.Python tests for test_reporting.TestReporting.test_rtf_report_create_nomenclature" />
       </list>

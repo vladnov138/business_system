@@ -3,52 +3,52 @@
     {
       "base_measure_unit": null,
       "name": "\u0433",
-      "uid": "73de1f90-fe63-4eb6-842a-78a6f707a210",
+      "uid": "ba647999-6065-4241-8b41-79a083cbf92f",
       "unit": 1.0
     },
     {
       "base_measure_unit": {
         "name": "\u0433",
-        "uid": "73de1f90-fe63-4eb6-842a-78a6f707a210",
+        "uid": "ba647999-6065-4241-8b41-79a083cbf92f",
         "unit": 1.0,
         "base_measure_unit": null
       },
       "name": "\u043a\u0433",
-      "uid": "c79a90d8-a820-41d3-80ad-ecc52d1fb701",
+      "uid": "71d65abd-a719-43e6-9533-3d5ef68ff11b",
       "unit": 1000.0
     },
     {
       "base_measure_unit": {
         "name": "\u043a\u0433",
-        "uid": "c79a90d8-a820-41d3-80ad-ecc52d1fb701",
+        "uid": "71d65abd-a719-43e6-9533-3d5ef68ff11b",
         "unit": 1000.0,
         "base_measure_unit": {
           "name": "\u0433",
-          "uid": "73de1f90-fe63-4eb6-842a-78a6f707a210",
+          "uid": "ba647999-6065-4241-8b41-79a083cbf92f",
           "unit": 1.0,
           "base_measure_unit": null
         }
       },
       "name": "\u0442",
-      "uid": "b4fc5648-e6e6-4816-ad4f-78f543639188",
+      "uid": "786663f5-0937-41b5-b9e7-8744d2f8f774",
       "unit": 1000.0
     },
     {
       "base_measure_unit": null,
       "name": "\u0448\u0442",
-      "uid": "9151552d-e281-47bf-aaa4-eb9afccdc95d",
+      "uid": "aed74936-064e-4b00-a0fe-b0bf6559529c",
       "unit": 1.0
     },
     {
       "base_measure_unit": null,
       "name": "\u0447.\u043b.",
-      "uid": "489d1aab-7b33-49a6-a8dd-1edf9b5e9464",
+      "uid": "49b5cc66-1397-4c18-8781-99449e05726a",
       "unit": 1.0
     },
     {
       "base_measure_unit": null,
       "name": "\u043c\u043b",
-      "uid": "7800f699-ccf4-4e53-8fc9-af5eeee4b6a6",
+      "uid": "3f94ac1e-221e-40cb-9eb3-1a6c5f06b635",
       "unit": 1.0
     }
   ]

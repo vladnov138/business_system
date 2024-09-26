@@ -2,6 +2,7 @@ from src.abstract.abstract_report import AbstractReport
 from src.abstract.format_reporting import FormatReporting
 from src.exceptions.argument_exception import ArgumentException
 from src.exceptions.operation_exception import OperationException
+from src.utils.xml_encoder import XmlEncoder
 
 
 class XmlReport(AbstractReport):
@@ -22,12 +23,13 @@ class XmlReport(AbstractReport):
         # список полей
         fields = list(filter(lambda x: not x.startswith("_") and not callable(getattr(first_model.__class__, x)),
                              dir(first_model)))
-
-        self._result += "<items>\n"
+        xmlEncoder = XmlEncoder()
+        class_name = type(first_model).__name__
+        result = f"<{class_name}>\n"
         for row in data:
-            self._result += "\t<item>\n"
+            result += "\t<item>\n"
             for field in fields:
                 value = getattr(row, field)
-                self._result += f"\t\t<{field}>{value}</{field}>\n"
-            self._result += "\t</item>\n"
-        self._result += "</items>\n"
+                result += "\t\t" + xmlEncoder.default(field, value) + "\n"
+            result += "\t</item>\n"
+        self._result = f"{result}</{class_name}>\n"

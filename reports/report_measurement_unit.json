@@ -1,1 +1,55 @@
-[{"base_measure_unit": "None", "name": "\u0433", "uid": "0c020e1a-ed95-42f5-b722-b9a57e2e124e", "unit": "1.0"}, {"base_measure_unit": "0c020e1a-ed95-42f5-b722-b9a57e2e124e", "name": "\u043a\u0433", "uid": "a08bf3c6-971b-414b-b7e0-69efed7a5315", "unit": "1000.0"}, {"base_measure_unit": "a08bf3c6-971b-414b-b7e0-69efed7a5315", "name": "\u0442", "uid": "4c916a3c-50c6-4d3b-8d9b-cf7de1798f41", "unit": "1000.0"}, {"base_measure_unit": "None", "name": "\u0448\u0442", "uid": "66831d0b-e0a7-4dee-a5d2-b2a08f60528c", "unit": "1.0"}, {"base_measure_unit": "None", "name": "\u0447.\u043b.", "uid": "c97755db-1988-4d85-90d0-0271c3fc11c5", "unit": "1.0"}, {"base_measure_unit": "None", "name": "\u043c\u043b", "uid": "b57511e3-18f2-410d-b0d6-180aed1bfae4", "unit": "1.0"}]
+{
+  "MeasurementUnitModel": [
+    {
+      "base_measure_unit": null,
+      "name": "\u0433",
+      "uid": "73de1f90-fe63-4eb6-842a-78a6f707a210",
+      "unit": 1.0
+    },
+    {
+      "base_measure_unit": {
+        "name": "\u0433",
+        "uid": "73de1f90-fe63-4eb6-842a-78a6f707a210",
+        "unit": 1.0,
+        "base_measure_unit": null
+      },
+      "name": "\u043a\u0433",
+      "uid": "c79a90d8-a820-41d3-80ad-ecc52d1fb701",
+      "unit": 1000.0
+    },
+    {
+      "base_measure_unit": {
+        "name": "\u043a\u0433",
+        "uid": "c79a90d8-a820-41d3-80ad-ecc52d1fb701",
+        "unit": 1000.0,
+        "base_measure_unit": {
+          "name": "\u0433",
+          "uid": "73de1f90-fe63-4eb6-842a-78a6f707a210",
+          "unit": 1.0,
+          "base_measure_unit": null
+        }
+      },
+      "name": "\u0442",
+      "uid": "b4fc5648-e6e6-4816-ad4f-78f543639188",
+      "unit": 1000.0
+    },
+    {
+      "base_measure_unit": null,
+      "name": "\u0448\u0442",
+      "uid": "9151552d-e281-47bf-aaa4-eb9afccdc95d",
+      "unit": 1.0
+    },
+    {
+      "base_measure_unit": null,
+      "name": "\u0447.\u043b.",
+      "uid": "489d1aab-7b33-49a6-a8dd-1edf9b5e9464",
+      "unit": 1.0
+    },
+    {
+      "base_measure_unit": null,
+      "name": "\u043c\u043b",
+      "uid": "7800f699-ccf4-4e53-8fc9-af5eeee4b6a6",
+      "unit": 1.0
+    }
+  ]
+}

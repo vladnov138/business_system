@@ -5,17 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4afd156-2404-459e-a434-5121565aff87" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/business_system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/business_system.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/json_model_encoder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/xml_encoder.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/test_settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/test_settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abstract/abstract_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abstract/abstract_report.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/settings_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/settings_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reports/report_factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/reports/report_factory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reports/rtf_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/reports/rtf_report.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/settings_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/settings_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_reporting.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_reporting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.csv" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_measurement_unit.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_measurement_unit.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.md" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_measurement_unit.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.rtf" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_measurement_unit.rtf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_measurement_unit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.csv" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.md" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.rtf" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.rtf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reports/json_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/reports/json_report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reports/xml_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/reports/xml_report.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +64,7 @@
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/vladnov138/business_system.git",
-    "accountId": "89db990f-1e6a-4a46-8a70-396d7bafa47d"
+    "accountId": "67d8ac6a-cd73-4066-9582-96612613f2bd"
   }
 }]]></component>
   <component name="ProjectColorInfo">{
@@ -94,6 +99,7 @@
     "Python tests.Python tests for test_models.TestModels.test_recipe_model_setters_exceptions.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.test_storage_model.executor": "Run",
     "Python tests.Python tests for test_reporting.TestReporting.test_csv_report_create_measurement_unit.executor": "Debug",
+    "Python tests.Python tests for test_reporting.TestReporting.test_json_report_create_measurement_unit.executor": "Debug",
     "Python tests.Python tests for test_reporting.TestReporting.test_rtf_report_create_nomenclature.executor": "Run",
     "Python tests.Python tests for test_reporting.TestReporting.test_xml_report_create_measurement_unit.executor": "Run",
     "Python tests.Python tests for test_settings.TestSettings.executor": "Run",
@@ -113,7 +119,7 @@
     "Python.settings_manager.executor": "Run",
     "Python.start_service.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "report__factory",
+    "git-widget-placeholder": "#3 on report__factory",
     "last_opened_file_path": "/home/vladnov138/PycharmProjects/business_system/src/reports",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
@@ -130,8 +136,8 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in tests">
-    <configuration name="Python tests for test_reporting.TestReporting.test_csv_report_create_measurement_unit" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests for test_reporting.TestReporting.test_xml_report_create_measurement_unit">
+    <configuration name="Python tests for test_reporting.TestReporting.test_json_report_create_measurement_unit" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -142,7 +148,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_reporting.TestReporting.test_csv_report_create_measurement_unit&quot;" />
+      <option name="_new_target" value="&quot;test_reporting.TestReporting.test_json_report_create_measurement_unit&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -208,18 +214,18 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests in tests" />
-        <item itemvalue="Python tests.Python tests in test_reporting.py" />
-        <item itemvalue="Python tests.Python tests for test_reporting.TestReporting.test_rtf_report_create_nomenclature" />
         <item itemvalue="Python tests.Python tests for test_reporting.TestReporting.test_xml_report_create_measurement_unit" />
-        <item itemvalue="Python tests.Python tests for test_reporting.TestReporting.test_csv_report_create_measurement_unit" />
+        <item itemvalue="Python tests.Python tests for test_reporting.TestReporting.test_json_report_create_measurement_unit" />
+        <item itemvalue="Python tests.Python tests in test_reporting.py" />
+        <item itemvalue="Python tests.Python tests in tests" />
+        <item itemvalue="Python tests.Python tests for test_reporting.TestReporting.test_rtf_report_create_nomenclature" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-884f5ed5d46b-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.22855.92" />
+        <option value="bundled-python-sdk-98f27166c754-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.21829.153" />
       </set>
     </attachedChunks>
   </component>
@@ -241,11 +247,6 @@
           <url>file://$PROJECT_DIR$/main.py</url>
           <line>6</line>
           <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tests/test_settings.py</url>
-          <line>38</line>
-          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

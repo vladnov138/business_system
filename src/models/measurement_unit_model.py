@@ -8,10 +8,10 @@ class MeasurementUnitModel(BaseComparingByName):
     __unit: float = 0
     __base_measure_unit: MeasurementUnitModel = None
 
-    def __init__(self, name: str, unit: float, base_measure_unit: MeasurementUnitModel=None):
+    def __init__(self, name: str='', unit: float=None, base_measure_unit: MeasurementUnitModel=None):
         super().__init__(name)
         unit = self.__cvt_unit_to_float(unit)
-        ArgumentException.check_arg(unit, float)
+        ArgumentException.check_arg(unit, float, True)
         ArgumentException.check_arg(base_measure_unit, MeasurementUnitModel, True)
         self.__unit = unit
         self.__base_measure_unit = base_measure_unit
@@ -37,5 +37,5 @@ class MeasurementUnitModel(BaseComparingByName):
 
     @base_measure_unit.setter
     def base_measure_unit(self, value: MeasurementUnitModel):
-        ArgumentException.check_arg(value, MeasurementUnitModel)
+        ArgumentException.check_arg(value, MeasurementUnitModel, True)
         self.__base_measure_unit = value

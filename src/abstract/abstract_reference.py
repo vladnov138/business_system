@@ -15,7 +15,7 @@ class AbstractReference(ABC):
 
     def __init__(self, name: str = '', uid: str = ''):
         super().__init__()
-        ArgumentException.check_arg(name, str)
+        ArgumentException.check_arg(name, str, True)
         ArgumentException.check_arg(uid, str)
         self._name = name
         self.__uid = uid
@@ -30,8 +30,12 @@ class AbstractReference(ABC):
     def name(self) -> str:
         return self._name
 
+    @uid.setter
+    def uid(self, value: str):
+        self.__uid = value
+
     @name.setter
-    def name(self, value: str):
+    def name(self, value: str = ''):
         ArgumentException.check_arg(value, str)
         self._name = value
 

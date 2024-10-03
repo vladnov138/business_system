@@ -4,7 +4,7 @@ import json
 class JsonModelEncoder(json.JSONEncoder):
     def default(self, o):
         if hasattr(o, '__dict__'):
-            result = {}
+            result = {"cls": type(o).__name__}
             for k, v in o.__dict__.items():
                 key = k.split('__')[-1]
                 key = key.lstrip('_')

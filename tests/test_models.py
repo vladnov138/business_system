@@ -125,7 +125,7 @@ class TestModels(unittest.TestCase):
         assert cooker.nomenclature_group == equipments
         assert cooker.measurement_unit == kg_unit
 
-    def test_organization_model_converting(self): \
+    def test_organization_model_converting(self):
             """
             Тестирует геттеры класса OrganizationModel и конвертацию из класса Settings
             Сравнивает геттеры класса OrganizationModel с геттерами класса Settings
@@ -147,107 +147,107 @@ class TestModels(unittest.TestCase):
     assert org.business_type == settings.business_type
 
 
-def test_storage_model_getters(self):
-    """
-    Тестирует геттеры у класса StorageModel
-    Сравнивает имя
-    Результатом сравнения является True
-    """
-    storage_name = "IdkWhatThis"
-    storage = StorageModel(storage_name)
-    assert storage.name == storage_name
+    def test_storage_model_getters(self):
+        """
+        Тестирует геттеры у класса StorageModel
+        Сравнивает имя
+        Результатом сравнения является True
+        """
+        storage_name = "IdkWhatThis"
+        storage = StorageModel(storage_name)
+        assert storage.name == storage_name
 
 
-def test_ingridient_model(self):
-    """
-    Тестирует создание модели IngridientModel
-    :return:
-    """
-    ml = MeasurementUnitModel("мл", 1)
-    ingridient = IngridientModel("Молоко", ml, 2)
-    assert ingridient.name == "Молоко"
-    assert ingridient.measurement_unit == ml
-    assert ingridient.amount == 2
+    def test_ingridient_model(self):
+        """
+        Тестирует создание модели IngridientModel
+        :return:
+        """
+        ml = MeasurementUnitModel("мл", 1)
+        ingridient = IngridientModel("Молоко", ml, 2)
+        assert ingridient.name == "Молоко"
+        assert ingridient.measurement_unit == ml
+        assert ingridient.amount == 2
 
 
-def test_ingridient_setters(self):
-    """
-    Тестирует сеттеры модели IngridientModel
-    :return:
-    """
-    ml = MeasurementUnitModel("мл", 1)
-    ingridient = IngridientModel("Молоко", ml, 2)
-    ingridient.name = "Молоко2"
-    ingridient.measurement_unit = ml
-    ingridient.amount = 3
-    assert ingridient.name == "Молоко2"
-    assert ingridient.measurement_unit == ml
-    assert ingridient.amount == 3
+    def test_ingridient_setters(self):
+        """
+        Тестирует сеттеры модели IngridientModel
+        :return:
+        """
+        ml = MeasurementUnitModel("мл", 1)
+        ingridient = IngridientModel("Молоко", ml, 2)
+        ingridient.name = "Молоко2"
+        ingridient.measurement_unit = ml
+        ingridient.amount = 3
+        assert ingridient.name == "Молоко2"
+        assert ingridient.measurement_unit == ml
+        assert ingridient.amount == 3
 
 
-def test_recipe_model(self):
-    """
-    Тестирует создание модели RecipeModel
-    :return:
-    """
-    ml = MeasurementUnitModel("мл", 1)
-    ingridient = IngridientModel("Молоко", ml, 2)
-    recipe = RecipeModel("Молоко", [ingridient], 10, "description")
-    assert recipe.name == "Молоко"
-    assert len(recipe.ingridients) == 1
-    assert recipe.ingridients[0] == ingridient
+    def test_recipe_model(self):
+        """
+        Тестирует создание модели RecipeModel
+        :return:
+        """
+        ml = MeasurementUnitModel("мл", 1)
+        ingridient = IngridientModel("Молоко", ml, 2)
+        recipe = RecipeModel("Молоко", [ingridient], 10, "description")
+        assert recipe.name == "Молоко"
+        assert len(recipe.ingridients) == 1
+        assert recipe.ingridients[0] == ingridient
 
 
-def test_recipe_setters(self):
-    """
-    Проверяет сеттеры модели RecipeModel
-    :return:
-    """
-    ml = MeasurementUnitModel("мл", 1)
-    ingridient = IngridientModel("Молоко", ml, 2)
-    recipe = RecipeModel("Молоко", [ingridient], 10, "description")
-    recipe.name = "Молоко2"
-    recipe.ingridients = [ingridient]
-    recipe.time = 20
-    recipe.description = "description2"
-    assert recipe.name == "Молоко2"
-    assert len(recipe.ingridients) == 1
-    assert recipe.ingridients[0] == ingridient
-    assert recipe.time == 20
-    assert recipe.description == "description2"
+    def test_recipe_setters(self):
+        """
+        Проверяет сеттеры модели RecipeModel
+        :return:
+        """
+        ml = MeasurementUnitModel("мл", 1)
+        ingridient = IngridientModel("Молоко", ml, 2)
+        recipe = RecipeModel("Молоко", [ingridient], 10, "description")
+        recipe.name = "Молоко2"
+        recipe.ingridients = [ingridient]
+        recipe.time = 20
+        recipe.description = "description2"
+        assert recipe.name == "Молоко2"
+        assert len(recipe.ingridients) == 1
+        assert recipe.ingridients[0] == ingridient
+        assert recipe.time == 20
+        assert recipe.description == "description2"
 
 
-def test_ingridient_model_setters_exceptions(self):
-    """
-    Проверяет исключения при неправильных типах данных
-    :return:
-    """
-    ml = MeasurementUnitModel("мл", 1)
-    ingridient = IngridientModel("Молоко", ml, 2)
-    with self.assertRaises(ArgumentException):
-        ingridient.name = 123
-    with self.assertRaises(ArgumentException):
-        ingridient.measurement_unit = "мл"
-    with self.assertRaises(ArgumentException):
-        ingridient.amount = 0
+    def test_ingridient_model_setters_exceptions(self):
+        """
+        Проверяет исключения при неправильных типах данных
+        :return:
+        """
+        ml = MeasurementUnitModel("мл", 1)
+        ingridient = IngridientModel("Молоко", ml, 2)
+        with self.assertRaises(ArgumentException):
+            ingridient.name = 123
+        with self.assertRaises(ArgumentException):
+            ingridient.measurement_unit = "мл"
+        with self.assertRaises(ArgumentException):
+            ingridient.amount = 0
 
 
-def test_recipe_model_setters_exceptions(self):
-    """
-    Проверяет исключения при неправильных типах данных
-    :return:
-    """
-    ml = MeasurementUnitModel("мл", 1)
-    ingridient = IngridientModel("Молоко", ml, 2)
-    recipe = RecipeModel("Молоко", [ingridient], 10, "description")
-    with self.assertRaises(ArgumentException):
-        recipe.name = 123
-    with self.assertRaises(ArgumentException):
-        recipe.ingridients = ["123"]
-    with self.assertRaises(ArgumentException):
-        recipe.cooking_time_minutes = -10
-    with self.assertRaises(ArgumentException):
-        recipe.description = 123
+    def test_recipe_model_setters_exceptions(self):
+        """
+        Проверяет исключения при неправильных типах данных
+        :return:
+        """
+        ml = MeasurementUnitModel("мл", 1)
+        ingridient = IngridientModel("Молоко", ml, 2)
+        recipe = RecipeModel("Молоко", [ingridient], 10, "description")
+        with self.assertRaises(ArgumentException):
+            recipe.name = 123
+        with self.assertRaises(ArgumentException):
+            recipe.ingridients = ["123"]
+        with self.assertRaises(ArgumentException):
+            recipe.cooking_time_minutes = -10
+        with self.assertRaises(ArgumentException):
+            recipe.description = 123
 
 if __name__ == "__main__":
     unittest.main()

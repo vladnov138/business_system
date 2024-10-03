@@ -5,17 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4afd156-2404-459e-a434-5121565aff87" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/utils/decoders/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/decoders/abstract_json_decoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/decoders/ingridient_json_decoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/decoders/json_decoder_factory.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/decoders/measurement_json_decoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/decoders/nomenclature_group_json_decoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/decoders/nomenclature_json_decoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/decoders/organization_json_decoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/decoders/recipe_json_decoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/json_model_decoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_report_deserialize.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.csv" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_measurement_unit.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_measurement_unit.json" afterDir="false" />
@@ -27,10 +16,18 @@
       <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.md" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.rtf" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.rtf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abstract/abstract_reference.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abstract/abstract_reference.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/measurement_unit_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/measurement_unit_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/nomenclature_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/nomenclature_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/json_model_encoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/json_model_encoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/decoders/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/decoders/abstract_json_decoder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/decoders/ingridient_json_decoder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/decoders/json_decoder_factory.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/decoders/measurement_json_decoder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/decoders/nomenclature_group_json_decoder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/decoders/nomenclature_json_decoder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/decoders/organization_json_decoder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/decoders/recipe_json_decoder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/json_model_decoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/json_model_decoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/_trial_temp/_trial_marker" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,8 +105,8 @@
     "Python tests.Python tests for test_models.TestModels.test_organization_model_converting.executor": "Debug",
     "Python tests.Python tests for test_models.TestModels.test_recipe_model_setters_exceptions.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.test_storage_model.executor": "Run",
-    "Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_json_measurement_unit_deserialize.executor": "Debug",
-    "Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_json_nomenclatures_deserialize.executor": "Debug",
+    "Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_json_measurement_unit_deserialize.executor": "Run",
+    "Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_json_nomenclatures_deserialize.executor": "Run",
     "Python tests.Python tests for test_reporting.TestReporting.test_csv_report_create_measurement_unit.executor": "Debug",
     "Python tests.Python tests for test_reporting.TestReporting.test_json_report_create_measurement_unit.executor": "Debug",
     "Python tests.Python tests for test_reporting.TestReporting.test_rtf_report_create_nomenclature.executor": "Run",
@@ -123,8 +120,9 @@
     "Python tests.Python tests in test_data_repository.py.executor": "Run",
     "Python tests.Python tests in test_exceptions.py.executor": "Run",
     "Python tests.Python tests in test_models.py.executor": "Run",
+    "Python tests.Python tests in test_report_deserialize.py.executor": "Run",
     "Python tests.Python tests in test_reporting.py.executor": "Run",
-    "Python tests.Python tests in test_settings.py.executor": "Debug",
+    "Python tests.Python tests in test_settings.py.executor": "Run",
     "Python tests.Python tests in tests.executor": "Run",
     "Python.main.executor": "Debug",
     "Python.nomenclature_group_model.executor": "Run",
@@ -148,8 +146,8 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_json_nomenclatures_deserialize">
-    <configuration name="Python tests for test_report_deserialize.TestReportDeserialize.test_json_measurement_unit_deserialize" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests in test_models.py">
+    <configuration name="Python tests in test_exceptions.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -160,11 +158,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_report_deserialize.TestReportDeserialize.test_json_measurement_unit_deserialize&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_exceptions.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_report_deserialize.TestReportDeserialize.test_json_nomenclatures_deserialize" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests in test_models.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -175,11 +173,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_report_deserialize.TestReportDeserialize.test_json_nomenclatures_deserialize&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_models.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_settings.TestSettings.test_file_loading" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests in test_report_deserialize.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -190,8 +188,8 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_settings.TestSettings.test_file_loading&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_report_deserialize.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="Python tests in test_reporting.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
@@ -209,7 +207,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in tests" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests in test_settings.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -220,17 +218,17 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_settings.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_json_nomenclatures_deserialize" />
-        <item itemvalue="Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_json_measurement_unit_deserialize" />
+        <item itemvalue="Python tests.Python tests in test_models.py" />
+        <item itemvalue="Python tests.Python tests in test_settings.py" />
         <item itemvalue="Python tests.Python tests in test_reporting.py" />
-        <item itemvalue="Python tests.Python tests in tests" />
-        <item itemvalue="Python tests.Python tests for test_settings.TestSettings.test_file_loading" />
+        <item itemvalue="Python tests.Python tests in test_report_deserialize.py" />
+        <item itemvalue="Python tests.Python tests in test_exceptions.py" />
       </list>
     </recent_temporary>
   </component>
@@ -264,11 +262,6 @@
           <url>file://$PROJECT_DIR$/src/reports/rtf_report.py</url>
           <line>55</line>
           <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tests/test_report_deserialize.py</url>
-          <line>33</line>
-          <option name="timeStamp" value="48" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -6,19 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d4afd156-2404-459e-a434-5121565aff87" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.rtf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.rtf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/nomenclature_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/nomenclature_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/recipe_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/recipe_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/json_model_decoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/json_model_decoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_measurement_unit.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_recipe.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_recipe.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_report_deserialize.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_report_deserialize.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +112,7 @@
     "Python.settings_manager.executor": "Run",
     "Python.start_service.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "report__deserealize",
+    "git-widget-placeholder": "#4 on report__deserealize",
     "last_opened_file_path": "/home/vladnov138/PycharmProjects/business_system/src/reports",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }

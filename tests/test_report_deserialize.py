@@ -32,7 +32,7 @@ class TestReportDeserialize(unittest.TestCase):
         self.service.create()
         self.report = JsonReport()
         parent_path = PathUtils().get_parent_directory(Path(__file__).resolve(), levels_up=2)
-        self.full_name = f"{parent_path}{os.sep}{"reports"}{os.sep}"
+        self.full_name = f"{parent_path}{os.sep}reports{os.sep}"
 
     def test_json_measurement_unit_deserialize(self):
         """

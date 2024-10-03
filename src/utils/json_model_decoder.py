@@ -4,8 +4,11 @@ import pkgutil
 import sys
 from json import JSONDecoder
 
+from src.exceptions.operation_exception import OperationException
+
 
 class JsonModelDecoder(JSONDecoder):
+
     def __init__(self):
         super().__init__()
         self.classes = {}
@@ -18,56 +21,55 @@ class JsonModelDecoder(JSONDecoder):
                 })
 
     def import_submodules(self, package):
-        """Импорт всех подмодулей пакета."""
+        """
+        Импорт всех подмодулей пакета
+        :return:
+        """
         module = importlib.import_module(package)
         for loader, name, is_pkg in pkgutil.walk_packages(module.__path__, module.__name__ + '.'):
             importlib.import_module(name)
         return module
 
-    def decode_model(self, coded_obj: dict, cls):
-        """Декодирование объекта в соответствующую модель."""
-        model = cls()  # Создаем инстанс модели
-        fields = list(filter(lambda x: not x.startswith("_") and not callable(getattr(model.__class__, x)),
-                             dir(model)))
+    def decode_model(self, coded_obj, cls):
+        """
+        Декодирование объекта в соответствующую модель
+        :return:
+        """
+        model = cls()
+        fields = list(filter(lambda x: not x.startswith("_") and not callable(getattr(model, x)), dir(model)))
 
         for field in fields:
             if field not in coded_obj:
                 continue
-
             value = coded_obj[field]
-            # Рекурсивно декодируем вложенные объекты
-            if isinstance(value, dict):
-                field_cls = self.get_field_class(cls, field)
-                if field_cls:
-                    value = self.decode_model(value, field_cls)
-
+            if isinstance(value, dict) and "cls" in value:
+                nested_cls_name = value["cls"]
+                nested_cls = self.classes.get(nested_cls_name)
+                if nested_cls:
+                    value = self.decode_model(value, nested_cls)
             setattr(model, field, value)
-
         return model
 
-    def get_field_class(self, cls, field_name):
-        """Попытка извлечь тип поля, если оно является объектом модели."""
-        annotations = getattr(cls, '__annotations__', {})
-        return annotations.get(field_name, None)
-
-    def decode(self, s, _w=...):
-        """Основное декодирование JSON-строки."""
-        decoded_content: dict = self.raw_decode(s)[0]  # Декодируем в словарь
-
-        if "cls" not in decoded_content.keys():
-            model_key = list(decoded_content.keys())[0]
+    def decode(self, s, _w=None):
+        """
+        Основное декодирование JSON-строки
+        :return:
+        """
+        if isinstance(s, str):
+            decoded_content = self.raw_decode(s)[0]
         else:
-            model_key = decoded_content["cls"]
+            decoded_content = s
 
-        # Поиск соответствующего класса по ключу
-        if model_key not in self.classes:
-            raise ValueError(f"Класс {model_key} не найден.")
+        model_key = decoded_content.get("cls") or list(decoded_content.keys())[0]
+        cls = self.classes.get(model_key)
 
-        cls = self.classes[model_key]
-        models = []
+        if cls is None:
+            raise OperationException(f"Класс {model_key} не найден среди загруженных моделей.")
 
-        for val in decoded_content[model_key]:
-            result = self.decode_model(val, cls)  # Декодируем модель
-            models.append(result)
+        data = decoded_content.get(model_key) or decoded_content[model_key]
+        if isinstance(data, list):
+            models = [self.decode_model(item, cls) for item in data]
+        else:
+            models = self.decode_model(data, cls)
 
         return models

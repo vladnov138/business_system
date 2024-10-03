@@ -5,13 +5,14 @@ from src.models.ingridient_model import IngridientModel
 
 class RecipeModel(BaseComparingByUid):
 
-    def __init__(self, name: str, ingridients: list[IngridientModel], cooking_time_minutes: int, description: str):
+    def __init__(self, name: str = '', ingridients: list[IngridientModel] = None, cooking_time_minutes: int = None, description: str = None):
         super().__init__(name)
-        ArgumentException.check_arg(ingridients, list)
-        for ingridient in ingridients:
-            ArgumentException.check_arg(ingridient, IngridientModel)
-        ArgumentException.check_arg(cooking_time_minutes, int)
-        ArgumentException.check_arg(description, str)
+        ArgumentException.check_arg(ingridients, list, True)
+        if ingridients:
+            for ingridient in ingridients:
+                ArgumentException.check_arg(ingridient, IngridientModel, True)
+        ArgumentException.check_arg(cooking_time_minutes, int, True)
+        ArgumentException.check_arg(description, str, True)
         self.__ingridients = ingridients
         self.__cooking_time_minutes = cooking_time_minutes
         self.__description = description

@@ -56,5 +56,5 @@ class NomenclatureModel(BaseComparingByName):
 
     @nomenclature_group.setter
     def nomenclature_group(self, value: NomenclatureGroupModel):
-        ArgumentException.check_arg(value, NomenclatureModel)
+        ArgumentException.check_arg(value, NomenclatureGroupModel)
         self.__nomenclature_group = value

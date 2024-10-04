@@ -4,14 +4,17 @@ from src.models.measurement_unit_model import MeasurementUnitModel
 
 
 class IngridientModel(BaseComparingByName):
+    __measurement_unit = None
+    __amount = None
 
-    def __init__(self, name: str, measurement_unit: MeasurementUnitModel, amount: float):
-        super().__init__(name)
-        ArgumentException.check_arg(measurement_unit, MeasurementUnitModel)
-        amount = self.__cvt_unit_to_float(amount)
-        ArgumentException.check_arg(amount, float)
-        self.__measurement_unit = measurement_unit
-        self.__amount = amount
+    @classmethod
+    def create(cls, name: str, measurement_unit: MeasurementUnitModel, amount: float):
+        model = cls()
+        model.name = name
+        model.measurement_unit = measurement_unit
+        model.amount = amount
+        return model
+
 
     def __cvt_unit_to_float(self, amount: (int | float)):
         if isinstance(amount, int):

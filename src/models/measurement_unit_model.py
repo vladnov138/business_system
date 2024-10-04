@@ -8,13 +8,13 @@ class MeasurementUnitModel(BaseComparingByName):
     __unit: float = 0
     __base_measure_unit: MeasurementUnitModel = None
 
-    def __init__(self, name: str='', unit: float=None, base_measure_unit: MeasurementUnitModel=None):
-        super().__init__(name)
-        unit = self.__cvt_unit_to_float(unit)
-        ArgumentException.check_arg(unit, float, True)
-        ArgumentException.check_arg(base_measure_unit, MeasurementUnitModel, True)
-        self.__unit = unit
-        self.__base_measure_unit = base_measure_unit
+    @classmethod
+    def create(cls, name: str, unit: float, base_measure_unit: MeasurementUnitModel=None):
+        model = cls()
+        model.name = name
+        model.unit = unit
+        model.base_measure_unit = base_measure_unit
+        return model
 
     def __cvt_unit_to_float(self, unit: (int | float)):
         if isinstance(unit, int):

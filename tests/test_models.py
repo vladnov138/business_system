@@ -25,8 +25,8 @@ class TestModels(unittest.TestCase):
         Сравнивает экземпляры класса
         Результатом сравнения должен быть True (не равны)
         """
-        item1 = NomenclatureGroupModel("item1")
-        item2 = NomenclatureGroupModel("item1")
+        item1 = NomenclatureGroupModel.create("item1")
+        item2 = NomenclatureGroupModel.create("item1")
         assert item1 != item2
 
     def test_nomenclature_group_model_getters(self):
@@ -36,7 +36,7 @@ class TestModels(unittest.TestCase):
         Результатом сравнения должен быть True
         """
         group_name = "group"
-        group = NomenclatureGroupModel(group_name)
+        group = NomenclatureGroupModel.create(group_name)
         assert group.name == group_name
 
     def test_measurement_unit_model_comparing_returns_true(self):
@@ -46,8 +46,8 @@ class TestModels(unittest.TestCase):
         Результатом сравнения должен быть True
         """
         unit_name = "грамм"
-        g1 = MeasurementUnitModel(unit_name, 1)
-        g2 = MeasurementUnitModel(unit_name, 1000)
+        g1 = MeasurementUnitModel.create(unit_name, 1)
+        g2 = MeasurementUnitModel.create(unit_name, 1000)
         assert g1 == g2
 
     def test_measurement_unit_model_getters(self):
@@ -58,7 +58,7 @@ class TestModels(unittest.TestCase):
         """
         unit_name = "грамм"
         unit = 1
-        g = MeasurementUnitModel(unit_name, unit)
+        g = MeasurementUnitModel.create(unit_name, unit)
         assert g.unit == unit
         assert g.name == unit_name
 
@@ -70,7 +70,7 @@ class TestModels(unittest.TestCase):
         """
         unit_name = "грамм"
         unit = 1
-        g = MeasurementUnitModel("1", 123)
+        g = MeasurementUnitModel.create("1", 123)
         g.unit = unit
         g.name = unit_name
         assert g.unit == unit
@@ -86,9 +86,9 @@ class TestModels(unittest.TestCase):
         unit_name = "килограмм"
         big_unit_name = "тонна"
 
-        g_unit = MeasurementUnitModel(base_unit_name, 1)
-        kg_unit = MeasurementUnitModel(unit_name, 1000, g_unit)
-        t_unit = MeasurementUnitModel(big_unit_name, 1000, kg_unit)
+        g_unit = MeasurementUnitModel.create(base_unit_name, 1)
+        kg_unit = MeasurementUnitModel.create(unit_name, 1000, g_unit)
+        t_unit = MeasurementUnitModel.create(big_unit_name, 1000, kg_unit)
 
         kg_base_unit = kg_unit.base_measure_unit
         t_base_unit = t_unit.base_measure_unit
@@ -104,7 +104,7 @@ class TestModels(unittest.TestCase):
         wrong_unit_name = 42
         unit = 1
         with self.assertRaises(ArgumentException):
-            MeasurementUnitModel(wrong_unit_name, unit)
+            MeasurementUnitModel.create(wrong_unit_name, unit)
 
     def test_nomenclature_model(self):
         """
@@ -112,13 +112,13 @@ class TestModels(unittest.TestCase):
         Создает два экземпляра sausage и cooker и сравнивает их группу и единицу измерения
         Результатом сравнения является True
         """
-        g_unit = MeasurementUnitModel("грамм", 1)
-        kg_unit = MeasurementUnitModel("килограмм", 1000, g_unit)
-        ingridients = NomenclatureGroupModel("Ингридиенты")
-        equipments = NomenclatureGroupModel("Оборудование")
+        g_unit = MeasurementUnitModel.create("грамм", 1)
+        kg_unit = MeasurementUnitModel.create("килограмм", 1000, g_unit)
+        ingridients = NomenclatureGroupModel.create("Ингридиенты")
+        equipments = NomenclatureGroupModel.create("Оборудование")
 
-        sausage = NomenclatureModel("Колбаса", ingridients, kg_unit)
-        cooker = NomenclatureModel("Плита", equipments, kg_unit)
+        sausage = NomenclatureModel.create("Колбаса", ingridients, kg_unit)
+        cooker = NomenclatureModel.create("Плита", equipments, kg_unit)
 
         assert sausage.nomenclature_group == ingridients
         assert sausage.measurement_unit == kg_unit
@@ -138,7 +138,7 @@ class TestModels(unittest.TestCase):
     settings_manager.convert()
     settings = settings_manager.settings
 
-    org = OrganizationModel(settings)
+    org = OrganizationModel.create(settings)
 
     assert org.name == settings.organization_name
     assert org.inn == settings.inn
@@ -154,7 +154,7 @@ class TestModels(unittest.TestCase):
         Результатом сравнения является True
         """
         storage_name = "IdkWhatThis"
-        storage = StorageModel(storage_name)
+        storage = StorageModel.create(storage_name)
         assert storage.name == storage_name
 
 
@@ -163,8 +163,8 @@ class TestModels(unittest.TestCase):
         Тестирует создание модели IngridientModel
         :return:
         """
-        ml = MeasurementUnitModel("мл", 1)
-        ingridient = IngridientModel("Молоко", ml, 2)
+        ml = MeasurementUnitModel.create("мл", 1)
+        ingridient = IngridientModel.create("Молоко", ml, 2)
         assert ingridient.name == "Молоко"
         assert ingridient.measurement_unit == ml
         assert ingridient.amount == 2
@@ -175,8 +175,8 @@ class TestModels(unittest.TestCase):
         Тестирует сеттеры модели IngridientModel
         :return:
         """
-        ml = MeasurementUnitModel("мл", 1)
-        ingridient = IngridientModel("Молоко", ml, 2)
+        ml = MeasurementUnitModel.create("мл", 1)
+        ingridient = IngridientModel.create("Молоко", ml, 2)
         ingridient.name = "Молоко2"
         ingridient.measurement_unit = ml
         ingridient.amount = 3
@@ -190,9 +190,9 @@ class TestModels(unittest.TestCase):
         Тестирует создание модели RecipeModel
         :return:
         """
-        ml = MeasurementUnitModel("мл", 1)
-        ingridient = IngridientModel("Молоко", ml, 2)
-        recipe = RecipeModel("Молоко", [ingridient], 10, "description")
+        ml = MeasurementUnitModel.create("мл", 1)
+        ingridient = IngridientModel.create("Молоко", ml, 2)
+        recipe = RecipeModel.create("Молоко", [ingridient], 10, "description")
         assert recipe.name == "Молоко"
         assert len(recipe.ingridients) == 1
         assert recipe.ingridients[0] == ingridient
@@ -203,9 +203,9 @@ class TestModels(unittest.TestCase):
         Проверяет сеттеры модели RecipeModel
         :return:
         """
-        ml = MeasurementUnitModel("мл", 1)
-        ingridient = IngridientModel("Молоко", ml, 2)
-        recipe = RecipeModel("Молоко", [ingridient], 10, "description")
+        ml = MeasurementUnitModel.create("мл", 1)
+        ingridient = IngridientModel.create("Молоко", ml, 2)
+        recipe = RecipeModel.create("Молоко", [ingridient], 10, "description")
         recipe.name = "Молоко2"
         recipe.ingridients = [ingridient]
         recipe.time = 20
@@ -222,8 +222,8 @@ class TestModels(unittest.TestCase):
         Проверяет исключения при неправильных типах данных
         :return:
         """
-        ml = MeasurementUnitModel("мл", 1)
-        ingridient = IngridientModel("Молоко", ml, 2)
+        ml = MeasurementUnitModel.create("мл", 1)
+        ingridient = IngridientModel.create("Молоко", ml, 2)
         with self.assertRaises(ArgumentException):
             ingridient.name = 123
         with self.assertRaises(ArgumentException):
@@ -237,9 +237,9 @@ class TestModels(unittest.TestCase):
         Проверяет исключения при неправильных типах данных
         :return:
         """
-        ml = MeasurementUnitModel("мл", 1)
-        ingridient = IngridientModel("Молоко", ml, 2)
-        recipe = RecipeModel("Молоко", [ingridient], 10, "description")
+        ml = MeasurementUnitModel.create("мл", 1)
+        ingridient = IngridientModel.create("Молоко", ml, 2)
+        recipe = RecipeModel.create("Молоко", [ingridient], 10, "description")
         with self.assertRaises(ArgumentException):
             recipe.name = 123
         with self.assertRaises(ArgumentException):

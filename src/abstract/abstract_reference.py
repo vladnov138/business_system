@@ -10,21 +10,16 @@ from src.exceptions.argument_exception import ArgumentException
 
 
 class AbstractReference(ABC):
-    __uid: str = ""
+    _uid: str = ""
     _name: str = ""
 
-    def __init__(self, name: str = '', uid: str = ''):
+    def __init__(self):
         super().__init__()
-        ArgumentException.check_arg(name, str, True)
-        ArgumentException.check_arg(uid, str)
-        self._name = name
-        self.__uid = uid
-        if not uid:
-            self.__uid = str(uuid.uuid4())
+        self._uid = str(uuid.uuid4())
 
     @property
     def uid(self) -> str:
-        return self.__uid
+        return self._uid
 
     @property
     def name(self) -> str:
@@ -32,7 +27,7 @@ class AbstractReference(ABC):
 
     @uid.setter
     def uid(self, value: str):
-        self.__uid = value
+        self._uid = value
 
     @name.setter
     def name(self, value: str = ''):
@@ -48,4 +43,4 @@ class AbstractReference(ABC):
         pass
 
     def __str__(self) -> str:
-        return self.__uid
+        return self._uid

@@ -9,24 +9,24 @@ class NomenclatureModel(BaseComparingByName):
     __nomenclature_group: NomenclatureGroupModel = None
     __measurement_unit: MeasurementUnitModel = None
 
-    def __init__(self, name: str = '', nomenclature_group: NomenclatureGroupModel = None, measurement_unit: MeasurementUnitModel = None,
+    @classmethod
+    def create(cls, name: str = '', nomenclature_group: NomenclatureGroupModel = None, measurement_unit: MeasurementUnitModel = None,
                  full_name: str = None):
-        super().__init__(name)
-        ArgumentException.check_arg(nomenclature_group, NomenclatureGroupModel, True)
-        ArgumentException.check_arg(measurement_unit, MeasurementUnitModel, True)
-        ArgumentException.check_arg(full_name, str, True)
-        self.__nomenclature_group = nomenclature_group
-        self.__measurement_unit = measurement_unit
-        self.__full_name = full_name
+        model = cls()
+        model.name = name
+        model.nomenclature_group = nomenclature_group
+        model.measurement_unit = measurement_unit
+        model.full_name = full_name
+        return model
 
     @staticmethod
     def default_flour_nomenclature(group: NomenclatureGroupModel, measurement_unit: MeasurementUnitModel):
-        nomenclature = NomenclatureModel("Мука", group, measurement_unit)
+        nomenclature = NomenclatureModel.create("Мука", group, measurement_unit)
         return nomenclature
 
     @staticmethod
     def default_ice_nomenclature(group: NomenclatureGroupModel, measurement_unit: MeasurementUnitModel):
-        nomenclature = NomenclatureModel("Лёд", group, measurement_unit)
+        nomenclature = NomenclatureModel.create("Лёд", group, measurement_unit)
         return nomenclature
 
 

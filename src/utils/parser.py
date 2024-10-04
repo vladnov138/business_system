@@ -36,7 +36,7 @@ class Parser(AbstractLogic):
                         if unit.name == measurement_unit_name:
                             measurement_unit = unit
                             break
-                    ingredients.append(IngridientModel(ingredient, measurement_unit, quantity))
+                    ingredients.append(IngridientModel.create(ingredient, measurement_unit, quantity))
         return ingredients
 
     @staticmethod
@@ -52,7 +52,7 @@ class Parser(AbstractLogic):
         recipe_title, cooking_time = Parser.parse_header_recipe(text)
         ingredients = Parser.parse_recipe_ingredients_table(text, measurements)
         steps_text = Parser.parse_steps(text)
-        recipe = RecipeModel(recipe_title, ingredients, int(cooking_time), steps_text)
+        recipe = RecipeModel.create(recipe_title, ingredients, int(cooking_time), steps_text)
         return recipe
 
     @staticmethod
@@ -64,6 +64,6 @@ class Parser(AbstractLogic):
                 if unit.name == data[k]['base']:
                     base = unit
                     break
-            measurement_unit = MeasurementUnitModel(k, data[k]['unit'], base)
+            measurement_unit = MeasurementUnitModel.create(k, data[k]['unit'], base)
             units.append(measurement_unit)
         return units

@@ -4,6 +4,8 @@ import pkgutil
 import sys
 from json import JSONDecoder
 
+from src.abstract.base_comparing_by_name import BaseComparingByName
+from src.abstract.base_comparing_by_uid import BaseComparingByUid
 from src.exceptions.operation_exception import OperationException
 
 
@@ -12,23 +14,17 @@ class JsonModelDecoder(JSONDecoder):
     def __init__(self):
         super().__init__()
         self.classes = {}
-        self.import_submodules("src.models")
-        for sub_module in sys.modules:
-            if sub_module.startswith("src.models"):
-                sub_module_obj = sys.modules[sub_module]
-                self.classes.update({
-                    name: cls for name, cls in inspect.getmembers(sub_module_obj, inspect.isclass)
-                })
+        self.import_submodules()
 
-    def import_submodules(self, package):
+    def import_submodules(self):
         """
         Импорт всех подмодулей пакета
         :return:
         """
-        module = importlib.import_module(package)
-        for loader, name, is_pkg in pkgutil.walk_packages(module.__path__, module.__name__ + '.'):
-            importlib.import_module(name)
-        return module
+        for inheritor in BaseComparingByName.__subclasses__():
+            self.classes[inheritor.__name__] = inheritor
+        for inheritor in BaseComparingByUid.__subclasses__():
+            self.classes[inheritor.__name__] = inheritor
 
     def decode_model(self, coded_obj, cls):
         """

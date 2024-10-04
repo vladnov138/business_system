@@ -34,83 +34,139 @@ class TestReportDeserialize(unittest.TestCase):
         parent_path = PathUtils().get_parent_directory(Path(__file__).resolve(), levels_up=2)
         self.full_name = f"{parent_path}{os.sep}reports{os.sep}"
 
+    def get_fields(self, model_class):
+        """
+        Получает поля класса модели для проверки
+        :return:
+        """
+        return list(filter(lambda x: not x.startswith("_") and not callable(getattr(model_class, x)),
+                           dir(model_class)))
+
+    def deserialize_json(self, data, report_name):
+        """
+        Экспортирует данные, десериализует и возвращает результат
+        :return:
+        """
+        self.report.create(data)
+        full_name = f"{self.full_name}{report_name}"
+        self.report.export(f"/reports/{report_name}")
+        with open(full_name) as file:
+            result = JsonModelDecoder().decode(file.read())
+        return result
+
     def test_json_measurement_unit_deserialize(self):
         """
         Тестирует десериализацию модели MeasurementUnitModel из формата JSON
-        Экспортирует загруженные единицы измерения, потом выгружает обратно и сверяет все поля
+        Экспортирует загруженные единицы измерения и сверяет кол-во экземпляров
         :return:
         """
         measurement_unit_key = self.data_repository.measurement_unit_key()
-        self.report.create(self.data_repository.data[measurement_unit_key])
-        report_name = "report_measurement_unit.json"
-        self.report.export(f"reports/{report_name}")
-        self.full_name = f"{self.full_name}{report_name}"
-        with open(self.full_name) as file:
-            result = JsonModelDecoder().decode(file.read())
-        fields = list(filter(lambda x: not x.startswith("_") and not callable(getattr(MeasurementUnitModel, x)),
-                             dir(MeasurementUnitModel)))
         measurement_units = self.data_repository.data[measurement_unit_key]
+        result = self.deserialize_json(measurement_units, "report_measurement_unit.json")
         assert len(result) == len(measurement_units)
-        passed = 0
-        for i in range(len(result)):
-            assert isinstance(result[i], MeasurementUnitModel)
-            if result[i] == measurement_units[i]:
-                passed += 1
-                for field in fields:
-                    assert getattr(result[i], field) == getattr(measurement_units[i], field)
-        assert passed == len(result)
 
-    def test_json_nomenclatures_deserialize(self):
+    def test_measurement_unit_instance(self):
+        """
+        Тестирует десериализацию модели MeasurementUnitModel из формата JSON
+        Экспортирует загруженные единицы измерения и проверяет, что все сущности это MeasurementUnitModel
+        :return:
+        """
+        measurement_unit_key = self.data_repository.measurement_unit_key()
+        measurement_units = self.data_repository.data[measurement_unit_key]
+        result = self.deserialize_json(measurement_units, "report_measurement_unit.json")
+        for item in result:
+            assert isinstance(item, MeasurementUnitModel)
+
+    def test_measurement_unit_fields(self):
+        """
+        Тестирует десериализацию модели MeasurementUnitModel из формата JSON
+        Экспортирует загруженные единицы измерения и сравнивает все поля
+        :return:
+        """
+        measurement_unit_key = self.data_repository.measurement_unit_key()
+        measurement_units = self.data_repository.data[measurement_unit_key]
+        result = self.deserialize_json(measurement_units, "report_measurement_unit.json")
+        fields = self.get_fields(MeasurementUnitModel)
+        for i in range(len(result)):
+            assert result[i] == measurement_units[i]
+            for field in fields:
+                assert getattr(result[i], field) == getattr(measurement_units[i], field)
+
+    def test_json_nomenclature_deserialize(self):
         """
         Тестирует десериализацию модели NomenclatureModel из формата JSON
-        Экспортирует загруженные номенклатуры, потом выгружает обратно и сверяет все поля
+        Экспортирует загруженные единицы измерения и сверяет кол-во экземпляров
         :return:
         """
         nomenclature_key = self.data_repository.nomenclature_key()
-        self.report.create(self.data_repository.data[nomenclature_key])
-        report_name = "report_nomenclature.json"
-        self.report.export(f"reports/{report_name}")
-        self.full_name = f"{self.full_name}{report_name}"
-        with open(self.full_name) as file:
-            result = JsonModelDecoder().decode(file.read())
-        fields = list(filter(lambda x: not x.startswith("_") and not callable(getattr(NomenclatureModel, x)),
-                             dir(NomenclatureModel)))
         nomenclatures = self.data_repository.data[nomenclature_key]
+        result = self.deserialize_json(nomenclatures, "report_nomenclature.json")
         assert len(result) == len(nomenclatures)
-        passed = 0
+
+    def test_nomenclature_instance(self):
+        """
+        Тестирует десериализацию модели NomenclatureModel из формата JSON
+        Экспортирует загруженные единицы измерения и проверяет, что все сущности это NomenclatureModel
+        :return:
+        """
+        nomenclature_key = self.data_repository.nomenclature_key()
+        nomenclatures = self.data_repository.data[nomenclature_key]
+        result = self.deserialize_json(nomenclatures, "report_nomenclature.json")
+        for item in result:
+            assert isinstance(item, NomenclatureModel)
+
+    def test_nomenclature_fields(self):
+        """
+        Тестирует десериализацию модели NomenclatureModel из формата JSON
+        Экспортирует загруженные единицы измерения и сравнивает все поля
+        :return:
+        """
+        nomenclature_key = self.data_repository.nomenclature_key()
+        nomenclatures = self.data_repository.data[nomenclature_key]
+        result = self.deserialize_json(nomenclatures, "report_measurement_unit.json")
+        fields = self.get_fields(NomenclatureModel)
         for i in range(len(result)):
-            assert isinstance(result[i], NomenclatureModel)
-            if result[i] == nomenclatures[i]:
-                passed += 1
-                for field in fields:
-                    assert getattr(result[i], field) == getattr(nomenclatures[i], field)
-        assert passed == len(result)
+            assert result[i] == nomenclatures[i]
+            for field in fields:
+                assert getattr(result[i], field) == getattr(nomenclatures[i], field)
 
     def test_json_recipe_deserialize(self):
         """
         Тестирует десериализацию модели RecipeModel из формата JSON
-        Экспортирует загруженные рецепты, потом выгружает обратно и сверяет все поля
+        Экспортирует загруженные единицы измерения и сверяет кол-во экземпляров
         :return:
         """
         recipe_key = self.data_repository.recipe_key()
-        self.report.create(self.data_repository.data[recipe_key])
-        report_name = "report_recipe.json"
-        self.report.export(f"reports/{report_name}")
-        self.full_name = f"{self.full_name}{report_name}"
-        with open(self.full_name) as file:
-            result = JsonModelDecoder().decode(file.read())
-        fields = list(filter(lambda x: not x.startswith("_") and not callable(getattr(RecipeModel, x)),
-                             dir(RecipeModel)))
         recipes = self.data_repository.data[recipe_key]
+        result = self.deserialize_json(recipes, "report_recipe.json")
         assert len(result) == len(recipes)
-        passed = 0
+
+    def test_recipe_instance(self):
+        """
+        Тестирует десериализацию модели RecipeModel из формата JSON
+        Экспортирует загруженные единицы измерения и проверяет, что все сущности это RecipeModel
+        :return:
+        """
+        recipe_key = self.data_repository.recipe_key()
+        recipes = self.data_repository.data[recipe_key]
+        result = self.deserialize_json(recipes, "report_recipe.json")
+        for item in result:
+            assert isinstance(item, RecipeModel)
+
+    def test_recipe_fields(self):
+        """
+        Тестирует десериализацию модели RecipeModel из формата JSON
+        Экспортирует загруженные единицы измерения и сравнивает все поля
+        :return:
+        """
+        recipe_key = self.data_repository.recipe_key()
+        recipes = self.data_repository.data[recipe_key]
+        result = self.deserialize_json(recipes, "report_recipe.json")
+        fields = self.get_fields(RecipeModel)
         for i in range(len(result)):
-            assert isinstance(result[i], RecipeModel)
-            if result[i] == recipes[i]:
-                passed += 1
-                for field in fields:
-                    assert getattr(result[i], field) == getattr(recipes[i], field)
-        assert passed == len(result)
+            assert result[i] == recipes[i]
+            for field in fields:
+                assert getattr(result[i], field) == getattr(recipes[i], field)
 
 if __name__ == "__main__":
     unittest.main()

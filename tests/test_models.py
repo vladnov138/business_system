@@ -192,7 +192,7 @@ class TestModels(unittest.TestCase):
         """
         ml = MeasurementUnitModel.create("мл", 1)
         ingridient = IngridientModel.create("Молоко", ml, 2)
-        recipe = RecipeModel.create("Молоко", [ingridient], 10, "description")
+        recipe = RecipeModel.create("Молоко", [ingridient], 10, ["description"])
         assert recipe.name == "Молоко"
         assert len(recipe.ingridients) == 1
         assert recipe.ingridients[0] == ingridient
@@ -205,16 +205,16 @@ class TestModels(unittest.TestCase):
         """
         ml = MeasurementUnitModel.create("мл", 1)
         ingridient = IngridientModel.create("Молоко", ml, 2)
-        recipe = RecipeModel.create("Молоко", [ingridient], 10, "description")
+        recipe = RecipeModel.create("Молоко", [ingridient], 10, ["description"])
         recipe.name = "Молоко2"
         recipe.ingridients = [ingridient]
         recipe.time = 20
-        recipe.description = "description2"
+        recipe.description = ["description2"]
         assert recipe.name == "Молоко2"
         assert len(recipe.ingridients) == 1
         assert recipe.ingridients[0] == ingridient
         assert recipe.time == 20
-        assert recipe.description == "description2"
+        assert recipe.description[0] == "description2"
 
 
     def test_ingridient_model_setters_exceptions(self):
@@ -239,7 +239,7 @@ class TestModels(unittest.TestCase):
         """
         ml = MeasurementUnitModel.create("мл", 1)
         ingridient = IngridientModel.create("Молоко", ml, 2)
-        recipe = RecipeModel.create("Молоко", [ingridient], 10, "description")
+        recipe = RecipeModel.create("Молоко", [ingridient], 10, ["description"])
         with self.assertRaises(ArgumentException):
             recipe.name = 123
         with self.assertRaises(ArgumentException):

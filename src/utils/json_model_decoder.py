@@ -1,7 +1,3 @@
-import importlib
-import inspect
-import pkgutil
-import sys
 from json import JSONDecoder
 
 from src.abstract.base_comparing_by_name import BaseComparingByName
@@ -38,11 +34,19 @@ class JsonModelDecoder(JSONDecoder):
             if field not in coded_obj:
                 continue
             value = coded_obj[field]
+
             if isinstance(value, dict) and "cls" in value:
                 nested_cls_name = value["cls"]
                 nested_cls = self.classes.get(nested_cls_name)
                 if nested_cls:
                     value = self.decode_model(value, nested_cls)
+            elif isinstance(value, list):
+                if len(value) > 0 and isinstance(value[0], dict) and "cls" in value[0]:
+                    nested_cls_name = value[0]["cls"]
+                    nested_cls = self.classes.get(nested_cls_name)
+                    if nested_cls:
+                        value = [self.decode_model(item, nested_cls) for item in value]
+
             setattr(model, field, value)
         return model
 
@@ -57,6 +61,9 @@ class JsonModelDecoder(JSONDecoder):
             decoded_content = s
 
         model_key = decoded_content.get("cls") or list(decoded_content.keys())[0]
+        if not model_key or model_key not in self.classes:
+            raise OperationException("Ошибка декодинга: не удалось обнаружить ключ")
+
         cls = self.classes.get(model_key)
 
         if cls is None:
@@ -69,3 +76,4 @@ class JsonModelDecoder(JSONDecoder):
             models = self.decode_model(data, cls)
 
         return models
+

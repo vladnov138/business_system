@@ -1,6 +1,7 @@
 import re
 
 from src.abstract.abstract_logic import AbstractLogic
+from src.exceptions.operation_exception import OperationException
 from src.models.ingridient_model import IngridientModel
 from src.models.measurement_unit_model import MeasurementUnitModel
 from src.models.recipe_model import RecipeModel
@@ -22,30 +23,33 @@ class Parser(AbstractLogic):
     @staticmethod
     def parse_recipe_ingredients_table(text: str, measurements: list[MeasurementUnitModel]) -> list[IngridientModel]:
         ingredients = []
-        ingredient_table_match = re.search(r'\| Ингредиенты\s+\|\s+Граммовка \|(.+?)\|', text, re.DOTALL)
-        if ingredient_table_match:
-            rows = ingredient_table_match.group(1).strip().split('\n')
-            for row in rows:
-                cols = row.split('|')
-                if len(cols) == 3:
-                    ingredient = cols[1].strip()
-                    quantity = cols[2].strip().split()[0]
-                    measurement_unit_name = cols[2].strip().split()[1]
-                    measurement_unit = None
-                    for unit in measurements:
-                        if unit.name == measurement_unit_name:
-                            measurement_unit = unit
-                            break
-                    ingredients.append(IngridientModel.create(ingredient, measurement_unit, quantity))
+        for line in text.split('\n'):
+            if '|' in line and 'ингредиенты' not in line.lower() and 'граммовка' not in line.lower() and '-|' not in line:
+                current_row = line.lstrip().split('|')[1:][:-1]
+                current_row = [i.strip() for i in current_row]
+                count_data = current_row[1].split(' ')
+                ingredient_name = current_row[0]
+                quantity = float(count_data[0])
+                measurement_unit_name = count_data[1]
+                measurement_unit = None
+                for unit in measurements:
+                    if unit.name == measurement_unit_name:
+                        measurement_unit = unit
+                        break
+                if measurement_unit is None:
+                    raise OperationException(f'Отсутствует единица измерения {measurement_unit_name}')
+                ingredients.append(IngridientModel.create(ingredient_name, measurement_unit, quantity))
         return ingredients
 
     @staticmethod
-    def parse_steps(text: str) -> str:
+    def parse_steps(text: str) -> list[str]:
         steps_match = re.search(r'## ПОШАГОВОЕ ПРИГОТОВЛЕНИЕ(.+)', text, re.DOTALL)
         steps_text = ""
         if steps_match:
             steps_text = steps_match.group(1).strip()
-        return steps_text
+        if "время приготовления" in steps_text.lower():
+            return steps_text.split('\n')[1:]
+        return steps_text.split('\n')
 
     @staticmethod
     def parse_recipe_from_md(text: str, measurements: list[MeasurementUnitModel]):

@@ -9,7 +9,7 @@ class RecipeModel(BaseComparingByUid):
     __description = None
 
     @classmethod
-    def create(cls, name: str, ingridients: list[IngridientModel], cooking_time_minutes: int, description: str):
+    def create(cls, name: str, ingridients: list[IngridientModel], cooking_time_minutes: int, description: list[str]):
         model = cls()
         model.name = name
         model.ingridients = ingridients
@@ -44,5 +44,7 @@ class RecipeModel(BaseComparingByUid):
 
     @description.setter
     def description(self, value: str):
-        ArgumentException.check_arg(value, str)
+        ArgumentException.check_arg(value, list)
+        for ingridient in value:
+            ArgumentException.check_arg(ingridient, str)
         self.__description = value

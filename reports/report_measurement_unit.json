@@ -1,44 +1,58 @@
 {
-  "NomenclatureModel": [
+  "MeasurementUnitModel": [
     {
-      "full_name": null,
-      "measurement_unit": {
+      "base_measure_unit": null,
+      "name": "\u0433",
+      "uid": "b3eb351e-caf0-47c1-874a-d29803d06dca",
+      "unit": 1.0
+    },
+    {
+      "base_measure_unit": {
         "cls": "MeasurementUnitModel",
-        "uid": "9fa2207a-3255-4138-b9a2-942da75c07d6",
+        "uid": "b3eb351e-caf0-47c1-874a-d29803d06dca",
+        "name": "\u0433",
+        "unit": 1.0,
+        "base_measure_unit": null
+      },
+      "name": "\u043a\u0433",
+      "uid": "0c770562-dd8c-4da7-8e4b-d91bd1954183",
+      "unit": 1000.0
+    },
+    {
+      "base_measure_unit": {
+        "cls": "MeasurementUnitModel",
+        "uid": "0c770562-dd8c-4da7-8e4b-d91bd1954183",
         "name": "\u043a\u0433",
         "unit": 1000.0,
         "base_measure_unit": {
           "cls": "MeasurementUnitModel",
-          "uid": "53658cef-0f26-44d6-a708-c1afc11564c6",
+          "uid": "b3eb351e-caf0-47c1-874a-d29803d06dca",
           "name": "\u0433",
           "unit": 1.0,
           "base_measure_unit": null
         }
       },
-      "name": "\u041c\u0443\u043a\u0430",
-      "nomenclature_group": {
-        "cls": "NomenclatureGroupModel",
-        "uid": "94d73597-6b1b-43c8-be36-053f593aa5a5",
-        "name": "\u0421\u044b\u0440\u044c\u0451"
-      },
-      "uid": "909e88b1-8a4b-475b-a038-3c19dc44df5d"
+      "name": "\u0442",
+      "uid": "5bf18fdb-ab69-4f09-b466-0f22ed7de0a0",
+      "unit": 1000.0
     },
     {
-      "full_name": null,
-      "measurement_unit": {
-        "cls": "MeasurementUnitModel",
-        "uid": "53658cef-0f26-44d6-a708-c1afc11564c6",
-        "name": "\u0433",
-        "unit": 1.0,
-        "base_measure_unit": null
-      },
-      "name": "\u041b\u0451\u0434",
-      "nomenclature_group": {
-        "cls": "NomenclatureGroupModel",
-        "uid": "c2a22fd1-18aa-47d0-a380-21e45f0c0619",
-        "name": "\u0417\u0430\u043c\u043e\u0440\u043e\u0437\u043a\u0430"
-      },
-      "uid": "6a7c8235-4668-42d5-ae3f-f5803c6731c2"
+      "base_measure_unit": null,
+      "name": "\u0448\u0442",
+      "uid": "82f82f95-689e-45a5-9275-f32a0bab42d5",
+      "unit": 1.0
+    },
+    {
+      "base_measure_unit": null,
+      "name": "\u0447.\u043b.",
+      "uid": "fce1a4ec-452c-4451-9281-faa6b74eee97",
+      "unit": 1.0
+    },
+    {
+      "base_measure_unit": null,
+      "name": "\u043c\u043b",
+      "uid": "0cf8935e-ae11-47c1-84b4-be7683518dd5",
+      "unit": 1.0
     }
   ]
 }

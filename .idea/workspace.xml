@@ -6,14 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d4afd156-2404-459e-a434-5121565aff87" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/recipe1.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/recipe1.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/recipe2.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/recipe2.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_measurement_unit.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/report_recipe.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_recipe.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/recipe_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/recipe_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/json_model_decoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/json_model_decoder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/parser.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +94,7 @@
     "Python tests.Python tests for test_models.TestModels.test_organization_model_converting.executor": "Debug",
     "Python tests.Python tests for test_models.TestModels.test_recipe_model.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.test_recipe_model_setters_exceptions.executor": "Run",
-    "Python tests.Python tests for test_models.TestModels.test_recipe_setters.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_recipe_setters.executor": "Debug",
     "Python tests.Python tests for test_models.TestModels.test_storage_model.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.test_storage_model_getters.executor": "Run",
     "Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_json_measurement_unit_deserialize.executor": "Run",
@@ -124,7 +120,7 @@
     "Python tests.Python tests in test_data_repository.py.executor": "Run",
     "Python tests.Python tests in test_exceptions.py.executor": "Run",
     "Python tests.Python tests in test_models.py.executor": "Run",
-    "Python tests.Python tests in test_report_deserialize.py.executor": "Debug",
+    "Python tests.Python tests in test_report_deserialize.py.executor": "Run",
     "Python tests.Python tests in test_reporting.py.executor": "Run",
     "Python tests.Python tests in test_settings.py.executor": "Run",
     "Python tests.Python tests in tests.executor": "Run",
@@ -151,6 +147,21 @@
     </key>
   </component>
   <component name="RunManager" selected="Python tests.Python tests in test_report_deserialize.py">
+    <configuration name="Python tests for test_models.TestModels.test_recipe_setters" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="business_system" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_models.TestModels.test_recipe_setters&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Python tests for test_report_deserialize.TestReportDeserialize.test_json_recipe_deserialize" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
@@ -163,36 +174,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_report_deserialize.TestReportDeserialize.test_json_recipe_deserialize&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_report_deserialize.TestReportDeserialize.test_nomenclature_fields" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="business_system" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_report_deserialize.TestReportDeserialize.test_nomenclature_fields&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_report_deserialize.TestReportDeserialize.test_nomenclature_instance" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="business_system" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_report_deserialize.TestReportDeserialize.test_nomenclature_instance&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -226,13 +207,28 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests in tests" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="business_system" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Python tests in test_report_deserialize.py" />
+        <item itemvalue="Python tests.Python tests in tests" />
+        <item itemvalue="Python tests.Python tests for test_models.TestModels.test_recipe_setters" />
         <item itemvalue="Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_recipe_instance" />
         <item itemvalue="Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_json_recipe_deserialize" />
-        <item itemvalue="Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_nomenclature_fields" />
-        <item itemvalue="Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_nomenclature_instance" />
       </list>
     </recent_temporary>
   </component>

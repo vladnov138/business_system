@@ -9,12 +9,15 @@ class OrganizationModel(BaseComparingByName):
     __bik = ""
     __business_type = ""
 
-    def __init__(self, settings: Settings):
-        super().__init__(settings.organization_name)
-        self.__inn = settings.inn
-        self.__account = settings.account
-        self.__bik = settings.bik
-        self.__business_type = settings.business_type
+    @classmethod
+    def create(cls, settings: Settings):
+        model = cls()
+        model.name = settings.organization_name
+        model.inn = settings.inn
+        model.account = settings.account
+        model.bik = settings.bik
+        model.business_type = settings.business_type
+        return model
 
     @property
     def inn(self):

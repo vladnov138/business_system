@@ -9,25 +9,24 @@ class NomenclatureModel(BaseComparingByName):
     __nomenclature_group: NomenclatureGroupModel = None
     __measurement_unit: MeasurementUnitModel = None
 
-    def __init__(self, name: str, nomenclature_group: NomenclatureGroupModel, measurement_unit: MeasurementUnitModel,
+    @classmethod
+    def create(cls, name: str = '', nomenclature_group: NomenclatureGroupModel = None, measurement_unit: MeasurementUnitModel = None,
                  full_name: str = None):
-        super().__init__(name)
-        ArgumentException.check_arg(name, str)
-        ArgumentException.check_arg(nomenclature_group, NomenclatureGroupModel)
-        ArgumentException.check_arg(measurement_unit, MeasurementUnitModel)
-        ArgumentException.check_arg(full_name, str, True)
-        self.__nomenclature_group = nomenclature_group
-        self.__measurement_unit = measurement_unit
-        self.__full_name = full_name
+        model = cls()
+        model.name = name
+        model.nomenclature_group = nomenclature_group
+        model.measurement_unit = measurement_unit
+        model.full_name = full_name
+        return model
 
     @staticmethod
     def default_flour_nomenclature(group: NomenclatureGroupModel, measurement_unit: MeasurementUnitModel):
-        nomenclature = NomenclatureModel("Мука", group, measurement_unit)
+        nomenclature = NomenclatureModel.create("Мука", group, measurement_unit)
         return nomenclature
 
     @staticmethod
     def default_ice_nomenclature(group: NomenclatureGroupModel, measurement_unit: MeasurementUnitModel):
-        nomenclature = NomenclatureModel("Лёд", group, measurement_unit)
+        nomenclature = NomenclatureModel.create("Лёд", group, measurement_unit)
         return nomenclature
 
 
@@ -36,9 +35,10 @@ class NomenclatureModel(BaseComparingByName):
         return self.__full_name
 
     @full_name.setter
-    def full_name(self, value: str):
-        ArgumentException.check_arg(value, str)
-        ArgumentException.check_max_len(value, 255)
+    def full_name(self, value: str = None):
+        ArgumentException.check_arg(value, str, True)
+        if value:
+            ArgumentException.check_max_len(value, 255)
         self.__full_name = value
 
     @property
@@ -56,5 +56,5 @@ class NomenclatureModel(BaseComparingByName):
 
     @nomenclature_group.setter
     def nomenclature_group(self, value: NomenclatureGroupModel):
-        ArgumentException.check_arg(value, NomenclatureModel)
+        ArgumentException.check_arg(value, NomenclatureGroupModel)
         self.__nomenclature_group = value

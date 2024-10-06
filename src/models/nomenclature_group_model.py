@@ -2,18 +2,26 @@ from src.abstract.base_comparing_by_uid import BaseComparingByUid
 
 
 class NomenclatureGroupModel(BaseComparingByUid):
-    """
-        Default группа - сырье
-        """
+
+    @classmethod
+    def create(cls, name: str):
+        model = cls()
+        model.name = name
+        return model
+
     @staticmethod
     def default_group_source():
-        item = NomenclatureGroupModel("Сырьё")
+        """
+        Default группа - сырье
+        """
+        item = NomenclatureGroupModel.create("Сырьё")
         return item
 
-    """
-    Default группа - заморозка
-    """
+
     @staticmethod
     def default_group_cold():
-        item = NomenclatureGroupModel("Заморозка")
+        """
+        Default группа - заморозка
+        """
+        item = NomenclatureGroupModel.create("Заморозка")
         return item

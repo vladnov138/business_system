@@ -4,17 +4,18 @@ from src.models.ingridient_model import IngridientModel
 
 
 class RecipeModel(BaseComparingByUid):
+    __ingridients = None
+    __cooking_time_minutes = None
+    __description = None
 
-    def __init__(self, name: str, ingridients: list[IngridientModel], cooking_time_minutes: int, description: str):
-        super().__init__(name)
-        ArgumentException.check_arg(ingridients, list)
-        for ingridient in ingridients:
-            ArgumentException.check_arg(ingridient, IngridientModel)
-        ArgumentException.check_arg(cooking_time_minutes, int)
-        ArgumentException.check_arg(description, str)
-        self.__ingridients = ingridients
-        self.__cooking_time_minutes = cooking_time_minutes
-        self.__description = description
+    @classmethod
+    def create(cls, name: str, ingridients: list[IngridientModel], cooking_time_minutes: int, description: list[str]):
+        model = cls()
+        model.name = name
+        model.ingridients = ingridients
+        model.cooking_time_minutes = cooking_time_minutes
+        model.description = description
+        return model
 
     @property
     def ingridients(self):
@@ -43,5 +44,7 @@ class RecipeModel(BaseComparingByUid):
 
     @description.setter
     def description(self, value: str):
-        ArgumentException.check_arg(value, str)
+        ArgumentException.check_arg(value, list)
+        for ingridient in value:
+            ArgumentException.check_arg(ingridient, str)
         self.__description = value

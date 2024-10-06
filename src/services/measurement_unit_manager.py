@@ -27,7 +27,7 @@ class MeasurementUnitManager:
                 if unit.name == self.__data[key]['base']:
                     base = unit
                     break
-            measurement_unit = MeasurementUnitModel(key, self.__data[key]['unit'], base)
+            measurement_unit = MeasurementUnitModel.create(key, self.__data[key]['unit'], base)
             units.append(measurement_unit)
         return units
 

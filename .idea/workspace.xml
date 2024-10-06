@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d4afd156-2404-459e-a434-5121565aff87" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abstract/abstract_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abstract/abstract_report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_measurement_unit.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_recipe.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_recipe.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/json_model_decoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/json_model_decoder.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,17 +76,37 @@
     "Python tests.Python tests for test_data_repository.TestDataRepository.test_data_recipes.executor": "Run",
     "Python tests.Python tests for test_exceptions.TestUtils.test_check_max_len_exceeded.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_ingridient_model.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_ingridient_model_setters_exceptions.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_ingridient_setters.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.test_measurement_base_unit_model.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.test_measurement_unit_exceptions.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.test_measurement_unit_model.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_measurement_unit_model_comparing_returns_true.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_measurement_unit_model_getters.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.test_measurement_unit_setters.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.test_nomenclature_group.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.test_nomenclature_group_model.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_nomenclature_group_model_comparing_by_uid_returns_true.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_nomenclature_group_model_getters.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.test_nomenclature_model.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.test_organization_model.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.test_organization_model_converting.executor": "Debug",
+    "Python tests.Python tests for test_models.TestModels.test_recipe_model.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.test_recipe_model_setters_exceptions.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_recipe_setters.executor": "Debug",
     "Python tests.Python tests for test_models.TestModels.test_storage_model.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_storage_model_getters.executor": "Run",
+    "Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_json_measurement_unit_deserialize.executor": "Run",
+    "Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_json_nomenclature_deserialize.executor": "Run",
+    "Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_json_nomenclatures_deserialize.executor": "Run",
+    "Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_json_recipe_deserialize.executor": "Run",
+    "Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_measurement_unit_fields.executor": "Debug",
+    "Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_measurement_unit_instance.executor": "Run",
+    "Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_nomenclature_fields.executor": "Run",
+    "Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_nomenclature_instance.executor": "Run",
+    "Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_recipe_fields.executor": "Run",
+    "Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_recipe_instance.executor": "Run",
     "Python tests.Python tests for test_reporting.TestReporting.test_csv_report_create_measurement_unit.executor": "Debug",
     "Python tests.Python tests for test_reporting.TestReporting.test_json_report_create_measurement_unit.executor": "Debug",
     "Python tests.Python tests for test_reporting.TestReporting.test_rtf_report_create_nomenclature.executor": "Run",
@@ -97,15 +120,16 @@
     "Python tests.Python tests in test_data_repository.py.executor": "Run",
     "Python tests.Python tests in test_exceptions.py.executor": "Run",
     "Python tests.Python tests in test_models.py.executor": "Run",
+    "Python tests.Python tests in test_report_deserialize.py.executor": "Run",
     "Python tests.Python tests in test_reporting.py.executor": "Run",
-    "Python tests.Python tests in test_settings.py.executor": "Debug",
+    "Python tests.Python tests in test_settings.py.executor": "Run",
     "Python tests.Python tests in tests.executor": "Run",
     "Python.main.executor": "Debug",
     "Python.nomenclature_group_model.executor": "Run",
     "Python.settings_manager.executor": "Run",
     "Python.start_service.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "#3 on report__factory",
+    "git-widget-placeholder": "#4 on report__deserealize",
     "last_opened_file_path": "/home/vladnov138/PycharmProjects/business_system/src/reports",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
@@ -122,8 +146,8 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in tests">
-    <configuration name="Python tests for test_reporting.TestReporting.test_json_report_create_measurement_unit" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests in test_report_deserialize.py">
+    <configuration name="Python tests for test_models.TestModels.test_recipe_setters" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -134,11 +158,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_reporting.TestReporting.test_json_report_create_measurement_unit&quot;" />
+      <option name="_new_target" value="&quot;test_models.TestModels.test_recipe_setters&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_reporting.TestReporting.test_xml_report_create_measurement_unit" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_report_deserialize.TestReportDeserialize.test_json_recipe_deserialize" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -149,11 +173,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_reporting.TestReporting.test_xml_report_create_measurement_unit&quot;" />
+      <option name="_new_target" value="&quot;test_report_deserialize.TestReportDeserialize.test_json_recipe_deserialize&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_settings.TestSettings.test_file_loading" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_report_deserialize.TestReportDeserialize.test_recipe_instance" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -164,11 +188,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_settings.TestSettings.test_file_loading&quot;" />
+      <option name="_new_target" value="&quot;test_report_deserialize.TestReportDeserialize.test_recipe_instance&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in test_reporting.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests in test_report_deserialize.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -179,7 +203,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_reporting.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_report_deserialize.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
@@ -200,11 +224,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests in test_report_deserialize.py" />
         <item itemvalue="Python tests.Python tests in tests" />
-        <item itemvalue="Python tests.Python tests for test_settings.TestSettings.test_file_loading" />
-        <item itemvalue="Python tests.Python tests in test_reporting.py" />
-        <item itemvalue="Python tests.Python tests for test_reporting.TestReporting.test_xml_report_create_measurement_unit" />
-        <item itemvalue="Python tests.Python tests for test_reporting.TestReporting.test_json_report_create_measurement_unit" />
+        <item itemvalue="Python tests.Python tests for test_models.TestModels.test_recipe_setters" />
+        <item itemvalue="Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_recipe_instance" />
+        <item itemvalue="Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_json_recipe_deserialize" />
       </list>
     </recent_temporary>
   </component>
@@ -238,6 +262,11 @@
           <url>file://$PROJECT_DIR$/src/reports/rtf_report.py</url>
           <line>55</line>
           <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/utils/parser.py</url>
+          <line>39</line>
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

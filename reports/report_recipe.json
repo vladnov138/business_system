@@ -4,101 +4,6 @@
       "cooking_time_minutes": 0,
       "description": [
         " ",
-        "1. \u041f\u043e\u0434\u0433\u043e\u0442\u043e\u0432\u044c\u0442\u0435 \u0432\u0441\u0435 \u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u044b\u0435 \u0438\u043d\u0433\u0440\u0435\u0434\u0438\u0435\u043d\u0442\u044b. \u0420\u0430\u0441\u0442\u043e\u043f\u0438\u0442\u0435 \u0441\u043b\u0438\u0432\u043e\u0447\u043d\u043e\u0435 \u043c\u0430\u0441\u043b\u043e \u043d\u0430 \u0441\u043b\u0430\u0431\u043e\u043c \u043e\u0433\u043d\u0435 \u0438\u043b\u0438 \u0432 \u043c\u0438\u043a\u0440\u043e\u0432\u043e\u043b\u043d\u043e\u0432\u043a\u0435.",
-        "2. \u0412 \u043c\u0438\u0441\u043a\u0435 \u0432\u0437\u0431\u0435\u0439\u0442\u0435 \u044f\u0439\u0446\u0430 \u0441 \u0441\u0430\u0445\u0430\u0440\u043e\u043c \u0434\u043e \u043e\u0434\u043d\u043e\u0440\u043e\u0434\u043d\u043e\u0439 \u043f\u044b\u0448\u043d\u043e\u0439 \u043c\u0430\u0441\u0441\u044b.",
-        "3. \u041f\u043e\u0441\u0442\u0435\u043f\u0435\u043d\u043d\u043e \u0432\u043b\u0435\u0439\u0442\u0435 \u043c\u043e\u043b\u043e\u043a\u043e \u0438 \u0440\u0430\u0441\u0442\u043e\u043f\u043b\u0435\u043d\u043d\u043e\u0435 \u043c\u0430\u0441\u043b\u043e, \u043f\u0440\u043e\u0434\u043e\u043b\u0436\u0430\u044f \u0432\u0437\u0431\u0438\u0432\u0430\u0442\u044c.",
-        "4. \u0412 \u0434\u0440\u0443\u0433\u043e\u0439 \u043c\u0438\u0441\u043a\u0435 \u0441\u043c\u0435\u0448\u0430\u0439\u0442\u0435 \u043c\u0443\u043a\u0443, \u043a\u043e\u0440\u0438\u0446\u0443 \u0438 \u0449\u0435\u043f\u043e\u0442\u043a\u0443 \u0441\u043e\u043b\u0438. \u041f\u043e\u0441\u0442\u0435\u043f\u0435\u043d\u043d\u043e \u0434\u043e\u0431\u0430\u0432\u043b\u044f\u0439\u0442\u0435 \u0441\u0443\u0445\u0438\u0435 \u0438\u043d\u0433\u0440\u0435\u0434\u0438\u0435\u043d\u0442\u044b \u0432 \u0436\u0438\u0434\u043a\u0443\u044e \u0441\u043c\u0435\u0441\u044c, \u043f\u0435\u0440\u0435\u043c\u0435\u0448\u0438\u0432\u0430\u044f \u0434\u043e \u043e\u0434\u043d\u043e\u0440\u043e\u0434\u043d\u043e\u0433\u043e \u0442\u0435\u0441\u0442\u0430.",
-        "5. \u0420\u0430\u0437\u043e\u0433\u0440\u0435\u0439\u0442\u0435 \u0432\u0430\u0444\u0435\u043b\u044c\u043d\u0438\u0446\u0443 \u0438 \u0432\u044b\u043b\u0438\u0432\u0430\u0439\u0442\u0435 \u0442\u0435\u0441\u0442\u043e \u043d\u0435\u0431\u043e\u043b\u044c\u0448\u0438\u043c\u0438 \u043f\u043e\u0440\u0446\u0438\u044f\u043c\u0438 (\u043e\u043a\u043e\u043b\u043e 1 \u0441\u0442\u043e\u043b\u043e\u0432\u043e\u0439 \u043b\u043e\u0436\u043a\u0438 \u043d\u0430 \u0432\u0430\u0444\u043b\u044e).",
-        "6. \u041f\u0435\u043a\u0438\u0442\u0435 \u0432\u0430\u0444\u043b\u0438 \u0434\u043e \u0437\u043e\u043b\u043e\u0442\u0438\u0441\u0442\u043e\u0433\u043e \u0446\u0432\u0435\u0442\u0430, \u043e\u043a\u043e\u043b\u043e 3-4 \u043c\u0438\u043d\u0443\u0442, \u0432 \u0437\u0430\u0432\u0438\u0441\u0438\u043c\u043e\u0441\u0442\u0438 \u043e\u0442 \u043c\u043e\u0449\u043d\u043e\u0441\u0442\u0438 \u0432\u0430\u0444\u0435\u043b\u044c\u043d\u0438\u0446\u044b.",
-        "7. \u0413\u043e\u0442\u043e\u0432\u044b\u0435 \u0432\u0430\u0444\u043b\u0438 \u0431\u0443\u0434\u0443\u0442 \u043c\u044f\u0433\u043a\u0438\u043c\u0438 \u0441\u0440\u0430\u0437\u0443 \u043f\u043e\u0441\u043b\u0435 \u0432\u044b\u043f\u0435\u043a\u0430\u043d\u0438\u044f, \u043d\u043e \u043e\u0441\u0442\u044b\u043d\u0443\u0432, \u0441\u0442\u0430\u043d\u0443\u0442 \u0445\u0440\u0443\u0441\u0442\u044f\u0449\u0438\u043c\u0438."
-      ],
-      "ingridients": [
-        {
-          "cls": "IngridientModel",
-          "uid": "83870156-9431-470c-a46d-b595da0abe31",
-          "name": "\u041f\u0448\u0435\u043d\u0438\u0447\u043d\u0430\u044f \u043c\u0443\u043a\u0430",
-          "measurement_unit": {
-            "cls": "MeasurementUnitModel",
-            "uid": "a9bf3dfe-a29f-4346-bc43-8075f65c9a49",
-            "name": "\u0433",
-            "unit": 1.0,
-            "base_measure_unit": null
-          },
-          "amount": 150.0
-        },
-        {
-          "cls": "IngridientModel",
-          "uid": "3b775616-5add-4ba4-b68d-49fe16a3541a",
-          "name": "\u0421\u0430\u0445\u0430\u0440",
-          "measurement_unit": {
-            "cls": "MeasurementUnitModel",
-            "uid": "a9bf3dfe-a29f-4346-bc43-8075f65c9a49",
-            "name": "\u0433",
-            "unit": 1.0,
-            "base_measure_unit": null
-          },
-          "amount": 60.0
-        },
-        {
-          "cls": "IngridientModel",
-          "uid": "a42804cb-336e-4e88-b40c-000151bb7d25",
-          "name": "\u0421\u043b\u0438\u0432\u043e\u0447\u043d\u043e\u0435 \u043c\u0430\u0441\u043b\u043e",
-          "measurement_unit": {
-            "cls": "MeasurementUnitModel",
-            "uid": "a9bf3dfe-a29f-4346-bc43-8075f65c9a49",
-            "name": "\u0433",
-            "unit": 1.0,
-            "base_measure_unit": null
-          },
-          "amount": 75.0
-        },
-        {
-          "cls": "IngridientModel",
-          "uid": "01d4163a-7e2c-48aa-82e4-8e8ea764e955",
-          "name": "\u042f\u0439\u0446\u0430",
-          "measurement_unit": {
-            "cls": "MeasurementUnitModel",
-            "uid": "80f69105-e981-4f6a-ad53-50095ba41ee0",
-            "name": "\u0448\u0442",
-            "unit": 1.0,
-            "base_measure_unit": null
-          },
-          "amount": 2.0
-        },
-        {
-          "cls": "IngridientModel",
-          "uid": "88ebfc42-6642-4e42-9bbe-0046e6420671",
-          "name": "\u041c\u043e\u043b\u043e\u043a\u043e",
-          "measurement_unit": {
-            "cls": "MeasurementUnitModel",
-            "uid": "a19df400-ee03-4dc0-9e03-c88eeaae4a8f",
-            "name": "\u043c\u043b",
-            "unit": 1.0,
-            "base_measure_unit": null
-          },
-          "amount": 100.0
-        },
-        {
-          "cls": "IngridientModel",
-          "uid": "8cc39561-e343-4d07-8562-297f8b28453e",
-          "name": "\u041a\u043e\u0440\u0438\u0446\u0430",
-          "measurement_unit": {
-            "cls": "MeasurementUnitModel",
-            "uid": "cfd60cfb-aa30-4310-b5fa-468a6c542837",
-            "name": "\u0447.\u043b.",
-            "unit": 1.0,
-            "base_measure_unit": null
-          },
-          "amount": 1.0
-        }
-      ],
-      "name": "\u0425\u0420\u0423\u0421\u0422\u042f\u0429\u0418\u0415 \u0412\u0410\u0424\u041b\u0418 \u0421 \u041a\u041e\u0420\u0418\u0426\u0415\u0419",
-      "uid": "3df70097-f6ab-48e5-8d82-bc1b3c4a24d5"
-    },
-    {
-      "cooking_time_minutes": 0,
-      "description": [
-        " ",
         "1. \u041a\u0430\u043a \u0438\u0441\u043f\u0435\u0447\u044c \u0432\u0430\u0444\u043b\u0438 \u0445\u0440\u0443\u0441\u0442\u044f\u0449\u0438\u0435 \u0432 \u0432\u0430\u0444\u0435\u043b\u044c\u043d\u0438\u0446\u0435? \u041f\u043e\u0434\u0433\u043e\u0442\u043e\u0432\u044c\u0442\u0435 \u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u044b\u0435 \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u044b. \u0418\u0437 \u0434\u0430\u043d\u043d\u043e\u0433\u043e \u043a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u0430 \u0443 \u043c\u0435\u043d\u044f \u043f\u043e\u043b\u0443\u0447\u0438\u043b\u043e\u0441\u044c 8 \u0448\u0442\u0443\u043a \u0434\u0438\u0430\u043c\u0435\u0442\u0440\u043e\u043c \u043e\u043a\u043e\u043b\u043e 10 \u0441\u043c.",
         "2. \u041c\u0430\u0441\u043b\u043e \u043f\u043e\u043b\u043e\u0436\u0438\u0442\u0435 \u0432 \u0441\u043e\u0442\u0435\u0439\u043d\u0438\u043a \u0441 \u0442\u043e\u043b\u0441\u0442\u044b\u043c \u0434\u043d\u043e\u043c. \u0420\u0430\u0441\u0442\u043e\u043f\u0438\u0442\u0435 \u0435\u0433\u043e \u043d\u0430 \u043c\u0430\u043b\u0435\u043d\u044c\u043a\u043e\u043c \u043e\u0433\u043d\u0435 \u043d\u0430 \u043f\u043b\u0438\u0442\u0435, \u043d\u0430 \u0432\u043e\u0434\u044f\u043d\u043e\u0439 \u0431\u0430\u043d\u0435 \u043b\u0438\u0431\u043e \u0432 \u043c\u0438\u043a\u0440\u043e\u0432\u043e\u043b\u043d\u043e\u0432\u043a\u0435.",
         "3. \u0414\u043e\u0431\u0430\u0432\u044c\u0442\u0435 \u0432 \u0442\u0435\u043f\u043b\u043e\u0435 \u043c\u0430\u0441\u043b\u043e \u0441\u0430\u0445\u0430\u0440. \u041f\u0435\u0440\u0435\u043c\u0435\u0448\u0430\u0439\u0442\u0435 \u0432\u0435\u043d\u0447\u0438\u043a\u043e\u043c \u0434\u043e \u043f\u043e\u043b\u043d\u043e\u0433\u043e \u0440\u0430\u0441\u0442\u0432\u043e\u0440\u0435\u043d\u0438\u044f \u0441\u0430\u0445\u0430\u0440\u0430. \u041e\u0442 \u0442\u0435\u043f\u043b\u0430 \u0441\u0430\u0445\u0430\u0440 \u0434\u043e\u0432\u043e\u043b\u044c\u043d\u043e \u0431\u044b\u0441\u0442\u0440\u043e \u0440\u0430\u0441\u0442\u0430\u0435\u0442.",
@@ -113,11 +18,11 @@
       "ingridients": [
         {
           "cls": "IngridientModel",
-          "uid": "ab8b5c52-5eab-49b9-8439-dac4b4a2d1e9",
+          "uid": "d3db73df-8c9e-45ab-b2fa-d80a5c70ac73",
           "name": "\u041f\u0448\u0435\u043d\u0438\u0447\u043d\u0430\u044f \u043c\u0443\u043a\u0430",
           "measurement_unit": {
             "cls": "MeasurementUnitModel",
-            "uid": "a9bf3dfe-a29f-4346-bc43-8075f65c9a49",
+            "uid": "196a5836-4903-4aa7-801a-510a34a4b622",
             "name": "\u0433",
             "unit": 1.0,
             "base_measure_unit": null
@@ -126,11 +31,11 @@
         },
         {
           "cls": "IngridientModel",
-          "uid": "b4c79185-4022-4eb9-8f92-9930bfb5fa89",
+          "uid": "a6ba1e68-9c2b-4cb5-9e10-37d7e8fbc03e",
           "name": "\u0421\u0430\u0445\u0430\u0440",
           "measurement_unit": {
             "cls": "MeasurementUnitModel",
-            "uid": "a9bf3dfe-a29f-4346-bc43-8075f65c9a49",
+            "uid": "196a5836-4903-4aa7-801a-510a34a4b622",
             "name": "\u0433",
             "unit": 1.0,
             "base_measure_unit": null
@@ -139,11 +44,11 @@
         },
         {
           "cls": "IngridientModel",
-          "uid": "a3d4de2a-cbfe-4b8c-b6f1-925e5bd263fe",
+          "uid": "87167c11-5095-4bdd-8633-3e62a35ef5c5",
           "name": "\u0421\u043b\u0438\u0432\u043e\u0447\u043d\u043e\u0435 \u043c\u0430\u0441\u043b\u043e",
           "measurement_unit": {
             "cls": "MeasurementUnitModel",
-            "uid": "a9bf3dfe-a29f-4346-bc43-8075f65c9a49",
+            "uid": "196a5836-4903-4aa7-801a-510a34a4b622",
             "name": "\u0433",
             "unit": 1.0,
             "base_measure_unit": null
@@ -152,11 +57,11 @@
         },
         {
           "cls": "IngridientModel",
-          "uid": "a7143c1d-8b7b-45d5-932a-ebd35beecc32",
+          "uid": "56579ccd-725f-414c-821d-fc994c3b2eb5",
           "name": "\u042f\u0439\u0446\u0430",
           "measurement_unit": {
             "cls": "MeasurementUnitModel",
-            "uid": "80f69105-e981-4f6a-ad53-50095ba41ee0",
+            "uid": "b13349a9-88a7-458f-a200-d502753de5fd",
             "name": "\u0448\u0442",
             "unit": 1.0,
             "base_measure_unit": null
@@ -165,11 +70,11 @@
         },
         {
           "cls": "IngridientModel",
-          "uid": "55c0a59c-7f94-444c-9ceb-ebd23a5e9214",
+          "uid": "4ec3ad63-4376-4412-b029-3925b341a4c5",
           "name": "\u0412\u0430\u043d\u0438\u043b\u0438\u043d(\u0449\u0435\u043f\u043e\u0442\u043a\u0430)",
           "measurement_unit": {
             "cls": "MeasurementUnitModel",
-            "uid": "a9bf3dfe-a29f-4346-bc43-8075f65c9a49",
+            "uid": "196a5836-4903-4aa7-801a-510a34a4b622",
             "name": "\u0433",
             "unit": 1.0,
             "base_measure_unit": null
@@ -178,7 +83,102 @@
         }
       ],
       "name": "\u0412\u0410\u0424\u041b\u0418 \u0425\u0420\u0423\u0421\u0422\u042f\u0429\u0418\u0415 \u0412 \u0412\u0410\u0424\u0415\u041b\u042c\u041d\u0418\u0426\u0415",
-      "uid": "3f974d82-98ad-43db-a2c0-e3e48eb80b4e"
+      "uid": "a3334d96-3289-4b51-bf59-36a34db5b8eb"
+    },
+    {
+      "cooking_time_minutes": 0,
+      "description": [
+        " ",
+        "1. \u041f\u043e\u0434\u0433\u043e\u0442\u043e\u0432\u044c\u0442\u0435 \u0432\u0441\u0435 \u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u044b\u0435 \u0438\u043d\u0433\u0440\u0435\u0434\u0438\u0435\u043d\u0442\u044b. \u0420\u0430\u0441\u0442\u043e\u043f\u0438\u0442\u0435 \u0441\u043b\u0438\u0432\u043e\u0447\u043d\u043e\u0435 \u043c\u0430\u0441\u043b\u043e \u043d\u0430 \u0441\u043b\u0430\u0431\u043e\u043c \u043e\u0433\u043d\u0435 \u0438\u043b\u0438 \u0432 \u043c\u0438\u043a\u0440\u043e\u0432\u043e\u043b\u043d\u043e\u0432\u043a\u0435.",
+        "2. \u0412 \u043c\u0438\u0441\u043a\u0435 \u0432\u0437\u0431\u0435\u0439\u0442\u0435 \u044f\u0439\u0446\u0430 \u0441 \u0441\u0430\u0445\u0430\u0440\u043e\u043c \u0434\u043e \u043e\u0434\u043d\u043e\u0440\u043e\u0434\u043d\u043e\u0439 \u043f\u044b\u0448\u043d\u043e\u0439 \u043c\u0430\u0441\u0441\u044b.",
+        "3. \u041f\u043e\u0441\u0442\u0435\u043f\u0435\u043d\u043d\u043e \u0432\u043b\u0435\u0439\u0442\u0435 \u043c\u043e\u043b\u043e\u043a\u043e \u0438 \u0440\u0430\u0441\u0442\u043e\u043f\u043b\u0435\u043d\u043d\u043e\u0435 \u043c\u0430\u0441\u043b\u043e, \u043f\u0440\u043e\u0434\u043e\u043b\u0436\u0430\u044f \u0432\u0437\u0431\u0438\u0432\u0430\u0442\u044c.",
+        "4. \u0412 \u0434\u0440\u0443\u0433\u043e\u0439 \u043c\u0438\u0441\u043a\u0435 \u0441\u043c\u0435\u0448\u0430\u0439\u0442\u0435 \u043c\u0443\u043a\u0443, \u043a\u043e\u0440\u0438\u0446\u0443 \u0438 \u0449\u0435\u043f\u043e\u0442\u043a\u0443 \u0441\u043e\u043b\u0438. \u041f\u043e\u0441\u0442\u0435\u043f\u0435\u043d\u043d\u043e \u0434\u043e\u0431\u0430\u0432\u043b\u044f\u0439\u0442\u0435 \u0441\u0443\u0445\u0438\u0435 \u0438\u043d\u0433\u0440\u0435\u0434\u0438\u0435\u043d\u0442\u044b \u0432 \u0436\u0438\u0434\u043a\u0443\u044e \u0441\u043c\u0435\u0441\u044c, \u043f\u0435\u0440\u0435\u043c\u0435\u0448\u0438\u0432\u0430\u044f \u0434\u043e \u043e\u0434\u043d\u043e\u0440\u043e\u0434\u043d\u043e\u0433\u043e \u0442\u0435\u0441\u0442\u0430.",
+        "5. \u0420\u0430\u0437\u043e\u0433\u0440\u0435\u0439\u0442\u0435 \u0432\u0430\u0444\u0435\u043b\u044c\u043d\u0438\u0446\u0443 \u0438 \u0432\u044b\u043b\u0438\u0432\u0430\u0439\u0442\u0435 \u0442\u0435\u0441\u0442\u043e \u043d\u0435\u0431\u043e\u043b\u044c\u0448\u0438\u043c\u0438 \u043f\u043e\u0440\u0446\u0438\u044f\u043c\u0438 (\u043e\u043a\u043e\u043b\u043e 1 \u0441\u0442\u043e\u043b\u043e\u0432\u043e\u0439 \u043b\u043e\u0436\u043a\u0438 \u043d\u0430 \u0432\u0430\u0444\u043b\u044e).",
+        "6. \u041f\u0435\u043a\u0438\u0442\u0435 \u0432\u0430\u0444\u043b\u0438 \u0434\u043e \u0437\u043e\u043b\u043e\u0442\u0438\u0441\u0442\u043e\u0433\u043e \u0446\u0432\u0435\u0442\u0430, \u043e\u043a\u043e\u043b\u043e 3-4 \u043c\u0438\u043d\u0443\u0442, \u0432 \u0437\u0430\u0432\u0438\u0441\u0438\u043c\u043e\u0441\u0442\u0438 \u043e\u0442 \u043c\u043e\u0449\u043d\u043e\u0441\u0442\u0438 \u0432\u0430\u0444\u0435\u043b\u044c\u043d\u0438\u0446\u044b.",
+        "7. \u0413\u043e\u0442\u043e\u0432\u044b\u0435 \u0432\u0430\u0444\u043b\u0438 \u0431\u0443\u0434\u0443\u0442 \u043c\u044f\u0433\u043a\u0438\u043c\u0438 \u0441\u0440\u0430\u0437\u0443 \u043f\u043e\u0441\u043b\u0435 \u0432\u044b\u043f\u0435\u043a\u0430\u043d\u0438\u044f, \u043d\u043e \u043e\u0441\u0442\u044b\u043d\u0443\u0432, \u0441\u0442\u0430\u043d\u0443\u0442 \u0445\u0440\u0443\u0441\u0442\u044f\u0449\u0438\u043c\u0438."
+      ],
+      "ingridients": [
+        {
+          "cls": "IngridientModel",
+          "uid": "e1ef5ca3-451b-4c9b-9adf-59d7fab254a6",
+          "name": "\u041f\u0448\u0435\u043d\u0438\u0447\u043d\u0430\u044f \u043c\u0443\u043a\u0430",
+          "measurement_unit": {
+            "cls": "MeasurementUnitModel",
+            "uid": "196a5836-4903-4aa7-801a-510a34a4b622",
+            "name": "\u0433",
+            "unit": 1.0,
+            "base_measure_unit": null
+          },
+          "amount": 150.0
+        },
+        {
+          "cls": "IngridientModel",
+          "uid": "3aadea40-308c-4c64-b52a-1a9087eebcd6",
+          "name": "\u0421\u0430\u0445\u0430\u0440",
+          "measurement_unit": {
+            "cls": "MeasurementUnitModel",
+            "uid": "196a5836-4903-4aa7-801a-510a34a4b622",
+            "name": "\u0433",
+            "unit": 1.0,
+            "base_measure_unit": null
+          },
+          "amount": 60.0
+        },
+        {
+          "cls": "IngridientModel",
+          "uid": "050b7498-db70-4506-9ad7-fd0a754f05a9",
+          "name": "\u0421\u043b\u0438\u0432\u043e\u0447\u043d\u043e\u0435 \u043c\u0430\u0441\u043b\u043e",
+          "measurement_unit": {
+            "cls": "MeasurementUnitModel",
+            "uid": "196a5836-4903-4aa7-801a-510a34a4b622",
+            "name": "\u0433",
+            "unit": 1.0,
+            "base_measure_unit": null
+          },
+          "amount": 75.0
+        },
+        {
+          "cls": "IngridientModel",
+          "uid": "faed1534-9407-493e-9812-bdc3b348c800",
+          "name": "\u042f\u0439\u0446\u0430",
+          "measurement_unit": {
+            "cls": "MeasurementUnitModel",
+            "uid": "b13349a9-88a7-458f-a200-d502753de5fd",
+            "name": "\u0448\u0442",
+            "unit": 1.0,
+            "base_measure_unit": null
+          },
+          "amount": 2.0
+        },
+        {
+          "cls": "IngridientModel",
+          "uid": "efb32040-2e59-4bc4-9ec8-29ce0e94af57",
+          "name": "\u041c\u043e\u043b\u043e\u043a\u043e",
+          "measurement_unit": {
+            "cls": "MeasurementUnitModel",
+            "uid": "d2306f2d-6239-4c98-901c-3b5cbf9c224a",
+            "name": "\u043c\u043b",
+            "unit": 1.0,
+            "base_measure_unit": null
+          },
+          "amount": 100.0
+        },
+        {
+          "cls": "IngridientModel",
+          "uid": "ae678abe-0337-44ad-91be-a250f2ab3b78",
+          "name": "\u041a\u043e\u0440\u0438\u0446\u0430",
+          "measurement_unit": {
+            "cls": "MeasurementUnitModel",
+            "uid": "a896d9d7-4fdb-4c63-b8bd-89d94560338e",
+            "name": "\u0447.\u043b.",
+            "unit": 1.0,
+            "base_measure_unit": null
+          },
+          "amount": 1.0
+        }
+      ],
+      "name": "\u0425\u0420\u0423\u0421\u0422\u042f\u0429\u0418\u0415 \u0412\u0410\u0424\u041b\u0418 \u0421 \u041a\u041e\u0420\u0418\u0426\u0415\u0419",
+      "uid": "af0c85e3-d237-4018-80f5-25152041ee1d"
     }
   ]
 }

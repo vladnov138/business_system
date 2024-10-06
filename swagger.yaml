@@ -1,0 +1,72 @@
+swagger: '2.0'
+info:
+  description: Набор сервисов для учета на предприятии /ООО Ромашка/
+  version: "1.0"
+  title: RestApi
+
+produces:
+  - application/json
+  - application/xml
+  - application/text
+
+basePath: "/api"
+
+paths:
+  /reports/formats:
+    get:
+      summary: Получить список форматов для отчетов
+      operationId: main.formats
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+        500:
+          description: Ошибка на сервере
+        default:
+          description: Неизвестная ошибка
+
+  /models:
+    get:
+      summary: Получить список всех моделей
+      operationId: main.get_models
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+        500:
+          description: Ошибка на сервере
+        default:
+          description: Неизвестная ошибка
+
+  /reports/{model_name}/{format_str}:
+    get:
+      summary: Получить список единиц измерения
+      operationId: main.reports
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+        500:
+          description: Ошибка на сервере
+        default:
+          description: Неизвестная ошибка
+    parameters:
+      - name: format_str
+        in: path
+        description: Формат
+        required: true
+        type: string
+      - name: model_name
+        in: path
+        description: Модель, для которой необходим отчет
+        required: true
+        type: string

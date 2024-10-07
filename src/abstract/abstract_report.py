@@ -18,7 +18,7 @@ class AbstractReport(AbstractLogic):
     _result: str = ""
 
     @abstractmethod
-    def create(self, file_name: str, data):
+    def create(self, data):
         """
         Сформировать
         """

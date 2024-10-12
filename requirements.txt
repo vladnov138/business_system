@@ -1,1 +1,7 @@
 PyRTF3
+typing-extensions
+connexion[flask]
+connexion[swagger-ui]
+connexion[uvicorn]
+flask-restplus
+Flask

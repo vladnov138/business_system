@@ -1,3 +1,5 @@
+import json
+
 import connexion
 from flask import request
 
@@ -85,10 +87,10 @@ def filter_model(entity):
     data = repository.data[key]
     model_prototype = ModelPrototype(data)
     result = model_prototype.create(data, filter_dto)
-    report_format = FormatReporting(3)
+    report_format = FormatReporting(manager.settings.report_format)
     report = ReportFactory(manager.settings).create(report_format)
     report.create(result.data)
-    return report.result
+    return json.loads(report.result)
 
 if __name__ == '__main__':
     app.add_api("swagger.yaml")

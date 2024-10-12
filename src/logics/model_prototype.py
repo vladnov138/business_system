@@ -8,6 +8,10 @@ class ModelPrototype(AbstractPrototype):
 
     def __init__(self, source: list):
         super().__init__(source)
+        self.conditions = {
+            FilterType.EQUAL: lambda searched_text, text: searched_text == text,
+            FilterType.LIKE: lambda searched_text, text: searched_text in text
+        }
 
     def create(self, data: list, filter_dto: FilterDto):
         super().create(data, filter_dto)
@@ -19,51 +23,23 @@ class ModelPrototype(AbstractPrototype):
     def filter_name(self, source: list, filter_dto: FilterDto) -> list :
         if filter_dto.name == "" or filter_dto.name is None:
             return source
-        if filter_dto.type == FilterType.EQUAL:
-            return self.__filter_equal_name(source, filter_dto)
-        elif filter_dto.type == FilterType.LIKE:
-            return self.__filter_like_name(source, filter_dto)
-        raise OperationException("Invalid type")
-
-    def __filter_equal_name(self, source: list, filter_dto: FilterDto) -> list:
+        condition = self.conditions.get(filter_dto.type) or None
+        if condition is None:
+            raise OperationException("Invalid filter type")
         result = []
         for item in source:
-            if item.name == filter_dto.name:
-                result.append(item)
-            fields = list(filter(lambda x: not x.startswith("_") and not callable(getattr(item.__class__, x)),
-                                 dir(item)))
-            for field in fields:
-                val = getattr(item, field)
-                if hasattr(val, '__dict__') and isinstance(val, type(item)):
-                    result.append(*self.__filter_equal_name([val], filter_dto))
-        return result
-
-    def __filter_like_name(self, source: list, filter_dto: FilterDto) -> list:
-        result = []
-        for item in source:
-            if filter_dto.name in item.name:
+            if condition(filter_dto.name, item.name):
                 result.append(item)
         return result
 
     def filter_id(self, source: list, filter_dto: FilterDto) -> list:
         if filter_dto.id == "" or filter_dto.id is None:
             return source
-        if filter_dto.type == FilterType.EQUAL:
-            return self.__filter_equal_id(source, filter_dto)
-        elif filter_dto.type == FilterType.LIKE:
-            return self.__filter_like_id(source, filter_dto)
-        raise OperationException("invalid_type")
-
-    def __filter_equal_id(self, source: list, filter_dto: FilterDto) -> list:
+        condition = self.conditions.get(filter_dto.type) or None
+        if condition is None:
+            raise OperationException("Invalid filter type")
         result = []
         for item in source:
-            if item.id == filter_dto.id:
-                result.append(item)
-        return result
-
-    def __filter_like_id(self, source: list, filter_dto: FilterDto) -> list:
-        result = []
-        for item in source:
-            if filter_dto.id in item.id:
+            if condition(filter_dto.id, item.uid):
                 result.append(item)
         return result

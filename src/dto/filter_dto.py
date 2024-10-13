@@ -6,10 +6,22 @@ class FilterDto:
     __id: str = ""
     __type: FilterType = None
 
-    def __init__(self, id, name, type):
-        self.id = id
-        self.name = name
-        self.type = FilterType(type)
+    @classmethod
+    def create(cls, id, name, type):
+        filter_dto = cls()
+        filter_dto.id = id
+        filter_dto.name = name
+        filter_dto.type = FilterType(type)
+        return filter_dto
+
+    @classmethod
+    def from_json(cls, json_data):
+        id = json_data.get("id")
+        name = json_data.get("name")
+        type = json_data.get("type")
+        if isinstance(type, str):
+            type = FilterType[type.upper()]
+        return cls.create(id, name, type)
 
     @property
     def name(self) -> str:

@@ -55,7 +55,8 @@ class ModelPrototype(AbstractPrototype):
             val = getattr(item, field)
             if isinstance(val, type(item)):
                 res = filter_func([val], filter_dto)
-                result.append(res)
+                if len(res) > 0:
+                    result.append(res)
         return result
 
     def create(self, data: list, filter_dto: FilterDto):

@@ -77,7 +77,7 @@ def reports(model_name: str, format_str: str):
 @app.route("/api/filter/<entity>", methods=["POST"])
 def filter_model(entity):
     filter_dto_json = request.get_json()
-    filter_dto = FilterDto(**filter_dto_json)
+    filter_dto = FilterDto.from_json(filter_dto_json)
     cls = models.get(entity) or None
     if cls is None:
         raise ArgumentException("Invalid model")

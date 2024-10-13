@@ -31,7 +31,7 @@ class AbstractReference(ABC):
 
     @name.setter
     def name(self, value: str = ''):
-        ArgumentException.check_arg(value, str)
+        ArgumentException.check_arg(value, str, True)
         self._name = value
 
     @abstractmethod

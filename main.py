@@ -19,6 +19,7 @@ from src.models.recipe_model import RecipeModel
 from src.reports.report_factory import ReportFactory
 from src.services.settings_manager import SettingsManager
 from src.services.start_service import StartService
+from src.utils.json_model_decoder import JsonModelDecoder
 
 app = connexion.FlaskApp(__name__)
 manager = SettingsManager()
@@ -76,8 +77,7 @@ def reports(model_name: str, format_str: str):
 
 @app.route("/api/filter/<entity>", methods=["POST"])
 def filter_model(entity):
-    filter_dto_json = request.get_json()
-    filter_dto = FilterDto.from_json(filter_dto_json)
+    filter_dto = JsonModelDecoder().decode_model(request.get_json(), FilterDto)
     cls = models.get(entity) or None
     if cls is None:
         raise ArgumentException("Invalid model")
@@ -87,6 +87,8 @@ def filter_model(entity):
     data = repository.data[key]
     model_prototype = ModelPrototype(data)
     result = model_prototype.create(data, filter_dto)
+    if len(result.data) == 0:
+        return result.data
     report_format = FormatReporting(manager.settings.report_format)
     report = ReportFactory(manager.settings).create(report_format)
     report.create(result.data)

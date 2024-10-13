@@ -1,48 +1,27 @@
+from src.abstract.base_comparing_by_name import BaseComparingByName
 from src.abstract.filter_type import FilterType
 
 
-class FilterDto:
-    __name: str = ""
-    __id: str = ""
+class FilterDto(BaseComparingByName):
     __type: FilterType = None
 
+    def __init__(self):
+        pass
+
     @classmethod
-    def create(cls, id, name, type):
+    def create(cls, uid, name, type):
         filter_dto = cls()
-        filter_dto.id = id
+        filter_dto.uid = uid
         filter_dto.name = name
         filter_dto.type = FilterType(type)
         return filter_dto
-
-    @classmethod
-    def from_json(cls, json_data):
-        id = json_data.get("id")
-        name = json_data.get("name")
-        type = json_data.get("type")
-        if isinstance(type, str):
-            type = FilterType[type.upper()]
-        return cls.create(id, name, type)
-
-    @property
-    def name(self) -> str:
-        return self.__name
-
-    @name.setter
-    def name(self, value: str):
-        self.__name = value
-
-    @property
-    def id(self) -> str:
-        return self.__id
-
-    @id.setter
-    def id(self, value: str):
-        self.__id = value
 
     @property
     def type(self):
         return self.__type
 
     @type.setter
-    def type(self, value: FilterType):
+    def type(self, value: FilterType | str):
+        if isinstance(value, str):
+            value = FilterType(value)
         self.__type = value

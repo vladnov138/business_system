@@ -32,14 +32,14 @@ class ModelPrototype(AbstractPrototype):
         return result
 
     def filter_id(self, source: list, filter_dto: FilterDto) -> list:
-        if filter_dto.id == "" or filter_dto.id is None:
+        if filter_dto.uid == "" or filter_dto.uid is None:
             return source
         condition = self.__conditions.get(filter_dto.type) or None
         if condition is None:
             raise OperationException("Invalid filter type")
         result = []
         for item in source:
-            if condition(filter_dto.id, item.uid):
+            if condition(filter_dto.uid, item.uid):
                 result.append(item)
             else:
                 nested = self.__filter_nested(item, filter_dto, self.filter_id)

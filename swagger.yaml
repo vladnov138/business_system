@@ -11,6 +11,24 @@ produces:
 
 basePath: "/api"
 
+definitions:
+  Filter:
+    type: object
+    properties:
+      id:
+        type:
+          - "string"
+          - "null"
+      name:
+        type:
+          - "string"
+          - "null"
+      type:
+        type: string
+        enum:
+          - EQUAL
+          - LIKE
+
 paths:
   /reports/formats:
     get:
@@ -70,3 +88,33 @@ paths:
         description: Модель, для которой необходим отчет
         required: true
         type: string
+
+  /{entity}/filter:
+    post:
+      summary: Фильтрация моделей
+      operationId: main.filter_model
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: filterDto
+          description: Параметры фильтрации для номенклатур
+          required: true
+          schema:
+            $ref: '#/definitions/Filter'
+        - in: path
+          name: entity
+          description: Параметры фильтрации для номенклатур
+          required: true
+          type: string
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+        500:
+          description: Ошибка на сервере
+        default:
+          description: Неизвестная ошибка

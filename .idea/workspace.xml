@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4afd156-2404-459e-a434-5121565aff87" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/abstract/process_type.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_processes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abstract/base_comparing_by_name.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abstract/base_comparing_by_name.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abstract/base_comparing_by_uid.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abstract/base_comparing_by_uid.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dto/warehouse_transaction_filter_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dto/warehouse_transaction_filter_dto.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logics/process_factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/logics/process_factory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logics/warehouse_transaction_prototype.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/logics/warehouse_transaction_prototype.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/swagger.yaml" afterDir="false" />
-    </list>
+    <list default="true" id="d4afd156-2404-459e-a434-5121565aff87" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

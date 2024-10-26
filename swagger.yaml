@@ -16,18 +16,26 @@ definitions:
     type: object
     properties:
       id:
-        type:
-          - "string"
-          - "null"
+        type: string
+        description: "Nullable string ID"
       name:
-        type:
-          - "string"
-          - "null"
+        type: string
+        description: "Nullable string name"
       type:
         type: string
         enum:
           - EQUAL
           - LIKE
+
+  WarehouseTransactionFilter:
+    type: object
+    properties:
+      warehouse_uid:
+        type: string
+        description: "Nullable"
+      nomenclature_uid:
+        type: string
+        description: "Nullable"
 
 paths:
   /reports/formats:
@@ -109,6 +117,29 @@ paths:
           description: Параметры фильтрации для номенклатур
           required: true
           type: string
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+        500:
+          description: Ошибка на сервере
+        default:
+          description: Неизвестная ошибка
+
+  /api/warehouse_transactions:
+    post:
+      summary: Транзакции склада
+      operationId: main.warehouse_transactions
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: filterDto
+          description: Параметры фильтрации для номенклатур
+          required: false
+          schema:
+            $ref: '#/definitions/WarehouseTransactionFilter'
       responses:
         200:
           description: OK

@@ -5,6 +5,8 @@ from src.models.measurement_unit_model import MeasurementUnitModel
 from src.models.nomenclature_group_model import NomenclatureGroupModel
 from src.models.nomenclature_model import NomenclatureModel
 from src.models.recipe_model import RecipeModel
+from src.models.warehouse_model import WarehouseModel
+from src.models.warehouse_transaction_model import WarehouseTransactionModel
 from src.services.start_service import StartService
 from src.services.settings_manager import SettingsManager
 
@@ -71,3 +73,24 @@ class TestDataRepository(unittest.TestCase):
         assert len(recipes) == 2
         for recipe in recipes:
             assert isinstance(recipe, RecipeModel)
+
+
+    def test_data_warehouse(self):
+        """
+        Тестирует, что в репозитории есть склад
+        :return:
+        """
+        warehouse_key = self.data_repository.warehouse_key()
+        warehouse = self.data_repository.data[warehouse_key]
+        assert isinstance(warehouse, WarehouseModel)
+
+    def test_data_warehouse_transactions(self):
+        """
+        Тестирует, что в репозитории есть 2 транзакции склада
+        :return:
+        """
+        warehouse_transaction_key = self.data_repository.warehouse_transaction_key()
+        warehouse_transactions = self.data_repository.data[warehouse_transaction_key]
+        assert len(warehouse_transactions) == 2
+        for warehouse_transaction in warehouse_transactions:
+            assert isinstance(warehouse_transaction, WarehouseTransactionModel)

@@ -2,7 +2,9 @@
 Набор тестов для проверки работы моделей
 """
 import unittest
+from datetime import datetime
 
+from src.abstract.transaction_type import TransactionType
 from src.exceptions.argument_exception import ArgumentException
 from src.models.ingridient_model import IngridientModel
 from src.models.measurement_unit_model import MeasurementUnitModel
@@ -10,7 +12,8 @@ from src.models.nomenclature_group_model import NomenclatureGroupModel
 from src.models.nomenclature_model import NomenclatureModel
 from src.models.organization_model import OrganizationModel
 from src.models.recipe_model import RecipeModel
-from src.models.storage_model import StorageModel
+from src.models.warehouse_model import WarehouseModel
+from src.models.warehouse_transaction_model import WarehouseTransactionModel
 from src.services.settings_manager import SettingsManager
 
 
@@ -146,18 +149,6 @@ class TestModels(unittest.TestCase):
     assert org.bik == settings.bik
     assert org.business_type == settings.business_type
 
-
-    def test_storage_model_getters(self):
-        """
-        Тестирует геттеры у класса StorageModel
-        Сравнивает имя
-        Результатом сравнения является True
-        """
-        storage_name = "IdkWhatThis"
-        storage = StorageModel.create(storage_name)
-        assert storage.name == storage_name
-
-
     def test_ingridient_model(self):
         """
         Тестирует создание модели IngridientModel
@@ -248,6 +239,34 @@ class TestModels(unittest.TestCase):
             recipe.cooking_time_minutes = -10
         with self.assertRaises(ArgumentException):
             recipe.description = 123
+
+    def test_warehouse_model(self):
+        """
+        Тестирует создание модели WarehouseModel
+        :return:
+        """
+        warehouse = WarehouseModel.create("Магазин", "Россия, Московская область, г. Москва, ул. Профсоюзная, д. 16")
+        assert warehouse.name == "Магазин"
+        assert warehouse.address == "Россия, Московская область, г. Москва, ул. Профсоюзная, д. 16"
+
+    def test_warehouse_transaction_model(self):
+        """
+        Тестирует создание модели WarehouseTransactionModel
+        :return:
+        """
+        ml = MeasurementUnitModel.create("мл", 1)
+        nomenclature_group = NomenclatureGroupModel.create("Сырьё")
+        warehouse = WarehouseModel.create("Магазин", "Россия, Московская область, г. Москва, ул. Профсоюзная, д. 16")
+        nomenclature = NomenclatureModel.create("Молоко", nomenclature_group, ml)
+        dt = datetime.now()
+        transaction = WarehouseTransactionModel.create("Молоко", warehouse, nomenclature, 10, ml, TransactionType.INCOME, dt)
+        assert transaction.name == "Молоко"
+        assert transaction.warehouse == warehouse
+        assert transaction.nomenclature == nomenclature
+        assert transaction.amount == 10
+        assert transaction.measurement_unit == ml
+        assert transaction.transaction_type == TransactionType.INCOME
+        assert transaction.period == dt
 
 if __name__ == "__main__":
     unittest.main()

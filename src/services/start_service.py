@@ -2,6 +2,8 @@ from src.data.data_repository import DataRepository
 from src.models.nomenclature_group_model import NomenclatureGroupModel
 from src.models.nomenclature_model import NomenclatureModel
 from src.models.settings_model import Settings
+from src.models.warehouse_model import WarehouseModel
+from src.models.warehouse_transaction_model import WarehouseTransactionModel
 from src.services.measurement_unit_manager import MeasurementUnitManager
 from src.services.recipe_manager import RecipeManager
 
@@ -55,6 +57,28 @@ class StartService:
         recipes = recipe_manager.convert(self.__repository.data[DataRepository.measurement_unit_key()])
         self.__repository.data[DataRepository.recipe_key()] = recipes
 
+    def __create_warehouse(self):
+        """
+        Формирует экземпляр класса склада
+        :return:
+        """
+        warehouse = WarehouseModel.default_warehouse()
+        self.__repository.data[DataRepository.warehouse_key()] = [warehouse]
+
+    def __create_warehouse_transactions(self):
+        """
+        Формирует экземпляры класса транзакции склада
+        Для формирования необходимо уже сформировать номенклатуры и единицы измерения
+        :return:
+        """
+        warehouse = self.__repository.data[DataRepository.warehouse_key()][0]
+        nomenclatures = self.__repository.data[DataRepository.nomenclature_key()]
+        nomenclature = nomenclatures[0]
+        measurement_unit = self.__repository.data[DataRepository.measurement_unit_key()][0]
+        income_transaction = WarehouseTransactionModel.default_income_transaction(warehouse, nomenclature, measurement_unit)
+        expense_transaction = WarehouseTransactionModel.default_expense_transaction(warehouse, nomenclature, measurement_unit)
+        self.__repository.data[DataRepository.warehouse_transaction_key()] = [income_transaction, expense_transaction]
+
 
     def create(self):
         """
@@ -64,3 +88,5 @@ class StartService:
         self.__create_measurement_units()
         self.__create_nomenclature()
         self.__create_recipe()
+        self.__create_warehouse()
+        self.__create_warehouse_transactions()

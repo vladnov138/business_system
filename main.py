@@ -9,13 +9,16 @@ from src.abstract.base_comparing_by_uid import BaseComparingByUid
 from src.abstract.format_reporting import FormatReporting
 from src.data.data_repository import DataRepository
 from src.dto.filter_dto import FilterDto
+from src.dto.warehouse_transaction_filter_dto import WarehouseTransactionFilterDto
 from src.exceptions.argument_exception import ArgumentException
 from src.exceptions.operation_exception import OperationException
 from src.logics.model_prototype import ModelPrototype
+from src.logics.warehouse_transaction_prototype import WarehouseTransactionPrototype
 from src.models.measurement_unit_model import MeasurementUnitModel
 from src.models.nomenclature_group_model import NomenclatureGroupModel
 from src.models.nomenclature_model import NomenclatureModel
 from src.models.recipe_model import RecipeModel
+from src.models.warehouse_model import WarehouseModel
 from src.reports.report_factory import ReportFactory
 from src.services.settings_manager import SettingsManager
 from src.services.start_service import StartService
@@ -39,13 +42,29 @@ models_keys = {
     NomenclatureModel.__name__: repository.nomenclature_key(),
     MeasurementUnitModel.__name__: repository.measurement_unit_key(),
     RecipeModel.__name__: repository.recipe_key(),
-    NomenclatureGroupModel.__name__: repository.group_key()
+    NomenclatureGroupModel.__name__: repository.group_key(),
+    WarehouseModel.__name__: repository.warehouse_key(),
+    WarehouseTransactionFilterDto.__name__: repository.warehouse_transaction_key()
 }
 
 def get_report(data, format: FormatReporting) -> AbstractReport:
     report = ReportFactory(manager.settings).create(format)
     report.create(data)
     return report
+
+def find_warehouse(warehouse_uid: str) -> WarehouseModel:
+    warehouses = repository.data[repository.warehouse_key()]
+    warehouse = [x for x in warehouses if x.uid == warehouse_uid]
+    if len(warehouse) == 0:
+        raise ArgumentException("Invalid warehouse")
+    return warehouse[0]
+
+def find_nomenclature(nomenclature_uid: str) -> NomenclatureModel:
+    nomenclatures = repository.data[repository.nomenclature_key()]
+    nomenclature = [x for x in nomenclatures if x.uid == nomenclature_uid]
+    if len(nomenclature) == 0:
+        raise ArgumentException("Invalid nomenclature")
+    return nomenclature[0]
 
 @app.route("/api/reports/formats", methods=["GET"])
 def formats():
@@ -93,6 +112,23 @@ def filter_model(entity):
     report = ReportFactory(manager.settings).create(report_format)
     report.create(result.data)
     return json.loads(report.result)
+
+@app.route("/api/warehouse_transactions", methods=["POST"])
+def warehouse_transactions():
+    key = repository.warehouse_transaction_key()
+    data = repository.data[key]
+    filter_json = request.get_json()
+    warehouse = find_warehouse(filter_json.get("warehouse_uid")) if filter_json.get("warehouse_uid") else None
+    nomenclature = find_nomenclature(filter_json.get("nomenclature_uid")) if filter_json.get(
+        "nomenclature_uid") else None
+    filter_dto = WarehouseTransactionFilterDto.create(warehouse, nomenclature)
+    prototype = WarehouseTransactionPrototype(data)
+    result = prototype.create(data, filter_dto)
+    report_format = FormatReporting(manager.settings.report_format)
+    report = ReportFactory(manager.settings).create(report_format)
+    report.create(result.data)
+    return json.loads(report.result)
+
 
 if __name__ == '__main__':
     app.add_api("swagger.yaml")

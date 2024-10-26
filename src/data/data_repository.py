@@ -34,3 +34,11 @@ class DataRepository:
     @staticmethod
     def recipe_key() -> str:
         return "recipe"
+
+    @staticmethod
+    def warehouse_transaction_key() -> str:
+        return "warehouse_transaction"
+
+    @staticmethod
+    def warehouse_key() -> str:
+        return "warehouse"

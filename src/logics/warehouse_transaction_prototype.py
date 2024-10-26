@@ -30,9 +30,21 @@ class WarehouseTransactionPrototype(AbstractPrototype):
             return source
         return self.__filter("nomenclature", source, filter_dto.nomenclature)
 
+    def filter_period(self, source: list, filter_dto: WarehouseTransactionFilterDto) -> list:
+        if filter_dto.date_from is None and filter_dto.date_to is None:
+            return source
+
+        result = []
+        for item in source:
+            if (filter_dto.date_from is None or filter_dto.date_from <= item.date) and \
+                    (filter_dto.date_to is None or item.date <= filter_dto.date_to):
+                result.append(item)
+        return result
+
     def create(self, data: list, filter_dto: WarehouseTransactionFilterDto):
         super().create(data, filter_dto)
         self.data = self.filter_warehouse(data, filter_dto)
         self.data = self.filter_nomenclature(self.data, filter_dto)
+        self.data = self.filter_period(self.data, filter_dto)
         instance = WarehouseTransactionPrototype(self.data)
         return instance

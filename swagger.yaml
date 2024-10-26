@@ -36,6 +36,12 @@ definitions:
       nomenclature_uid:
         type: string
         description: "Nullable"
+      date_from:
+        type: string
+        description: "Nullable"
+      date_to:
+        type: string
+        description: "Nullable"
 
 paths:
   /reports/formats:
@@ -131,6 +137,29 @@ paths:
     post:
       summary: Транзакции склада
       operationId: main.warehouse_transactions
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: filterDto
+          description: Параметры фильтрации для номенклатур
+          required: false
+          schema:
+            $ref: '#/definitions/WarehouseTransactionFilter'
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+        500:
+          description: Ошибка на сервере
+        default:
+          description: Неизвестная ошибка
+
+  /api/warehouse_turnovers:
+    post:
+      summary: Обороты склада
+      operationId: main.warehouse_turnovers
       produces:
         - application/json
       parameters:

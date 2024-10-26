@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4afd156-2404-459e-a434-5121565aff87" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/abstract/process_type.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_processes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abstract/abstract_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abstract/abstract_process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abstract/base_comparing_by_name.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abstract/base_comparing_by_name.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abstract/base_comparing_by_uid.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abstract/base_comparing_by_uid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dto/warehouse_transaction_filter_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dto/warehouse_transaction_filter_dto.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logics/process_factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/logics/process_factory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logics/warehouse_turnover_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/logics/warehouse_turnover_process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logics/warehouse_transaction_prototype.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/logics/warehouse_transaction_prototype.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/swagger.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,81 +72,85 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python tests.Python tests for test_data_repository.TestDataRepository.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_data_repository.TestDataRepository.test_data_measurement_units.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_data_repository.TestDataRepository.test_data_nomenclature.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_data_repository.TestDataRepository.test_data_nomenclature_group.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_data_repository.TestDataRepository.test_data_recipes.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_exceptions.TestUtils.test_check_max_len_exceeded.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_model_prototype.TestCase.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_model_prototype.TestCase.test_equal_id_filter.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_model_prototype.TestCase.test_equal_name_filter.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_model_prototype.TestCase.test_like_id_filter.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_model_prototype.TestCase.test_like_name_filter.executor&quot;: &quot;Debug&quot;,
-    &quot;Python tests.Python tests for test_models.TestModels.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_models.TestModels.test_ingridient_model.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_models.TestModels.test_ingridient_model_setters_exceptions.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_models.TestModels.test_ingridient_setters.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_models.TestModels.test_measurement_base_unit_model.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_models.TestModels.test_measurement_unit_exceptions.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_models.TestModels.test_measurement_unit_model.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_models.TestModels.test_measurement_unit_model_comparing_returns_true.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_models.TestModels.test_measurement_unit_model_getters.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_models.TestModels.test_measurement_unit_setters.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_models.TestModels.test_nomenclature_group.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_models.TestModels.test_nomenclature_group_model.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_models.TestModels.test_nomenclature_group_model_comparing_by_uid_returns_true.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_models.TestModels.test_nomenclature_group_model_getters.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_models.TestModels.test_nomenclature_model.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_models.TestModels.test_organization_model.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_models.TestModels.test_organization_model_converting.executor&quot;: &quot;Debug&quot;,
-    &quot;Python tests.Python tests for test_models.TestModels.test_recipe_model.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_models.TestModels.test_recipe_model_setters_exceptions.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_models.TestModels.test_recipe_setters.executor&quot;: &quot;Debug&quot;,
-    &quot;Python tests.Python tests for test_models.TestModels.test_storage_model.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_models.TestModels.test_storage_model_getters.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_models.TestModels.test_warehouse_model.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_models.TestModels.test_warehouse_transaction_model.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_json_measurement_unit_deserialize.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_json_nomenclature_deserialize.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_json_nomenclatures_deserialize.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_json_recipe_deserialize.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_measurement_unit_fields.executor&quot;: &quot;Debug&quot;,
-    &quot;Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_measurement_unit_instance.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_nomenclature_fields.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_nomenclature_instance.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_recipe_fields.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_recipe_instance.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_reporting.TestReporting.test_csv_report_create_measurement_unit.executor&quot;: &quot;Debug&quot;,
-    &quot;Python tests.Python tests for test_reporting.TestReporting.test_json_report_create_measurement_unit.executor&quot;: &quot;Debug&quot;,
-    &quot;Python tests.Python tests for test_reporting.TestReporting.test_rtf_report_create_nomenclature.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_reporting.TestReporting.test_xml_report_create_measurement_unit.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_settings.TestSettings.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_settings.TestSettings.test_file_loading.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_settings.TestSettings.test_settings_manager_open_fail.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_settings.TestSettings.test_settings_manager_singletone.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_utils.TestUtils.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_utils.TestUtils.test_check_arg_invalid_type.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_data_repository.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_exceptions.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_model_prototype.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_models.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_report_deserialize.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_reporting.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_settings.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in tests.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.nomenclature_group_model.executor&quot;: &quot;Run&quot;,
-    &quot;Python.settings_manager.executor&quot;: &quot;Run&quot;,
-    &quot;Python.start_service.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;storage&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/vladnov138/PycharmProjects/business_system/src/reports&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests for test_data_repository.TestDataRepository.executor": "Run",
+    "Python tests.Python tests for test_data_repository.TestDataRepository.test_data_measurement_units.executor": "Run",
+    "Python tests.Python tests for test_data_repository.TestDataRepository.test_data_nomenclature.executor": "Run",
+    "Python tests.Python tests for test_data_repository.TestDataRepository.test_data_nomenclature_group.executor": "Run",
+    "Python tests.Python tests for test_data_repository.TestDataRepository.test_data_recipes.executor": "Run",
+    "Python tests.Python tests for test_exceptions.TestUtils.test_check_max_len_exceeded.executor": "Run",
+    "Python tests.Python tests for test_model_prototype.TestCase.executor": "Run",
+    "Python tests.Python tests for test_model_prototype.TestCase.test_equal_id_filter.executor": "Run",
+    "Python tests.Python tests for test_model_prototype.TestCase.test_equal_name_filter.executor": "Run",
+    "Python tests.Python tests for test_model_prototype.TestCase.test_like_id_filter.executor": "Run",
+    "Python tests.Python tests for test_model_prototype.TestCase.test_like_name_filter.executor": "Debug",
+    "Python tests.Python tests for test_models.TestModels.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_ingridient_model.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_ingridient_model_setters_exceptions.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_ingridient_setters.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_measurement_base_unit_model.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_measurement_unit_exceptions.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_measurement_unit_model.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_measurement_unit_model_comparing_returns_true.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_measurement_unit_model_getters.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_measurement_unit_setters.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_nomenclature_group.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_nomenclature_group_model.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_nomenclature_group_model_comparing_by_uid_returns_true.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_nomenclature_group_model_getters.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_nomenclature_model.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_organization_model.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_organization_model_converting.executor": "Debug",
+    "Python tests.Python tests for test_models.TestModels.test_recipe_model.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_recipe_model_setters_exceptions.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_recipe_setters.executor": "Debug",
+    "Python tests.Python tests for test_models.TestModels.test_storage_model.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_storage_model_getters.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_warehouse_model.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_warehouse_transaction_model.executor": "Run",
+    "Python tests.Python tests for test_processes.TestProcesses.test_process_factory.executor": "Run",
+    "Python tests.Python tests for test_processes.TestProcesses.test_turnover_both_process.executor": "Run",
+    "Python tests.Python tests for test_processes.TestProcesses.test_turnover_only_expense_process.executor": "Run",
+    "Python tests.Python tests for test_processes.TestProcesses.test_turnover_only_income_process.executor": "Run",
+    "Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_json_measurement_unit_deserialize.executor": "Run",
+    "Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_json_nomenclature_deserialize.executor": "Run",
+    "Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_json_nomenclatures_deserialize.executor": "Run",
+    "Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_json_recipe_deserialize.executor": "Run",
+    "Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_measurement_unit_fields.executor": "Debug",
+    "Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_measurement_unit_instance.executor": "Run",
+    "Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_nomenclature_fields.executor": "Run",
+    "Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_nomenclature_instance.executor": "Run",
+    "Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_recipe_fields.executor": "Run",
+    "Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_recipe_instance.executor": "Run",
+    "Python tests.Python tests for test_reporting.TestReporting.test_csv_report_create_measurement_unit.executor": "Debug",
+    "Python tests.Python tests for test_reporting.TestReporting.test_json_report_create_measurement_unit.executor": "Debug",
+    "Python tests.Python tests for test_reporting.TestReporting.test_rtf_report_create_nomenclature.executor": "Run",
+    "Python tests.Python tests for test_reporting.TestReporting.test_xml_report_create_measurement_unit.executor": "Run",
+    "Python tests.Python tests for test_settings.TestSettings.executor": "Run",
+    "Python tests.Python tests for test_settings.TestSettings.test_file_loading.executor": "Run",
+    "Python tests.Python tests for test_settings.TestSettings.test_settings_manager_open_fail.executor": "Run",
+    "Python tests.Python tests for test_settings.TestSettings.test_settings_manager_singletone.executor": "Run",
+    "Python tests.Python tests for test_utils.TestUtils.executor": "Run",
+    "Python tests.Python tests for test_utils.TestUtils.test_check_arg_invalid_type.executor": "Run",
+    "Python tests.Python tests in test_data_repository.py.executor": "Run",
+    "Python tests.Python tests in test_exceptions.py.executor": "Run",
+    "Python tests.Python tests in test_model_prototype.py.executor": "Run",
+    "Python tests.Python tests in test_models.py.executor": "Run",
+    "Python tests.Python tests in test_report_deserialize.py.executor": "Run",
+    "Python tests.Python tests in test_reporting.py.executor": "Run",
+    "Python tests.Python tests in test_settings.py.executor": "Run",
+    "Python tests.Python tests in tests.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.nomenclature_group_model.executor": "Run",
+    "Python.settings_manager.executor": "Run",
+    "Python.start_service.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "storage",
+    "last_opened_file_path": "/home/vladnov138/PycharmProjects/business_system/src/reports",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/reports" />
@@ -176,7 +186,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_models.TestModels.test_warehouse_model" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_processes.TestProcesses.test_turnover_both_process" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -187,11 +197,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_models.TestModels.test_warehouse_model&quot;" />
+      <option name="_new_target" value="&quot;test_processes.TestProcesses.test_turnover_both_process&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_models.TestModels.test_warehouse_transaction_model" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_processes.TestProcesses.test_turnover_only_expense_process" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -202,11 +212,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_models.TestModels.test_warehouse_transaction_model&quot;" />
+      <option name="_new_target" value="&quot;test_processes.TestProcesses.test_turnover_only_expense_process&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in test_data_repository.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_processes.TestProcesses.test_turnover_only_income_process" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -217,11 +227,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_data_repository.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="_new_target" value="&quot;test_processes.TestProcesses.test_turnover_only_income_process&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in test_models.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests in tests" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -232,17 +242,17 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_models.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
-        <item itemvalue="Python tests.Python tests for test_models.TestModels.test_warehouse_model" />
-        <item itemvalue="Python tests.Python tests for test_models.TestModels.test_warehouse_transaction_model" />
-        <item itemvalue="Python tests.Python tests in test_models.py" />
-        <item itemvalue="Python tests.Python tests in test_data_repository.py" />
+        <item itemvalue="Python tests.Python tests in tests" />
+        <item itemvalue="Python tests.Python tests for test_processes.TestProcesses.test_turnover_both_process" />
+        <item itemvalue="Python tests.Python tests for test_processes.TestProcesses.test_turnover_only_expense_process" />
+        <item itemvalue="Python tests.Python tests for test_processes.TestProcesses.test_turnover_only_income_process" />
       </list>
     </recent_temporary>
   </component>

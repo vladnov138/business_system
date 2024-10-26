@@ -13,3 +13,6 @@ class BaseComparingByUid(AbstractReference, ABC):
 
     def __ne__(self, other: AbstractReference):
         return not self == other
+
+    def __hash__(self):
+        return hash(self.uid)

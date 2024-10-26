@@ -1,4 +1,5 @@
 import json
+from datetime import datetime
 
 import connexion
 from flask import request
@@ -14,6 +15,7 @@ from src.exceptions.argument_exception import ArgumentException
 from src.exceptions.operation_exception import OperationException
 from src.logics.model_prototype import ModelPrototype
 from src.logics.warehouse_transaction_prototype import WarehouseTransactionPrototype
+from src.logics.warehouse_turnover_process import WarehouseTurnoverProcess
 from src.models.measurement_unit_model import MeasurementUnitModel
 from src.models.nomenclature_group_model import NomenclatureGroupModel
 from src.models.nomenclature_model import NomenclatureModel
@@ -127,6 +129,25 @@ def warehouse_transactions():
     report_format = FormatReporting(manager.settings.report_format)
     report = ReportFactory(manager.settings).create(report_format)
     report.create(result.data)
+    return json.loads(report.result)
+
+@app.route("/api/warehouse_turnovers", methods=["POST"])
+def warehouse_turnovers():
+    key = repository.warehouse_transaction_key()
+    data = repository.data[key]
+    filter_json = request.get_json()
+    warehouse = find_warehouse(filter_json.get("warehouse_uid")) if filter_json.get("warehouse_uid") else None
+    nomenclature = find_nomenclature(filter_json.get("nomenclature_uid")) if filter_json.get(
+        "nomenclature_uid") else None
+    date_from = datetime.strptime(filter_json.get("date_from"), "%Y-%m-%d") if filter_json.get("date_from") else None
+    date_to = datetime.strptime(filter_json.get("date_to"), "%Y-%m-%d") if filter_json.get("date_to") else None
+    filter_dto = WarehouseTransactionFilterDto.create(warehouse, nomenclature, date_from, date_to)
+    prototype = WarehouseTransactionPrototype(data)
+    result = prototype.create(data, filter_dto)
+    turnovers = WarehouseTurnoverProcess().execute(result.data)
+    report_format = FormatReporting(manager.settings.report_format)
+    report = ReportFactory(manager.settings).create(report_format)
+    report.create(turnovers)
     return json.loads(report.result)
 
 

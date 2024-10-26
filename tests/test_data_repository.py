@@ -81,7 +81,7 @@ class TestDataRepository(unittest.TestCase):
         :return:
         """
         warehouse_key = self.data_repository.warehouse_key()
-        warehouse = self.data_repository.data[warehouse_key]
+        warehouse = self.data_repository.data[warehouse_key][0]
         assert isinstance(warehouse, WarehouseModel)
 
     def test_data_warehouse_transactions(self):

@@ -9,7 +9,7 @@ class FilterService:
     def filter(self, source: list, filter_dto: FilterDto) -> list:
         prototype = ModelPrototype(source)
         for item in filter_dto.items:
-            prototype = prototype.create(item.field, item.type, item.value)
+            prototype = prototype.create(item.field, item)
         return prototype.data
 
     def filter_warehouse_transactions(self, source: list, warehouse_filter_dto: WarehouseTransactionFilterDto) -> list:

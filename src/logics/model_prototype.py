@@ -10,7 +10,9 @@ class ModelPrototype(AbstractPrototype):
     def __init__(self, source: list):
         super().__init__(source)
 
-    def __filter_nested(self, item: object, field_name: str, type_: FilterType, value: str) -> list:
+    def __filter_nested(self, item: object, field_name: str, filter_item: FilterItem) -> list:
+        type_ = filter_item.type
+        value = filter_item.value
         fields = list(filter(lambda x: not x.startswith("_") and not callable(getattr(item.__class__, x)),
                              dir(item)))
         result = []
@@ -18,7 +20,7 @@ class ModelPrototype(AbstractPrototype):
             val = getattr(item, field)
             if isinstance(val, type(item)):
                 prototype = ModelPrototype([val])
-                res = prototype.create(field_name, type_, value)
+                res = prototype.create(field_name, filter_item)
                 if len(res.data) > 0:
                     result.append(res)
         return result
@@ -38,7 +40,7 @@ class ModelPrototype(AbstractPrototype):
             if condition(value, field_value):
                 result.append(item)
             else:
-                nested = self.__filter_nested(item, field, type, value)
+                nested = self.__filter_nested(item, field, filter_item)
                 if len(nested) > 0:
                     result.append(item)
         prototype = ModelPrototype(result)

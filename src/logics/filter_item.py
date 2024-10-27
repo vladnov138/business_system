@@ -7,6 +7,14 @@ class FilterItem:
     __type: FilterType = None
     __value: str = ""
 
+    @classmethod
+    def create(cls, field: str, filter_type: FilterType | str, value: str):
+        instance = cls()
+        instance.field = field
+        instance.type = filter_type
+        instance.value = value
+        return instance
+
     @property
     def field(self):
         return self.__field

@@ -20,13 +20,14 @@ class ModelPrototype(AbstractPrototype):
             val = getattr(item, field)
             if isinstance(val, type(item)):
                 prototype = ModelPrototype([val])
-                res = prototype.create(field_name, filter_item)
+                res = prototype.create(filter_item)
                 if len(res.data) > 0:
                     result.append(res)
         return result
 
-    def create(self, field: str, filter_item: FilterItem):
+    def create(self, filter_item: FilterItem):
         ArgumentException.check_arg(filter_item, FilterItem)
+        field = filter_item.field
         type = filter_item.type
         value = filter_item.value
         condition = self._conditions.get(type) or None

@@ -1,10 +1,8 @@
 import json
-from datetime import datetime
 
 import connexion
 from flask import request
 
-from src.abstract.abstract_report import AbstractReport
 from src.abstract.base_comparing_by_name import BaseComparingByName
 from src.abstract.base_comparing_by_uid import BaseComparingByUid
 from src.abstract.format_reporting import FormatReporting
@@ -14,9 +12,7 @@ from src.dto.warehouse_transaction_filter_dto import WarehouseTransactionFilterD
 from src.exceptions.argument_exception import ArgumentException
 from src.exceptions.operation_exception import OperationException
 from src.logics.filter_item import FilterItem
-from src.logics.model_prototype import ModelPrototype
 from src.logics.warehouse_filter_item import WarehouseFilterItem
-from src.logics.warehouse_transaction_prototype import WarehouseTransactionPrototype
 from src.logics.warehouse_turnover_process import WarehouseTurnoverProcess
 from src.models.measurement_unit_model import MeasurementUnitModel
 from src.models.nomenclature_group_model import NomenclatureGroupModel
@@ -25,6 +21,7 @@ from src.models.recipe_model import RecipeModel
 from src.models.warehouse_model import WarehouseModel
 from src.reports.report_factory import ReportFactory
 from src.services.filter_service import FilterService
+from src.services.report_service import ReportService
 from src.services.settings_manager import SettingsManager
 from src.services.start_service import StartService
 from src.utils.json_model_decoder import JsonModelDecoder
@@ -52,25 +49,6 @@ models_keys = {
     WarehouseTransactionFilterDto.__name__: repository.warehouse_transaction_key()
 }
 
-def get_report(data, format: FormatReporting) -> AbstractReport:
-    report = ReportFactory(manager.settings).create(format)
-    report.create(data)
-    return report
-
-def find_warehouse(warehouse_uid: str) -> WarehouseModel:
-    warehouses = repository.data[repository.warehouse_key()]
-    warehouse = [x for x in warehouses if x.uid == warehouse_uid]
-    if len(warehouse) == 0:
-        raise ArgumentException("Invalid warehouse")
-    return warehouse[0]
-
-def find_nomenclature(nomenclature_uid: str) -> NomenclatureModel:
-    nomenclatures = repository.data[repository.nomenclature_key()]
-    nomenclature = [x for x in nomenclatures if x.uid == nomenclature_uid]
-    if len(nomenclature) == 0:
-        raise ArgumentException("Invalid nomenclature")
-    return nomenclature[0]
-
 @app.route("/api/reports/formats", methods=["GET"])
 def formats():
     format_name = list(filter(lambda x: x, FormatReporting))
@@ -96,7 +74,8 @@ def reports(model_name: str, format_str: str):
     if key is None:
         raise OperationException("Не существует отчет по этой модели")
     inner_format = FormatReporting(format)
-    report = get_report(repository.data[key], inner_format)
+    report_service = ReportService()
+    report = report_service.get_report(repository.data[key], inner_format)
     return report.result
 
 @app.route("/api/filter/<entity>", methods=["POST"])

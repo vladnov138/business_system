@@ -39,7 +39,7 @@ class TestCase(unittest.TestCase):
         key = repository.measurement_unit_key()
         data = repository.data[key]
         model_prototype = ModelPrototype(data)
-        result = model_prototype.create(filter_item.field, filter_item).data
+        result = model_prototype.create(filter_item).data
         assert len(result) == 1
 
     def test_equal_name_filter(self):
@@ -53,7 +53,7 @@ class TestCase(unittest.TestCase):
         key = repository.measurement_unit_key()
         data = repository.data[key]
         model_prototype = ModelPrototype(data)
-        result = model_prototype.create(filter_item.field, filter_item).data
+        result = model_prototype.create(filter_item).data
         assert len(result) == 3
 
     def test_like_id_filter(self):
@@ -69,7 +69,7 @@ class TestCase(unittest.TestCase):
         part_of_id = first_item.uid[:2]
         filter_item = FilterItem.create("uid", FilterType.LIKE, part_of_id)
         model_prototype = ModelPrototype(data)
-        result = model_prototype.create(filter_item.field, filter_item).data
+        result = model_prototype.create(filter_item).data
         assert first_item in result
 
     def test_equal_id_filter(self):
@@ -85,6 +85,6 @@ class TestCase(unittest.TestCase):
         id = first_item.uid
         filter_item = FilterItem.create("uid", FilterType.EQUAL, id)
         model_prototype = ModelPrototype(data)
-        result = model_prototype.create(filter_item.field, filter_item).data
+        result = model_prototype.create(filter_item).data
         assert len(result) == 1
         assert result[0] == first_item

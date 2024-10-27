@@ -17,7 +17,7 @@ class AbstractPrototype(ABC):
         }
 
     @abstractmethod
-    def create(self, field: str, filter_item):
+    def create(self, filter_item):
         pass
 
     @property

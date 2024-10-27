@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4afd156-2404-459e-a434-5121565aff87" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/services/report_service.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.csv" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_measurement_unit.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_measurement_unit.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.md" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_measurement_unit.md" afterDir="false" />
@@ -17,10 +19,9 @@
       <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.rtf" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.rtf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/report_recipe.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_recipe.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logics/filter_item.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/logics/filter_item.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abstract/abstract_prototype.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abstract/abstract_prototype.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logics/model_prototype.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/logics/model_prototype.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/filter_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/filter_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_model_prototype.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_model_prototype.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,9 +89,9 @@
     "Python tests.Python tests for test_exceptions.TestUtils.test_check_max_len_exceeded.executor": "Run",
     "Python tests.Python tests for test_model_prototype.TestCase.executor": "Run",
     "Python tests.Python tests for test_model_prototype.TestCase.test_equal_id_filter.executor": "Run",
-    "Python tests.Python tests for test_model_prototype.TestCase.test_equal_name_filter.executor": "Debug",
+    "Python tests.Python tests for test_model_prototype.TestCase.test_equal_name_filter.executor": "Run",
     "Python tests.Python tests for test_model_prototype.TestCase.test_like_id_filter.executor": "Run",
-    "Python tests.Python tests for test_model_prototype.TestCase.test_like_name_filter.executor": "Debug",
+    "Python tests.Python tests for test_model_prototype.TestCase.test_like_name_filter.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.test_ingridient_model.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.test_ingridient_model_setters_exceptions.executor": "Run",
@@ -169,7 +170,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_model_prototype.TestCase.test_equal_name_filter">
+  <component name="RunManager" selected="Python tests.Python tests in tests">
     <configuration name="Python tests for test_model_prototype.TestCase.test_equal_id_filter" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
@@ -215,7 +216,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in test_model_prototype.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_model_prototype.TestCase.test_like_name_filter" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -226,8 +227,8 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_model_prototype.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="_new_target" value="&quot;test_model_prototype.TestCase.test_like_name_filter&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="Python tests in tests" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
@@ -247,11 +248,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for test_model_prototype.TestCase.test_equal_name_filter" />
-        <item itemvalue="Python tests.Python tests for test_model_prototype.TestCase.test_like_id_filter" />
-        <item itemvalue="Python tests.Python tests for test_model_prototype.TestCase.test_equal_id_filter" />
-        <item itemvalue="Python tests.Python tests in test_model_prototype.py" />
         <item itemvalue="Python tests.Python tests in tests" />
+        <item itemvalue="Python tests.Python tests for test_model_prototype.TestCase.test_like_name_filter" />
+        <item itemvalue="Python tests.Python tests for test_model_prototype.TestCase.test_like_id_filter" />
+        <item itemvalue="Python tests.Python tests for test_model_prototype.TestCase.test_equal_name_filter" />
+        <item itemvalue="Python tests.Python tests for test_model_prototype.TestCase.test_equal_id_filter" />
       </list>
     </recent_temporary>
   </component>
@@ -285,11 +286,6 @@
           <url>file://$PROJECT_DIR$/src/utils/parser.py</url>
           <line>39</line>
           <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tests/test_model_prototype.py</url>
-          <line>55</line>
-          <option name="timeStamp" value="116" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

@@ -1,27 +1,27 @@
 from src.abstract.base_comparing_by_name import BaseComparingByName
 from src.abstract.filter_type import FilterType
+from src.exceptions.argument_exception import ArgumentException
+from src.logics.filter_item import FilterItem
 
 
 class FilterDto(BaseComparingByName):
-    __type: FilterType = None
+    __items: list[FilterItem] = []
 
     def __init__(self):
         pass
 
     @classmethod
-    def create(cls, uid, name, type):
+    def create(cls, items: list[FilterItem]):
         filter_dto = cls()
-        filter_dto.uid = uid
-        filter_dto.name = name
-        filter_dto.type = FilterType(type)
+        filter_dto.items = items
         return filter_dto
 
     @property
-    def type(self):
-        return self.__type
+    def items(self) -> list[FilterItem]:
+        return self.__items
 
-    @type.setter
-    def type(self, value: FilterType | str):
-        if isinstance(value, str):
-            value = FilterType(value)
-        self.__type = value
+    @items.setter
+    def items(self, value: list[FilterItem]):
+        for item in value:
+            ArgumentException.check_arg(item, FilterItem)
+        self.__items = value

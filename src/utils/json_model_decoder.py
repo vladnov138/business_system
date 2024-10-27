@@ -1,3 +1,4 @@
+from datetime import datetime
 from json import JSONDecoder
 
 from src.abstract.base_comparing_by_name import BaseComparingByName
@@ -57,11 +58,22 @@ class JsonModelDecoder(JSONDecoder):
         """
         model = cls()
         fields = self.__get_model_fields(model)
+        types = model.__annotations__
         for field in fields:
             if field not in coded_obj:
                 continue
             value = coded_obj[field]
-            setattr(model, field, self.__decode_field_value(value))
+            key = f"_{cls.__name__}__{field}" # добавляем префикс класса
+            if isinstance(value, dict) and "cls" not in value:
+                if key in types:
+                    res = self.decode_model(value, types[key])
+                    setattr(model, field, res)
+                else:
+                    raise OperationException(f"Class {cls.__name__} has no field {field}.")
+            elif key in types.keys() and types[key] == datetime:
+                setattr(model, field, datetime.strptime(value, "%Y-%m-%d"))
+            else:
+                setattr(model, field, self.__decode_field_value(value))
         return model
 
     def __get_model_fields(self, model):
@@ -76,7 +88,7 @@ class JsonModelDecoder(JSONDecoder):
         """
         if isinstance(value, dict) and "cls" in value:
             return self.__decode_nested_object(value)
-        elif isinstance(value, list):
+        if isinstance(value, list):
             return self.__decode_list(value)
         return value
 

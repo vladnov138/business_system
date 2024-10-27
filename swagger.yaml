@@ -15,33 +15,44 @@ definitions:
   Filter:
     type: object
     properties:
-      id:
+      field:
         type: string
-        description: "Nullable string ID"
-      name:
+        description: "Имя фильтруемого поля"
+      value:
         type: string
-        description: "Nullable string name"
+        description: "Искомое значение"
       type:
         type: string
         enum:
           - EQUAL
           - LIKE
 
+  PeriodFilter:
+    type: object
+    properties:
+      date:
+        type: string
+        description: "Параметр даты"
+      filter_type:
+        description: "Параметры фильтра даты"
+        type: string
+        enum:
+          - AFTER
+          - BEFORE
+          - EQUAL
+
   WarehouseTransactionFilter:
     type: object
     properties:
-      warehouse_uid:
-        type: string
-        description: "Nullable"
-      nomenclature_uid:
-        type: string
-        description: "Nullable"
-      date_from:
-        type: string
-        description: "Nullable"
-      date_to:
-        type: string
-        description: "Nullable"
+      warehouse_item:
+        $ref: "#/definitions/Filter"
+        description: "Параметры фильтра склада"
+      nomenclature_item:
+        $ref: "#/definitions/Filter"
+        description: "Параметры фильтра номенклатуры"
+      period:
+        $ref: "#/definitions/PeriodFilter"
+        description: "Параметры фильтра начала даты"
 
 paths:
   /reports/formats:
@@ -113,11 +124,13 @@ paths:
         - application/json
       parameters:
         - in: body
-          name: filterDto
+          name: filter
           description: Параметры фильтрации для номенклатур
           required: true
           schema:
-            $ref: '#/definitions/Filter'
+            type: array
+            items:
+              $ref: '#/definitions/Filter'
         - in: path
           name: entity
           description: Параметры фильтрации для номенклатур
@@ -145,7 +158,9 @@ paths:
           description: Параметры фильтрации для номенклатур
           required: false
           schema:
-            $ref: '#/definitions/WarehouseTransactionFilter'
+            type: array
+            items:
+              $ref: '#/definitions/WarehouseTransactionFilter'
       responses:
         200:
           description: OK
@@ -168,7 +183,9 @@ paths:
           description: Параметры фильтрации для номенклатур
           required: false
           schema:
-            $ref: '#/definitions/WarehouseTransactionFilter'
+            type: array
+            items:
+              $ref: '#/definitions/WarehouseTransactionFilter'
       responses:
         200:
           description: OK

@@ -1,50 +1,58 @@
 from src.abstract.abstract_prototype import AbstractPrototype
-from src.abstract.filter_type import FilterType
-from src.dto.filter_dto import FilterDto
-from src.dto.warehouse_transaction_filter_dto import WarehouseTransactionFilterDto
+from src.abstract.date_filter_type import DateFilterType
+from src.abstract.period_filter_item import PeriodFilterItem
 from src.exceptions.operation_exception import OperationException
+from src.logics.filter_item import FilterItem
+from src.logics.warehouse_filter_item import WarehouseFilterItem
 
 
 class WarehouseTransactionPrototype(AbstractPrototype):
 
     def __init__(self, source: list):
         super().__init__(source)
+        self.__date_conditions = {
+            DateFilterType.EQUAL: lambda searched_date, date: searched_date.date() == date.date(),
+            DateFilterType.AFTER: lambda searched_date, date: searched_date.date() < date.date(),
+            DateFilterType.BEFORE: lambda searched_date, date: searched_date.date() > date.date()
+        }
 
-    def __filter(self, field: str, source: list, searched_value) -> list:
+    def filter_period(self, field: str, filter_item: PeriodFilterItem) -> list:
+        if filter_item is None:
+            return self.data
+        condition = self.__date_conditions.get(filter_item.filter_type) or None
+        if condition is None:
+            raise OperationException("Invalid filter type")
         result = []
-        for item in source:
-            field_value = getattr(item, field)
-            if field_value is None:
-                raise OperationException("Invalid field value")
-            if field_value == searched_value:
+        for item in self.data:
+            field_date = getattr(item, field)
+            if field_date is None:
+                raise OperationException("Invalid field")
+            if condition(filter_item.date, field_date):
                 result.append(item)
         return result
 
-    def filter_warehouse(self, source: list, filter_dto: WarehouseTransactionFilterDto) -> list:
-        if filter_dto.warehouse is None:
-            return source
-        return self.__filter("warehouse", source, filter_dto.warehouse)
-
-    def filter_nomenclature(self, source: list, filter_dto: WarehouseTransactionFilterDto) -> list:
-        if filter_dto.nomenclature is None:
-            return source
-        return self.__filter("nomenclature", source, filter_dto.nomenclature)
-
-    def filter_period(self, source: list, filter_dto: WarehouseTransactionFilterDto) -> list:
-        if filter_dto.date_from is None and filter_dto.date_to is None:
-            return source
-
+    def filter(self, field: str, filter_item: FilterItem):
+        if filter_item is None:
+            return self.data
+        condition = self._conditions.get(filter_item.type) or None
+        if condition is None:
+            raise OperationException("Invalid filter type")
         result = []
-        for item in source:
-            if (filter_dto.date_from is None or filter_dto.date_from <= item.date) and \
-                    (filter_dto.date_to is None or item.date <= filter_dto.date_to):
+        for item in self.data:
+            field_model = getattr(item, field)
+            field_model_value = getattr(field_model, filter_item.field)
+            if field_model_value is None:
+                raise OperationException("Invalid field")
+            if condition(filter_item.value, field_model_value):
                 result.append(item)
         return result
 
-    def create(self, data: list, filter_dto: WarehouseTransactionFilterDto):
-        super().create(data, filter_dto)
-        self.data = self.filter_warehouse(data, filter_dto)
-        self.data = self.filter_nomenclature(self.data, filter_dto)
-        self.data = self.filter_period(self.data, filter_dto)
-        instance = WarehouseTransactionPrototype(self.data)
-        return instance
+    def create(self, filter_item: WarehouseFilterItem):
+        if filter_item.warehouse_item:
+            self.data = self.filter("warehouse", filter_item.warehouse_item)
+        if filter_item.nomenclature_item:
+            self.data = self.filter("nomenclature", filter_item.nomenclature_item)
+        if filter_item.period:
+            self.data = self.filter_period("period", filter_item.period)
+        prototype = WarehouseTransactionPrototype(self.data)
+        return prototype

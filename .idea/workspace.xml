@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4afd156-2404-459e-a434-5121565aff87" name="Changes" comment="" />
+    <list default="true" id="d4afd156-2404-459e-a434-5121565aff87" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/abstract/date_filter_type.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstract/period_filter_item.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logics/filter_item.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logics/warehouse_filter_item.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/filter_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/warehouse_filter_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abstract/abstract_prototype.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abstract/abstract_prototype.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dto/filter_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dto/filter_dto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dto/warehouse_transaction_filter_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dto/warehouse_transaction_filter_dto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logics/model_prototype.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/logics/model_prototype.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logics/warehouse_transaction_prototype.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/logics/warehouse_transaction_prototype.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/json_model_decoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/json_model_decoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/swagger.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -135,7 +151,7 @@
     "Python.settings_manager.executor": "Run",
     "Python.start_service.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "storage",
+    "git-widget-placeholder": "#7 on storage",
     "last_opened_file_path": "/home/vladnov138/PycharmProjects/business_system/src/reports",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
@@ -248,7 +264,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-0e3be3396995-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23339.19" />
+        <option value="bundled-python-sdk-d7ad00fb9fc3-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23726.102" />
       </set>
     </attachedChunks>
   </component>
@@ -276,17 +292,14 @@
           <line>39</line>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/reports/json_report.py</url>
-          <line>35</line>
-          <option name="timeStamp" value="56" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/reports/json_report.py</url>
-          <line>36</line>
-          <option name="timeStamp" value="57" />
-        </line-breakpoint>
       </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">

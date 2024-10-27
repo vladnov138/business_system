@@ -13,7 +13,9 @@ from src.dto.filter_dto import FilterDto
 from src.dto.warehouse_transaction_filter_dto import WarehouseTransactionFilterDto
 from src.exceptions.argument_exception import ArgumentException
 from src.exceptions.operation_exception import OperationException
+from src.logics.filter_item import FilterItem
 from src.logics.model_prototype import ModelPrototype
+from src.logics.warehouse_filter_item import WarehouseFilterItem
 from src.logics.warehouse_transaction_prototype import WarehouseTransactionPrototype
 from src.logics.warehouse_turnover_process import WarehouseTurnoverProcess
 from src.models.measurement_unit_model import MeasurementUnitModel
@@ -22,6 +24,7 @@ from src.models.nomenclature_model import NomenclatureModel
 from src.models.recipe_model import RecipeModel
 from src.models.warehouse_model import WarehouseModel
 from src.reports.report_factory import ReportFactory
+from src.services.filter_service import FilterService
 from src.services.settings_manager import SettingsManager
 from src.services.start_service import StartService
 from src.utils.json_model_decoder import JsonModelDecoder
@@ -98,7 +101,12 @@ def reports(model_name: str, format_str: str):
 
 @app.route("/api/filter/<entity>", methods=["POST"])
 def filter_model(entity):
-    filter_dto = JsonModelDecoder().decode_model(request.get_json(), FilterDto)
+    params = request.get_json()
+    filter_items = []
+    for param in params:
+        filter_item = JsonModelDecoder().decode_model(param, FilterItem)
+        filter_items.append(filter_item)
+    filter_dto = FilterDto.create(filter_items)
     cls = models.get(entity) or None
     if cls is None:
         raise ArgumentException("Invalid model")
@@ -106,45 +114,43 @@ def filter_model(entity):
     if key is None:
         raise OperationException("Не существует отчет по этой модели")
     data = repository.data[key]
-    model_prototype = ModelPrototype(data)
-    result = model_prototype.create(data, filter_dto)
-    if len(result.data) == 0:
-        return result.data
+    filter_service = FilterService()
+    result = filter_service.filter(data, filter_dto)
+    if len(result) == 0:
+        return result
     report_format = FormatReporting(manager.settings.report_format)
     report = ReportFactory(manager.settings).create(report_format)
-    report.create(result.data)
+    report.create(result)
     return json.loads(report.result)
 
 @app.route("/api/warehouse_transactions", methods=["POST"])
 def warehouse_transactions():
     key = repository.warehouse_transaction_key()
     data = repository.data[key]
-    filter_json = request.get_json()
-    warehouse = find_warehouse(filter_json.get("warehouse_uid")) if filter_json.get("warehouse_uid") else None
-    nomenclature = find_nomenclature(filter_json.get("nomenclature_uid")) if filter_json.get(
-        "nomenclature_uid") else None
-    filter_dto = WarehouseTransactionFilterDto.create(warehouse, nomenclature)
-    prototype = WarehouseTransactionPrototype(data)
-    result = prototype.create(data, filter_dto)
+    params = request.get_json()
+    filter_items = []
+    for param in params:
+        filter_item = JsonModelDecoder().decode_model(param, WarehouseFilterItem)
+        filter_items.append(filter_item)
+    filter_dto = WarehouseTransactionFilterDto.create(filter_items)
+    result = FilterService().filter_warehouse_transactions(data, filter_dto)
     report_format = FormatReporting(manager.settings.report_format)
     report = ReportFactory(manager.settings).create(report_format)
-    report.create(result.data)
+    report.create(result)
     return json.loads(report.result)
 
 @app.route("/api/warehouse_turnovers", methods=["POST"])
 def warehouse_turnovers():
     key = repository.warehouse_transaction_key()
     data = repository.data[key]
-    filter_json = request.get_json()
-    warehouse = find_warehouse(filter_json.get("warehouse_uid")) if filter_json.get("warehouse_uid") else None
-    nomenclature = find_nomenclature(filter_json.get("nomenclature_uid")) if filter_json.get(
-        "nomenclature_uid") else None
-    date_from = datetime.strptime(filter_json.get("date_from"), "%Y-%m-%d") if filter_json.get("date_from") else None
-    date_to = datetime.strptime(filter_json.get("date_to"), "%Y-%m-%d") if filter_json.get("date_to") else None
-    filter_dto = WarehouseTransactionFilterDto.create(warehouse, nomenclature, date_from, date_to)
-    prototype = WarehouseTransactionPrototype(data)
-    result = prototype.create(data, filter_dto)
-    turnovers = WarehouseTurnoverProcess().execute(result.data)
+    params = request.get_json()
+    filter_items = []
+    for param in params:
+        filter_item = JsonModelDecoder().decode_model(param, WarehouseFilterItem)
+        filter_items.append(filter_item)
+    filter_dto = WarehouseTransactionFilterDto.create(filter_items)
+    result = FilterService().filter_warehouse_transactions(data, filter_dto)
+    turnovers = WarehouseTurnoverProcess().execute(result)
     report_format = FormatReporting(manager.settings.report_format)
     report = ReportFactory(manager.settings).create(report_format)
     report.create(turnovers)

@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4afd156-2404-459e-a434-5121565aff87" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/abstract/abstract_reference.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abstract/abstract_reference.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logics/warehouse_transaction_prototype.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/logics/warehouse_transaction_prototype.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +35,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="report_deserealize" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,12 +46,12 @@
     &quot;assignee&quot;: &quot;vladnov138&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/vladnov138/business_system.git",
-    "accountId": "89db990f-1e6a-4a46-8a70-396d7bafa47d"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/vladnov138/business_system.git&quot;,
+    &quot;accountId&quot;: &quot;89db990f-1e6a-4a46-8a70-396d7bafa47d&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -75,7 +75,7 @@
     "Python tests.Python tests for test_model_prototype.TestCase.test_equal_id_filter.executor": "Run",
     "Python tests.Python tests for test_model_prototype.TestCase.test_equal_name_filter.executor": "Run",
     "Python tests.Python tests for test_model_prototype.TestCase.test_like_id_filter.executor": "Run",
-    "Python tests.Python tests for test_model_prototype.TestCase.test_like_name_filter.executor": "Debug",
+    "Python tests.Python tests for test_model_prototype.TestCase.test_like_name_filter.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.test_ingridient_model.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.test_ingridient_model_setters_exceptions.executor": "Run",
@@ -98,6 +98,12 @@
     "Python tests.Python tests for test_models.TestModels.test_recipe_setters.executor": "Debug",
     "Python tests.Python tests for test_models.TestModels.test_storage_model.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.test_storage_model_getters.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_warehouse_model.executor": "Run",
+    "Python tests.Python tests for test_models.TestModels.test_warehouse_transaction_model.executor": "Run",
+    "Python tests.Python tests for test_processes.TestProcesses.test_process_factory.executor": "Run",
+    "Python tests.Python tests for test_processes.TestProcesses.test_turnover_both_process.executor": "Run",
+    "Python tests.Python tests for test_processes.TestProcesses.test_turnover_only_expense_process.executor": "Run",
+    "Python tests.Python tests for test_processes.TestProcesses.test_turnover_only_income_process.executor": "Run",
     "Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_json_measurement_unit_deserialize.executor": "Run",
     "Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_json_nomenclature_deserialize.executor": "Run",
     "Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_json_nomenclatures_deserialize.executor": "Run",
@@ -131,7 +137,7 @@
     "Python.settings_manager.executor": "Run",
     "Python.start_service.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "#6 on prototype",
+    "git-widget-placeholder": "#7 on storage",
     "last_opened_file_path": "/home/vladnov138/PycharmProjects/business_system/src/reports",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
@@ -148,7 +154,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in test_model_prototype.py">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
@@ -171,7 +177,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_model_prototype.TestCase" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_model_prototype.TestCase.test_like_id_filter" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -182,7 +188,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_model_prototype.TestCase&quot;" />
+      <option name="_new_target" value="&quot;test_model_prototype.TestCase.test_like_id_filter&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -233,18 +239,18 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests in test_model_prototype.py" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python tests.Python tests in test_model_prototype.py" />
         <item itemvalue="Python tests.Python tests in tests" />
-        <item itemvalue="Python tests.Python tests for test_model_prototype.TestCase" />
         <item itemvalue="Python tests.Python tests for test_model_prototype.TestCase.test_like_name_filter" />
+        <item itemvalue="Python tests.Python tests for test_model_prototype.TestCase.test_like_id_filter" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-0e3be3396995-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23339.19" />
+        <option value="bundled-python-sdk-d7ad00fb9fc3-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23726.102" />
       </set>
     </attachedChunks>
   </component>
@@ -272,12 +278,14 @@
           <line>39</line>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/logics/model_prototype.py</url>
-          <line>24</line>
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
       </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">

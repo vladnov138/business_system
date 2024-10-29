@@ -1,24 +1,25 @@
-import json
-
 import connexion
 from flask import request
 
-from src.abstract.abstract_report import AbstractReport
-from src.abstract.base_comparing_by_name import BaseComparingByName
-from src.abstract.base_comparing_by_uid import BaseComparingByUid
 from src.abstract.format_reporting import FormatReporting
 from src.data.data_repository import DataRepository
 from src.dto.filter_dto import FilterDto
+from src.dto.warehouse_transaction_filter_dto import WarehouseTransactionFilterDto
 from src.exceptions.argument_exception import ArgumentException
 from src.exceptions.operation_exception import OperationException
-from src.logics.model_prototype import ModelPrototype
+from src.logics.filter_item import FilterItem
+from src.logics.warehouse_filter_item import WarehouseFilterItem
+from src.logics.warehouse_turnover_process import WarehouseTurnoverProcess
 from src.models.measurement_unit_model import MeasurementUnitModel
 from src.models.nomenclature_group_model import NomenclatureGroupModel
 from src.models.nomenclature_model import NomenclatureModel
 from src.models.recipe_model import RecipeModel
-from src.reports.report_factory import ReportFactory
+from src.models.warehouse_model import WarehouseModel
+from src.services.filter_service import FilterService
+from src.services.report_service import ReportService
 from src.services.settings_manager import SettingsManager
 from src.services.start_service import StartService
+from src.utils.common import Common
 from src.utils.json_model_decoder import JsonModelDecoder
 
 app = connexion.FlaskApp(__name__)
@@ -26,26 +27,21 @@ manager = SettingsManager()
 manager.open("resources/settings.json")
 manager.convert()
 repository = DataRepository()
+report_service = ReportService()
 start = StartService(repository, manager.settings)
 start.create()
 
-models = {}
-for inheritor in BaseComparingByName.__subclasses__():
-    models[inheritor.__name__] = inheritor
-for inheritor in BaseComparingByUid.__subclasses__():
-    models[inheritor.__name__] = inheritor
+helper = Common()
+models = helper.get_models_dict()
 
 models_keys = {
     NomenclatureModel.__name__: repository.nomenclature_key(),
     MeasurementUnitModel.__name__: repository.measurement_unit_key(),
     RecipeModel.__name__: repository.recipe_key(),
-    NomenclatureGroupModel.__name__: repository.group_key()
+    NomenclatureGroupModel.__name__: repository.group_key(),
+    WarehouseModel.__name__: repository.warehouse_key(),
+    WarehouseTransactionFilterDto.__name__: repository.warehouse_transaction_key()
 }
-
-def get_report(data, format: FormatReporting) -> AbstractReport:
-    report = ReportFactory(manager.settings).create(format)
-    report.create(data)
-    return report
 
 @app.route("/api/reports/formats", methods=["GET"])
 def formats():
@@ -72,12 +68,17 @@ def reports(model_name: str, format_str: str):
     if key is None:
         raise OperationException("Не существует отчет по этой модели")
     inner_format = FormatReporting(format)
-    report = get_report(repository.data[key], inner_format)
+    report = report_service.get_report(repository.data[key], inner_format)
     return report.result
 
 @app.route("/api/filter/<entity>", methods=["POST"])
 def filter_model(entity):
-    filter_dto = JsonModelDecoder().decode_model(request.get_json(), FilterDto)
+    params = request.get_json()
+    filter_items = []
+    for param in params:
+        filter_item = JsonModelDecoder().decode_model(param, FilterItem)
+        filter_items.append(filter_item)
+    filter_dto = FilterDto.create(filter_items)
     cls = models.get(entity) or None
     if cls is None:
         raise ArgumentException("Invalid model")
@@ -85,14 +86,39 @@ def filter_model(entity):
     if key is None:
         raise OperationException("Не существует отчет по этой модели")
     data = repository.data[key]
-    model_prototype = ModelPrototype(data)
-    result = model_prototype.create(data, filter_dto)
-    if len(result.data) == 0:
-        return result.data
-    report_format = FormatReporting(manager.settings.report_format)
-    report = ReportFactory(manager.settings).create(report_format)
-    report.create(result.data)
-    return json.loads(report.result)
+    filter_service = FilterService()
+    result = filter_service.filter(data, filter_dto)
+    if len(result) == 0:
+        return result
+    return report_service.prepare_report(result)
+
+@app.route("/api/warehouse_transactions", methods=["POST"])
+def warehouse_transactions():
+    key = repository.warehouse_transaction_key()
+    data = repository.data[key]
+    params = request.get_json()
+    filter_items = []
+    for param in params:
+        filter_item = JsonModelDecoder().decode_model(param, WarehouseFilterItem)
+        filter_items.append(filter_item)
+    filter_dto = WarehouseTransactionFilterDto.create(filter_items)
+    result = FilterService().filter_warehouse_transactions(data, filter_dto)
+    return report_service.prepare_report(result)
+
+@app.route("/api/warehouse_turnovers", methods=["POST"])
+def warehouse_turnovers():
+    key = repository.warehouse_transaction_key()
+    data = repository.data[key]
+    params = request.get_json()
+    filter_items = []
+    for param in params:
+        filter_item = JsonModelDecoder().decode_model(param, WarehouseFilterItem)
+        filter_items.append(filter_item)
+    filter_dto = WarehouseTransactionFilterDto.create(filter_items)
+    result = FilterService().filter_warehouse_transactions(data, filter_dto)
+    turnovers = WarehouseTurnoverProcess().execute(result)
+    return report_service.prepare_report(turnovers)
+
 
 if __name__ == '__main__':
     app.add_api("swagger.yaml")

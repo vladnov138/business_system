@@ -4,6 +4,7 @@ from main import repository
 from src.abstract.filter_type import FilterType
 from src.data.data_repository import DataRepository
 from src.dto.filter_dto import FilterDto
+from src.logics.filter_item import FilterItem
 from src.logics.model_prototype import ModelPrototype
 from src.services.settings_manager import SettingsManager
 from src.services.start_service import StartService
@@ -34,11 +35,11 @@ class TestCase(unittest.TestCase):
         Результатом сравнения является список из 1 элемента
         :return:
         """
-        filter_dto = FilterDto.create(None, "ш", FilterType.LIKE)
+        filter_item = FilterItem.create("name", FilterType.LIKE, "ш")
         key = repository.measurement_unit_key()
         data = repository.data[key]
         model_prototype = ModelPrototype(data)
-        result = model_prototype.create(data, filter_dto).data
+        result = model_prototype.create(filter_item).data
         assert len(result) == 1
 
     def test_equal_name_filter(self):
@@ -48,11 +49,11 @@ class TestCase(unittest.TestCase):
         Результатом сравнения является список из 3 элементов (т.к. проверяется вхождение вложенных элементов)
         :return:
         """
-        filter_dto = FilterDto.create(None, "г", FilterType.EQUAL)
+        filter_item = FilterItem.create("name", FilterType.EQUAL, "г")
         key = repository.measurement_unit_key()
         data = repository.data[key]
         model_prototype = ModelPrototype(data)
-        result = model_prototype.create(data, filter_dto).data
+        result = model_prototype.create(filter_item).data
         assert len(result) == 3
 
     def test_like_id_filter(self):
@@ -66,9 +67,9 @@ class TestCase(unittest.TestCase):
         data = repository.data[key]
         first_item = data[0]
         part_of_id = first_item.uid[:2]
-        filter_dto = FilterDto.create(part_of_id, None, FilterType.LIKE)
+        filter_item = FilterItem.create("uid", FilterType.LIKE, part_of_id)
         model_prototype = ModelPrototype(data)
-        result = model_prototype.create(data, filter_dto).data
+        result = model_prototype.create(filter_item).data
         assert first_item in result
 
     def test_equal_id_filter(self):
@@ -82,8 +83,8 @@ class TestCase(unittest.TestCase):
         data = repository.data[key]
         first_item = data[0]
         id = first_item.uid
-        filter_dto = FilterDto.create(id, None, FilterType.EQUAL)
+        filter_item = FilterItem.create("uid", FilterType.EQUAL, id)
         model_prototype = ModelPrototype(data)
-        result = model_prototype.create(data, filter_dto).data
+        result = model_prototype.create(filter_item).data
         assert len(result) == 1
         assert result[0] == first_item

@@ -15,19 +15,44 @@ definitions:
   Filter:
     type: object
     properties:
-      id:
-        type:
-          - "string"
-          - "null"
-      name:
-        type:
-          - "string"
-          - "null"
+      field:
+        type: string
+        description: "Имя фильтруемого поля"
+      value:
+        type: string
+        description: "Искомое значение"
       type:
         type: string
         enum:
           - EQUAL
           - LIKE
+
+  PeriodFilter:
+    type: object
+    properties:
+      date:
+        type: string
+        description: "Параметр даты"
+      filter_type:
+        description: "Параметры фильтра даты"
+        type: string
+        enum:
+          - AFTER
+          - BEFORE
+          - EQUAL
+
+  WarehouseTransactionFilter:
+    type: object
+    properties:
+      warehouse_item:
+        $ref: "#/definitions/Filter"
+        description: "Параметры фильтра склада"
+      nomenclature_item:
+        $ref: "#/definitions/Filter"
+        description: "Параметры фильтра номенклатуры"
+      period:
+        $ref: "#/definitions/PeriodFilter"
+        description: "Параметры фильтра начала даты"
 
 paths:
   /reports/formats:
@@ -99,16 +124,68 @@ paths:
         - application/json
       parameters:
         - in: body
-          name: filterDto
+          name: filter
           description: Параметры фильтрации для номенклатур
           required: true
           schema:
-            $ref: '#/definitions/Filter'
+            type: array
+            items:
+              $ref: '#/definitions/Filter'
         - in: path
           name: entity
           description: Параметры фильтрации для номенклатур
           required: true
           type: string
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+        500:
+          description: Ошибка на сервере
+        default:
+          description: Неизвестная ошибка
+
+  /api/warehouse_transactions:
+    post:
+      summary: Транзакции склада
+      operationId: main.warehouse_transactions
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: filterDto
+          description: Параметры фильтрации для номенклатур
+          required: false
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/WarehouseTransactionFilter'
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+        500:
+          description: Ошибка на сервере
+        default:
+          description: Неизвестная ошибка
+
+  /api/warehouse_turnovers:
+    post:
+      summary: Обороты склада
+      operationId: main.warehouse_turnovers
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: filterDto
+          description: Параметры фильтрации для номенклатур
+          required: false
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/WarehouseTransactionFilter'
       responses:
         200:
           description: OK

@@ -196,7 +196,7 @@ class TestProcesses(unittest.TestCase):
         plt.xlabel(f"count_transaction ")
         plt.ylabel(f"time in seconds")
         plt.legend()
-        plt.savefig("../demo/test_speed.png")
+        # plt.savefig("../demo/test_speed.png")
         plt.close()
 
 

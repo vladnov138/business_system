@@ -16,5 +16,7 @@
     "XML": "xml_report",
     "MARKDOWN": "md_report",
     "RTF": "rtf_report"
-  }
+  },
+  "date_format": "%Y-%m-%d",
+  "date_block": "2023-10-29"
 }

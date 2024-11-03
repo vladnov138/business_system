@@ -90,5 +90,7 @@ class SettingsManager:
     def __set_default_data(self):
         data = {"inn": "380080920202", "organization_name": "Рога и копыта (default)",
                 "director_name": "Default default", "bik": "999999999", "account": "12312312312",
-                "business_type": "DEFDF", "correspondent_account": "13213213213"}
+                "business_type": "DEFDF", "correspondent_account": "13213213213",
+                "recipe_folder": "docs/", "measurement_units_path": "resources/measurement_units.json",
+                "date_format": "%Y-%m-%d"}
         self.__data = data

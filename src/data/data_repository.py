@@ -42,3 +42,7 @@ class DataRepository:
     @staticmethod
     def warehouse_key() -> str:
         return "warehouse"
+
+    @staticmethod
+    def turnovers_key() -> str:
+        return "turnovers"

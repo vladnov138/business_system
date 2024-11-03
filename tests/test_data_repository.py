@@ -91,6 +91,6 @@ class TestDataRepository(unittest.TestCase):
         """
         warehouse_transaction_key = self.data_repository.warehouse_transaction_key()
         warehouse_transactions = self.data_repository.data[warehouse_transaction_key]
-        assert len(warehouse_transactions) == 2
+        assert len(warehouse_transactions) == 3
         for warehouse_transaction in warehouse_transactions:
             assert isinstance(warehouse_transaction, WarehouseTransactionModel)

@@ -5,7 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4afd156-2404-459e-a434-5121565aff87" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/logics/warehouse_transaction_prototype.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/logics/warehouse_transaction_prototype.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstract/observer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logics/date_block_observer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/processes/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/processes/dateblock_turnover_process.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/processes/save_turnover_process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.csv" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_measurement_unit.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_measurement_unit.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.md" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_measurement_unit.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.rtf" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_measurement_unit.rtf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_measurement_unit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.csv" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.md" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.rtf" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.rtf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/report_recipe.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_recipe.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/test_settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/test_settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abstract/process_type.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abstract/process_type.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/data_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/data_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logics/process_factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/processes/process_factory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logics/warehouse_turnover_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/processes/warehouse_turnover_process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/settings_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/settings_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/warehouse_transaction_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/warehouse_transaction_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/settings_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/settings_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/start_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/start_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/swagger.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_data_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_data_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_processes.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_processes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +81,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/vladnov138/business_system.git&quot;,
-    &quot;accountId&quot;: &quot;89db990f-1e6a-4a46-8a70-396d7bafa47d&quot;
+    &quot;accountId&quot;: &quot;67d8ac6a-cd73-4066-9582-96612613f2bd&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -100,6 +132,8 @@
     "Python tests.Python tests for test_models.TestModels.test_storage_model_getters.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.test_warehouse_model.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.test_warehouse_transaction_model.executor": "Run",
+    "Python tests.Python tests for test_processes.TestProcesses.test_dateblock_process.executor": "Run",
+    "Python tests.Python tests for test_processes.TestProcesses.test_dateblock_turnovers_speed.executor": "Run",
     "Python tests.Python tests for test_processes.TestProcesses.test_process_factory.executor": "Run",
     "Python tests.Python tests for test_processes.TestProcesses.test_turnover_both_process.executor": "Run",
     "Python tests.Python tests for test_processes.TestProcesses.test_turnover_only_expense_process.executor": "Run",
@@ -132,12 +166,13 @@
     "Python tests.Python tests in test_reporting.py.executor": "Run",
     "Python tests.Python tests in test_settings.py.executor": "Run",
     "Python tests.Python tests in tests.executor": "Run",
-    "Python.main.executor": "Run",
+    "Python.main.executor": "Debug",
     "Python.nomenclature_group_model.executor": "Run",
     "Python.settings_manager.executor": "Run",
     "Python.start_service.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "#7 on storage",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "dateblock",
     "last_opened_file_path": "/home/vladnov138/PycharmProjects/business_system/src/reports",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
@@ -147,11 +182,11 @@
       <recent name="$PROJECT_DIR$/src/reports" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/processes" />
       <recent name="C:\Users\vladn\PycharmProjects\business_system\src\services" />
       <recent name="C:\Users\vladn\PycharmProjects\business_system\src\abstract" />
       <recent name="$PROJECT_DIR$/src/models" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
@@ -177,7 +212,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_model_prototype.TestCase.test_like_id_filter" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_data_repository.TestDataRepository.test_data_nomenclature_group" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -188,11 +223,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_model_prototype.TestCase.test_like_id_filter&quot;" />
+      <option name="_new_target" value="&quot;test_data_repository.TestDataRepository.test_data_nomenclature_group&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_model_prototype.TestCase.test_like_name_filter" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_processes.TestProcesses.test_dateblock_process" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -203,11 +238,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_model_prototype.TestCase.test_like_name_filter&quot;" />
+      <option name="_new_target" value="&quot;test_processes.TestProcesses.test_dateblock_process&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in test_model_prototype.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_processes.TestProcesses.test_dateblock_turnovers_speed" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -218,8 +253,8 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_model_prototype.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="_new_target" value="&quot;test_processes.TestProcesses.test_dateblock_turnovers_speed&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="Python tests in tests" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
@@ -240,10 +275,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
-        <item itemvalue="Python tests.Python tests in test_model_prototype.py" />
         <item itemvalue="Python tests.Python tests in tests" />
-        <item itemvalue="Python tests.Python tests for test_model_prototype.TestCase.test_like_name_filter" />
-        <item itemvalue="Python tests.Python tests for test_model_prototype.TestCase.test_like_id_filter" />
+        <item itemvalue="Python tests.Python tests for test_processes.TestProcesses.test_dateblock_turnovers_speed" />
+        <item itemvalue="Python tests.Python tests for test_processes.TestProcesses.test_dateblock_process" />
+        <item itemvalue="Python tests.Python tests for test_data_repository.TestDataRepository.test_data_nomenclature_group" />
       </list>
     </recent_temporary>
   </component>

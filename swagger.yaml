@@ -17,7 +17,7 @@ definitions:
     description: "Единица измерения"
     properties:
       uid:
-        type: integer
+        type: string
         description: "Идентификатор единицы измерения"
       name:
         type: string
@@ -41,7 +41,7 @@ definitions:
         description: "Группа номенклатуры"
         properties:
           uid:
-            type: integer
+            type: string
             description: "Идентификатор группы номенклатуры"
           name:
             type: string
@@ -51,7 +51,7 @@ definitions:
         description: "Единица измерения"
         properties:
           uid:
-            type: integer
+            type: string
             description: "Идентификатор единицы измерения"
           name:
             type: string

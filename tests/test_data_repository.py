@@ -43,12 +43,12 @@ class TestDataRepository(unittest.TestCase):
 
     def test_data_nomenclature(self):
         """
-        Тестирует, что в репозитории есть 2 номенклатуры
+        Тестирует, что в репозитории есть 9 номенклатур
         :return:
         """
         nomenclature_key = self.data_repository.nomenclature_key()
         nomenclatures = self.data_repository.data[nomenclature_key]
-        assert len(nomenclatures) == 2
+        assert len(nomenclatures) == 9
         for nomenclature in nomenclatures:
             assert isinstance(nomenclature, NomenclatureModel)
 

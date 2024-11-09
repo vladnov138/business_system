@@ -5,6 +5,7 @@ from src.abstract.abstract_logic import AbstractLogic
 from src.core.event_type import EventType
 from src.data.data_repository import DataRepository
 from src.exceptions.argument_exception import ArgumentException
+from src.models.nomenclature_model import NomenclatureModel
 from src.utils.file_reader import FileReader
 from src.utils.parser import Parser
 from src.utils.path_utils import PathUtils
@@ -57,8 +58,11 @@ class RecipeManager(AbstractLogic):
 
     def handle_event(self, type: EventType, **kwargs):
         super().handle_event(type, **kwargs)
-        if "nomenclature" not in kwargs or "data":
-            raise ArgumentException("nomenclature and data is required")
+        try:
+            ArgumentException.check_arg(kwargs.get("nomenclature"), NomenclatureModel)
+            ArgumentException.check_arg(kwargs.get("data"), DataRepository)
+        except Exception as e:
+            raise ArgumentException("Invalid arguments in kwargs") from e
         nomenclature = kwargs["nomenclature"]
         repository: DataRepository = kwargs["data"]
         recipe_key = repository.recipe_key()
@@ -66,7 +70,10 @@ class RecipeManager(AbstractLogic):
         match(type):
             case EventType.CHANGE_NOMENCLATURE:
                 for recipe in recipes:
-                    if nomenclature in recipe:
-                        recipe["nomenclature"] = nomenclature
-                        recipes[recipes.index(recipe)] = recipe
-                        break
+                    for ingridient in recipe.ingridients:
+                        if nomenclature.uid == ingridient.nomenclature.uid:
+                            ingridient.nomenclature = nomenclature
+                            recipe[recipe.ingridients.index(ingridient)] = ingridient
+                            recipes[recipes.index(recipe)] = recipe
+                            break
+        repository.data[recipe_key] = recipes

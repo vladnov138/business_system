@@ -98,6 +98,8 @@ class NomenclatureService(AbstractLogic):
         match(type):
             case EventType.DELETE_NOMENCLATURE:
                 for recipe in recipes:
-                    if nomenclature in recipe.ingridients:
-                        nomenclature_key = repository.nomenclature_key()
-                        repository.data[nomenclature_key].append(nomenclature)
+                    for ingridient in recipe.ingridients:
+                        if nomenclature == ingridient.nomenclature:
+                            # если используется, то восстанавливаем номенклатуру
+                            nomenclature_key = repository.nomenclature_key()
+                            repository.data[nomenclature_key].append(nomenclature)

@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from src.abstract.format_reporting import FormatReporting
 from src.exceptions.argument_exception import ArgumentException
 
@@ -17,6 +19,9 @@ class Settings:
     __report_format: FormatReporting = None
     __format_reports: dict = {}
     __report_classes_folder = ""
+
+    __date_format = "%Y-%m-%d"
+    __date_block = None
 
     @property
     def organization_name(self):
@@ -128,6 +133,25 @@ class Settings:
     def report_classes_folder(self, value: str):
         ArgumentException.check_arg(value, str)
         self.__report_classes_folder = value
+
+    @property
+    def date_format(self):
+        return self.__date_format
+
+    @date_format.setter
+    def date_format(self, value: str):
+        self.__date_format = value
+
+    @property
+    def date_block(self):
+        return self.__date_block
+
+    @date_block.setter
+    def date_block(self, value: datetime | str):
+        if isinstance(value, str):
+            value = datetime.strptime(value.split(" ")[0], self.date_format)
+        ArgumentException.check_arg(value, datetime)
+        self.__date_block = value
 
     def __str__(self):
         return f"""Settings(Organization Name: {self.organization_name}

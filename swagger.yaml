@@ -195,3 +195,44 @@ paths:
           description: Ошибка на сервере
         default:
           description: Неизвестная ошибка
+
+  /api/date_block:
+    get:
+      summary: Получить текущую дату блокировки
+      operationId: main.get_dateblock
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+        500:
+          description: Ошибка на сервере
+        default:
+          description: Неизвестная ошибка
+    post:
+      summary: Изменить дату блокировки
+      operationId: main.set_dateblock
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: dateblock
+          description: Новая дата блокировки
+          required: true
+          schema:
+            type: object
+            properties:
+              dateblock:
+                type: string
+                format: date
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+        500:
+          description: Ошибка на сервере
+        default:
+          description: Неизвестная ошибка

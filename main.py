@@ -2,14 +2,17 @@ import connexion
 from flask import request
 
 from src.abstract.format_reporting import FormatReporting
+from src.abstract.process_type import ProcessType
 from src.data.data_repository import DataRepository
 from src.dto.filter_dto import FilterDto
 from src.dto.warehouse_transaction_filter_dto import WarehouseTransactionFilterDto
 from src.exceptions.argument_exception import ArgumentException
 from src.exceptions.operation_exception import OperationException
+from src.logics.date_block_observer import DateBlockUpdator
 from src.logics.filter_item import FilterItem
 from src.logics.warehouse_filter_item import WarehouseFilterItem
-from src.logics.warehouse_turnover_process import WarehouseTurnoverProcess
+from src.processes.process_factory import ProcessFactory
+from src.processes.warehouse_turnover_process import WarehouseTurnoverProcess
 from src.models.measurement_unit_model import MeasurementUnitModel
 from src.models.nomenclature_group_model import NomenclatureGroupModel
 from src.models.nomenclature_model import NomenclatureModel
@@ -31,6 +34,8 @@ report_service = ReportService()
 start = StartService(repository, manager.settings)
 start.create()
 
+dateblockObserver = DateBlockUpdator(manager.settings.date_block, repository, ProcessFactory(), ProcessType.DATEBLOCK)
+
 helper = Common()
 models = helper.get_models_dict()
 
@@ -43,6 +48,7 @@ models_keys = {
     WarehouseTransactionFilterDto.__name__: repository.warehouse_transaction_key()
 }
 
+
 @app.route("/api/reports/formats", methods=["GET"])
 def formats():
     format_name = list(filter(lambda x: x, FormatReporting))
@@ -52,9 +58,11 @@ def formats():
         arr.append(result)
     return arr
 
+
 @app.route("/api/models", methods=["GET"])
 def get_models():
     return {"models": list(models.keys())}
+
 
 @app.route("/api/reports/<model_name>/<format_str>", methods=["GET"])
 def reports(model_name: str, format_str: str):
@@ -70,6 +78,7 @@ def reports(model_name: str, format_str: str):
     inner_format = FormatReporting(format)
     report = report_service.get_report(repository.data[key], inner_format)
     return report.result
+
 
 @app.route("/api/filter/<entity>", methods=["POST"])
 def filter_model(entity):
@@ -92,6 +101,7 @@ def filter_model(entity):
         return result
     return report_service.prepare_report(result)
 
+
 @app.route("/api/warehouse_transactions", methods=["POST"])
 def warehouse_transactions():
     key = repository.warehouse_transaction_key()
@@ -105,6 +115,7 @@ def warehouse_transactions():
     result = FilterService().filter_warehouse_transactions(data, filter_dto)
     return report_service.prepare_report(result)
 
+
 @app.route("/api/warehouse_turnovers", methods=["POST"])
 def warehouse_turnovers():
     key = repository.warehouse_transaction_key()
@@ -116,8 +127,26 @@ def warehouse_turnovers():
         filter_items.append(filter_item)
     filter_dto = WarehouseTransactionFilterDto.create(filter_items)
     result = FilterService().filter_warehouse_transactions(data, filter_dto)
-    turnovers = WarehouseTurnoverProcess().execute(result)
+    turnovers_repository = repository.data[repository.turnovers_key()]
+    process = ProcessFactory().create(ProcessType.DATEBLOCK, turnovers=turnovers_repository,
+                                        dateblock=manager.settings.date_block)
+    turnovers = process.execute(result)
     return report_service.prepare_report(turnovers)
+
+
+@app.route("/api/date_block", methods=["GET"])
+def get_dateblock():
+    return {"dateblock": manager.settings.date_block}
+
+
+@app.route("/api/date_block", methods=["POST"])
+def set_dateblock():
+    params = request.get_json()
+    date_block = params["dateblock"]
+    manager.settings.date_block = date_block
+    dateblockObserver.update(manager.settings.date_block)
+    manager.save()
+    return get_dateblock()
 
 
 if __name__ == '__main__':

@@ -33,22 +33,22 @@ class WarehouseTransactionModel(BaseComparingByName):
 
     @staticmethod
     def default_income_transaction(warehouse: WarehouseModel, nomenclature: NomenclatureModel,
-                            measurement_unit: MeasurementUnitModel) -> WarehouseTransactionModel:
+                                   measurement_unit: MeasurementUnitModel,
+                                   period: datetime = datetime(2020, 1, 1)) -> WarehouseTransactionModel:
         name = "Поступление сырья"
         amount = 100
         transaction_type = TransactionType.INCOME
-        period = datetime.now()
         transaction = WarehouseTransactionModel.create(name, warehouse, nomenclature, amount, measurement_unit,
                                                        transaction_type, period)
         return transaction
 
     @staticmethod
     def default_expense_transaction(warehouse: WarehouseModel, nomenclature: NomenclatureModel,
-                                   measurement_unit: MeasurementUnitModel) -> WarehouseTransactionModel:
+                                    measurement_unit: MeasurementUnitModel,
+                                    period: datetime = datetime(2020, 1, 1)) -> WarehouseTransactionModel:
         name = "Расход сырья"
         amount = 10
         transaction_type = TransactionType.EXPENSE
-        period = datetime.now()
         transaction = WarehouseTransactionModel.create(name, warehouse, nomenclature, amount, measurement_unit,
                                                        transaction_type, period)
         return transaction

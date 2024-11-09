@@ -1,7 +1,5 @@
 import unittest
 
-from Scripts.activate_this import prev_length
-
 from src.data.data_repository import DataRepository
 from src.models.measurement_unit_model import MeasurementUnitModel
 from src.models.nomenclature_group_model import NomenclatureGroupModel

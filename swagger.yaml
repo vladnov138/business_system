@@ -12,6 +12,55 @@ produces:
 basePath: "/api"
 
 definitions:
+  MeasurementUnitModel:
+    type: object
+    description: "Единица измерения"
+    properties:
+      uid:
+        type: integer
+        description: "Идентификатор единицы измерения"
+      name:
+        type: string
+        description: "Название единицы измерения"
+      base_unit:
+        type: object
+        description: "Базовая единица измерения"
+        $ref: "#/definitions/MeasurementUnitModel"
+
+  NomenclatureModel:
+    type: object
+    properties:
+      uid:
+        type: string
+        description: "Идентификатор номенклатуры"
+      name:
+        type: string
+        description: "Название номенклатуры"
+      nomenclature_group:
+        type: object
+        description: "Группа номенклатуры"
+        properties:
+          uid:
+            type: integer
+            description: "Идентификатор группы номенклатуры"
+          name:
+            type: string
+            description: "Название группы номенклатуры"
+      measurement_unit:
+        type: object
+        description: "Единица измерения"
+        properties:
+          uid:
+            type: integer
+            description: "Идентификатор единицы измерения"
+          name:
+            type: string
+            description: "Название единицы измерения"
+          base_unit:
+            type: object
+            description: "Базовая единица измерения"
+            $ref: "#/definitions/MeasurementUnitModel"
+
   Filter:
     type: object
     properties:
@@ -227,6 +276,90 @@ paths:
               dateblock:
                 type: string
                 format: date
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+        500:
+          description: Ошибка на сервере
+        default:
+          description: Неизвестная ошибка
+
+  /api/nomenclature:
+    get:
+      summary: Получить номенклатуру
+      operationId: main.get_nomenclature
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: id
+          description: ID номенклатуры
+          required: true
+          type: integer
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+        500:
+          description: Ошибка на сервере
+        default:
+          description: Неизвестная ошибка
+    put:
+      summary: Добавить номенклатуру
+      operationId: main.put_nomenclature
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: nomenclature
+          description: Номенклатура
+          required: true
+          schema:
+            $ref: '#/definitions/NomenclatureModel'
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+        500:
+          description: Ошибка на сервере
+        default:
+          description: Неизвестная ошибка
+    patch:
+      summary: Изменить номенклатуру
+      operationId: main.patch_nomenclature
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: nomenclature
+          description: Номенклатура
+          required: true
+          schema:
+            $ref: '#/definitions/NomenclatureModel'
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+        500:
+          description: Ошибка на сервере
+        default:
+          description: Неизвестная ошибка
+    delete:
+      summary: Удалить номенклатуру
+      operationId: main.delete_nomenclature
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: id
+          description: ID номенклатуры
+          required: true
+          type: integer
       responses:
         200:
           description: OK

@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4afd156-2404-459e-a434-5121565aff87" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/test_nomenclature_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/event_type.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/observe_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logics/date_block_observer.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/logics/date_block_updator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/swagger.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_nomenclature_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_nomenclature_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_processes.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_processes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +107,11 @@
     "Python tests.Python tests for test_models.TestModels.test_storage_model_getters.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.test_warehouse_model.executor": "Run",
     "Python tests.Python tests for test_models.TestModels.test_warehouse_transaction_model.executor": "Run",
+    "Python tests.Python tests for test_nomenclature_service.TestNomenclatureService.executor": "Run",
+    "Python tests.Python tests for test_nomenclature_service.TestNomenclatureService.test_add_nomenclature.executor": "Run",
+    "Python tests.Python tests for test_nomenclature_service.TestNomenclatureService.test_delete_nomenclature.executor": "Run",
+    "Python tests.Python tests for test_nomenclature_service.TestNomenclatureService.test_get_nomenclature.executor": "Run",
+    "Python tests.Python tests for test_nomenclature_service.TestNomenclatureService.test_update_nomenclature.executor": "Run",
     "Python tests.Python tests for test_processes.TestProcesses.test_dateblock_process.executor": "Run",
     "Python tests.Python tests for test_processes.TestProcesses.test_dateblock_turnovers_speed.executor": "Run",
     "Python tests.Python tests for test_processes.TestProcesses.test_process_factory.executor": "Run",
@@ -157,7 +169,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in tests">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
@@ -180,7 +192,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_processes.TestProcesses.test_dateblock_turnovers_speed" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_nomenclature_service.TestNomenclatureService" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -191,11 +203,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_processes.TestProcesses.test_dateblock_turnovers_speed&quot;" />
+      <option name="_new_target" value="&quot;test_nomenclature_service.TestNomenclatureService&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_processes.TestProcesses.test_turnover_both_process" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_nomenclature_service.TestNomenclatureService.test_delete_nomenclature" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -206,11 +218,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_processes.TestProcesses.test_turnover_both_process&quot;" />
+      <option name="_new_target" value="&quot;test_nomenclature_service.TestNomenclatureService.test_delete_nomenclature&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_report_deserialize.TestReportDeserialize.test_json_measurement_unit_deserialize" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_nomenclature_service.TestNomenclatureService.test_get_nomenclature" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -221,11 +233,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_report_deserialize.TestReportDeserialize.test_json_measurement_unit_deserialize&quot;" />
+      <option name="_new_target" value="&quot;test_nomenclature_service.TestNomenclatureService.test_get_nomenclature&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in tests" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_nomenclature_service.TestNomenclatureService.test_update_nomenclature" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -236,17 +248,17 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="_new_target" value="&quot;test_nomenclature_service.TestNomenclatureService.test_update_nomenclature&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests in tests" />
-        <item itemvalue="Python tests.Python tests for test_report_deserialize.TestReportDeserialize.test_json_measurement_unit_deserialize" />
-        <item itemvalue="Python tests.Python tests for test_processes.TestProcesses.test_turnover_both_process" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python tests.Python tests for test_processes.TestProcesses.test_dateblock_turnovers_speed" />
+        <item itemvalue="Python tests.Python tests for test_nomenclature_service.TestNomenclatureService" />
+        <item itemvalue="Python tests.Python tests for test_nomenclature_service.TestNomenclatureService.test_delete_nomenclature" />
+        <item itemvalue="Python tests.Python tests for test_nomenclature_service.TestNomenclatureService.test_update_nomenclature" />
+        <item itemvalue="Python tests.Python tests for test_nomenclature_service.TestNomenclatureService.test_get_nomenclature" />
       </list>
     </recent_temporary>
   </component>

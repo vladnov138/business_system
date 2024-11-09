@@ -8,16 +8,15 @@ from src.dto.filter_dto import FilterDto
 from src.dto.warehouse_transaction_filter_dto import WarehouseTransactionFilterDto
 from src.exceptions.argument_exception import ArgumentException
 from src.exceptions.operation_exception import OperationException
-from src.logics.date_block_observer import DateBlockUpdator
+from src.logics.date_block_updator import DateBlockUpdator
 from src.logics.filter_item import FilterItem
 from src.logics.warehouse_filter_item import WarehouseFilterItem
-from src.processes.process_factory import ProcessFactory
-from src.processes.warehouse_turnover_process import WarehouseTurnoverProcess
 from src.models.measurement_unit_model import MeasurementUnitModel
 from src.models.nomenclature_group_model import NomenclatureGroupModel
 from src.models.nomenclature_model import NomenclatureModel
 from src.models.recipe_model import RecipeModel
 from src.models.warehouse_model import WarehouseModel
+from src.processes.process_factory import ProcessFactory
 from src.services.filter_service import FilterService
 from src.services.report_service import ReportService
 from src.services.settings_manager import SettingsManager
@@ -148,6 +147,21 @@ def set_dateblock():
     manager.save()
     return get_dateblock()
 
+@app.route("/api/nomenclature", methods=["GET"])
+def get_nomenclature():
+    pass
+
+@app.route("/api/nomenclature", methods=["PUT"])
+def put_nomenclature():
+    pass
+
+@app.route("/api/nomenclature", methods=["PATCH"])
+def patch_nomenclature():
+    pass
+
+@app.route("/api/nomenclature", methods=["DELETE"])
+def delete_nomenclature():
+    pass
 
 if __name__ == '__main__':
     app.add_api("swagger.yaml")

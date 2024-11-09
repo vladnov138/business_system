@@ -1,6 +1,10 @@
 import unittest
 
+from Scripts.activate_this import prev_length
+
 from src.data.data_repository import DataRepository
+from src.models.measurement_unit_model import MeasurementUnitModel
+from src.models.nomenclature_group_model import NomenclatureGroupModel
 from src.models.nomenclature_model import NomenclatureModel
 from src.services.filter_service import FilterService
 from src.services.nomenclature_service import NomenclatureService
@@ -29,25 +33,51 @@ class TestNomenclatureService(unittest.TestCase):
         Тестирует добавление номенклатуры
         :return:
         """
-        pass
+        g_unit = MeasurementUnitModel.create("грамм", 1)
+        kg_unit = MeasurementUnitModel.create("килограмм", 1000, g_unit)
+        ingridients = NomenclatureGroupModel.create("Ингридиенты")
+        sausage = NomenclatureModel.create("Колбаса", ingridients, kg_unit)
+        nomenclature_key = self.data_repository.nomenclature_key()
+        prev_length = len(self.data_repository.data[nomenclature_key])
+        self.nomenclature_service.add_nomenclature(sausage)
+        new_length = len(self.data_repository.data[nomenclature_key])
+        assert new_length - prev_length == 1
 
     def test_get_nomenclature(self):
         """
         Тестирует получение номенклатуры
         :return:
         """
-        pass
+        nomenclature_key = self.data_repository.nomenclature_key()
+        nomenclatures = self.data_repository.data[nomenclature_key]
+        nomenclature = nomenclatures[0]
+        result = self.nomenclature_service.get_nomenclature(nomenclature.uid)
+        assert result == nomenclature
 
     def test_update_nomenclature(self):
         """
         Тестирует обновление номенклатуры
         :return:
         """
-        pass
+        nomenclature_key = self.data_repository.nomenclature_key()
+        nomenclatures = self.data_repository.data[nomenclature_key]
+        nomenclature = nomenclatures[0]
+        new_name = "TestName2"
+        nomenclature.name = new_name
+        self.nomenclature_service.update_nomenclature(nomenclature)
+        result = nomenclatures[0]
+        assert result.name == new_name
 
     def test_delete_nomenclature(self):
         """
         Тестирует удаление номенклатуры
         :return:
         """
-        pass
+        nomenclature_key = self.data_repository.nomenclature_key()
+        nomenclatures = self.data_repository.data[nomenclature_key]
+        nomenclature = nomenclatures[0]
+        prev_length = len(nomenclatures)
+        self.nomenclature_service.delete_nomenclature(nomenclature.uid)
+        new_length = len(nomenclatures)
+        assert prev_length - new_length == 1
+        assert nomenclature not in nomenclatures

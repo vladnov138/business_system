@@ -25,6 +25,7 @@ from src.services.recipe_manager import RecipeManager
 from src.services.report_service import ReportService
 from src.services.settings_manager import SettingsManager
 from src.services.start_service import StartService
+from src.services.turnover_service import TurnoverService
 from src.utils.common import Common
 from src.utils.json_model_decoder import JsonModelDecoder
 
@@ -35,12 +36,15 @@ manager.convert()
 repository = DataRepository()
 report_service = ReportService()
 nomenclature_service = NomenclatureService(repository, FilterService())
+
 recipe_manager = RecipeManager()
+turnover_service = TurnoverService()
 
 # Инициализируем наблюдателя и слушателей
 observe_service = ObserveService()
 observe_service.append(nomenclature_service)
 observe_service.append(recipe_manager)
+observe_service.append(turnover_service)
 
 start = StartService(repository, manager.settings)
 start.create()

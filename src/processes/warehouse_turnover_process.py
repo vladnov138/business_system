@@ -7,20 +7,23 @@ from src.models.warehouse_turnover_model import WarehouseTurnOverModel
 
 class WarehouseTurnoverProcess(AbstractProcess):
     def execute(self, transactions: list[WarehouseTransactionModel]) -> list[WarehouseTurnOverModel]:
-        result = {}
+        ArgumentException.check_arg(transactions, list)
+        result = []
+
+        grouped_transactions = {}
         for transaction in transactions:
             ArgumentException.check_arg(transaction, WarehouseTransactionModel)
-            warehouse = transaction.warehouse
-            nomenclature = transaction.nomenclature
-            measurement_unit = transaction.measurement_unit
-            key = (warehouse, nomenclature, measurement_unit)
-            value = transaction.amount
-            if transaction.transaction_type == TransactionType.EXPENSE:
-                value = -value
-            result[key] = result.get(key, 0) + value
-        turns = []
-        for key, value in result.items():
-            turn = WarehouseTurnOverModel.create(warehouse=key[0], turnover=value, nomenclature=key[1],
-                                                 measurement_unit=key[2])
-            turns.append(turn)
-        return turns
+            key = f"{transaction.nomenclature.uid}_{transaction.warehouse.uid}_{transaction.measurement_unit.uid}"
+            if key not in grouped_transactions.keys():
+                grouped_transactions[key] = []
+
+            grouped_transactions[key].append(transaction)
+
+        for key, transactions in grouped_transactions.items():
+            first_transaction = transactions[0]
+            turnover = (sum(transaction.amount for transaction in transactions if transaction.transaction_type == TransactionType.INCOME)
+                        - sum(transaction.amount for transaction in transactions if transaction.transaction_type == TransactionType.EXPENSE))
+            row = WarehouseTurnOverModel.create(first_transaction.warehouse, turnover, first_transaction.nomenclature,
+                                        first_transaction.measurement_unit)
+            result.append(row)
+        return result

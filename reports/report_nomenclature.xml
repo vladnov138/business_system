@@ -3,11 +3,11 @@
   <item>
     <full_name>None</full_name>
     <measurement_unit>
-      <uid>4ee189a8-134d-4427-9776-c1383b6328f3</uid>
+      <uid>aad53560-afdc-4f7a-a0c4-6b960ee7893b</uid>
       <name>кг</name>
       <unit>1000.0</unit>
       <base_measure_unit>
-        <uid>8aaf0e1e-499f-4c47-af66-c3aa8549efaf</uid>
+        <uid>1abe3e0f-0a90-46e8-a7c2-3bea7e3e31b4</uid>
         <name>г</name>
         <unit>1.0</unit>
         <base_measure_unit>None</base_measure_unit>
@@ -15,24 +15,24 @@
     </measurement_unit>
     <name>Мука</name>
     <nomenclature_group>
-      <uid>0582c433-3ccd-478e-9370-36dfc49baef0</uid>
+      <uid>09780221-0639-423f-8d09-2fe4f012cf2d</uid>
       <name>Сырьё</name>
     </nomenclature_group>
-    <uid>cdfca52e-78b8-49fb-a450-23763db4a56b</uid>
+    <uid>2930796d-72c6-4e0c-9e8c-558933f08faa</uid>
   </item>
   <item>
     <full_name>None</full_name>
     <measurement_unit>
-      <uid>8aaf0e1e-499f-4c47-af66-c3aa8549efaf</uid>
+      <uid>1abe3e0f-0a90-46e8-a7c2-3bea7e3e31b4</uid>
       <name>г</name>
       <unit>1.0</unit>
       <base_measure_unit>None</base_measure_unit>
     </measurement_unit>
     <name>Лёд</name>
     <nomenclature_group>
-      <uid>92d4cf26-3d49-4151-933d-51fde14fbb67</uid>
+      <uid>abe6c6b0-6167-4c34-aeef-963625fac898</uid>
       <name>Заморозка</name>
     </nomenclature_group>
-    <uid>145c5260-0426-4c4d-8b10-d79cac871fae</uid>
+    <uid>fda98e4b-32fe-4462-8e4c-95e953777396</uid>
   </item>
 </NomenclatureModel>

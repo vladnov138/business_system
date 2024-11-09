@@ -149,7 +149,7 @@ class Settings:
     @date_block.setter
     def date_block(self, value: datetime | str):
         if isinstance(value, str):
-            value = datetime.strptime(value, self.date_format)
+            value = datetime.strptime(value.split(" ")[0], self.date_format)
         ArgumentException.check_arg(value, datetime)
         self.__date_block = value
 

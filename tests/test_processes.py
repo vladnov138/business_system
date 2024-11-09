@@ -9,7 +9,7 @@ from main import repository
 from src.abstract.process_type import ProcessType
 from src.abstract.transaction_type import TransactionType
 from src.data.data_repository import DataRepository
-from src.logics.date_block_observer import DateBlockObserver
+from src.logics.date_block_observer import DateBlockUpdator
 from src.processes.process_factory import ProcessFactory
 from src.processes.warehouse_turnover_process import WarehouseTurnoverProcess
 from src.models.warehouse_transaction_model import WarehouseTransactionModel
@@ -168,7 +168,7 @@ class TestProcesses(unittest.TestCase):
         dates = [start_date + (end_date - start_date) * i / 9 for i in range(10)]
         dateblock_ = datetime(1900, 1, 1)
         process_factory = ProcessFactory()
-        dateblock_observer = DateBlockObserver(dateblock_, repository, process_factory, ProcessType.DATEBLOCK)
+        dateblock_observer = DateBlockUpdator(dateblock_, repository, process_factory, ProcessType.DATEBLOCK)
 
         # запускаем обход
         for dateblock in dates:

@@ -8,7 +8,7 @@ from src.dto.filter_dto import FilterDto
 from src.dto.warehouse_transaction_filter_dto import WarehouseTransactionFilterDto
 from src.exceptions.argument_exception import ArgumentException
 from src.exceptions.operation_exception import OperationException
-from src.logics.date_block_observer import DateBlockObserver
+from src.logics.date_block_observer import DateBlockUpdator
 from src.logics.filter_item import FilterItem
 from src.logics.warehouse_filter_item import WarehouseFilterItem
 from src.processes.process_factory import ProcessFactory
@@ -34,7 +34,7 @@ report_service = ReportService()
 start = StartService(repository, manager.settings)
 start.create()
 
-dateblockObserver = DateBlockObserver(manager.settings.date_block, repository, ProcessFactory(), ProcessType.DATEBLOCK)
+dateblockObserver = DateBlockUpdator(manager.settings.date_block, repository, ProcessFactory(), ProcessType.DATEBLOCK)
 
 helper = Common()
 models = helper.get_models_dict()
@@ -145,6 +145,7 @@ def set_dateblock():
     date_block = params["dateblock"]
     manager.settings.date_block = date_block
     dateblockObserver.update(manager.settings.date_block)
+    manager.save()
     return get_dateblock()
 
 

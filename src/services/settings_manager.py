@@ -1,3 +1,4 @@
+import json
 import os
 from pathlib import Path
 
@@ -6,6 +7,7 @@ from src.exceptions.argument_exception import ArgumentException
 from src.exceptions.operation_exception import OperationException
 from src.models.settings_model import Settings
 from src.utils.file_reader import FileReader
+from src.utils.json_model_encoder import JsonModelEncoder
 from src.utils.path_utils import PathUtils
 
 
@@ -71,6 +73,32 @@ class SettingsManager:
             return True
         except Exception as ex:
             self.__set_default_data()
+            return False
+
+    def save(self, file_name: str = ""):
+        ArgumentException.check_arg(file_name, str)
+
+        if file_name != "":
+            self.__file_name = file_name
+
+        try:
+            current_path = Path(__file__).resolve()
+            parent_path = self.__path_utils.get_parent_directory(current_path, levels_up=3)
+            if not Path(self.__file_name).is_absolute():
+                full_name = f"{parent_path}{os.sep}{self.__file_name}"
+            else:
+                full_name = self.__file_name
+
+            if os.path.exists(full_name):
+                os.remove(full_name)
+
+            result = json.dumps(self.__settings, cls=JsonModelEncoder, indent=2)
+
+            with open(full_name, "w") as file:
+                file.write(result)
+            return True
+        except Exception as ex:
+            self.set_exception(ex)
             return False
 
     # Настройки

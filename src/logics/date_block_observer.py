@@ -7,7 +7,7 @@ from src.exceptions.argument_exception import ArgumentException
 from src.processes.process_factory import ProcessFactory
 
 
-class DateBlockObserver(Observer):
+class DateBlockUpdator:
     """
     Класс-слушатель, совершает действия при изменении date_block
     """

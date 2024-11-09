@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+from src.core.event_type import EventType
 from src.exceptions.argument_exception import ArgumentException
 
 
@@ -37,3 +38,7 @@ class AbstractLogic(ABC):
         Абстрактный метод для загрузки и обработки исключений
         """
         pass
+
+    @abstractmethod
+    def handle_event(self, type: EventType, **kwargs):
+        ArgumentException.check_arg(type, EventType)

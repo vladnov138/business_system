@@ -286,7 +286,7 @@ paths:
         default:
           description: Неизвестная ошибка
 
-  /api/nomenclature:
+  /api/nomenclature/{id}:
     get:
       summary: Получить номенклатуру
       operationId: main.get_nomenclature
@@ -297,7 +297,7 @@ paths:
           name: id
           description: ID номенклатуры
           required: true
-          type: integer
+          type: string
       responses:
         200:
           description: OK
@@ -307,6 +307,27 @@ paths:
           description: Ошибка на сервере
         default:
           description: Неизвестная ошибка
+    delete:
+      summary: Удалить номенклатуру
+      operationId: main.delete_nomenclature
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: id
+          description: ID номенклатуры
+          required: true
+          type: string
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+        500:
+          description: Ошибка на сервере
+        default:
+          description: Неизвестная ошибка
+  /api/nomenclature:
     put:
       summary: Добавить номенклатуру
       operationId: main.put_nomenclature
@@ -340,26 +361,6 @@ paths:
           required: true
           schema:
             $ref: '#/definitions/NomenclatureModel'
-      responses:
-        200:
-          description: OK
-          schema:
-            type: object
-        500:
-          description: Ошибка на сервере
-        default:
-          description: Неизвестная ошибка
-    delete:
-      summary: Удалить номенклатуру
-      operationId: main.delete_nomenclature
-      produces:
-        - application/json
-      parameters:
-        - in: path
-          name: id
-          description: ID номенклатуры
-          required: true
-          type: integer
       responses:
         200:
           description: OK

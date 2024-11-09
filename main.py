@@ -3,6 +3,7 @@ from flask import request
 
 from src.abstract.format_reporting import FormatReporting
 from src.abstract.process_type import ProcessType
+from src.core.event_type import EventType
 from src.data.data_repository import DataRepository
 from src.dto.filter_dto import FilterDto
 from src.dto.warehouse_transaction_filter_dto import WarehouseTransactionFilterDto
@@ -18,6 +19,9 @@ from src.models.recipe_model import RecipeModel
 from src.models.warehouse_model import WarehouseModel
 from src.processes.process_factory import ProcessFactory
 from src.services.filter_service import FilterService
+from src.services.nomenclature_service import NomenclatureService
+from src.services.observe_service import ObserveService
+from src.services.recipe_manager import RecipeManager
 from src.services.report_service import ReportService
 from src.services.settings_manager import SettingsManager
 from src.services.start_service import StartService
@@ -30,10 +34,18 @@ manager.open("resources/settings.json")
 manager.convert()
 repository = DataRepository()
 report_service = ReportService()
+nomenclature_service = NomenclatureService(repository, FilterService())
+recipe_manager = RecipeManager()
+
+# Инициализируем наблюдателя и слушателей
+observe_service = ObserveService()
+observe_service.append(nomenclature_service)
+observe_service.append(recipe_manager)
+
 start = StartService(repository, manager.settings)
 start.create()
 
-dateblockObserver = DateBlockUpdator(manager.settings.date_block, repository, ProcessFactory(), ProcessType.DATEBLOCK)
+dateblockUpdater = DateBlockUpdator(manager.settings.date_block, repository, ProcessFactory(), ProcessType.DATEBLOCK)
 
 helper = Common()
 models = helper.get_models_dict()
@@ -143,25 +155,44 @@ def set_dateblock():
     params = request.get_json()
     date_block = params["dateblock"]
     manager.settings.date_block = date_block
-    dateblockObserver.update(manager.settings.date_block)
+    dateblockUpdater.update(manager.settings.date_block)
     manager.save()
     return get_dateblock()
 
-@app.route("/api/nomenclature", methods=["GET"])
-def get_nomenclature():
-    pass
+@app.route("/api/nomenclature/{id}", methods=["GET"])
+def get_nomenclature(id: str):
+    nomenclature = nomenclature_service.get_nomenclature(id)
+    return report_service.prepare_report([nomenclature])
 
 @app.route("/api/nomenclature", methods=["PUT"])
 def put_nomenclature():
-    pass
+    param = request.get_json()
+    nomenclature = JsonModelDecoder().decode_model(param, NomenclatureModel)
+    nomenclature_service.add_nomenclature(nomenclature)
+    return 200
 
 @app.route("/api/nomenclature", methods=["PATCH"])
 def patch_nomenclature():
-    pass
+    param = request.get_json()
+    nomenclature = JsonModelDecoder().decode_model(param, NomenclatureModel)
+    nomenclature_service.update_nomenclature(nomenclature)
+    observe_service.raise_event(EventType.CHANGE_NOMENCLATURE, nomenclature=nomenclature, data=repository)
+    return 200
 
-@app.route("/api/nomenclature", methods=["DELETE"])
-def delete_nomenclature():
-    pass
+@app.route("/api/nomenclature/{id}", methods=["DELETE"])
+def delete_nomenclature(id: str):
+    """
+    Удаление номенклатуры
+    :param id: идентификатор номенклатуры
+    :return: кол-во удаленных номенклатур
+    """
+    nomenclature = nomenclature_service.get_nomenclature(id)
+    nomenclature_key = repository.nomenclature_key()
+    prev_length = len(repository.data[nomenclature_key])
+    nomenclature_service.delete_nomenclature(id)
+    observe_service.raise_event(EventType.DELETE_NOMENCLATURE, nomenclature=nomenclature, data=repository)
+    new_length = len(repository.data[nomenclature_key])
+    return prev_length - new_length
 
 if __name__ == '__main__':
     app.add_api("swagger.yaml")

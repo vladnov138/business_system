@@ -1,13 +1,16 @@
 import os
 from pathlib import Path
 
+from src.abstract.abstract_logic import AbstractLogic
+from src.core.event_type import EventType
+from src.data.data_repository import DataRepository
 from src.exceptions.argument_exception import ArgumentException
 from src.utils.file_reader import FileReader
 from src.utils.parser import Parser
 from src.utils.path_utils import PathUtils
 
 
-class RecipeManager:
+class RecipeManager(AbstractLogic):
     __recipe_folder = "docs/"
     __data: list = None
     __path_utils = PathUtils()
@@ -17,12 +20,12 @@ class RecipeManager:
             cls.instance = super(RecipeManager, cls).__new__(cls)
         return cls.instance
 
-    def convert(self, measurement_units):
+    def convert(self, measurement_units, repository: DataRepository):
         if self.__data is None:
             raise AttributeError()
         recipes = []
         for recipe_raw_text in self.__data:
-            recipe = Parser.parse_recipe_from_md(recipe_raw_text, measurement_units)
+            recipe = Parser.parse_recipe_from_md(recipe_raw_text, measurement_units, repository)
             recipes.append(recipe)
         return recipes
 
@@ -48,3 +51,22 @@ class RecipeManager:
     def __set_default_data(self):
         data = []
         self.__data = data
+
+    def set_exception(self, ex: Exception):
+        self.set_exception(ex)
+
+    def handle_event(self, type: EventType, **kwargs):
+        super().handle_event(type, **kwargs)
+        if "nomenclature" not in kwargs or "data":
+            raise ArgumentException("nomenclature and data is required")
+        nomenclature = kwargs["nomenclature"]
+        repository: DataRepository = kwargs["data"]
+        recipe_key = repository.recipe_key()
+        recipes = repository.data[recipe_key]
+        match(type):
+            case EventType.CHANGE_NOMENCLATURE:
+                for recipe in recipes:
+                    if nomenclature in recipe:
+                        recipe["nomenclature"] = nomenclature
+                        recipes[recipes.index(recipe)] = recipe
+                        break

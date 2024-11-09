@@ -13,12 +13,12 @@ class ObserveService:
         if not isinstance(service, AbstractLogic):
             raise ArgumentException("Некорректный тип данных!")
         items = list(map(lambda x: type(x).__name__, ObserveService.observers))
-        found = type( service ).__name__ in items
+        found = type(service).__name__ in items
         if not found:
-            ObserveService.observers.append( service )
+            ObserveService.observers.append(service)
 
     @staticmethod
-    def raise_event(type: EventType, params):
+    def raise_event(type: EventType, **kwargs):
         for instance in ObserveService.observers:
             if instance is not None:
-                instance.handle_event( type, params )
+                instance.handle_event(type, **kwargs)

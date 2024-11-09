@@ -6,8 +6,8 @@ from src.models.nomenclature_model import NomenclatureModel
 
 
 class TurnoverService(AbstractLogic):
-    def _inner_set_exception(self, ex: Exception):
-        super()._inner_set_exception(ex)
+    def set_exception(self, ex: Exception):
+        self._inner_set_exception(ex)
 
     def handle_event(self, type: EventType, **kwargs):
         super().handle_event(type, **kwargs)

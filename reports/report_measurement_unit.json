@@ -3,55 +3,55 @@
     {
       "base_measure_unit": null,
       "name": "\u0433",
-      "uid": "5e60fdac-11e7-4853-9433-36680f670ca0",
+      "uid": "d97e3083-6d52-462e-8322-179ac66878a0",
       "unit": 1.0
     },
     {
       "base_measure_unit": {
         "cls": "MeasurementUnitModel",
-        "uid": "5e60fdac-11e7-4853-9433-36680f670ca0",
+        "uid": "d97e3083-6d52-462e-8322-179ac66878a0",
         "name": "\u0433",
         "unit": 1.0,
         "base_measure_unit": null
       },
       "name": "\u043a\u0433",
-      "uid": "7ccfaab0-2572-4593-87ec-22e9087334a6",
+      "uid": "d90e062c-0e4f-430a-9d16-45477bd9d8b5",
       "unit": 1000.0
     },
     {
       "base_measure_unit": {
         "cls": "MeasurementUnitModel",
-        "uid": "7ccfaab0-2572-4593-87ec-22e9087334a6",
+        "uid": "d90e062c-0e4f-430a-9d16-45477bd9d8b5",
         "name": "\u043a\u0433",
         "unit": 1000.0,
         "base_measure_unit": {
           "cls": "MeasurementUnitModel",
-          "uid": "5e60fdac-11e7-4853-9433-36680f670ca0",
+          "uid": "d97e3083-6d52-462e-8322-179ac66878a0",
           "name": "\u0433",
           "unit": 1.0,
           "base_measure_unit": null
         }
       },
       "name": "\u0442",
-      "uid": "aca5586b-2d10-4251-9892-4ec9b4f96b22",
+      "uid": "3b5a56a2-2eb3-445d-8c05-fe8bcb7fe989",
       "unit": 1000.0
     },
     {
       "base_measure_unit": null,
       "name": "\u0448\u0442",
-      "uid": "e364cd6a-69a9-4eb4-8334-0af5bf9fa76e",
+      "uid": "b810fd81-983f-422b-8d64-a36eb7c85b3e",
       "unit": 1.0
     },
     {
       "base_measure_unit": null,
       "name": "\u0447.\u043b.",
-      "uid": "33ac7f54-cdfa-447f-bbd7-9129782aa71b",
+      "uid": "e851e534-c41c-40b5-9b60-13dc4a108a91",
       "unit": 1.0
     },
     {
       "base_measure_unit": null,
       "name": "\u043c\u043b",
-      "uid": "5dafc0e4-2500-4f0f-b5a1-1c5804f25ed2",
+      "uid": "0aec4ec5-ab3a-408f-9617-0a542945998a",
       "unit": 1.0
     }
   ]

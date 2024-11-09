@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4afd156-2404-459e-a434-5121565aff87" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/services/nomenclature_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abstract/observer.py" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_nomenclature_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

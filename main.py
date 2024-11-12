@@ -42,7 +42,6 @@ turnover_service = TurnoverService()
 
 # Инициализируем наблюдателя и слушателей
 observe_service = ObserveService()
-observe_service.append(nomenclature_service)
 observe_service.append(recipe_manager)
 observe_service.append(turnover_service)
 

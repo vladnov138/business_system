@@ -1,8 +1,8 @@
 |base_measure_unit|name|uid|unit|
 |-----------------|----|---|----|
-|None|г|a1ddf845-b9c6-433a-a7c2-6d94c8bcb6d7|1.0|
-|a1ddf845-b9c6-433a-a7c2-6d94c8bcb6d7|кг|bb516e0f-c60a-41ab-abe0-1908117f6e36|1000.0|
-|bb516e0f-c60a-41ab-abe0-1908117f6e36|т|87dda27b-8f82-4bf6-9bf2-e5499c6bedcb|1000.0|
-|None|шт|ab9b7fc4-793c-4ec4-9d65-0329fe7453d6|1.0|
-|None|ч.л.|ed240dd9-599e-4276-9b27-1004d88d6f14|1.0|
-|None|мл|2f3edfca-c573-40b6-aa3a-1b16dada5cf9|1.0|
+|None|г|d738a8db-7802-4c98-b0e4-d2b716a5e6be|1.0|
+|d738a8db-7802-4c98-b0e4-d2b716a5e6be|кг|986f5af7-5708-498e-bf8e-a02ccc2f6d19|1000.0|
+|986f5af7-5708-498e-bf8e-a02ccc2f6d19|т|d32f1b8b-359b-4891-ab3e-0b80b79adc89|1000.0|
+|None|шт|86b65970-aff1-4812-b3c2-cc81cf108e0e|1.0|
+|None|ч.л.|802a99d1-244b-4cbf-9b0d-6169d108f1ab|1.0|
+|None|мл|b09f871e-2688-46ad-abb6-01a6fbd338d6|1.0|

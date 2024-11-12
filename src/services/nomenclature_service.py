@@ -75,31 +75,4 @@ class NomenclatureService(AbstractLogic):
         self.set_exception(ex)
 
     def handle_event(self, type: EventType, **kwargs):
-        """
-        Обработка события удаления номенклатуры
-        Если номенклатура используется в рецепте, то она восстанавливается
-        :param type: тип события
-        :param kwargs:
-                   - nomenclature (обязателен): Номенклатура, с которой связано событие
-                   - data (обязателен): Источник данных (репозиторий)
-        :raises ArgumentException: Если ключи 'nomenclature' и 'data' отсутствуют в kwargs или не соответствуют типу данных
-        :return:
-        """
         super().handle_event(type, **kwargs)
-        try:
-            ArgumentException.check_arg(kwargs.get("nomenclature"), NomenclatureModel)
-            ArgumentException.check_arg(kwargs.get("data"), DataRepository)
-        except Exception as e:
-            raise ArgumentException("Invalid arguments in kwargs") from e
-        nomenclature = kwargs["nomenclature"]
-        repository: DataRepository = kwargs["data"]
-        recipe_key = repository.recipe_key()
-        recipes: list[RecipeModel] = repository.data[recipe_key]
-        match(type):
-            case EventType.DELETE_NOMENCLATURE:
-                for recipe in recipes:
-                    for ingridient in recipe.ingridients:
-                        if nomenclature == ingridient.nomenclature:
-                            # если используется, то восстанавливаем номенклатуру
-                            nomenclature_key = repository.nomenclature_key()
-                            repository.data[nomenclature_key].append(nomenclature)

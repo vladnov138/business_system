@@ -3,11 +3,11 @@
   <item>
     <full_name>None</full_name>
     <measurement_unit>
-      <uid>f9a225da-35e1-4120-9045-b26b2aff621e</uid>
+      <uid>54e5fb53-58da-4f9e-aef8-1b52c349e7b9</uid>
       <name>кг</name>
       <unit>1000.0</unit>
       <base_measure_unit>
-        <uid>334f88df-cc55-4a27-b020-d29c623c757c</uid>
+        <uid>d8e24ecf-f2be-40d0-b225-54ea98cf052f</uid>
         <name>г</name>
         <unit>1.0</unit>
         <base_measure_unit>None</base_measure_unit>
@@ -15,129 +15,129 @@
     </measurement_unit>
     <name>Мука</name>
     <nomenclature_group>
-      <uid>71a8f487-38d8-4a26-9ac3-efbf7bcd6a51</uid>
+      <uid>22147db9-a708-4993-8307-e762495c9222</uid>
       <name>Сырьё</name>
     </nomenclature_group>
-    <uid>8f735323-2d45-413e-b3a0-d1fb807ead27</uid>
+    <uid>34b14b27-e056-48bb-b92e-dde681092b7e</uid>
   </item>
   <item>
     <full_name>None</full_name>
     <measurement_unit>
-      <uid>334f88df-cc55-4a27-b020-d29c623c757c</uid>
+      <uid>d8e24ecf-f2be-40d0-b225-54ea98cf052f</uid>
       <name>г</name>
       <unit>1.0</unit>
       <base_measure_unit>None</base_measure_unit>
     </measurement_unit>
     <name>Лёд</name>
     <nomenclature_group>
-      <uid>accb50f5-e1b9-404f-a429-16c1211810c5</uid>
+      <uid>4bac5b6b-9fd2-4003-9c7e-556689c17720</uid>
       <name>Заморозка</name>
     </nomenclature_group>
-    <uid>9fb02197-8bb3-4e6b-b543-05f3301f0397</uid>
+    <uid>40a33063-614d-4545-ba9c-2b76cbe91e7f</uid>
   </item>
   <item>
     <full_name>None</full_name>
     <measurement_unit>
-      <uid>334f88df-cc55-4a27-b020-d29c623c757c</uid>
+      <uid>d8e24ecf-f2be-40d0-b225-54ea98cf052f</uid>
       <name>г</name>
       <unit>1.0</unit>
       <base_measure_unit>None</base_measure_unit>
     </measurement_unit>
     <name>Пшеничная мука</name>
     <nomenclature_group>
-      <uid>6b6e8c34-1386-4736-95bf-ed7af74cc089</uid>
+      <uid>5505e4ec-3fdb-4dc5-a251-c8245727bd50</uid>
       <name>Продукты</name>
     </nomenclature_group>
-    <uid>5af0d211-953a-4dc6-aea1-371d6b71cf1c</uid>
+    <uid>75f5987e-3431-43cc-a214-d61b1a3ef10d</uid>
   </item>
   <item>
     <full_name>None</full_name>
     <measurement_unit>
-      <uid>334f88df-cc55-4a27-b020-d29c623c757c</uid>
+      <uid>d8e24ecf-f2be-40d0-b225-54ea98cf052f</uid>
       <name>г</name>
       <unit>1.0</unit>
       <base_measure_unit>None</base_measure_unit>
     </measurement_unit>
     <name>Сахар</name>
     <nomenclature_group>
-      <uid>6b6e8c34-1386-4736-95bf-ed7af74cc089</uid>
+      <uid>5505e4ec-3fdb-4dc5-a251-c8245727bd50</uid>
       <name>Продукты</name>
     </nomenclature_group>
-    <uid>8b9911d9-6f12-4424-85f2-c7bed260ec14</uid>
+    <uid>304377a3-0fb0-4ec2-a069-90b1c7c89af4</uid>
   </item>
   <item>
     <full_name>None</full_name>
     <measurement_unit>
-      <uid>334f88df-cc55-4a27-b020-d29c623c757c</uid>
+      <uid>d8e24ecf-f2be-40d0-b225-54ea98cf052f</uid>
       <name>г</name>
       <unit>1.0</unit>
       <base_measure_unit>None</base_measure_unit>
     </measurement_unit>
     <name>Сливочное масло</name>
     <nomenclature_group>
-      <uid>6b6e8c34-1386-4736-95bf-ed7af74cc089</uid>
+      <uid>5505e4ec-3fdb-4dc5-a251-c8245727bd50</uid>
       <name>Продукты</name>
     </nomenclature_group>
-    <uid>f1105ff8-1b32-4415-8f72-210a8698cc65</uid>
+    <uid>9029a3dc-3908-45b9-a869-9fe960c9506f</uid>
   </item>
   <item>
     <full_name>None</full_name>
     <measurement_unit>
-      <uid>3946437a-5fe0-47a6-ac70-b4a0d8023981</uid>
+      <uid>86965f6a-da6f-45b9-bd50-e5e2a3d94bc7</uid>
       <name>шт</name>
       <unit>1.0</unit>
       <base_measure_unit>None</base_measure_unit>
     </measurement_unit>
     <name>Яйца</name>
     <nomenclature_group>
-      <uid>6b6e8c34-1386-4736-95bf-ed7af74cc089</uid>
+      <uid>5505e4ec-3fdb-4dc5-a251-c8245727bd50</uid>
       <name>Продукты</name>
     </nomenclature_group>
-    <uid>6e55482b-6799-4ec5-8957-862b1728ad8f</uid>
+    <uid>c889b035-e500-4ec4-b9ad-f1a996d5d25a</uid>
   </item>
   <item>
     <full_name>None</full_name>
     <measurement_unit>
-      <uid>334f88df-cc55-4a27-b020-d29c623c757c</uid>
-      <name>г</name>
-      <unit>1.0</unit>
-      <base_measure_unit>None</base_measure_unit>
-    </measurement_unit>
-    <name>Ванилин(щепотка)</name>
-    <nomenclature_group>
-      <uid>6b6e8c34-1386-4736-95bf-ed7af74cc089</uid>
-      <name>Продукты</name>
-    </nomenclature_group>
-    <uid>6bf259e2-7f52-4093-822e-808bdf003f8d</uid>
-  </item>
-  <item>
-    <full_name>None</full_name>
-    <measurement_unit>
-      <uid>be572c97-0136-4a7a-8032-55082258b33e</uid>
+      <uid>15c729a5-f9f1-4c6f-91a5-e5c4285c9516</uid>
       <name>мл</name>
       <unit>1.0</unit>
       <base_measure_unit>None</base_measure_unit>
     </measurement_unit>
     <name>Молоко</name>
     <nomenclature_group>
-      <uid>d13fc0a1-bfa2-4bee-8c41-3c5fac19379e</uid>
+      <uid>5505e4ec-3fdb-4dc5-a251-c8245727bd50</uid>
       <name>Продукты</name>
     </nomenclature_group>
-    <uid>024384a1-1dcb-4643-8ee2-28fc1ba7306a</uid>
+    <uid>e0fe4ea2-9db9-4db2-adb5-0c817ace477b</uid>
   </item>
   <item>
     <full_name>None</full_name>
     <measurement_unit>
-      <uid>22f2b8b9-09fc-4a80-973d-84ca2d02d440</uid>
+      <uid>cdd2084c-718e-4be2-80b2-590cd0b1767f</uid>
       <name>ч.л.</name>
       <unit>1.0</unit>
       <base_measure_unit>None</base_measure_unit>
     </measurement_unit>
     <name>Корица</name>
     <nomenclature_group>
-      <uid>d13fc0a1-bfa2-4bee-8c41-3c5fac19379e</uid>
+      <uid>5505e4ec-3fdb-4dc5-a251-c8245727bd50</uid>
       <name>Продукты</name>
     </nomenclature_group>
-    <uid>ad23a10d-4921-4dbe-a5eb-ec070014b9b6</uid>
+    <uid>c608b260-8c85-4f6c-b8ec-316a82f62fbb</uid>
+  </item>
+  <item>
+    <full_name>None</full_name>
+    <measurement_unit>
+      <uid>d8e24ecf-f2be-40d0-b225-54ea98cf052f</uid>
+      <name>г</name>
+      <unit>1.0</unit>
+      <base_measure_unit>None</base_measure_unit>
+    </measurement_unit>
+    <name>Ванилин(щепотка)</name>
+    <nomenclature_group>
+      <uid>1e6ed6d8-91c0-48ca-a4ba-1c3c3c63080f</uid>
+      <name>Продукты</name>
+    </nomenclature_group>
+    <uid>1cc808fc-6980-4349-b6c3-edde63b1802c</uid>
   </item>
 </NomenclatureModel>

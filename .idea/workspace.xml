@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4afd156-2404-459e-a434-5121565aff87" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/services/turnover_service.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/nomenclature_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/nomenclature_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/recipe_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/recipe_manager.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,13 +141,13 @@
     "Python tests.Python tests in test_reporting.py.executor": "Run",
     "Python tests.Python tests in test_settings.py.executor": "Run",
     "Python tests.Python tests in tests.executor": "Run",
-    "Python.main.executor": "Debug",
+    "Python.main.executor": "Run",
     "Python.nomenclature_group_model.executor": "Run",
     "Python.settings_manager.executor": "Run",
     "Python.start_service.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "event__handling",
+    "git-widget-placeholder": "#9 on event__handling",
     "last_opened_file_path": "/home/vladnov138/PycharmProjects/business_system/src/reports",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
@@ -164,7 +164,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in tests">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
@@ -249,8 +249,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests in tests" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python tests.Python tests in tests" />
         <item itemvalue="Python tests.Python tests in test_models.py" />
         <item itemvalue="Python tests.Python tests for test_models.TestModels.test_ingridient_model" />
         <item itemvalue="Python tests.Python tests for test_nomenclature_service.TestNomenclatureService" />

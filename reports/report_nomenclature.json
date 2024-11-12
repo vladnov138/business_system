@@ -4,12 +4,12 @@
       "full_name": null,
       "measurement_unit": {
         "cls": "MeasurementUnitModel",
-        "uid": "627689e6-5b22-441e-b209-c95d69739a91",
+        "uid": "443f8d21-0cd7-49c2-abbd-51b6b947ced7",
         "name": "\u043a\u0433",
         "unit": 1000.0,
         "base_measure_unit": {
           "cls": "MeasurementUnitModel",
-          "uid": "68cc7695-ff06-40f4-88d8-378c974575bd",
+          "uid": "661dd496-35f8-4a36-b4d1-30f456e9fdab",
           "name": "\u0433",
           "unit": 1.0,
           "base_measure_unit": null
@@ -18,16 +18,16 @@
       "name": "\u041c\u0443\u043a\u0430",
       "nomenclature_group": {
         "cls": "NomenclatureGroupModel",
-        "uid": "b8c29faa-676d-49fe-acc0-8c2a0350b320",
+        "uid": "46ebdbc4-91b0-4a76-91f6-5dd287b19342",
         "name": "\u0421\u044b\u0440\u044c\u0451"
       },
-      "uid": "db0aa5ea-e2e2-45ef-b3f5-39a27236c96c"
+      "uid": "187a89e4-5f01-4491-9151-f82c7f831c8f"
     },
     {
       "full_name": null,
       "measurement_unit": {
         "cls": "MeasurementUnitModel",
-        "uid": "68cc7695-ff06-40f4-88d8-378c974575bd",
+        "uid": "661dd496-35f8-4a36-b4d1-30f456e9fdab",
         "name": "\u0433",
         "unit": 1.0,
         "base_measure_unit": null
@@ -35,16 +35,16 @@
       "name": "\u041b\u0451\u0434",
       "nomenclature_group": {
         "cls": "NomenclatureGroupModel",
-        "uid": "367c2d2a-b11f-46d6-b99a-ebf7dbea5f2c",
+        "uid": "bd4bf65c-b6e0-4289-b37a-2e1191ba9f95",
         "name": "\u0417\u0430\u043c\u043e\u0440\u043e\u0437\u043a\u0430"
       },
-      "uid": "f69d88db-1a1f-4ea1-a2f0-838358c689f9"
+      "uid": "185fd286-acb9-4394-a394-c789bc35d50c"
     },
     {
       "full_name": null,
       "measurement_unit": {
         "cls": "MeasurementUnitModel",
-        "uid": "68cc7695-ff06-40f4-88d8-378c974575bd",
+        "uid": "661dd496-35f8-4a36-b4d1-30f456e9fdab",
         "name": "\u0433",
         "unit": 1.0,
         "base_measure_unit": null
@@ -52,16 +52,16 @@
       "name": "\u041f\u0448\u0435\u043d\u0438\u0447\u043d\u0430\u044f \u043c\u0443\u043a\u0430",
       "nomenclature_group": {
         "cls": "NomenclatureGroupModel",
-        "uid": "4805e12f-0171-47c6-b02e-4fe6268827cd",
+        "uid": "67497a35-4dc8-4edb-a303-3201d2b1f265",
         "name": "\u041f\u0440\u043e\u0434\u0443\u043a\u0442\u044b"
       },
-      "uid": "1db241e0-6e6b-449a-a83e-2294b6d79341"
+      "uid": "a6b63aa1-e629-4294-9d9a-340185ba70b0"
     },
     {
       "full_name": null,
       "measurement_unit": {
         "cls": "MeasurementUnitModel",
-        "uid": "68cc7695-ff06-40f4-88d8-378c974575bd",
+        "uid": "661dd496-35f8-4a36-b4d1-30f456e9fdab",
         "name": "\u0433",
         "unit": 1.0,
         "base_measure_unit": null
@@ -69,16 +69,16 @@
       "name": "\u0421\u0430\u0445\u0430\u0440",
       "nomenclature_group": {
         "cls": "NomenclatureGroupModel",
-        "uid": "4805e12f-0171-47c6-b02e-4fe6268827cd",
+        "uid": "67497a35-4dc8-4edb-a303-3201d2b1f265",
         "name": "\u041f\u0440\u043e\u0434\u0443\u043a\u0442\u044b"
       },
-      "uid": "63909b6b-b13f-495e-b245-6aeb1e56502e"
+      "uid": "bf2f0feb-d7cc-4f41-baa0-a199c683532e"
     },
     {
       "full_name": null,
       "measurement_unit": {
         "cls": "MeasurementUnitModel",
-        "uid": "68cc7695-ff06-40f4-88d8-378c974575bd",
+        "uid": "661dd496-35f8-4a36-b4d1-30f456e9fdab",
         "name": "\u0433",
         "unit": 1.0,
         "base_measure_unit": null
@@ -86,16 +86,16 @@
       "name": "\u0421\u043b\u0438\u0432\u043e\u0447\u043d\u043e\u0435 \u043c\u0430\u0441\u043b\u043e",
       "nomenclature_group": {
         "cls": "NomenclatureGroupModel",
-        "uid": "4805e12f-0171-47c6-b02e-4fe6268827cd",
+        "uid": "67497a35-4dc8-4edb-a303-3201d2b1f265",
         "name": "\u041f\u0440\u043e\u0434\u0443\u043a\u0442\u044b"
       },
-      "uid": "a1e3bf12-70f5-435f-a06a-023eaa3456a7"
+      "uid": "836d1d65-9bce-42e6-8b3c-90d084fd1a51"
     },
     {
       "full_name": null,
       "measurement_unit": {
         "cls": "MeasurementUnitModel",
-        "uid": "5f99d0bb-8499-4a1c-92b9-7a2fcecffd4c",
+        "uid": "bfac859d-5de1-4b24-8177-71113c9c4068",
         "name": "\u0448\u0442",
         "unit": 1.0,
         "base_measure_unit": null
@@ -103,33 +103,16 @@
       "name": "\u042f\u0439\u0446\u0430",
       "nomenclature_group": {
         "cls": "NomenclatureGroupModel",
-        "uid": "4805e12f-0171-47c6-b02e-4fe6268827cd",
+        "uid": "67497a35-4dc8-4edb-a303-3201d2b1f265",
         "name": "\u041f\u0440\u043e\u0434\u0443\u043a\u0442\u044b"
       },
-      "uid": "8c09ce9a-272d-4137-b75d-e31ad00d66bc"
+      "uid": "6f702e93-31b4-4f11-829b-dcb7feac8178"
     },
     {
       "full_name": null,
       "measurement_unit": {
         "cls": "MeasurementUnitModel",
-        "uid": "68cc7695-ff06-40f4-88d8-378c974575bd",
-        "name": "\u0433",
-        "unit": 1.0,
-        "base_measure_unit": null
-      },
-      "name": "\u0412\u0430\u043d\u0438\u043b\u0438\u043d(\u0449\u0435\u043f\u043e\u0442\u043a\u0430)",
-      "nomenclature_group": {
-        "cls": "NomenclatureGroupModel",
-        "uid": "4805e12f-0171-47c6-b02e-4fe6268827cd",
-        "name": "\u041f\u0440\u043e\u0434\u0443\u043a\u0442\u044b"
-      },
-      "uid": "9882f33c-fb44-44a9-bac1-9b2a0f896906"
-    },
-    {
-      "full_name": null,
-      "measurement_unit": {
-        "cls": "MeasurementUnitModel",
-        "uid": "62a3047e-027d-49c2-998a-251421db1bf7",
+        "uid": "5296747b-0b3d-4c96-bac7-3434fb644169",
         "name": "\u043c\u043b",
         "unit": 1.0,
         "base_measure_unit": null
@@ -137,16 +120,16 @@
       "name": "\u041c\u043e\u043b\u043e\u043a\u043e",
       "nomenclature_group": {
         "cls": "NomenclatureGroupModel",
-        "uid": "eb739f9a-5900-48f6-8673-83e10967e340",
+        "uid": "67497a35-4dc8-4edb-a303-3201d2b1f265",
         "name": "\u041f\u0440\u043e\u0434\u0443\u043a\u0442\u044b"
       },
-      "uid": "99a0dbab-ec4c-4667-88f7-a945ac70c5fb"
+      "uid": "5a84c94d-eb27-4a94-bc31-1813954c0826"
     },
     {
       "full_name": null,
       "measurement_unit": {
         "cls": "MeasurementUnitModel",
-        "uid": "3b5d1c4a-76ca-4fab-837f-1cbd74fac0b7",
+        "uid": "da040d7b-16be-4d85-b82f-35377e7fce1a",
         "name": "\u0447.\u043b.",
         "unit": 1.0,
         "base_measure_unit": null
@@ -154,10 +137,27 @@
       "name": "\u041a\u043e\u0440\u0438\u0446\u0430",
       "nomenclature_group": {
         "cls": "NomenclatureGroupModel",
-        "uid": "eb739f9a-5900-48f6-8673-83e10967e340",
+        "uid": "67497a35-4dc8-4edb-a303-3201d2b1f265",
         "name": "\u041f\u0440\u043e\u0434\u0443\u043a\u0442\u044b"
       },
-      "uid": "db8e555d-28c0-48af-b06e-d2deb3052181"
+      "uid": "7f59358c-102f-4374-9fb1-017a87e44adb"
+    },
+    {
+      "full_name": null,
+      "measurement_unit": {
+        "cls": "MeasurementUnitModel",
+        "uid": "661dd496-35f8-4a36-b4d1-30f456e9fdab",
+        "name": "\u0433",
+        "unit": 1.0,
+        "base_measure_unit": null
+      },
+      "name": "\u0412\u0430\u043d\u0438\u043b\u0438\u043d(\u0449\u0435\u043f\u043e\u0442\u043a\u0430)",
+      "nomenclature_group": {
+        "cls": "NomenclatureGroupModel",
+        "uid": "00216827-5e1e-4728-8f20-23f700d4f9c7",
+        "name": "\u041f\u0440\u043e\u0434\u0443\u043a\u0442\u044b"
+      },
+      "uid": "ff6da2b3-a729-4f3e-baa1-1f0019660764"
     }
   ]
 }

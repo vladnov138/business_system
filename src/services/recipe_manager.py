@@ -57,6 +57,17 @@ class RecipeManager(AbstractLogic):
         self.set_exception(ex)
 
     def handle_event(self, type: EventType, **kwargs):
+        """
+        Обработка события удаления и редактирования номенклатуры
+        Если номенклатура используется в рецепте, то при удалении она восстанавливается
+        При редактировании обновляются изменения в рецепте
+        :param type: тип события
+        :param kwargs:
+                   - nomenclature (обязателен): Номенклатура, с которой связано событие
+                   - data (обязателен): Источник данных (репозиторий)
+        :raises ArgumentException: Если ключи 'nomenclature' и 'data' отсутствуют в kwargs или не соответствуют типу данных
+        :return:
+        """
         super().handle_event(type, **kwargs)
         try:
             ArgumentException.check_arg(kwargs.get("nomenclature"), NomenclatureModel)
@@ -76,4 +87,11 @@ class RecipeManager(AbstractLogic):
                             recipe[recipe.ingridients.index(ingridient)] = ingridient
                             recipes[recipes.index(recipe)] = recipe
                             break
+            case EventType.DELETE_NOMENCLATURE:
+                for recipe in recipes:
+                    for ingridient in recipe.ingridients:
+                        if nomenclature == ingridient.nomenclature:
+                            # если используется, то восстанавливаем номенклатуру
+                            nomenclature_key = repository.nomenclature_key()
+                            repository.data[nomenclature_key].append(nomenclature)
         repository.data[recipe_key] = recipes

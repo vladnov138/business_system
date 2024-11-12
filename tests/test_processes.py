@@ -9,7 +9,7 @@ from main import repository
 from src.abstract.process_type import ProcessType
 from src.abstract.transaction_type import TransactionType
 from src.data.data_repository import DataRepository
-from src.logics.date_block_observer import DateBlockUpdator
+from src.logics.date_block_updator import DateBlockUpdator
 from src.processes.process_factory import ProcessFactory
 from src.processes.warehouse_turnover_process import WarehouseTurnoverProcess
 from src.models.warehouse_transaction_model import WarehouseTransactionModel

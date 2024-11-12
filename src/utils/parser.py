@@ -1,9 +1,14 @@
 import re
 
 from src.abstract.abstract_logic import AbstractLogic
+from src.core.event_type import EventType
+from src.data.data_repository import DataRepository
+from src.exceptions.argument_exception import ArgumentException
 from src.exceptions.operation_exception import OperationException
 from src.models.ingridient_model import IngridientModel
 from src.models.measurement_unit_model import MeasurementUnitModel
+from src.models.nomenclature_group_model import NomenclatureGroupModel
+from src.models.nomenclature_model import NomenclatureModel
 from src.models.recipe_model import RecipeModel
 
 
@@ -21,8 +26,11 @@ class Parser(AbstractLogic):
         return recipe_title, cooking_time
 
     @staticmethod
-    def parse_recipe_ingredients_table(text: str, measurements: list[MeasurementUnitModel]) -> list[IngridientModel]:
+    def parse_recipe_ingredients_table(text: str, measurements: list[MeasurementUnitModel], repository: DataRepository) -> list[IngridientModel]:
+        ArgumentException.check_arg(repository, DataRepository)
         ingredients = []
+        nomenclature_group = NomenclatureGroupModel.create("Продукты")
+        nomenclatures = repository.data[repository.nomenclature_key()]
         for line in text.split('\n'):
             if '|' in line and 'ингредиенты' not in line.lower() and 'граммовка' not in line.lower() and '-|' not in line:
                 current_row = line.lstrip().split('|')[1:][:-1]
@@ -38,7 +46,17 @@ class Parser(AbstractLogic):
                         break
                 if measurement_unit is None:
                     raise OperationException(f'Отсутствует единица измерения {measurement_unit_name}')
-                ingredients.append(IngridientModel.create(ingredient_name, measurement_unit, quantity))
+                nomenclature = None
+                found = False
+                for nomenclature in nomenclatures:
+                    if nomenclature.name == ingredient_name:
+                        nomenclature = nomenclature
+                        found = True
+                        break
+                if not found:
+                    nomenclature = NomenclatureModel.create(ingredient_name, nomenclature_group, measurement_unit)
+                    nomenclatures.append(nomenclature)
+                ingredients.append(IngridientModel.create(nomenclature, quantity))
         return ingredients
 
     @staticmethod
@@ -52,9 +70,9 @@ class Parser(AbstractLogic):
         return steps_text.split('\n')
 
     @staticmethod
-    def parse_recipe_from_md(text: str, measurements: list[MeasurementUnitModel]):
+    def parse_recipe_from_md(text: str, measurements: list[MeasurementUnitModel], repository: DataRepository) -> RecipeModel:
         recipe_title, cooking_time = Parser.parse_header_recipe(text)
-        ingredients = Parser.parse_recipe_ingredients_table(text, measurements)
+        ingredients = Parser.parse_recipe_ingredients_table(text, measurements, repository)
         steps_text = Parser.parse_steps(text)
         recipe = RecipeModel.create(recipe_title, ingredients, int(cooking_time), steps_text)
         return recipe
@@ -71,3 +89,7 @@ class Parser(AbstractLogic):
             measurement_unit = MeasurementUnitModel.create(k, data[k]['unit'], base)
             units.append(measurement_unit)
         return units
+
+    def handle_event(self, type: EventType, **kwargs):
+        super().handle_event(type, **kwargs)
+

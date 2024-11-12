@@ -63,7 +63,7 @@ class StartService:
         """
         recipe_manager = RecipeManager()
         recipe_manager.open(self.__settings.recipe_folder)
-        recipes = recipe_manager.convert(self.__repository.data[DataRepository.measurement_unit_key()])
+        recipes = recipe_manager.convert(self.__repository.data[DataRepository.measurement_unit_key()], self.__repository)
         self.__repository.data[DataRepository.recipe_key()] = recipes
 
     def __create_warehouse(self):

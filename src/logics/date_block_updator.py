@@ -1,6 +1,5 @@
 from datetime import datetime
 
-from src.abstract.observer import Observer
 from src.abstract.process_type import ProcessType
 from src.data.data_repository import DataRepository
 from src.exceptions.argument_exception import ArgumentException

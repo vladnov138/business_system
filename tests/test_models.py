@@ -129,25 +129,24 @@ class TestModels(unittest.TestCase):
         assert cooker.measurement_unit == kg_unit
 
     def test_organization_model_converting(self):
-            """
-            Тестирует геттеры класса OrganizationModel и конвертацию из класса Settings
-            Сравнивает геттеры класса OrganizationModel с геттерами класса Settings
-            Результатом сравнения является True
-            """
+        """
+        Тестирует геттеры класса OrganizationModel и конвертацию из класса Settings
+        Сравнивает геттеры класса OrganizationModel с геттерами класса Settings
+        Результатом сравнения является True
+        """
+        settings_manager = SettingsManager()
+        file_path = "resources/test_settings.json"
+        settings_manager.open(file_path)
+        settings_manager.convert()
+        settings = settings_manager.settings
 
-    settings_manager = SettingsManager()
-    file_path = "resources/test_settings.json"
-    settings_manager.open(file_path)
-    settings_manager.convert()
-    settings = settings_manager.settings
+        org = OrganizationModel.create(settings)
 
-    org = OrganizationModel.create(settings)
-
-    assert org.name == settings.organization_name
-    assert org.inn == settings.inn
-    assert org.account == settings.account
-    assert org.bik == settings.bik
-    assert org.business_type == settings.business_type
+        assert org.name == settings.organization_name
+        assert org.inn == settings.inn
+        assert org.account == settings.account
+        assert org.bik == settings.bik
+        assert org.business_type == settings.business_type
 
     def test_ingridient_model(self):
         """
@@ -155,25 +154,12 @@ class TestModels(unittest.TestCase):
         :return:
         """
         ml = MeasurementUnitModel.create("мл", 1)
-        ingridient = IngridientModel.create("Молоко", ml, 2)
-        assert ingridient.name == "Молоко"
-        assert ingridient.measurement_unit == ml
+        nomenclature_group = NomenclatureGroupModel.create("Ингридиенты")
+        nomenclature = NomenclatureModel.create("Молоко", nomenclature_group, ml)
+        ingridient = IngridientModel.create(nomenclature, 2)
+        assert ingridient.nomenclature.name == "Молоко"
+        assert ingridient.nomenclature.measurement_unit == ml
         assert ingridient.amount == 2
-
-
-    def test_ingridient_setters(self):
-        """
-        Тестирует сеттеры модели IngridientModel
-        :return:
-        """
-        ml = MeasurementUnitModel.create("мл", 1)
-        ingridient = IngridientModel.create("Молоко", ml, 2)
-        ingridient.name = "Молоко2"
-        ingridient.measurement_unit = ml
-        ingridient.amount = 3
-        assert ingridient.name == "Молоко2"
-        assert ingridient.measurement_unit == ml
-        assert ingridient.amount == 3
 
 
     def test_recipe_model(self):
@@ -182,7 +168,9 @@ class TestModels(unittest.TestCase):
         :return:
         """
         ml = MeasurementUnitModel.create("мл", 1)
-        ingridient = IngridientModel.create("Молоко", ml, 2)
+        nomenclature_group = NomenclatureGroupModel.create("Ингридиенты")
+        nomenclature = NomenclatureModel.create("Молоко", nomenclature_group, ml)
+        ingridient = IngridientModel.create(nomenclature, 2)
         recipe = RecipeModel.create("Молоко", [ingridient], 10, ["description"])
         assert recipe.name == "Молоко"
         assert len(recipe.ingridients) == 1
@@ -195,7 +183,9 @@ class TestModels(unittest.TestCase):
         :return:
         """
         ml = MeasurementUnitModel.create("мл", 1)
-        ingridient = IngridientModel.create("Молоко", ml, 2)
+        nomenclature_group = NomenclatureGroupModel.create("Ингридиенты")
+        nomenclature = NomenclatureModel.create("Молоко", nomenclature_group, ml)
+        ingridient = IngridientModel.create(nomenclature, 2)
         recipe = RecipeModel.create("Молоко", [ingridient], 10, ["description"])
         recipe.name = "Молоко2"
         recipe.ingridients = [ingridient]
@@ -214,11 +204,13 @@ class TestModels(unittest.TestCase):
         :return:
         """
         ml = MeasurementUnitModel.create("мл", 1)
-        ingridient = IngridientModel.create("Молоко", ml, 2)
+        nomenclature_group = NomenclatureGroupModel.create("Ингридиенты")
+        nomenclature = NomenclatureModel.create("Молоко", nomenclature_group, ml)
+        ingridient = IngridientModel.create(nomenclature, 2)
         with self.assertRaises(ArgumentException):
             ingridient.name = 123
         with self.assertRaises(ArgumentException):
-            ingridient.measurement_unit = "мл"
+            ingridient.nomenclature.measurement_unit = "мл"
         with self.assertRaises(ArgumentException):
             ingridient.amount = 0
 
@@ -229,7 +221,9 @@ class TestModels(unittest.TestCase):
         :return:
         """
         ml = MeasurementUnitModel.create("мл", 1)
-        ingridient = IngridientModel.create("Молоко", ml, 2)
+        nomenclature_group = NomenclatureGroupModel.create("Ингридиенты")
+        nomenclature = NomenclatureModel.create("Молоко", nomenclature_group, ml)
+        ingridient = IngridientModel.create(nomenclature, 2)
         recipe = RecipeModel.create("Молоко", [ingridient], 10, ["description"])
         with self.assertRaises(ArgumentException):
             recipe.name = 123

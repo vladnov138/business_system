@@ -1,6 +1,7 @@
 from src.abstract.abstract_logic import AbstractLogic
 from src.abstract.abstract_report import AbstractReport
 from src.abstract.format_reporting import FormatReporting
+from src.core.event_type import EventType
 from src.exceptions.argument_exception import ArgumentException
 from src.exceptions.operation_exception import OperationException
 from src.models.settings_model import Settings
@@ -40,3 +41,7 @@ class ReportFactory(AbstractLogic):
     def settings(self, value: Settings):
         ArgumentException.check_arg(value, Settings)
         self.__settings = value
+
+    def handle_event(self, type: EventType, **kwargs):
+        super().handle_event(type, **kwargs)
+

@@ -4,6 +4,7 @@ from pathlib import Path
 
 from src.abstract.abstract_logic import AbstractLogic
 from src.abstract.format_reporting import FormatReporting
+from src.core.event_type import EventType
 from src.exceptions.argument_exception import ArgumentException
 from src.utils.path_utils import PathUtils
 
@@ -53,4 +54,7 @@ class AbstractReport(AbstractLogic):
 
     def set_exception(self, ex: Exception):
         self._inner_set_exception(ex)
+
+    def handle_event(self, type: EventType, **kwargs):
+        super().handle_event(type, **kwargs)
 

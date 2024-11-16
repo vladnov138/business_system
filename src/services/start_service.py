@@ -126,10 +126,11 @@ class StartService:
         """
         Первый старт
         """
-        self.__create_nomenclature_groups()
-        self.__create_measurement_units()
-        self.__create_nomenclature()
-        self.__create_recipe()
-        self.__create_warehouse()
-        self.__create_warehouse_transactions()
-        self.__create_turnovers()
+        if self.__settings.generate_data:
+            self.__create_nomenclature_groups()
+            self.__create_measurement_units()
+            self.__create_nomenclature()
+            self.__create_recipe()
+            self.__create_warehouse()
+            self.__create_warehouse_transactions()
+            self.__create_turnovers()

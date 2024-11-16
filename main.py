@@ -20,6 +20,7 @@ from src.models.nomenclature_model import NomenclatureModel
 from src.models.recipe_model import RecipeModel
 from src.models.warehouse_model import WarehouseModel
 from src.processes.process_factory import ProcessFactory
+from src.services.data_manager import DataManager
 from src.services.filter_service import FilterService
 from src.services.nomenclature_service import NomenclatureService
 from src.services.observe_service import ObserveService
@@ -51,6 +52,7 @@ start = StartService(repository, manager.settings)
 start.create()
 
 dateblockUpdater = DateBlockUpdator(manager.settings.date_block, repository, ProcessFactory(), ProcessType.DATEBLOCK)
+data_manager = DataManager(repository)
 
 helper = Common()
 models = helper.get_models_dict()
@@ -205,11 +207,17 @@ def get_balance_sheet(start_date: datetime, end_date: datetime, warehouse_id: st
 
 @app.route("/api/save_data", methods=["POST"])
 def save_data():
-    pass
+    param = request.get_json()
+    filename = param["filename"]
+    manager.settings.generate_data = False
+    data_manager.save(filename)
 
 @app.route("/api/load_data", methods=["POST"])
 def load_data():
-    pass
+    param = request.get_json()
+    filename = param["filename"]
+    data = data_manager.load(filename)
+    repository.data = data
 
 if __name__ == '__main__':
     app.add_api("swagger.yaml")

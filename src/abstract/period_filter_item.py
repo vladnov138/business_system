@@ -8,6 +8,13 @@ class PeriodFilterItem:
     __date: datetime = None
     __filter_type: DateFilterType = None
 
+    @classmethod
+    def create(cls, date: datetime, filter_type: DateFilterType):
+        instance = cls()
+        instance.date = date
+        instance.filter_type = filter_type
+        return instance
+
     @property
     def date(self):
         return self.__date

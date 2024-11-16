@@ -23,6 +23,8 @@ class Settings:
     __date_format = "%Y-%m-%d"
     __date_block = None
 
+    __generate_data = True
+
     @property
     def organization_name(self):
         return self.__organization_name
@@ -152,6 +154,15 @@ class Settings:
             value = datetime.strptime(value.split(" ")[0], self.date_format)
         ArgumentException.check_arg(value, datetime)
         self.__date_block = value
+
+    @property
+    def generate_data(self):
+        return self.__generate_data
+
+    @generate_data.setter
+    def generate_data(self, value: bool):
+        ArgumentException.check_arg(value, bool)
+        self.__generate_data = value
 
     def __str__(self):
         return f"""Settings(Organization Name: {self.organization_name}

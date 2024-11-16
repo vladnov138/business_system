@@ -377,12 +377,23 @@ paths:
       produces:
         - application/json
       parameters:
-        - in: body
-          name: nomenclature
-          description: Номенклатура
+        - in: query
+          name: start_date
+          description: Дата начала
           required: true
-          schema:
-            $ref: '#/definitions/NomenclatureModel'
+          type: string
+          format: date
+        - in: query
+          name: end_date
+          description: Дата конца
+          required: true
+          type: string
+          format: date
+        - in: query
+          name: warehouse_id
+          description: Идентификатор склада
+          required: true
+          type: string
       responses:
         200:
           description: OK

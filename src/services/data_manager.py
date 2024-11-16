@@ -28,7 +28,7 @@ class DataManager(AbstractLogic):
             current_path = Path(__file__).resolve()
             parent_path = self.__path_utils.get_parent_directory(current_path, levels_up=3)
             if not Path(file_name).is_absolute():
-                full_name = f"{parent_path}{os.sep}{"resources"}{os.sep}{file_name}"
+                full_name = f"{parent_path}{os.sep}resources{os.sep}{file_name}"
             else:
                 full_name = file_name
 
@@ -51,7 +51,7 @@ class DataManager(AbstractLogic):
             current_path = Path(__file__).resolve()
             parent_path = self.__path_utils.get_parent_directory(current_path, levels_up=3)
             if not Path(file_name).is_absolute():
-                full_name = f"{parent_path}{os.sep}{"resources"}{os.sep}{file_name}"
+                full_name = f"{parent_path}{os.sep}resources{os.sep}{file_name}"
             else:
                 full_name = file_name
 

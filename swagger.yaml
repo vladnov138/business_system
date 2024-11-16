@@ -370,3 +370,69 @@ paths:
           description: Ошибка на сервере
         default:
           description: Неизвестная ошибка
+  /api/balance_sheet:
+    get:
+      summary: Получить оборотно-сальдовую ведомость
+      operationId: main.get_balance_sheet
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: nomenclature
+          description: Номенклатура
+          required: true
+          schema:
+            $ref: '#/definitions/NomenclatureModel'
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+        500:
+          description: Ошибка на сервере
+        default:
+          description: Неизвестная ошибка
+  /api/save_data:
+    get:
+      summary: Сохранить все данные
+      operationId: main.save_data
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: filename
+          description: Название файла
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+        500:
+          description: Ошибка на сервере
+        default:
+          description: Неизвестная ошибка
+  /api/load_data:
+    get:
+      summary: Загрузить данные
+      operationId: main.load_data
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: filename
+          description: Название файла
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+        500:
+          description: Ошибка на сервере
+        default:
+          description: Неизвестная ошибка

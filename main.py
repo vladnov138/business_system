@@ -1,3 +1,5 @@
+from datetime import datetime
+
 import connexion
 from flask import request
 
@@ -196,6 +198,18 @@ def delete_nomenclature(id: str):
     observe_service.raise_event(EventType.DELETE_NOMENCLATURE, nomenclature=nomenclature, data=repository)
     new_length = len(repository.data[nomenclature_key])
     return prev_length - new_length
+
+@app.route("/api/balance_sheet", methods=["GET"])
+def get_balance_sheet(start_date: datetime, end_date: datetime, warehouse_id: str):
+    pass
+
+@app.route("/api/save_data", methods=["POST"])
+def save_data():
+    pass
+
+@app.route("/api/load_data", methods=["POST"])
+def load_data():
+    pass
 
 if __name__ == '__main__':
     app.add_api("swagger.yaml")

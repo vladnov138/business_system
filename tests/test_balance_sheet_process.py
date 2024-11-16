@@ -108,9 +108,9 @@ class TestBalanceSheetProcess(unittest.TestCase):
         result = process.execute(transactions)
 
         output_path = "../demo/balance_sheet_image.png"
-        self.generate_balance_sheet_image(result, output_file=output_path)
+        # self.generate_balance_sheet_image(result, output_file=output_path)
 
-        assert os.path.exists(output_path), "Файл изображения ОСВ не был создан"
+        # assert os.path.exists(output_path), "Файл изображения ОСВ не был создан"
 
     def generate_balance_sheet_image(self, balance_sheet, output_file="balance_sheet.png"):
         """

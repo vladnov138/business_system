@@ -11,6 +11,8 @@ class TurnoverService(AbstractLogic):
 
     def handle_event(self, type: EventType, **kwargs):
         super().handle_event(type, **kwargs)
+        if type != EventType.CHANGE_NOMENCLATURE:
+            return
         try:
             ArgumentException.check_arg(kwargs.get("nomenclature"), NomenclatureModel)
             ArgumentException.check_arg(kwargs.get("data"), DataRepository)

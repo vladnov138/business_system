@@ -5,31 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4afd156-2404-459e-a434-5121565aff87" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/processes/balance_sheet_process.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/data_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_balance_sheet_process.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.csv" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_measurement_unit.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_measurement_unit.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.md" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_measurement_unit.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.rtf" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_measurement_unit.rtf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/report_measurement_unit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_measurement_unit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.csv" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.md" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.rtf" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.rtf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/report_nomenclature.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_nomenclature.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/report_recipe.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/report_recipe.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/test_settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/test_settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abstract/period_filter_item.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abstract/period_filter_item.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abstract/process_type.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abstract/process_type.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/data_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/data_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/event_type.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/event_type.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/settings_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/settings_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/processes/process_factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/processes/process_factory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/data_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/data_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/recipe_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/recipe_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/start_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/start_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/turnover_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/turnover_service.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swagger.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/swagger.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_balance_sheet_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_balance_sheet_process.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,9 +75,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python tests.Python tests for test_balance_sheet_process.TestBalanceSheetProcess.executor": "Run",
     "Python tests.Python tests for test_balance_sheet_process.TestBalanceSheetProcess.test_beginning_balance.executor": "Run",
     "Python tests.Python tests for test_balance_sheet_process.TestBalanceSheetProcess.test_debit_credit.executor": "Debug",
     "Python tests.Python tests for test_balance_sheet_process.TestBalanceSheetProcess.test_end_balance.executor": "Run",
+    "Python tests.Python tests for test_balance_sheet_process.TestBalanceSheetProcess.test_save_balance_sheet_image.executor": "Run",
     "Python tests.Python tests for test_data_repository.TestDataRepository.executor": "Run",
     "Python tests.Python tests for test_data_repository.TestDataRepository.test_data_measurement_units.executor": "Run",
     "Python tests.Python tests for test_data_repository.TestDataRepository.test_data_nomenclature.executor": "Run",
@@ -166,7 +154,7 @@
     "Python tests.Python tests in test_reporting.py.executor": "Run",
     "Python tests.Python tests in test_settings.py.executor": "Run",
     "Python tests.Python tests in tests.executor": "Run",
-    "Python.main.executor": "Run",
+    "Python.main.executor": "Debug",
     "Python.nomenclature_group_model.executor": "Run",
     "Python.settings_manager.executor": "Run",
     "Python.start_service.executor": "Run",
@@ -189,7 +177,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_balance_sheet_process.TestBalanceSheetProcess.test_debit_credit">
+  <component name="RunManager" selected="Python tests.Python tests for test_balance_sheet_process.TestBalanceSheetProcess.test_save_balance_sheet_image">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
@@ -212,7 +200,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_balance_sheet_process.TestBalanceSheetProcess.test_beginning_balance" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_balance_sheet_process.TestBalanceSheetProcess" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -223,7 +211,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_balance_sheet_process.TestBalanceSheetProcess.test_beginning_balance&quot;" />
+      <option name="_new_target" value="&quot;test_balance_sheet_process.TestBalanceSheetProcess&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -257,7 +245,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in tests" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_balance_sheet_process.TestBalanceSheetProcess.test_save_balance_sheet_image" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -268,17 +256,17 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="_new_target" value="&quot;test_balance_sheet_process.TestBalanceSheetProcess.test_save_balance_sheet_image&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for test_balance_sheet_process.TestBalanceSheetProcess.test_save_balance_sheet_image" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python tests.Python tests for test_balance_sheet_process.TestBalanceSheetProcess" />
         <item itemvalue="Python tests.Python tests for test_balance_sheet_process.TestBalanceSheetProcess.test_debit_credit" />
         <item itemvalue="Python tests.Python tests for test_balance_sheet_process.TestBalanceSheetProcess.test_end_balance" />
-        <item itemvalue="Python tests.Python tests for test_balance_sheet_process.TestBalanceSheetProcess.test_beginning_balance" />
-        <item itemvalue="Python tests.Python tests in tests" />
-        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -307,6 +295,21 @@
           <url>file://$PROJECT_DIR$/src/reports/rtf_report.py</url>
           <line>55</line>
           <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/services/start_service.py</url>
+          <line>140</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/services/data_manager.py</url>
+          <line>66</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/services/data_manager.py</url>
+          <line>63</line>
+          <option name="timeStamp" value="89" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

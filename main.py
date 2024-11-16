@@ -42,17 +42,19 @@ nomenclature_service = NomenclatureService(repository, FilterService())
 
 recipe_manager = RecipeManager()
 turnover_service = TurnoverService()
+data_manager = DataManager(repository)
+
 
 # Инициализируем наблюдателя и слушателей
 observe_service = ObserveService()
 observe_service.append(recipe_manager)
 observe_service.append(turnover_service)
+observe_service.append(data_manager)
 
 start = StartService(repository, manager.settings)
 start.create()
 
 dateblockUpdater = DateBlockUpdator(manager.settings.date_block, repository, ProcessFactory(), ProcessType.DATEBLOCK)
-data_manager = DataManager(repository)
 
 helper = Common()
 models = helper.get_models_dict()
@@ -203,7 +205,14 @@ def delete_nomenclature(id: str):
 
 @app.route("/api/balance_sheet", methods=["GET"])
 def get_balance_sheet(start_date: datetime, end_date: datetime, warehouse_id: str):
-    pass
+    process = ProcessFactory().create(ProcessType.BALANCE_SHEET,
+                                      start_date=start_date,
+                                      end_date=end_date,
+                                      warehouse_uid=warehouse_id)
+    key = repository.warehouse_transaction_key()
+    transactions = repository.data[key]
+    result = process.execute(transactions)
+    return result
 
 @app.route("/api/save_data", methods=["POST"])
 def save_data():
@@ -211,6 +220,8 @@ def save_data():
     filename = param["filename"]
     manager.settings.generate_data = False
     data_manager.save(filename)
+    manager.save()
+    observe_service.raise_event(EventType.CHANGE_DATA_GENERATING_SETTING, callback=start.create)
 
 @app.route("/api/load_data", methods=["POST"])
 def load_data():

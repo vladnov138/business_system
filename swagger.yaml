@@ -404,7 +404,7 @@ paths:
         default:
           description: Неизвестная ошибка
   /api/save_data:
-    get:
+    post:
       summary: Сохранить все данные
       operationId: main.save_data
       produces:
@@ -415,7 +415,7 @@ paths:
           description: Название файла
           required: true
           schema:
-            type: string
+            type: object
       responses:
         200:
           description: OK
@@ -426,7 +426,7 @@ paths:
         default:
           description: Неизвестная ошибка
   /api/load_data:
-    get:
+    post:
       summary: Загрузить данные
       operationId: main.load_data
       produces:

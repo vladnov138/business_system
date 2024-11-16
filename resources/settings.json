@@ -1,13 +1,18 @@
 {
-  "organization_name": "Рога и копыта",
-  "inn": "382132121212",
-  "director_name": "Рог Копытов",
+  "cls": "Settings",
   "account": "12345678901",
-  "correspondent_account": "09876543211",
   "bik": "123456789",
-  "business_type": "ОООOO",
-  "recipe_folder": "docs/",
+  "business_type": "\u041e\u041e\u041eOO",
+  "correspondent_account": "09876543211",
+  "data_file": "data_repository.json",
+  "date_block": "2023-10-29 00:00:00",
+  "date_format": "%Y-%m-%d",
+  "director_name": "\u0420\u043e\u0433 \u041a\u043e\u043f\u044b\u0442\u043e\u0432",
+  "generate_data": true,
+  "inn": "382132121212",
   "measurement_units_path": "resources/measurement_units.json",
+  "organization_name": "\u0420\u043e\u0433\u0430 \u0438 \u043a\u043e\u043f\u044b\u0442\u0430",
+  "recipe_folder": "docs/",
   "report_classes_folder": "src/reports",
   "report_format": "JSON",
   "format_reports": {
@@ -16,8 +21,5 @@
     "XML": "xml_report",
     "MARKDOWN": "md_report",
     "RTF": "rtf_report"
-  },
-  "date_format": "%Y-%m-%d",
-  "date_block": "2023-10-29",
-  "generate_data": true
+  }
 }

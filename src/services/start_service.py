@@ -12,9 +12,11 @@ from src.models.settings_model import Settings
 from src.models.warehouse_model import WarehouseModel
 from src.models.warehouse_transaction_model import WarehouseTransactionModel
 from src.processes.process_factory import ProcessFactory
+from src.services.data_manager import DataManager
 from src.services.filter_service import FilterService
 from src.services.measurement_unit_manager import MeasurementUnitManager
 from src.services.recipe_manager import RecipeManager
+from src.utils.json_model_decoder import JsonModelDecoder
 
 
 class StartService:
@@ -134,3 +136,6 @@ class StartService:
             self.__create_warehouse()
             self.__create_warehouse_transactions()
             self.__create_turnovers()
+        else:
+            result = DataManager(self.__repository).load(self.__settings.data_file)
+            self.__repository.data = result

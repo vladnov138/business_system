@@ -24,6 +24,7 @@ class Settings:
     __date_block = None
 
     __generate_data = True
+    __data_file: str = "data_repository.json"
 
     @property
     def organization_name(self):
@@ -163,6 +164,15 @@ class Settings:
     def generate_data(self, value: bool):
         ArgumentException.check_arg(value, bool)
         self.__generate_data = value
+
+    @property
+    def data_file(self):
+        return self.__data_file
+
+    @data_file.setter
+    def data_file(self, value: str):
+        ArgumentException.check_arg(value, str)
+        self.__data_file = value
 
     def __str__(self):
         return f"""Settings(Organization Name: {self.organization_name}

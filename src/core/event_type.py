@@ -7,3 +7,6 @@ class EventType(Enum):
     CHANGE_RANGE = 3
     CHANGE_BLOCK_PERIOD = 4
     CHANGE_DATA_GENERATING_SETTING = 5
+    LOG_INFO = 6
+    LOG_DEBUG = 7
+    LOG_ERROR = 8

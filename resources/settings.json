@@ -21,5 +21,7 @@
     "XML": "xml_report",
     "MARKDOWN": "md_report",
     "RTF": "rtf_report"
-  }
+  },
+  "log_level": "DEBUG",
+  "log_path": null
 }

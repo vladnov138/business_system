@@ -8,6 +8,7 @@ curl -X POST "http://localhost:8001/api/date_block" \
     "dateblock": "2024-12-31"
   }'
 
+# Получить uid единицы измерения и группы
 measurement_unit_uid=$(curl -s -X GET "http://localhost:8001/api/reports/MeasurementUnitModel/3" -H "Accept: application/json" | jq -r '.MeasurementUnitModel[0].uid')
 group_uid=$(curl -s -X GET "http://localhost:8001/api/reports/NomenclatureGroupModel/3" -H "Accept: application/json" | jq -r '.NomenclatureGroupModel[0].uid')
 

@@ -1,0 +1,10 @@
+---Logger started at 2024-11-23T22:00:59.197305---
+---Logger level: LogLevel.DEBUG---
+[2024-11-23T22:01:01.126278 | INFO]: GET /api/nomenclature/s1
+[2024-11-23T22:01:01.127045 | ERROR]: Nomenclature not found! in GET /api/nomenclature/s1
+[2024-11-23T22:01:05.226445 | INFO]: GET /api/date_block
+[2024-11-23T22:01:10.125586 | INFO]: POST /api/filter/MeasurementUnitModel
+[2024-11-23T22:01:10.126004 | DEBUG]: POST /api/filter/MeasurementUnitModel params: [{'field': 'name', 'value': 'ã', 'type': 'EQUAL'}]
+[2024-11-23T22:01:12.664601 | INFO]: GET /api/reports/3/3
+[2024-11-23T22:01:12.664983 | ERROR]: Invalid model in GET /api/reports/3/3
+[2024-11-23T22:01:17.180496 | INFO]: GET /api/reports/MeasurementUnitModel/3

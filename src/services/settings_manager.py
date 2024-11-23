@@ -5,6 +5,7 @@ from pathlib import Path
 from src.abstract.format_reporting import FormatReporting
 from src.exceptions.argument_exception import ArgumentException
 from src.exceptions.operation_exception import OperationException
+from src.logger.log_level import LogLevel
 from src.models.settings_model import Settings
 from src.utils.file_reader import FileReader
 from src.utils.json_model_encoder import JsonModelEncoder
@@ -51,10 +52,14 @@ class SettingsManager:
             if len(keys) != 0:
                 value = self.__data[field]
                 report_format_key = "report_format"
-                if not isinstance(value, list) and not isinstance(value, dict) and field != report_format_key:
+                log_level_key = "log_level"
+                if not isinstance(value, list) and not isinstance(value, dict) and field not in (report_format_key, log_level_key):
                     setattr(self.__settings, field, value)
-                elif field == report_format_key:
-                    self.__settings.report_format = list(filter(lambda x: x.name == value, FormatReporting))[0]
+                elif field in (report_format_key, log_level_key):
+                    if field == report_format_key:
+                        self.__settings.report_format = list(filter(lambda x: x.name == value, FormatReporting))[0]
+                    else:
+                        self.__settings.log_level = list(filter(lambda x: x.name == value, LogLevel))[0]
         self.__convert_format_reports(self.__settings.report_classes_folder)
         return self.__settings
 

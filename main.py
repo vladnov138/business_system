@@ -11,6 +11,7 @@ from src.dto.filter_dto import FilterDto
 from src.dto.warehouse_transaction_filter_dto import WarehouseTransactionFilterDto
 from src.exceptions.argument_exception import ArgumentException
 from src.exceptions.operation_exception import OperationException
+from src.logger.logger import Logger
 from src.logics.date_block_updator import DateBlockUpdator
 from src.logics.filter_item import FilterItem
 from src.logics.warehouse_filter_item import WarehouseFilterItem
@@ -44,11 +45,14 @@ recipe_manager = RecipeManager()
 turnover_service = TurnoverService()
 data_manager = DataManager(repository)
 
+logger = Logger(manager.settings.log_path, manager.settings.log_level)
+
 # Инициализируем наблюдателя и слушателей
 observe_service = ObserveService()
 observe_service.append(recipe_manager)
 observe_service.append(turnover_service)
 observe_service.append(data_manager)
+observe_service.append(logger)
 
 start = StartService(repository, manager.settings)
 start.create()

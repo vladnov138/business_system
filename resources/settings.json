@@ -23,5 +23,5 @@
     "RTF": "rtf_report"
   },
   "log_level": "DEBUG",
-  "log_path": null
+  "log_path": "logs/log.txt"
 }

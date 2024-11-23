@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4afd156-2404-459e-a434-5121565aff87" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/logger/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logger/log_level.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logger/logger.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/event_type.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/event_type.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/settings_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/settings_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logger/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/logger/logger.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/data_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/data_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/settings_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/settings_manager.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +40,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="event_handling" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -151,7 +149,7 @@
     "Python tests.Python tests in test_reporting.py.executor": "Run",
     "Python tests.Python tests in test_settings.py.executor": "Run",
     "Python tests.Python tests in tests.executor": "Run",
-    "Python.main.executor": "Run",
+    "Python.main.executor": "Debug",
     "Python.nomenclature_group_model.executor": "Run",
     "Python.settings_manager.executor": "Run",
     "Python.start_service.executor": "Run",
@@ -298,6 +296,11 @@
           <url>file://$PROJECT_DIR$/src/services/start_service.py</url>
           <line>140</line>
           <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>225</line>
+          <option name="timeStamp" value="100" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

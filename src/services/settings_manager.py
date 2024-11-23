@@ -103,7 +103,6 @@ class SettingsManager:
                 file.write(result)
             return True
         except Exception as ex:
-            self.set_exception(ex)
             return False
 
     # Настройки

@@ -235,7 +235,7 @@ def put_nomenclature():
         ObserveService.raise_event(EventType.LOG_DEBUG, message=f"PUT /api/nomenclature params: {param}")
         nomenclature = JsonModelDecoder().decode_model(param, NomenclatureModel)
         nomenclature_service.add_nomenclature(nomenclature)
-        return 200
+        return "200"
     except Exception as ex:
         ObserveService.raise_event(EventType.LOG_ERROR, message=f"{ex} in PUT /api/nomenclature")
         raise ex

@@ -5,11 +5,13 @@
   "business_type": "\u041e\u041e\u041eOO",
   "correspondent_account": "09876543211",
   "data_file": "data_repository.json",
-  "date_block": "2023-10-30 00:00:00",
+  "date_block": "2024-11-23 00:00:00",
   "date_format": "%Y-%m-%d",
   "director_name": "\u0420\u043e\u0433 \u041a\u043e\u043f\u044b\u0442\u043e\u0432",
   "generate_data": true,
   "inn": "382132121212",
+  "log_level": "DEBUG",
+  "log_path": "logs/log.txt",
   "measurement_units_path": "resources/measurement_units.json",
   "organization_name": "\u0420\u043e\u0433\u0430 \u0438 \u043a\u043e\u043f\u044b\u0442\u0430",
   "recipe_folder": "docs/",
@@ -21,7 +23,5 @@
     "XML": "xml_report",
     "MARKDOWN": "md_report",
     "RTF": "rtf_report"
-  },
-  "log_level": "DEBUG",
-  "log_path": "logs/log.txt"
+  }
 }

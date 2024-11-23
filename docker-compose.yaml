@@ -7,7 +7,11 @@ services:
     ports:
       - 8000:8080
     volumes:
+      - ./resources/measurement_units.json:/resources/measurement_units.json
       - ./resources/settings.json:/resources/settings.json
+      - ./docs/recipe1.md:/docs/recipe1.md
+      - ./docs/recipe2.md:/docs/recipe2.md
+      - ./logs:/logs
 
   study2025:
     container_name: study2025
@@ -15,7 +19,11 @@ services:
     ports:
       - 8001:8080
     volumes:
+      - ./resources/measurement_units.json:/resources/measurement_units.json
       - ./resources/settings.json:/resources/settings.json
+      - ./docs/recipe1.md:/docs/recipe1.md
+      - ./docs/recipe2.md:/docs/recipe2.md
+      - ./logs:/logs
 
 networks:
   default:

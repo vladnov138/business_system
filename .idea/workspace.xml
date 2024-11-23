@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4afd156-2404-459e-a434-5121565aff87" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/tests/test_balance_sheet_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_balance_sheet_process.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +53,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/vladnov138/business_system.git&quot;,
-    &quot;accountId&quot;: &quot;89db990f-1e6a-4a46-8a70-396d7bafa47d&quot;
+    &quot;accountId&quot;: &quot;67d8ac6a-cd73-4066-9582-96612613f2bd&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -144,13 +148,14 @@
     "Python tests.Python tests in test_reporting.py.executor": "Run",
     "Python tests.Python tests in test_settings.py.executor": "Run",
     "Python tests.Python tests in tests.executor": "Run",
-    "Python.main.executor": "Debug",
+    "Python.main.executor": "Run",
     "Python.nomenclature_group_model.executor": "Run",
     "Python.settings_manager.executor": "Run",
     "Python.start_service.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "balance__report",
+    "git-widget-placeholder": "#10 on balance__report",
     "last_opened_file_path": "/home/vladnov138/PycharmProjects/business_system/src/reports",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
@@ -167,7 +172,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_balance_sheet_process.TestBalanceSheetProcess.test_save_balance_sheet_image">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="business_system" />
       <option name="ENV_FILES" value="" />
@@ -252,8 +257,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for test_balance_sheet_process.TestBalanceSheetProcess.test_save_balance_sheet_image" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python tests.Python tests for test_balance_sheet_process.TestBalanceSheetProcess.test_save_balance_sheet_image" />
         <item itemvalue="Python tests.Python tests for test_balance_sheet_process.TestBalanceSheetProcess" />
         <item itemvalue="Python tests.Python tests for test_balance_sheet_process.TestBalanceSheetProcess.test_debit_credit" />
         <item itemvalue="Python tests.Python tests for test_balance_sheet_process.TestBalanceSheetProcess.test_end_balance" />

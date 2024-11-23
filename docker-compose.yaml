@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  study2024:
+    container_name: study2024
+    image: study2024
+    ports:
+      - 8000:8080
+    volumes:
+      - ./resources/settings.json:/resources/settings.json
+
+  study2025:
+    container_name: study2025
+    image: study2024
+    ports:
+      - 8001:8080
+    volumes:
+      - ./resources/settings.json:/resources/settings.json
+
+networks:
+  default:

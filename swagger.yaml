@@ -370,3 +370,80 @@ paths:
           description: Ошибка на сервере
         default:
           description: Неизвестная ошибка
+  /api/balance_sheet:
+    get:
+      summary: Получить оборотно-сальдовую ведомость
+      operationId: main.get_balance_sheet
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: start_date
+          description: Дата начала
+          required: true
+          type: string
+          format: date
+        - in: query
+          name: end_date
+          description: Дата конца
+          required: true
+          type: string
+          format: date
+        - in: query
+          name: warehouse_id
+          description: Идентификатор склада
+          required: true
+          type: string
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+        500:
+          description: Ошибка на сервере
+        default:
+          description: Неизвестная ошибка
+  /api/save_data:
+    post:
+      summary: Сохранить все данные
+      operationId: main.save_data
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: filename
+          description: Название файла
+          required: true
+          schema:
+            type: object
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+        500:
+          description: Ошибка на сервере
+        default:
+          description: Неизвестная ошибка
+  /api/load_data:
+    post:
+      summary: Загрузить данные
+      operationId: main.load_data
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: filename
+          description: Название файла
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+        500:
+          description: Ошибка на сервере
+        default:
+          description: Неизвестная ошибка

@@ -69,6 +69,8 @@ class RecipeManager(AbstractLogic):
         :return:
         """
         super().handle_event(type, **kwargs)
+        if type not in [EventType.CHANGE_NOMENCLATURE, EventType.DELETE_NOMENCLATURE]:
+            return
         try:
             ArgumentException.check_arg(kwargs.get("nomenclature"), NomenclatureModel)
             ArgumentException.check_arg(kwargs.get("data"), DataRepository)

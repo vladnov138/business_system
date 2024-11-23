@@ -1,0 +1,453 @@
+{
+  "group": [
+    {
+      "cls": "NomenclatureGroupModel",
+      "uid": "ef54ff8b-41a8-49d1-a4fd-9edf1525461d",
+      "name": "\u0417\u0430\u043c\u043e\u0440\u043e\u0437\u043a\u0430"
+    },
+    {
+      "cls": "NomenclatureGroupModel",
+      "uid": "477efed9-be41-4ed6-924e-35b80140e838",
+      "name": "\u0421\u044b\u0440\u044c\u0451"
+    }
+  ],
+  "measurement_unit": [
+    {
+      "cls": "MeasurementUnitModel",
+      "uid": "51effde6-99c3-48b6-8793-ea5966a90e41",
+      "name": "\u0433",
+      "unit": 1.0,
+      "base_measure_unit": null
+    },
+    {
+      "cls": "MeasurementUnitModel",
+      "uid": "904d1b31-68a4-471a-ab5d-cab33c3859df",
+      "name": "\u043a\u0433",
+      "unit": 1000.0,
+      "base_measure_unit": {
+        "cls": "MeasurementUnitModel",
+        "uid": "51effde6-99c3-48b6-8793-ea5966a90e41",
+        "name": "\u0433",
+        "unit": 1.0,
+        "base_measure_unit": null
+      }
+    },
+    {
+      "cls": "MeasurementUnitModel",
+      "uid": "cac9d839-2c30-4ca5-920d-eeb24220fa0c",
+      "name": "\u0442",
+      "unit": 1000.0,
+      "base_measure_unit": {
+        "cls": "MeasurementUnitModel",
+        "uid": "904d1b31-68a4-471a-ab5d-cab33c3859df",
+        "name": "\u043a\u0433",
+        "unit": 1000.0,
+        "base_measure_unit": {
+          "cls": "MeasurementUnitModel",
+          "uid": "51effde6-99c3-48b6-8793-ea5966a90e41",
+          "name": "\u0433",
+          "unit": 1.0,
+          "base_measure_unit": null
+        }
+      }
+    },
+    {
+      "cls": "MeasurementUnitModel",
+      "uid": "328ebaea-6ed1-421b-b93d-79254d4dad27",
+      "name": "\u0448\u0442",
+      "unit": 1.0,
+      "base_measure_unit": null
+    },
+    {
+      "cls": "MeasurementUnitModel",
+      "uid": "6ce9fc51-9d7f-42db-ab2d-1a2c8c1c0578",
+      "name": "\u0447.\u043b.",
+      "unit": 1.0,
+      "base_measure_unit": null
+    },
+    {
+      "cls": "MeasurementUnitModel",
+      "uid": "70cc4410-7058-485d-912c-e847c1db7cfb",
+      "name": "\u043c\u043b",
+      "unit": 1.0,
+      "base_measure_unit": null
+    }
+  ],
+  "nomenclature": [
+    {
+      "cls": "NomenclatureModel",
+      "uid": "382cee95-aae1-4bff-9c41-0a5bc6bce827",
+      "name": "\u041c\u0443\u043a\u0430",
+      "nomenclature_group": {
+        "cls": "NomenclatureGroupModel",
+        "uid": "477efed9-be41-4ed6-924e-35b80140e838",
+        "name": "\u0421\u044b\u0440\u044c\u0451"
+      },
+      "measurement_unit": {
+        "cls": "MeasurementUnitModel",
+        "uid": "904d1b31-68a4-471a-ab5d-cab33c3859df",
+        "name": "\u043a\u0433",
+        "unit": 1000.0,
+        "base_measure_unit": {
+          "cls": "MeasurementUnitModel",
+          "uid": "51effde6-99c3-48b6-8793-ea5966a90e41",
+          "name": "\u0433",
+          "unit": 1.0,
+          "base_measure_unit": null
+        }
+      },
+      "full_name": null
+    },
+    {
+      "cls": "NomenclatureModel",
+      "uid": "7bf68fbc-7dd6-43c1-b19d-59cc1e0ba98b",
+      "name": "\u041b\u0451\u0434",
+      "nomenclature_group": {
+        "cls": "NomenclatureGroupModel",
+        "uid": "ef54ff8b-41a8-49d1-a4fd-9edf1525461d",
+        "name": "\u0417\u0430\u043c\u043e\u0440\u043e\u0437\u043a\u0430"
+      },
+      "measurement_unit": {
+        "cls": "MeasurementUnitModel",
+        "uid": "51effde6-99c3-48b6-8793-ea5966a90e41",
+        "name": "\u0433",
+        "unit": 1.0,
+        "base_measure_unit": null
+      },
+      "full_name": null
+    },
+    {
+      "cls": "NomenclatureModel",
+      "uid": "fe7ade4a-d4df-4d06-9a09-5a1b066f94d9",
+      "name": "\u041f\u0448\u0435\u043d\u0438\u0447\u043d\u0430\u044f \u043c\u0443\u043a\u0430",
+      "nomenclature_group": {
+        "cls": "NomenclatureGroupModel",
+        "uid": "2693b074-6ae4-4bc8-bad2-aa134d92c261",
+        "name": "\u041f\u0440\u043e\u0434\u0443\u043a\u0442\u044b"
+      },
+      "measurement_unit": {
+        "cls": "MeasurementUnitModel",
+        "uid": "51effde6-99c3-48b6-8793-ea5966a90e41",
+        "name": "\u0433",
+        "unit": 1.0,
+        "base_measure_unit": null
+      },
+      "full_name": null
+    },
+    {
+      "cls": "NomenclatureModel",
+      "uid": "9db4cdbe-202c-4575-aff0-47d3a5591bd3",
+      "name": "\u0421\u0430\u0445\u0430\u0440",
+      "nomenclature_group": {
+        "cls": "NomenclatureGroupModel",
+        "uid": "2693b074-6ae4-4bc8-bad2-aa134d92c261",
+        "name": "\u041f\u0440\u043e\u0434\u0443\u043a\u0442\u044b"
+      },
+      "measurement_unit": {
+        "cls": "MeasurementUnitModel",
+        "uid": "51effde6-99c3-48b6-8793-ea5966a90e41",
+        "name": "\u0433",
+        "unit": 1.0,
+        "base_measure_unit": null
+      },
+      "full_name": null
+    },
+    {
+      "cls": "NomenclatureModel",
+      "uid": "1cc57325-e570-476c-b010-53a3bef42e06",
+      "name": "\u0421\u043b\u0438\u0432\u043e\u0447\u043d\u043e\u0435 \u043c\u0430\u0441\u043b\u043e",
+      "nomenclature_group": {
+        "cls": "NomenclatureGroupModel",
+        "uid": "2693b074-6ae4-4bc8-bad2-aa134d92c261",
+        "name": "\u041f\u0440\u043e\u0434\u0443\u043a\u0442\u044b"
+      },
+      "measurement_unit": {
+        "cls": "MeasurementUnitModel",
+        "uid": "51effde6-99c3-48b6-8793-ea5966a90e41",
+        "name": "\u0433",
+        "unit": 1.0,
+        "base_measure_unit": null
+      },
+      "full_name": null
+    },
+    {
+      "cls": "NomenclatureModel",
+      "uid": "b0663df6-0427-48c4-811f-a9a00f56b543",
+      "name": "\u042f\u0439\u0446\u0430",
+      "nomenclature_group": {
+        "cls": "NomenclatureGroupModel",
+        "uid": "2693b074-6ae4-4bc8-bad2-aa134d92c261",
+        "name": "\u041f\u0440\u043e\u0434\u0443\u043a\u0442\u044b"
+      },
+      "measurement_unit": {
+        "cls": "MeasurementUnitModel",
+        "uid": "328ebaea-6ed1-421b-b93d-79254d4dad27",
+        "name": "\u0448\u0442",
+        "unit": 1.0,
+        "base_measure_unit": null
+      },
+      "full_name": null
+    },
+    {
+      "cls": "NomenclatureModel",
+      "uid": "67882f13-fddb-4095-b1e2-3f3f774596be",
+      "name": "\u041c\u043e\u043b\u043e\u043a\u043e",
+      "nomenclature_group": {
+        "cls": "NomenclatureGroupModel",
+        "uid": "2693b074-6ae4-4bc8-bad2-aa134d92c261",
+        "name": "\u041f\u0440\u043e\u0434\u0443\u043a\u0442\u044b"
+      },
+      "measurement_unit": {
+        "cls": "MeasurementUnitModel",
+        "uid": "70cc4410-7058-485d-912c-e847c1db7cfb",
+        "name": "\u043c\u043b",
+        "unit": 1.0,
+        "base_measure_unit": null
+      },
+      "full_name": null
+    },
+    {
+      "cls": "NomenclatureModel",
+      "uid": "8d00e08d-914b-4b9e-a690-7461af3d0ead",
+      "name": "\u041a\u043e\u0440\u0438\u0446\u0430",
+      "nomenclature_group": {
+        "cls": "NomenclatureGroupModel",
+        "uid": "2693b074-6ae4-4bc8-bad2-aa134d92c261",
+        "name": "\u041f\u0440\u043e\u0434\u0443\u043a\u0442\u044b"
+      },
+      "measurement_unit": {
+        "cls": "MeasurementUnitModel",
+        "uid": "6ce9fc51-9d7f-42db-ab2d-1a2c8c1c0578",
+        "name": "\u0447.\u043b.",
+        "unit": 1.0,
+        "base_measure_unit": null
+      },
+      "full_name": null
+    },
+    {
+      "cls": "NomenclatureModel",
+      "uid": "c98aa20a-f88a-42d7-b30c-da62ad4b9f60",
+      "name": "\u0412\u0430\u043d\u0438\u043b\u0438\u043d(\u0449\u0435\u043f\u043e\u0442\u043a\u0430)",
+      "nomenclature_group": {
+        "cls": "NomenclatureGroupModel",
+        "uid": "a0eebb37-dc91-4423-999d-8ae38e9e4057",
+        "name": "\u041f\u0440\u043e\u0434\u0443\u043a\u0442\u044b"
+      },
+      "measurement_unit": {
+        "cls": "MeasurementUnitModel",
+        "uid": "51effde6-99c3-48b6-8793-ea5966a90e41",
+        "name": "\u0433",
+        "unit": 1.0,
+        "base_measure_unit": null
+      },
+      "full_name": null
+    }
+  ],
+  "recipe": [
+    {
+      "cls": "RecipeModel",
+      "uid": "80809487-d783-41e0-9852-44edc9ac631c",
+      "name": "\u0425\u0420\u0423\u0421\u0422\u042f\u0429\u0418\u0415 \u0412\u0410\u0424\u041b\u0418 \u0421 \u041a\u041e\u0420\u0418\u0426\u0415\u0419",
+      "ingridients": "[<src.models.ingridient_model.IngridientModel object at 0x7f86cda2dbe0>, <src.models.ingridient_model.IngridientModel object at 0x7f86cd569790>, <src.models.ingridient_model.IngridientModel object at 0x7f86cd5697f0>, <src.models.ingridient_model.IngridientModel object at 0x7f86cd569670>, <src.models.ingridient_model.IngridientModel object at 0x7f86cd569880>, <src.models.ingridient_model.IngridientModel object at 0x7f86cd569700>]",
+      "cooking_time_minutes": 0,
+      "description": "[' ', '1. \u041f\u043e\u0434\u0433\u043e\u0442\u043e\u0432\u044c\u0442\u0435 \u0432\u0441\u0435 \u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u044b\u0435 \u0438\u043d\u0433\u0440\u0435\u0434\u0438\u0435\u043d\u0442\u044b. \u0420\u0430\u0441\u0442\u043e\u043f\u0438\u0442\u0435 \u0441\u043b\u0438\u0432\u043e\u0447\u043d\u043e\u0435 \u043c\u0430\u0441\u043b\u043e \u043d\u0430 \u0441\u043b\u0430\u0431\u043e\u043c \u043e\u0433\u043d\u0435 \u0438\u043b\u0438 \u0432 \u043c\u0438\u043a\u0440\u043e\u0432\u043e\u043b\u043d\u043e\u0432\u043a\u0435.', '2. \u0412 \u043c\u0438\u0441\u043a\u0435 \u0432\u0437\u0431\u0435\u0439\u0442\u0435 \u044f\u0439\u0446\u0430 \u0441 \u0441\u0430\u0445\u0430\u0440\u043e\u043c \u0434\u043e \u043e\u0434\u043d\u043e\u0440\u043e\u0434\u043d\u043e\u0439 \u043f\u044b\u0448\u043d\u043e\u0439 \u043c\u0430\u0441\u0441\u044b.', '3. \u041f\u043e\u0441\u0442\u0435\u043f\u0435\u043d\u043d\u043e \u0432\u043b\u0435\u0439\u0442\u0435 \u043c\u043e\u043b\u043e\u043a\u043e \u0438 \u0440\u0430\u0441\u0442\u043e\u043f\u043b\u0435\u043d\u043d\u043e\u0435 \u043c\u0430\u0441\u043b\u043e, \u043f\u0440\u043e\u0434\u043e\u043b\u0436\u0430\u044f \u0432\u0437\u0431\u0438\u0432\u0430\u0442\u044c.', '4. \u0412 \u0434\u0440\u0443\u0433\u043e\u0439 \u043c\u0438\u0441\u043a\u0435 \u0441\u043c\u0435\u0448\u0430\u0439\u0442\u0435 \u043c\u0443\u043a\u0443, \u043a\u043e\u0440\u0438\u0446\u0443 \u0438 \u0449\u0435\u043f\u043e\u0442\u043a\u0443 \u0441\u043e\u043b\u0438. \u041f\u043e\u0441\u0442\u0435\u043f\u0435\u043d\u043d\u043e \u0434\u043e\u0431\u0430\u0432\u043b\u044f\u0439\u0442\u0435 \u0441\u0443\u0445\u0438\u0435 \u0438\u043d\u0433\u0440\u0435\u0434\u0438\u0435\u043d\u0442\u044b \u0432 \u0436\u0438\u0434\u043a\u0443\u044e \u0441\u043c\u0435\u0441\u044c, \u043f\u0435\u0440\u0435\u043c\u0435\u0448\u0438\u0432\u0430\u044f \u0434\u043e \u043e\u0434\u043d\u043e\u0440\u043e\u0434\u043d\u043e\u0433\u043e \u0442\u0435\u0441\u0442\u0430.', '5. \u0420\u0430\u0437\u043e\u0433\u0440\u0435\u0439\u0442\u0435 \u0432\u0430\u0444\u0435\u043b\u044c\u043d\u0438\u0446\u0443 \u0438 \u0432\u044b\u043b\u0438\u0432\u0430\u0439\u0442\u0435 \u0442\u0435\u0441\u0442\u043e \u043d\u0435\u0431\u043e\u043b\u044c\u0448\u0438\u043c\u0438 \u043f\u043e\u0440\u0446\u0438\u044f\u043c\u0438 (\u043e\u043a\u043e\u043b\u043e 1 \u0441\u0442\u043e\u043b\u043e\u0432\u043e\u0439 \u043b\u043e\u0436\u043a\u0438 \u043d\u0430 \u0432\u0430\u0444\u043b\u044e).', '6. \u041f\u0435\u043a\u0438\u0442\u0435 \u0432\u0430\u0444\u043b\u0438 \u0434\u043e \u0437\u043e\u043b\u043e\u0442\u0438\u0441\u0442\u043e\u0433\u043e \u0446\u0432\u0435\u0442\u0430, \u043e\u043a\u043e\u043b\u043e 3-4 \u043c\u0438\u043d\u0443\u0442, \u0432 \u0437\u0430\u0432\u0438\u0441\u0438\u043c\u043e\u0441\u0442\u0438 \u043e\u0442 \u043c\u043e\u0449\u043d\u043e\u0441\u0442\u0438 \u0432\u0430\u0444\u0435\u043b\u044c\u043d\u0438\u0446\u044b.', '7. \u0413\u043e\u0442\u043e\u0432\u044b\u0435 \u0432\u0430\u0444\u043b\u0438 \u0431\u0443\u0434\u0443\u0442 \u043c\u044f\u0433\u043a\u0438\u043c\u0438 \u0441\u0440\u0430\u0437\u0443 \u043f\u043e\u0441\u043b\u0435 \u0432\u044b\u043f\u0435\u043a\u0430\u043d\u0438\u044f, \u043d\u043e \u043e\u0441\u0442\u044b\u043d\u0443\u0432, \u0441\u0442\u0430\u043d\u0443\u0442 \u0445\u0440\u0443\u0441\u0442\u044f\u0449\u0438\u043c\u0438.']"
+    },
+    {
+      "cls": "RecipeModel",
+      "uid": "8d89c9d3-3788-435b-bcff-46ac9f887fb9",
+      "name": "\u0412\u0410\u0424\u041b\u0418 \u0425\u0420\u0423\u0421\u0422\u042f\u0429\u0418\u0415 \u0412 \u0412\u0410\u0424\u0415\u041b\u042c\u041d\u0418\u0426\u0415",
+      "ingridients": "[<src.models.ingridient_model.IngridientModel object at 0x7f86cd5698b0>, <src.models.ingridient_model.IngridientModel object at 0x7f86cd5698e0>, <src.models.ingridient_model.IngridientModel object at 0x7f86cd569970>, <src.models.ingridient_model.IngridientModel object at 0x7f86cd5699d0>, <src.models.ingridient_model.IngridientModel object at 0x7f86cd569a30>]",
+      "cooking_time_minutes": 0,
+      "description": "[' ', '1. \u041a\u0430\u043a \u0438\u0441\u043f\u0435\u0447\u044c \u0432\u0430\u0444\u043b\u0438 \u0445\u0440\u0443\u0441\u0442\u044f\u0449\u0438\u0435 \u0432 \u0432\u0430\u0444\u0435\u043b\u044c\u043d\u0438\u0446\u0435? \u041f\u043e\u0434\u0433\u043e\u0442\u043e\u0432\u044c\u0442\u0435 \u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u044b\u0435 \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u044b. \u0418\u0437 \u0434\u0430\u043d\u043d\u043e\u0433\u043e \u043a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u0430 \u0443 \u043c\u0435\u043d\u044f \u043f\u043e\u043b\u0443\u0447\u0438\u043b\u043e\u0441\u044c 8 \u0448\u0442\u0443\u043a \u0434\u0438\u0430\u043c\u0435\u0442\u0440\u043e\u043c \u043e\u043a\u043e\u043b\u043e 10 \u0441\u043c.', '2. \u041c\u0430\u0441\u043b\u043e \u043f\u043e\u043b\u043e\u0436\u0438\u0442\u0435 \u0432 \u0441\u043e\u0442\u0435\u0439\u043d\u0438\u043a \u0441 \u0442\u043e\u043b\u0441\u0442\u044b\u043c \u0434\u043d\u043e\u043c. \u0420\u0430\u0441\u0442\u043e\u043f\u0438\u0442\u0435 \u0435\u0433\u043e \u043d\u0430 \u043c\u0430\u043b\u0435\u043d\u044c\u043a\u043e\u043c \u043e\u0433\u043d\u0435 \u043d\u0430 \u043f\u043b\u0438\u0442\u0435, \u043d\u0430 \u0432\u043e\u0434\u044f\u043d\u043e\u0439 \u0431\u0430\u043d\u0435 \u043b\u0438\u0431\u043e \u0432 \u043c\u0438\u043a\u0440\u043e\u0432\u043e\u043b\u043d\u043e\u0432\u043a\u0435.', '3. \u0414\u043e\u0431\u0430\u0432\u044c\u0442\u0435 \u0432 \u0442\u0435\u043f\u043b\u043e\u0435 \u043c\u0430\u0441\u043b\u043e \u0441\u0430\u0445\u0430\u0440. \u041f\u0435\u0440\u0435\u043c\u0435\u0448\u0430\u0439\u0442\u0435 \u0432\u0435\u043d\u0447\u0438\u043a\u043e\u043c \u0434\u043e \u043f\u043e\u043b\u043d\u043e\u0433\u043e \u0440\u0430\u0441\u0442\u0432\u043e\u0440\u0435\u043d\u0438\u044f \u0441\u0430\u0445\u0430\u0440\u0430. \u041e\u0442 \u0442\u0435\u043f\u043b\u0430 \u0441\u0430\u0445\u0430\u0440 \u0434\u043e\u0432\u043e\u043b\u044c\u043d\u043e \u0431\u044b\u0441\u0442\u0440\u043e \u0440\u0430\u0441\u0442\u0430\u0435\u0442.', '4. \u0414\u043e\u0431\u0430\u0432\u044c\u0442\u0435 \u0432 \u043c\u0430\u0441\u043b\u043e \u044f\u0439\u0446\u043e. \u041f\u0440\u0435\u0434\u0432\u0430\u0440\u0438\u0442\u0435\u043b\u044c\u043d\u043e \u0432\u0441\u0435-\u0442\u0430\u043a\u0438 \u043f\u0440\u043e\u0432\u0435\u0440\u044c\u0442\u0435 \u043c\u0430\u0441\u043b\u043e, \u043d\u0435 \u0433\u043e\u0440\u044f\u0447\u0435\u0435 \u043b\u0438 \u043e\u043d\u043e, \u0438\u043d\u0430\u0447\u0435 \u044f\u0439\u0446\u043e \u043c\u043e\u0436\u0435\u0442 \u0441\u0432\u0430\u0440\u0438\u0442\u044c\u0441\u044f. \u041f\u0435\u0440\u0435\u043c\u0435\u0448\u0430\u0439\u0442\u0435 \u044f\u0439\u0446\u043e \u0441 \u043c\u0430\u0441\u043b\u043e\u043c \u0434\u043e \u043e\u0434\u043d\u043e\u0440\u043e\u0434\u043d\u043e\u0441\u0442\u0438.', '5. \u0412\u0441\u044b\u043f\u044c\u0442\u0435 \u043c\u0443\u043a\u0443, \u0434\u043e\u0431\u0430\u0432\u044c\u0442\u0435 \u0432\u0430\u043d\u0438\u043b\u0438\u043d.', '6. \u041f\u0435\u0440\u0435\u043c\u0435\u0448\u0430\u0439\u0442\u0435 \u043c\u0430\u0441\u0441\u0443 \u0432\u0435\u043d\u0447\u0438\u043a\u043e\u043c \u0434\u043e \u0441\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u044f \u0433\u043b\u0430\u0434\u043a\u043e\u0433\u043e \u043e\u0434\u043d\u043e\u0440\u043e\u0434\u043d\u043e\u0433\u043e \u0442\u0435\u0441\u0442\u0430.', '7. \u0420\u0430\u0437\u043e\u0433\u0440\u0435\u0439\u0442\u0435 \u0432\u0430\u0444\u0435\u043b\u044c\u043d\u0438\u0446\u0443 \u043f\u043e \u0438\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u0438 \u043a \u043d\u0435\u0439. \u0423 \u043c\u0435\u043d\u044f \u043e\u0447\u0435\u043d\u044c \u0441\u0442\u0430\u0440\u0430\u044f, \u0435\u0449\u0435 \u0441\u043e\u0432\u0435\u0442\u0441\u043a\u0438\u0445 \u0432\u0440\u0435\u043c\u0435\u043d \u044d\u043b\u0435\u043a\u0442\u0440\u043e\u0432\u0430\u0444\u0435\u043b\u044c\u043d\u0438\u0446\u0430. \u041e\u043d\u0430 \u043c\u043e\u0436\u0435\u0442 \u0438 \u043d\u0435 \u043e\u0447\u0435\u043d\u044c \u043a\u0440\u0430\u0441\u0438\u0432\u0430\u044f, \u043d\u043e \u043f\u0435\u0447\u0435\u0442 \u0437\u0430\u043c\u0435\u0447\u0430\u0442\u0435\u043b\u044c\u043d\u043e!', '   \u042f \u043d\u0435 \u0441\u043c\u0430\u0437\u044b\u0432\u0430\u044e \u0432\u0430\u0444\u0435\u043b\u044c\u043d\u0438\u0446\u0443 \u043c\u0430\u0441\u043b\u043e\u043c, \u0432 \u0442\u0435\u0441\u0442\u0435 \u0434\u043e\u0441\u0442\u0430\u0442\u043e\u0447\u043d\u043e \u0436\u0438\u0440\u0430, \u0434\u0430 \u0438 \u043a \u043d\u0435\u0439 \u0443\u0436\u0435 \u0434\u0430\u0432\u043d\u043e \u043d\u0438\u0447\u0435\u0433\u043e \u043d\u0435 \u043f\u0440\u0438\u043b\u0438\u043f\u0430\u0435\u0442. \u041d\u043e \u0432\u044b \u0441\u043c\u043e\u0442\u0440\u0438\u0442\u0435 \u043f\u043e \u0441\u0432\u043e\u0435\u0439 \u043c\u043e\u0434\u0435\u043b\u0438. \u0412\u044b\u043a\u043b\u0430\u0434\u044b\u0432\u0430\u0439\u0442\u0435 \u0442\u0435\u0441\u0442\u043e \u043f\u043e \u0441\u0442\u043e\u043b\u043e\u0432\u043e\u0439 \u043b\u043e\u0436\u043a\u0435.', '   \u041c\u043e\u0436\u043d\u043e \u043a\u043b\u0430\u0441\u0442\u044c \u043d\u0435\u043c\u043d\u043e\u0433\u043e \u043c\u0435\u043d\u044c\u0448\u0435 \u0442\u0435\u0441\u0442\u0430, \u0442\u043e\u0433\u0434\u0430 \u0432\u0430\u0444\u043b\u0438 \u0431\u0443\u0434\u0443\u0442 \u043c\u0435\u043d\u044c\u0448\u0435 \u0438 \u0438\u0445 \u043f\u043e\u043b\u0443\u0447\u0438\u0442\u0441\u044f \u0431\u043e\u043b\u044c\u0448\u0435.', '9. \u041f\u0435\u043a\u0438\u0442\u0435 \u0432\u0430\u0444\u043b\u0438 \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u043e \u043c\u0438\u043d\u0443\u0442 \u0434\u043e \u0437\u043e\u043b\u043e\u0442\u0438\u0441\u0442\u043e\u0433\u043e \u0446\u0432\u0435\u0442\u0430. \u041e\u0441\u0442\u043e\u0440\u043e\u0436\u043d\u043e \u043e\u0442\u043a\u0440\u043e\u0439\u0442\u0435 \u0432\u0430\u0444\u0435\u043b\u044c\u043d\u0438\u0446\u0443, \u043e\u043d\u0430 \u043e\u0447\u0435\u043d\u044c \u0433\u043e\u0440\u044f\u0447\u0430\u044f! \u0421\u043d\u0438\u043c\u0438\u0442\u0435 \u0432\u0430\u0444\u043b\u044e \u043b\u043e\u043f\u0430\u0442\u043a\u043e\u0439. \u0413\u043e\u0440\u044f\u0447\u0430\u044f \u043e\u043d\u0430 \u043e\u0447\u0435\u043d\u044c \u043c\u044f\u0433\u043a\u0430\u044f, \u043a\u0430\u043a \u0431\u043b\u0438\u043d\u0447\u0438\u043a.']"
+    }
+  ],
+  "warehouse": [
+    {
+      "cls": "WarehouseModel",
+      "uid": "740b2eff-5230-4ede-81e9-fe66d671bca2",
+      "name": "\u0421\u043a\u043b\u0430\u0434",
+      "address": "\u0420\u043e\u0441\u0441\u0438\u044f, \u041c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c, \u0433. \u041c\u043e\u0441\u043a\u0432\u0430, \u0443\u043b. \u041f\u0440\u043e\u0444\u0441\u043e\u044e\u0437\u043d\u0430\u044f, \u0434. 15"
+    }
+  ],
+  "warehouse_transaction": [
+    {
+      "cls": "WarehouseTransactionModel",
+      "uid": "8506f88a-e70e-46e0-90b5-d8e958bd9c2f",
+      "name": "\u041f\u043e\u0441\u0442\u0443\u043f\u043b\u0435\u043d\u0438\u0435 \u0441\u044b\u0440\u044c\u044f",
+      "warehouse": {
+        "cls": "WarehouseModel",
+        "uid": "740b2eff-5230-4ede-81e9-fe66d671bca2",
+        "name": "\u0421\u043a\u043b\u0430\u0434",
+        "address": "\u0420\u043e\u0441\u0441\u0438\u044f, \u041c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c, \u0433. \u041c\u043e\u0441\u043a\u0432\u0430, \u0443\u043b. \u041f\u0440\u043e\u0444\u0441\u043e\u044e\u0437\u043d\u0430\u044f, \u0434. 15"
+      },
+      "nomenclature": {
+        "cls": "NomenclatureModel",
+        "uid": "382cee95-aae1-4bff-9c41-0a5bc6bce827",
+        "name": "\u041c\u0443\u043a\u0430",
+        "nomenclature_group": {
+          "cls": "NomenclatureGroupModel",
+          "uid": "477efed9-be41-4ed6-924e-35b80140e838",
+          "name": "\u0421\u044b\u0440\u044c\u0451"
+        },
+        "measurement_unit": {
+          "cls": "MeasurementUnitModel",
+          "uid": "904d1b31-68a4-471a-ab5d-cab33c3859df",
+          "name": "\u043a\u0433",
+          "unit": 1000.0,
+          "base_measure_unit": {
+            "cls": "MeasurementUnitModel",
+            "uid": "51effde6-99c3-48b6-8793-ea5966a90e41",
+            "name": "\u0433",
+            "unit": 1.0,
+            "base_measure_unit": null
+          }
+        },
+        "full_name": null
+      },
+      "amount": 100.0,
+      "measurement_unit": {
+        "cls": "MeasurementUnitModel",
+        "uid": "51effde6-99c3-48b6-8793-ea5966a90e41",
+        "name": "\u0433",
+        "unit": 1.0,
+        "base_measure_unit": null
+      },
+      "transaction_type": "INCOME",
+      "period": "2020-01-01 00:00:00"
+    },
+    {
+      "cls": "WarehouseTransactionModel",
+      "uid": "ef2fb4e9-d993-488e-b7d9-6f17f41368a5",
+      "name": "\u0420\u0430\u0441\u0445\u043e\u0434 \u0441\u044b\u0440\u044c\u044f",
+      "warehouse": {
+        "cls": "WarehouseModel",
+        "uid": "740b2eff-5230-4ede-81e9-fe66d671bca2",
+        "name": "\u0421\u043a\u043b\u0430\u0434",
+        "address": "\u0420\u043e\u0441\u0441\u0438\u044f, \u041c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c, \u0433. \u041c\u043e\u0441\u043a\u0432\u0430, \u0443\u043b. \u041f\u0440\u043e\u0444\u0441\u043e\u044e\u0437\u043d\u0430\u044f, \u0434. 15"
+      },
+      "nomenclature": {
+        "cls": "NomenclatureModel",
+        "uid": "382cee95-aae1-4bff-9c41-0a5bc6bce827",
+        "name": "\u041c\u0443\u043a\u0430",
+        "nomenclature_group": {
+          "cls": "NomenclatureGroupModel",
+          "uid": "477efed9-be41-4ed6-924e-35b80140e838",
+          "name": "\u0421\u044b\u0440\u044c\u0451"
+        },
+        "measurement_unit": {
+          "cls": "MeasurementUnitModel",
+          "uid": "904d1b31-68a4-471a-ab5d-cab33c3859df",
+          "name": "\u043a\u0433",
+          "unit": 1000.0,
+          "base_measure_unit": {
+            "cls": "MeasurementUnitModel",
+            "uid": "51effde6-99c3-48b6-8793-ea5966a90e41",
+            "name": "\u0433",
+            "unit": 1.0,
+            "base_measure_unit": null
+          }
+        },
+        "full_name": null
+      },
+      "amount": 10.0,
+      "measurement_unit": {
+        "cls": "MeasurementUnitModel",
+        "uid": "51effde6-99c3-48b6-8793-ea5966a90e41",
+        "name": "\u0433",
+        "unit": 1.0,
+        "base_measure_unit": null
+      },
+      "transaction_type": "EXPENSE",
+      "period": "2020-01-01 00:00:00"
+    },
+    {
+      "cls": "WarehouseTransactionModel",
+      "uid": "6e806449-3acc-4266-bbf0-686965cb03cc",
+      "name": "\u041f\u043e\u0441\u0442\u0443\u043f\u043b\u0435\u043d\u0438\u0435 \u0441\u044b\u0440\u044c\u044f",
+      "warehouse": {
+        "cls": "WarehouseModel",
+        "uid": "740b2eff-5230-4ede-81e9-fe66d671bca2",
+        "name": "\u0421\u043a\u043b\u0430\u0434",
+        "address": "\u0420\u043e\u0441\u0441\u0438\u044f, \u041c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c, \u0433. \u041c\u043e\u0441\u043a\u0432\u0430, \u0443\u043b. \u041f\u0440\u043e\u0444\u0441\u043e\u044e\u0437\u043d\u0430\u044f, \u0434. 15"
+      },
+      "nomenclature": {
+        "cls": "NomenclatureModel",
+        "uid": "382cee95-aae1-4bff-9c41-0a5bc6bce827",
+        "name": "\u041c\u0443\u043a\u0430",
+        "nomenclature_group": {
+          "cls": "NomenclatureGroupModel",
+          "uid": "477efed9-be41-4ed6-924e-35b80140e838",
+          "name": "\u0421\u044b\u0440\u044c\u0451"
+        },
+        "measurement_unit": {
+          "cls": "MeasurementUnitModel",
+          "uid": "904d1b31-68a4-471a-ab5d-cab33c3859df",
+          "name": "\u043a\u0433",
+          "unit": 1000.0,
+          "base_measure_unit": {
+            "cls": "MeasurementUnitModel",
+            "uid": "51effde6-99c3-48b6-8793-ea5966a90e41",
+            "name": "\u0433",
+            "unit": 1.0,
+            "base_measure_unit": null
+          }
+        },
+        "full_name": null
+      },
+      "amount": 100.0,
+      "measurement_unit": {
+        "cls": "MeasurementUnitModel",
+        "uid": "51effde6-99c3-48b6-8793-ea5966a90e41",
+        "name": "\u0433",
+        "unit": 1.0,
+        "base_measure_unit": null
+      },
+      "transaction_type": "INCOME",
+      "period": "2024-01-01 00:00:00"
+    }
+  ],
+  "turnovers": [
+    {
+      "cls": "WarehouseTurnOverModel",
+      "uid": "f684599e-3552-4aaf-aee8-dfd9c02465ea",
+      "warehouse": {
+        "cls": "WarehouseModel",
+        "uid": "740b2eff-5230-4ede-81e9-fe66d671bca2",
+        "name": "\u0421\u043a\u043b\u0430\u0434",
+        "address": "\u0420\u043e\u0441\u0441\u0438\u044f, \u041c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c, \u0433. \u041c\u043e\u0441\u043a\u0432\u0430, \u0443\u043b. \u041f\u0440\u043e\u0444\u0441\u043e\u044e\u0437\u043d\u0430\u044f, \u0434. 15"
+      },
+      "turnover": 90.0,
+      "nomenclature": {
+        "cls": "NomenclatureModel",
+        "uid": "382cee95-aae1-4bff-9c41-0a5bc6bce827",
+        "name": "\u041c\u0443\u043a\u0430",
+        "nomenclature_group": {
+          "cls": "NomenclatureGroupModel",
+          "uid": "477efed9-be41-4ed6-924e-35b80140e838",
+          "name": "\u0421\u044b\u0440\u044c\u0451"
+        },
+        "measurement_unit": {
+          "cls": "MeasurementUnitModel",
+          "uid": "904d1b31-68a4-471a-ab5d-cab33c3859df",
+          "name": "\u043a\u0433",
+          "unit": 1000.0,
+          "base_measure_unit": {
+            "cls": "MeasurementUnitModel",
+            "uid": "51effde6-99c3-48b6-8793-ea5966a90e41",
+            "name": "\u0433",
+            "unit": 1.0,
+            "base_measure_unit": null
+          }
+        },
+        "full_name": null
+      },
+      "measurement_unit": {
+        "cls": "MeasurementUnitModel",
+        "uid": "51effde6-99c3-48b6-8793-ea5966a90e41",
+        "name": "\u0433",
+        "unit": 1.0,
+        "base_measure_unit": null
+      }
+    }
+  ]
+}

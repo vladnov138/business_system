@@ -1,0 +1,16 @@
+---Logger started at 2024-11-23T14:56:58.912651---
+---Logger level: LogLevel.DEBUG---
+[2024-11-23T14:57:01.051212 | INFO]: POST /api/date_block
+[2024-11-23T14:57:01.052050 | DEBUG]: POST /api/date_block params: {'dateblock': '2024-12-31'}
+[2024-11-23T14:57:01.052252 | INFO]: Settings: date_block changed to 2024-12-31 00:00:00
+[2024-11-23T14:57:01.052832 | INFO]: GET /api/date_block
+[2024-11-23T14:57:01.080661 | INFO]: GET /api/reports/WarehouseModel/3
+[2024-11-23T14:57:01.102519 | INFO]: GET /api/reports/MeasurementUnitModel/3
+[2024-11-23T14:57:01.124240 | INFO]: GET /api/reports/NomenclatureGroupModel/3
+[2024-11-23T14:57:01.145137 | INFO]: PUT /api/nomenclature
+[2024-11-23T14:57:01.145775 | DEBUG]: PUT /api/nomenclature params: {'name': 'New Item', 'nomenclature_group': {'uid': 'b33750e1-47df-428d-94dd-e0d2d716b9a8', 'name': 'Test Group'}, 'measurement_unit': {'uid': '', 'name': 'kg'}}
+[2024-11-23T14:57:33.992542 | INFO]: GET /api/date_block
+[2024-11-23T14:57:34.018214 | INFO]: GET /api/reports/WarehouseModel/3
+[2024-11-23T14:58:38.296991 | INFO]: GET /api/date_block
+[2024-11-23T14:58:38.320797 | INFO]: GET /api/reports/WarehouseModel/3
+[2024-11-23T14:58:38.343217 | INFO]: GET /api/reports/NomenclatureModel/3

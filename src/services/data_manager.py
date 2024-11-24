@@ -71,7 +71,7 @@ class DataManager(AbstractLogic):
 
     def handle_event(self, type: EventType, **kwargs):
         super().handle_event(type, **kwargs)
-        if EventType.CHANGE_DATA_GENERATING_SETTING:
+        if type == EventType.CHANGE_DATA_GENERATING_SETTING:
             try:
                 if not callable(kwargs.get('callback')):
                     ArgumentException('callback must be callable')
